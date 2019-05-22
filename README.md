@@ -13,7 +13,7 @@ $ python setup.py develop
 
 Or, simply using `pip`:
 ```
-$ pip install drgmpy
+$ pip install drgpy
 ```
 
 ## File Structure
