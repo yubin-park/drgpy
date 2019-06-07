@@ -2,7 +2,7 @@ import csv
 import re
 from pkg_resources import resource_filename as rscfn
 
-def read_a(fn):
+def read_a(fn="data/appendix_A.txt"):
     drgmap = {}
     is_drg_section = False
     fn = rscfn(__name__, fn)
@@ -23,7 +23,7 @@ def read_a(fn):
                         "desc": desc}
     return drgmap
 
-def read_c(fn):
+def read_c(fn="data/appendix_C.txt"):
     ccmap = {}
     exmap = {}
     is_cc_section = False
@@ -65,7 +65,7 @@ def read_c(fn):
                 ccmap[dx]["aowa"] = True
     return ccmap, exmap
 
-def read_d(fn):
+def read_d(fn="data/appendix_D_E.txt"):
     rankmap = {}
     rank = 0
     is_rank_section = False
@@ -88,10 +88,6 @@ def read_d(fn):
                     rank += 1
     return rankmap
 
-if __name__=="__main__":
-    #read_a("data/appendix_A.txt")
-    #read_c("data/appendix_C.txt")
-    #read_d("data/appendix_D_E.txt")
 
 
 
