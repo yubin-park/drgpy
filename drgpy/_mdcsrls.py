@@ -76,6 +76,90 @@ def mdcs00(x):
 
 def mdcs01(x):
     y = []
+    if "MDC01" not in x:
+        return y
+
+    # 020 - 022
+    if (x["020&021&022|INTRACRANIAL VASCULAR PROCEDURE ORPCS"] * 
+            x["020&021&022|HEMORRHAGE PDX"] > 0):
+        if x["MCC"] > 0:
+            y.append("020")
+        elif x["CC"] > 0:
+            y.append("021")
+        else:
+            y.append("022")
+
+    # 023 - 024
+    c1 = ((x["023&024|CRANIOTOMY ORPCS"] * 
+            x["023&024|MAJOR DEVICE IMPLANT"]) + 
+            x["023&024|ACUTE COMPLEX CNS PDX"])
+    c2 = x["023&024|CHEMOTHERAPY IMPLANT NON-ORPCS"]
+    c3 = x["023&024|EPILEPSY PDX"] * x["023&024|NEUROSTIMULATOR"]
+    if c1*x["MCC"] + c2 + c3 > 0:
+        y.append("023")
+    elif c1 > 0:
+        y.append("024")
+
+    # 025 - 027
+    if x["025&026&027|CRANIOTOMY ORPCS"] > 0:
+        if x["MCC"] > 0:
+            y.append("025")
+        elif x["CC"] > 0:
+            y.append("026")
+        else:
+            y.append("027")
+
+    # 028 - 030
+    if x["028&029&030|SPINAL PROCEDURE ORPCS"] > 0:
+        if x["MCC"] > 0:
+            y.append("028")
+        elif x["CC"] > 0:
+            y.append("029")
+        elif x["028&029&030|SPINAL NEUROSTIMULATORS"] > 0:
+            y.append("029")
+        else:
+            y.append("030")
+
+    # 031 - 033
+    if x["031&032&033|ORPCS"] > 0:
+        if x["MCC"] > 0:
+            y.append("031")
+        elif x["CC"] > 0:
+            y.append("032")
+        else:
+            y.append("033")
+
+    # 034 - 036
+    if ((x["034&035&036|ORPCS"] + 
+        (x["034&035&036|OR ORPCS"] * x["034&035&036|WITH ORPCS"])) > 0):
+        if x["MCC"] > 0:
+            y.append("034")
+        elif x["CC"] > 0:
+            y.append("035")
+        else:
+            y.append("036")
+
+    # 037 - 039
+    if x["037&038&039|ORPCS"] > 0:
+        if x["MCC"] > 0:
+            y.append("037")
+        elif x["CC"] > 0:
+            y.append("038")
+        else:
+            y.append("039")
+    
+    # 040 - 042
+    s1 = ("040&041&042|PERIPHERAL / CRANIAL NERVE & " + 
+            "OTHER NERVOUS SYSTEM PROCEDURE ORPCS")
+    if x[s1] + x["040&041&042|NON-ORPCS"] > 0:
+        if x["MCC"] > 0:
+            y.append("040")
+        elif x["CC"] > 0:
+            y.append("041")
+        elif x["040&041&042|PERIPHERAL NEUROSTIMULATORS"] > 0:
+            y.append("041")
+        else:
+            y.append("042")
 
     return y
 

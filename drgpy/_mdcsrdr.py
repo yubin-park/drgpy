@@ -25,7 +25,7 @@ def get_codetype(dx_lst, pr_lst, cache):
     else:
         if "DX" in cache["D"]:
             codetype = "dx"
-        elif "PCS" in cache["D"]:
+        else:
             codetype = "pr"
     return codetype
 
@@ -112,7 +112,6 @@ def parse_E(line, cursor, dxmap, prmap, cache, _cursor):
         if len(cache["E"]) > 0:
             update_mapping(dxmap, prmap, cache)
         cache["E"] = [codetype, code]
-
 
 def read(fn, dxmap, prmap):
 
