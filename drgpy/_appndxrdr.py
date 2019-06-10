@@ -88,6 +88,51 @@ def read_d(fn="data/appendix_D_E.txt"):
                     rank += 1
     return rankmap
 
+def read_e(fn="data/appendix_D_E.txt"):
+    orpcsmap = {}
+    is_orpcs_section = False
+    fn = rscfn(__name__, fn)
+    with open(fn, "r") as fp:
+        for line in fp:
+            if line.strip() == "CODE    MDC MS-DRG  SURGICAL CATEGORY":
+                is_orpcs_section = True
+            elif line.strip() == "Procedure Cluster/MS-DRG Index":
+                # end of the orpcs section
+                break
+
+            if is_orpcs_section:
+                if len(line) < 9:
+                    continue
+                code = line[:9].strip()
+                is_nonorpcs = (line[9] == "*")
+                if not is_nonorpcs and code != "":
+                    orpcsmap[code] = 1
+    return orpcsmap
+
+def read_f(fn="data/appendix_F_J.txt"):
+
+    uormap = {}
+    is_uor_section = False
+    fn = rscfn(__name__, fn)
+    with open(fn, "r") as fp:
+        for line in fp:
+            if "DRG 989 NON-EXTENSIVE O.R. PROCEDURE" in line:
+                is_uor_section = True
+            elif is_uor_section and len(line) > 0 and line[0]==":":
+                break
+
+            if is_uor_section:
+                if len(line) < 9:
+                    continue
+                code = line[:9].strip()
+                if code != "":
+                    uormap[code] = 1
+    return uormap
+
+
+if __name__=="__main__":
+
+    read_f()
 
 
 

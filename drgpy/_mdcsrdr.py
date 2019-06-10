@@ -23,9 +23,9 @@ def get_codetype(dx_lst, pr_lst, cache):
     elif len(dx_lst) == 0 and len(pr_lst) > 0:
         codetype = "pr"
     else:
-        if "diagnos" in cache["D"].lower():
+        if "DX" in cache["D"]:
             codetype = "dx"
-        elif "procedure" in cache["D"].lower():
+        elif "PCS" in cache["D"]:
             codetype = "pr"
     return codetype
 
@@ -58,11 +58,11 @@ def parse_A(line, cursor, dxmap, cache):
         dxmap[dx].append(cache["A"])
 
 def is_B(line, cursor):
-    return (cursor in {"A", "B", "E"} and 
+    return (cursor in {"A", "B", "D", "E"} and 
             (line[:2] == "+-" or line[0]=="|"))
 
 def is_C(line, cursor):
-    return (cursor in {"B", "C", "E"} and line[:4] == "DRG ")
+    return (cursor in {"B", "C", "D", "E"} and line[:4] == "DRG ")
 
 def parse_C(line, cursor, cache, _cursor):
 
@@ -92,6 +92,7 @@ def is_E(line, cursor):
     return (cursor in {"D", "E"} and line[:2] == "  ")
 
 def parse_E(line, cursor, dxmap, prmap, cache, _cursor):
+
 
     line = line.strip() 
     if line == "":
@@ -131,7 +132,7 @@ def read(fn, dxmap, prmap):
     D        (blank)
     E          Codes...
 
-    *pattern: A -> [B -> [C -> [D -> E]]]
+    *pattern: A -> [B -> [C -> [D -> (E)]]]
     """
 
     _cursor = "F"
@@ -186,6 +187,6 @@ if __name__=="__main__":
     for fn in fn_lst[:1]:
         dxmap, prmap = read(fn, dxmap, prmap)
 
-    import json
-    print(json.dumps(prmap, indent=2, sort_keys=True))
+    #import json
+    #print(json.dumps(prmap, indent=2, sort_keys=True))
 

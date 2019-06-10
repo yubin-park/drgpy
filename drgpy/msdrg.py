@@ -3,7 +3,7 @@ import drgpy._mdcsrdr as mdcsrdr
 import drgpy._appndxrdr as appndxrdr
 import drgpy._mdcsrls as mdcsrls
 from collections import defaultdict
-
+from collections import Counter
 
 class DRGEngine:
 
@@ -21,47 +21,61 @@ class DRGEngine:
         self.ccmap = ccmap
         self.exmap = exmap
 
-    def get_dxel(self, dx_lst):
+        orpcsmap = appndxrdr.read_e()
+        self.orpcsmap = orpcsmap
 
-        el_lst = []
-        cc_lst = []
-        if len(dx_lst)==0:
-            return code_lst
-        
-        # dx_lst[0]: primary/principal diagnosis
-        # dx_lst[1:]: secondary diagnoses
-        pdx = dx_lst[0]
-        for i, dx in enumerate(dx_lst):
-            elements = self.dxmap[dx]
-            if dx in self.ccmap and i > 0:
-                cc_info = self.ccmap[dx]
-                if pdx not in self.exmap[cc_info["pdx"]]:
-                    cc_lst.append(cc_info["level"])
-            for el in elements:
-                if "PDX" in el and i > 0:
-                    continue
-                el_lst.append(el)
-        
-        if "MCC" in cc_lst:
-            el_lst.append("MCC")
-        elif "CC" in cc_lst:
-            el_lst.append("CC")
-   
-        return el_lst
+        uormap = appndxrdr.read_f()
+        self.uormap = uormap
 
-    def get_prel(self, pr_lst):
-        el_lst = []
+    def get_features(self, dx_lst, pr_lst):
+
+        x = [] # MDC, DRG, etc.
+        z = [] # CC/MCC
+       
+        if len(dx_lst) > 0:
+            # dx_lst[0]: primary/principal diagnosis
+            # dx_lst[1:]: secondary diagnoses
+            pdx = dx_lst[0]
+            for j, dx in enumerate(dx_lst):
+                is_pdx = j==0
+                for x_i in self.dxmap[dx]:
+                    if is_pdx:
+                        if "PDX" in x_i or "PSDX" in x_i:
+                            x.append(x_i)
+                        elif "SDX" not in x_i:
+                            x.append(x_i)
+                    else:
+                        if "PDX" not in x_i:
+                            x.append(x_i)
+                if dx in self.ccmap and not is_pdx:
+                    cc_info = self.ccmap[dx]
+                    if pdx not in self.exmap[cc_info["pdx"]]:
+                        x.append(cc_info["level"])
+
         for pr in pr_lst:
-            elements = self.prmap[pr]
-            el_lst += elements
-        return el_lst 
+            for x_i in self.prmap[pr]:
+                tokens = x_i.split("|")
+                if len(tokens) > 2:
+                    if tokens[2] in pr_lst:
+                        x.append(tokens[0] + "|" + tokens[1])
+                else:
+                    x.append(x_i)
+            if x_i in self.orpcsmap:
+                x.append("ORPCS")
+            if x_i in self.uormap:
+                x.append("UNREALTED ORPCS")
 
-    def get_drg(self, dx_lst, pr_lst):
+        return Counter(x)
 
-        el_lst = self.get_dxel(dx_lst)
-        el_lst += self.get_prel(pr_lst)
+    def get_drg_all(self, dx_lst, pr_lst):
 
-        pass
+        y = []
+        x = self.get_features(dx_lst, pr_lst)
+        y += mdcsrls.mdcs00(x)
+            
+        return y
+        
+         
 
 
     
