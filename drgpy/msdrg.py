@@ -40,17 +40,18 @@ class DRGEngine:
                 is_pdx = j==0
                 for x_i in self.dxmap[dx]:
                     if is_pdx:
-                        if "PDX" in x_i or "PSDX" in x_i:
-                            x.append(x_i)
-                        elif "SDX" not in x_i:
+                        if ("PDX" in x_i or 
+                            "PSDX" in x_i or 
+                            "_MDC" in x_i):
                             x.append(x_i)
                     else:
-                        if "PDX" not in x_i and "MDC" not in x_i:
+                        if ("PDX" not in x_i and 
+                            "_MDC" not in x_i):
                             x.append(x_i)
                 if dx in self.ccmap and not is_pdx:
                     cc_info = self.ccmap[dx]
                     if pdx not in self.exmap[cc_info["pdx"]]:
-                        x.append(cc_info["level"])
+                        x.append("_" + cc_info["level"])
 
         for pr in pr_lst:
             for x_i in self.prmap[pr]:
@@ -60,10 +61,11 @@ class DRGEngine:
                         x.append(tokens[0] + "|" + tokens[1])
                 else:
                     x.append(x_i)
-            if x_i in self.orpcsmap:
-                x.append("ORPCS")
-            if x_i in self.uormap:
-                x.append("UNREALTED ORPCS")
+                
+            if pr in self.orpcsmap:
+                x.append("_ORPCS")
+            if pr in self.uormap:
+                x.append("_UNREALTED_ORPCS")
 
         return Counter(x)
 
@@ -74,6 +76,9 @@ class DRGEngine:
         y += mdcsrls.mdcs00(x)
         y += mdcsrls.mdcs01(x)
         y += mdcsrls.mdcs02(x)
+        y += mdcsrls.mdcs03(x)
+
+
 
         return y
         

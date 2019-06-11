@@ -52,7 +52,7 @@ def parse_A(line, cursor, dxmap, cache):
     mdc_lst = re.findall("MDC\s(\d{2})\s", line)
     dx_lst = re.findall("\s{2}" + dx_pttrn + "\s+", line)
     if len(mdc_lst) > 0:
-        cache["A"] = "MDC" + mdc_lst[0]
+        cache["A"] = "_MDC" + mdc_lst[0] 
     elif len(dx_lst) > 0:
         dx = dx_lst[0].strip()
         dxmap[dx].append(cache["A"])
