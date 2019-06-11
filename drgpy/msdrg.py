@@ -45,7 +45,7 @@ class DRGEngine:
                         elif "SDX" not in x_i:
                             x.append(x_i)
                     else:
-                        if "PDX" not in x_i:
+                        if "PDX" not in x_i and "MDC" not in x_i:
                             x.append(x_i)
                 if dx in self.ccmap and not is_pdx:
                     cc_info = self.ccmap[dx]
@@ -73,6 +73,7 @@ class DRGEngine:
         x = self.get_features(dx_lst, pr_lst)
         y += mdcsrls.mdcs00(x)
         y += mdcsrls.mdcs01(x)
+        y += mdcsrls.mdcs02(x)
 
         return y
         

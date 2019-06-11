@@ -60,7 +60,67 @@ class TestMCD01(unittest.TestCase):
                         ["008F0ZZ", "0JH60BZ", "00HE0MZ"])
         self.assertTrue("041" in drg_lst)
 
+        drg_lst = de.get_drg_all(["G041"], [])
+        self.assertTrue("053" in drg_lst)
 
+        drg_lst = de.get_drg_all(["C700"], [])
+        self.assertTrue("055" in drg_lst)
+
+        drg_lst = de.get_drg_all(["A5210"], [])
+        self.assertTrue("057" in drg_lst)
+
+        drg_lst = de.get_drg_all(["G110"], [])
+        self.assertTrue("060" in drg_lst)
+
+        drg_lst = de.get_drg_all(["G450"], ["3E03017"])
+        self.assertTrue("063" in drg_lst)
+
+        drg_lst = de.get_drg_all(["I6000", "Z9282"], [])
+        self.assertTrue("065" in drg_lst)
+
+        drg_lst = de.get_drg_all(["G450"], [])
+        self.assertTrue("069" in drg_lst)
+
+        drg_lst = de.get_drg_all(["G3289"], [])
+        self.assertTrue("072" in drg_lst)
+
+        drg_lst = de.get_drg_all(["B020"], [])
+        self.assertTrue("074" in drg_lst)
+
+        drg_lst = de.get_drg_all(["A870"], [])
+        self.assertTrue("076" in drg_lst)
+
+        drg_lst = de.get_drg_all(["I674"], [])
+        self.assertTrue("079" in drg_lst)
+
+        drg_lst = de.get_drg_all(["E035"], [])
+        self.assertTrue("081" in drg_lst)
+
+        drg_lst = de.get_drg_all(["S061X3A"], [])
+        self.assertTrue("084" in drg_lst)
+
+        drg_lst = de.get_drg_all(["S020XXA"], [])
+        self.assertTrue("087" in drg_lst)
+
+        drg_lst = de.get_drg_all(["S060X0A"], [])
+        self.assertTrue("090" in drg_lst)
+
+        drg_lst = de.get_drg_all(["A881"], [])
+        self.assertTrue("093" in drg_lst)
+
+        drg_lst = de.get_drg_all(["A0221"], [])
+        self.assertTrue("096" in drg_lst)
+
+        drg_lst = de.get_drg_all(["A066"], [])
+        self.assertTrue("099" in drg_lst)
+
+        drg_lst = de.get_drg_all(["G40001"], [])
+        self.assertTrue("101" in drg_lst)
+
+        drg_lst = de.get_drg_all(["F0781"], [])
+        self.assertTrue("103" in drg_lst)
+
+       
 
 if __name__=="__main__":
     unittest.main()

@@ -161,6 +161,180 @@ def mdcs01(x):
         else:
             y.append("042")
 
+    # 052 - 053
+    if x["052&053|PDX"] > 0:
+        if x["MCC"] + x["CC"] > 0:
+            y.append("052")
+        else:
+            y.append("053")
+
+    # 054 - 055
+    if x["054&055|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("054")
+        else:
+            y.append("055")
+
+    # 056 - 057
+    if x["056&057|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("056")
+        else:
+            y.append("057")
+
+    # 058 - 060
+    if x["058&059&060|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("058")
+        elif x["CC"] > 0:
+            y.append("059")
+        else:
+            y.append("060")
+
+    # 061 - 063
+    if x["061&062&063|PDX"] * x["061&062&063|NON-ORPCS"] > 0:
+        if x["MCC"] > 0:
+            y.append("061")
+        elif x["CC"] > 0:
+            y.append("062")
+        else:
+            y.append("063")
+
+
+    # 064 - 066
+    if x["064&065&066|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("064")
+        elif x["CC"] > 0:
+            y.append("065")
+        elif x["064&065&066|tPA within 24 hours Secondary diagnosis"] > 0:
+            y.append("065")
+        else:
+            y.append("066")
+
+    # 067 - 068
+    if x["061&062&063|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("067")
+        else:
+            y.append("068")
+
+    # 069
+    if x["069|PDX"] > 0:
+        y.append("069")
+
+    # 070 - 072
+    if x["070&071&072|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("070")
+        elif x["MCC"] > 0:
+            y.append("071")
+        else:
+            y.append("072")
+    
+    # 073 - 074
+    if x["073&074|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("073")
+        else:
+            y.append("074")
+
+    # 075 - 076
+    if x["075&076|PDX"] > 0:
+        if x["MCC"] + x["CC"] > 0:
+            y.append("075")
+        else:
+            y.append("076")
+
+    # 077 - 079
+    if x["077&078&079|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("077")
+        elif x["CC"] > 0:
+            y.append("078")
+        else:
+            y.append("079")
+
+    # 080 - 081
+    if x["080&081|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("080")
+        else:
+            y.append("081")
+
+    # 082 - 084
+    if ((x["082&083&084|PDX"] + 
+        (x["082&083&084|OR PDX"] * x["082&083&084|AND SDX"])) > 0):
+        if x["MCC"] > 0:
+            y.append("082")
+        elif x["CC"] > 0:
+            y.append("083")
+        else:
+            y.append("084")
+       
+    # 085 - 087
+    if x["085&086&087|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("085")
+        elif x["CC"] > 0:
+            y.append("086")
+        else:
+            y.append("087")
+
+    # 088 - 090
+    if x["088&089&090|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("088")
+        elif x["CC"] > 0:
+            y.append("089")
+        else:
+            y.append("090")
+           
+    # 091 - 093
+    if x["091&092&093|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("091")
+        elif x["CC"] > 0:
+            y.append("092")
+        else:
+            y.append("093")
+
+    # 094 - 096
+    if x["094&095&096|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("094")
+        elif x["CC"] > 0:
+            y.append("095")
+        else:
+            y.append("096")
+
+    # 097 - 099
+    if x["097&098&099|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("097")
+        elif x["CC"] > 0:
+            y.append("098")
+        else:
+            y.append("099")
+
+    # 100 - 101
+    if x["100&101|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("100")
+        else:
+            y.append("101")
+
+    # 102 - 103
+    if x["102&103|PDX"] > 0:
+        if x["MCC"] > 0:
+            y.append("102")
+        else:
+            y.append("103")
+
     return y
 
+def mcds02(x):
+    y = []
+    
 
+    return y
