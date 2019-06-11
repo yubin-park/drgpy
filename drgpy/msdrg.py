@@ -1,7 +1,7 @@
 
 import drgpy._mdcsrdr as mdcsrdr
 import drgpy._appndxrdr as appndxrdr
-import drgpy._mdcsrls as mdcsrls
+import drgpy._mdcs0007 as mdcs0007
 from collections import defaultdict
 from collections import Counter
 
@@ -73,11 +73,11 @@ class DRGEngine:
 
         y = []
         x = self.get_features(dx_lst, pr_lst)
-        y += mdcsrls.mdcs00(x)
-        y += mdcsrls.mdcs01(x)
-        y += mdcsrls.mdcs02(x)
-        y += mdcsrls.mdcs03(x)
-
+        y += mdcs0007.mdcs00(x)
+        y += mdcs0007.mdcs01(x)
+        y += mdcs0007.mdcs02(x)
+        y += mdcs0007.mdcs03(x)
+        y += mdcs0007.mdcs04(x)
 
 
         return y

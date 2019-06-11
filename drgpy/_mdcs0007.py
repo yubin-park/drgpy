@@ -475,7 +475,132 @@ def mdcs04(x):
     if x["_MDC04"] == 0:
         return y
 
+    # 163 - 165
+    if x["163&164&165|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("163")
+        elif x["_CC"] > 0:
+            y.append("164")
+        else:
+            y.append("165")
 
+    # 166 - 168
+    if x["166&167&168|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("166")
+        elif x["_CC"] > 0:
+            y.append("167")
+        else:
+            y.append("168")
+
+    # 207 - 208
+    if (x["207&208|ANY PDX IN MDC 4 ECMO NON-ORPCS"] +
+        x["207&208|MECHANICAL VENTILATION >96 HOURS NON-ORPCS"] > 0):
+        y.append("207")   
+    elif x["207&208|MECHANICAL VENTILATION <96 HOURS NON-ORPCS"] > 0:
+        y.append("208")
+
+    # 175 - 176
+    if x["175&176|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("175")
+        else:
+            y.append("176")
+    
+    # 177 - 179
+    if (x["177&178&179|PDX"] * x["793|OR SDX"] + 
+            x["177&178&179|or PDX"] > 0):
+        if x["_MCC"] > 0:
+            y.append("177")
+        elif x["_CC"] > 0:
+            y.append("178")
+        else:
+            y.append("179")
+
+    # 180 - 182
+    if x["180&181&182|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("180")
+        elif x["_CC"] > 0:
+            y.append("181")
+        else:
+            y.append("182")
+
+    # 183 - 185
+    if x["183&184&185|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("183")
+        elif x["_CC"] > 0:
+            y.append("184")
+        else:
+            y.append("185")
+
+    # 186 - 188
+    if x["186&187&188|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("186")
+        elif x["_CC"] > 0:
+            y.append("187")
+        else:
+            y.append("188")
+
+    # 189
+    if x["189|PDX"] > 0:
+        y.append("189")
+
+    # 190 - 192
+    if x["190&191&192|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("190")
+        elif x["_CC"] > 0:
+            y.append("191")
+        else:
+            y.append("192")
+
+    # 193 - 195
+    if x["193&194&195|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("193")
+        elif x["_CC"] > 0:
+            y.append("194")
+        else:
+            y.append("195")
+
+    # 196 - 198
+    if x["196&197&198|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("196")
+        elif x["_CC"] > 0:
+            y.append("197")
+        else:
+            y.append("198")
+
+    # 199 - 201
+    if x["199&200&201|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("199")
+        elif x["_CC"] > 0:
+            y.append("200")
+        else:
+            y.append("201")
+
+    # 202 - 203
+    if x["202&203|PDX"] > 0:
+        if x["_MCC"] + x["_CC"] > 0:
+            y.append("202")
+        else:
+            y.append("203")
+
+    # 204
+    if x["204|PDX"] > 0:
+        y.append("204")
+
+    # 205 - 206
+    if x["205&206|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("205")
+        else:
+            y.append("206")
 
     return y
 
