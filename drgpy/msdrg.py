@@ -66,6 +66,10 @@ class DRGEngine:
                 x.append("_ORPCS")
             if pr in self.uormap:
                 x.append("_UNREALTED_ORPCS")
+    
+        # TODO: need to identify if the patient is live at discharge
+        # For now, we just assume all patients are alive
+        x.append("_ALIVE")
 
         return Counter(x)
 
@@ -73,12 +77,14 @@ class DRGEngine:
 
         y = []
         x = self.get_features(dx_lst, pr_lst)
-        y += mdcs0007.mdcs00(x)
-        y += mdcs0007.mdcs01(x)
-        y += mdcs0007.mdcs02(x)
-        y += mdcs0007.mdcs03(x)
-        y += mdcs0007.mdcs04(x)
-
+        y += mdcs0007.mdc00(x)
+        y += mdcs0007.mdc01(x)
+        y += mdcs0007.mdc02(x)
+        y += mdcs0007.mdc03(x)
+        y += mdcs0007.mdc04(x)
+        y += mdcs0007.mdc05(x)
+        y += mdcs0007.mdc06(x)
+        y += mdcs0007.mdc07(x)
 
         return y
         

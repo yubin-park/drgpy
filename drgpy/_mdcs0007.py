@@ -1,5 +1,5 @@
 
-def mdcs00(x):
+def mdc00(x):
 
     y = []
 
@@ -74,7 +74,7 @@ def mdcs00(x):
 
     return y
 
-def mdcs01(x):
+def mdc01(x):
     y = []
     if x["_MDC01"] == 0:
         return y
@@ -333,7 +333,7 @@ def mdcs01(x):
 
     return y
 
-def mdcs02(x):
+def mdc02(x):
     y = []
     
     if x["_MDC02"] == 0:
@@ -377,7 +377,7 @@ def mdcs02(x):
 
     return y
 
-def mdcs03(x):
+def mdc03(x):
     y = []
     if x["_MDC03"] == 0:
         return y
@@ -469,7 +469,7 @@ def mdcs03(x):
 
     return y
 
-def mdcs04(x):
+def mdc04(x):
 
     y = []
     if x["_MDC04"] == 0:
@@ -603,5 +603,336 @@ def mdcs04(x):
             y.append("206")
 
     return y
+
+def mdc05(x):
+    y = []
+    if x["_MDC05"] == 0:
+        return y
+
+    # 215
+    if x["215|ORPCS"] > 0:
+        y.append("215")
+
+    # 216 - 221
+    s1 = ("216&217&218&219&220&221|CARDIAC VALVE AND " + 
+            "OTHER MAJOR CARDIOTHORACIC PROCEDURE ORPCS")
+    s2 = "216&217&218&219&220&221|CARDIAC CATHETERIZATION NON-ORPCS"
+    if x[s1] > 0:
+        if x[s2] > 0:
+            if x["_MCC"] > 0:
+                y.append("216")
+            elif x["_CC"] > 0:
+                y.append("217")
+            else:
+                y.append("218")
+        else:
+            if x["_MCC"] > 0:
+                y.append("219")
+            elif x["_CC"] > 0:
+                y.append("220")
+            else:
+                y.append("221")
+    
+    # 266 - 267
+    if x["266&267|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("266")
+        else:
+            y.append("267")
+
+    # 222 - 227
+    s1 = "222&223&224&225&226&227|CARDIAC DEFIBRILLATOR IMPLANT ORPCS"
+    s2 = "222&223&224&225&226&227|CARDIAC CATHETERIZATION NON-ORPCS"
+    s3 = "222&223&224&225&226&227|AMI / HF / SHOCK PDX"
+    if x[s1] > 0:
+        if x[s2] > 0:
+            if x[s3] > 0:
+                if x["_MCC"] > 0:
+                    y.append("222")
+                else:
+                    y.append("223")
+            else:
+                if x["_MCC"] > 0:
+                    y.append("224")
+                else:
+                    y.append("225")
+        else:
+            if x["_MCC"] > 0:
+                y.append("226")
+            else:
+                y.append("227")
+
+    # 228 - 229
+    if x["228&229|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("228")
+        elif x["_CC"] > 0:
+            y.append("229")
+
+    # 231 - 236
+    s1 = "231&232&233&234&235&236|CORONARY BYPASS ORPCS"
+    s2 = "231&232&233&234&235&236|PTCA ORPCS"
+    s3 = "216&217&218&219&220&221|CARDIAC CATHETERIZATION NON-ORPCS"
+    if x[s1] > 0:
+        if x[s2] > 0:
+            if x["_MCC"] > 0:
+                y.append("231")
+            else:
+                y.append("232")
+        elif x[s3] > 0:
+            if x["_MCC"] > 0:
+                y.append("233")
+            else:
+                y.append("234")
+        else:
+            if x["_MCC"] > 0:
+                y.append("235")
+            else:
+                y.append("236")
+
+    # 268 - 269
+    if x["268&269|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("268")
+        else:
+            y.append("269")
+
+    # 270 - 272
+    if x["270&271&272|MAJOR CARDIOVASCULAR PROCEDURE ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("270")
+        elif x["_CC"] > 0:
+            y.append("271")
+        else:
+            y.append("272")
+
+    # 239 - 241
+    if x["239&240&241|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("239")
+        elif x["_CC"] > 0:
+            y.append("240")
+        else:
+            y.append("241")
+
+    # 242 - 244
+    if x["242&243&244|CARDIAC PACEMAKER DEVICE"] > 0:
+        if x["_MCC"] > 0:
+            y.append("242")
+        elif x["_CC"] > 0:
+            y.append("243")
+        else:
+            y.append("244")
+
+    # 245
+    if x["245|ORPCS"] > 0:
+        y.append("245")
+
+    # 265 
+    if x["265|ORPCS"] > 0:
+        y.append("265")
+
+    # 273 - 274
+    if x["273&274|ORPCS"] + x["273&274|OR NON-ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("273")
+        else:
+            y.append("274")
+
+    # 246 - 249
+    s1 = "246&247&248&249|PERCUTANEOUS CARDIOVASCULAR PROCEDURE ORPCS"
+    s2 = "246&247&248&249|OR NON-ORPCS"
+    s3 = "246&247&248&249|DRUG-ELUTING STENT"
+    s4 = "246&247&248&249|NON-DRUG-ELUTING STENT"
+    s5 = ("246&247&248&249|COMBINATION OF CODES IN THE NEXT FOUR " +
+            "LISTS THAT ADD UP TO FOUR OR MORE ARTERIES/STENTS " + 
+            "SELECT DRG 246 OVER DRG 247 or DRG 248 " + 
+            "OVER DRG 249 ONE STENT")
+    s6 = "246&247&248&249|TWO STENTS"
+    s7 = "246&247&248&249|THREE STENTS"
+    s8 = "246&247&248&249|FOUR OR MORE STENTS"
+    s9 = "246&247&248&249|ONE ARTERY"
+    s10 = "246&247&248&249|TWO ARTERIES"
+    s11 = "246&247&248&249|THREE ARTERIES"
+    s12 = "246&247&248&249|FOUR OR MORE ARTERIES"
+    stent_cnt = (x[s5] + 2 * x[s6] + 3 * x[s7] + 4 * x[s8])
+    artery_cnt = (x[s9] + 2 * x[s10] + 3 * x[s11] + 4 * x[s12])
+    if x[s1] + x[s2] > 0:
+        if x[s3] > 0:
+            if (x["_MCC"] > 0 or stent_cnt > 3 or artery_cnt > 3):
+                y.append("246")
+            else:
+                y.append("247")
+        elif x[s4] > 0:
+            if (x["_MCC"] > 0 or stent_cnt > 3 or artery_cnt > 3):
+                y.append("248")
+            else:
+                y.append("249")
+        
+    if x["250&251|ORPCS"] + x["250&251|OR NON-ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("250")
+        else:
+            y.append("251")
+
+    if x["252&253&254|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("252")
+        elif x["_CC"] > 0:
+            y.append("253")
+        else:
+            y.append("254")
+
+    if x["255&256&257|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("255")
+        elif x["_CC"] > 0:
+            y.append("256")
+        else:
+            y.append("257")
+
+    if x["258&259|NON ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("258")
+        else:
+            y.append("259")
+
+    if x["260&261&262|ORPCS"] + x["260&261&262|OR NON ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("260")
+        elif x["_CC"] > 0:
+            y.append("261")
+        else:
+            y.append("262")
+
+    if x["263|ORPCS"] > 0:
+        y.append("263")
+
+    if x["264|ORPCS"] > 0:
+        y.append("264")
+
+    if x["280&281&282&283&284&285|PDX OR SDX"] > 0:
+        if x["_ALIVE"] > 0: 
+            if x["_MCC"] > 0:
+                y.append("280")
+            elif x["_CC"] > 0:
+                y.append("281")
+            else:
+                y.append("282")
+        else:
+            if x["_MCC"] > 0:
+                y.append("283")
+            elif x["_CC"] > 0:
+                y.append("284")
+            else:
+                y.append("285")
+
+    if x["286&287|NON-ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("286")
+        else:
+            y.append("287")
+
+    if x["288&289&290|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("288")
+        elif x["_CC"] > 0:
+            y.append("289")
+        else:
+            y.append("290")
+
+    if x["291&292&293|PDX"] > 0:
+        if x["291&292&293|ECMO NON-ORPCS"] + x["_MCC"] > 0:
+            y.append("291")
+        elif x["_CC"] > 0:
+            y.append("292")
+        else:
+            y.append("293")
+
+    if x["294&295|PDX"] > 0:
+        if x["_MCC"] + x["_CC"] > 0:
+            y.append("294")
+        else:
+            y.append("295")
+
+    if x["296&297&298|PDX"] > 0:
+        if x["296&297&298|ECMO NON-ORPCS"] + x["_MCC"] > 0:
+            y.append("296")
+        elif x["_CC"] > 0:
+            y.append("297")
+        else:
+            y.append("298")
+
+    if x["299&300&301|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("299")
+        elif x["_CC"] > 0:
+            y.append("300")
+        else:
+            y.append("301")
+
+    if x["302&303|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("302")
+        else:
+            y.append("303")
+
+    if x["304&305|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("304")
+        else:
+            y.append("305")
+
+    if x["306&307|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("306")
+        else:
+            y.append("307")
+
+    if x["308&309&310|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("308")
+        elif x["_CC"] > 0:
+            y.append("309")
+        else:
+            y.append("310")
+
+    if x["311|PDX"] > 0:
+        y.append("311")
+
+    if x["312|PDX"] > 0:
+        y.append("312")
+
+    if x["313|PDX"] > 0:
+        y.append("313")
+
+    if x["314&315&316|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("314")
+        elif x["_CC"] > 0:
+            y.append("315")
+        else:
+            y.append("316")
+            
+    return y
+
+def mdc06(x):
+
+    y = []
+    if x["_MDC06"] == 0:
+        return y
+
+
+    return y
+
+def mdc07(x):
+
+    y = []
+    if x["_MDC07"] == 0:
+        return y
+
+
+    return y
+
 
 
