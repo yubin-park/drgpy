@@ -768,7 +768,8 @@ def mdc05(x):
                 y.append("248")
             else:
                 y.append("249")
-        
+       
+    # 250 - 251
     if x["250&251|ORPCS"] + x["250&251|OR NON-ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("250")
@@ -811,6 +812,7 @@ def mdc05(x):
     if x["264|ORPCS"] > 0:
         y.append("264")
 
+    # 280 - 285
     if x["280&281&282&283&284&285|PDX OR SDX"] > 0:
         if x["_ALIVE"] > 0: 
             if x["_MCC"] > 0:
@@ -855,6 +857,7 @@ def mdc05(x):
         else:
             y.append("295")
 
+    # 296 - 298
     if x["296&297&298|PDX"] > 0:
         if x["296&297&298|ECMO NON-ORPCS"] + x["_MCC"] > 0:
             y.append("296")
@@ -871,6 +874,7 @@ def mdc05(x):
         else:
             y.append("301")
 
+    # 302 - 303
     if x["302&303|PDX"] > 0:
         if x["_MCC"] > 0:
             y.append("302")
@@ -905,7 +909,8 @@ def mdc05(x):
 
     if x["313|PDX"] > 0:
         y.append("313")
-
+    
+    # 314 - 316
     if x["314&315&316|PDX"] > 0:
         if x["_MCC"] > 0:
             y.append("314")
@@ -922,6 +927,171 @@ def mdc06(x):
     if x["_MDC06"] == 0:
         return y
 
+    if x["326&327&328|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("326")
+        elif x["_CC"] > 0:
+            y.append("327")
+        else:
+            y.append("328")
+    
+    if x["329&330&331|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("329")
+        elif x["_CC"] > 0:
+            y.append("330")
+        else:
+            y.append("331")
+
+    if x["332&333&334|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("332")
+        elif x["_CC"] > 0:
+            y.append("333")
+        else:
+            y.append("334")
+    
+    if x["335&336&337|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("335")
+        elif x["_CC"] > 0:
+            y.append("336")
+        else:
+            y.append("337")
+        
+    if x["338&339&340&341&342&343|APPENDECTOMY ORPCS"] > 0:
+        if x["338&339&340&341&342&343|COMPLICATED PDX PDX"] > 0:
+            if x["_MCC"] > 0:
+                y.append("338")
+            elif x["_CC"] > 0:
+                y.append("339")
+            else:
+                y.append("340")
+        else:
+            if x["_MCC"] > 0:
+                y.append("341")
+            elif x["_CC"] > 0:
+                y.append("342")
+            else:
+                y.append("343")
+
+    if x["344&345&346|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("344")
+        elif x["_CC"] > 0:
+            y.append("345")
+        else:
+            y.append("346")
+
+    if x["347&348&349|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("347")
+        elif x["_CC"] > 0:
+            y.append("348")
+        else:
+            y.append("349")
+
+    s1 = ("350&351&352&353&354&355|INGUINAL AND " + 
+            "FEMORAL HERNIA PROCEDURE ORPCS")
+    s2 = ("350&351&352&353&354&355|HERNIA PROCEDURE EXCEPT " + 
+            "INGUINAL AND FEMORAL ORPCS")
+    if x[s1] > 0:
+        if x["_MCC"] > 0:
+            y.append("350")
+        elif x["_CC"] > 0:
+            y.append("351")
+        else:
+            y.append("352")
+    elif x[s2] > 0:
+        if x["_MCC"] > 0:
+            y.append("353")
+        elif x["_CC"] > 0:
+            y.append("354")
+        else:
+            y.append("355")
+
+    if x["356&357&358|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("356")
+        elif x["_CC"] > 0:
+            y.append("357")
+        else:
+            y.append("358")
+
+    if x["368&369&370|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("368")
+        elif x["_CC"] > 0:
+            y.append("369")
+        else:
+            y.append("370")
+
+    if x["371&372&373|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("371")
+        elif x["_CC"] > 0:
+            y.append("372")
+        else:
+            y.append("373")
+
+    if x["374&375&376|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("374")
+        elif x["_CC"] > 0:
+            y.append("375")
+        else:
+            y.append("376")
+
+    if x["377&378&379|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("377")
+        elif x["_CC"] > 0:
+            y.append("378")
+        else:
+            y.append("379")
+
+    if x["380&381&382&383&384|COMPLICATED PEPTIC ULCER PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("380")
+        elif x["_CC"] > 0:
+            y.append("381")
+        else:
+            y.append("382")
+    elif x["380&381&382&383&384|UNCOMPLICATED PEPTIC ULCER PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("383")
+        else:
+            y.append("384")
+
+    if x["385&386&387|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("385")
+        elif x["_CC"] > 0:
+            y.append("386")
+        else:
+            y.append("387")
+ 
+    if x["388&389&390|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("388")
+        elif x["_CC"] > 0:
+            y.append("389")
+        else:
+            y.append("390")
+ 
+    if x["391&392|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("391")
+        else:
+            y.append("392")
+
+    if x["393&394&395|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("393")
+        elif x["_CC"] > 0:
+            y.append("394")
+        else:
+            y.append("395")
 
     return y
 
@@ -931,6 +1101,107 @@ def mdc07(x):
     if x["_MDC07"] == 0:
         return y
 
+    if x["405&406&407|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("405")
+        elif x["_CC"] > 0:
+            y.append("406")
+        else:
+            y.append("407")
+
+    if x["408&409&410|ORPCS"] + x["408&409&410|OR ORPCS"] > 0:
+        if x["408&409&410|WITHOUT ORPCS"] == 0:
+            if x["_MCC"] > 0:
+                y.append("408")
+            elif x["_CC"] > 0:
+                y.append("409")
+            else:
+                y.append("410")
+
+    s1 = "411&412&413&414&415&416&417&418&419|ORPCS" 
+    s2 = "411&412&413&414&415&416&417&418&419|C.D.E. ORPCS"
+    s3 = ("411&412&413&414&415&416&417&418&419|CHOLECYSTECTOMY EXCEPT " + 
+            "BY LAPAROSCOPE ORPCS")
+    s4 = ("411&412&413&414&415&416&417&418&419|LAPAROSCOPIC " + 
+            "CHOLECYSTECTOMY ORPCS")
+    if x[s1] > 0:
+        if x[s2] > 0:
+            if x["_MCC"] > 0:
+                y.append("411")
+            elif x["_CC"] > 0:
+                y.append("412")
+            else:
+                y.append("413")
+        elif x[s3] > 0:
+            if x["_MCC"] > 0:
+                y.append("414")
+            elif x["_CC"] > 0:
+                y.append("415")
+            else:
+                y.append("416")
+        elif x[s4] > 0:
+            if x["_MCC"] > 0:
+                y.append("417")
+            elif x["_CC"] > 0:
+                y.append("418")
+            else:
+                y.append("419")
+
+    if x["420&421&422|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("420")
+        elif x["_CC"] > 0:
+            y.append("421")
+        else:
+            y.append("422")
+
+    if x["423&424&425|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("423")
+        elif x["_CC"] > 0:
+            y.append("424")
+        else:
+            y.append("425")
+
+    if x["432&433&434|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("432")
+        elif x["_CC"] > 0:
+            y.append("433")
+        else:
+            y.append("434")
+
+    if x["435&436&437|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("435")
+        elif x["_CC"] > 0:
+            y.append("436")
+        else:
+            y.append("437")
+
+    if x["438&439&440|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("438")
+        elif x["_CC"] > 0:
+            y.append("439")
+        else:
+            y.append("440")
+
+    if x["441&442&443|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("441")
+        elif x["_CC"] > 0:
+            y.append("442")
+        else:
+            y.append("443")
+
+    if x["444&445&446|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("444")
+        elif x["_CC"] > 0:
+            y.append("445")
+        else:
+            y.append("446")
 
     return y
 

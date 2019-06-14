@@ -2,6 +2,9 @@
 import drgpy._mdcsrdr as mdcsrdr
 import drgpy._appndxrdr as appndxrdr
 import drgpy._mdcs0007 as mdcs0007
+import drgpy._mdcs0811 as mdcs0811
+import drgpy._mdcs1221 as mdcs1221
+import drgpy._mdcs2225 as mdcs2225
 from collections import defaultdict
 from collections import Counter
 
@@ -85,11 +88,33 @@ class DRGEngine:
         y += mdcs0007.mdc05(x)
         y += mdcs0007.mdc06(x)
         y += mdcs0007.mdc07(x)
+        y += mdcs0811.mdc08(x)
+        y += mdcs0811.mdc09(x)
+        y += mdcs0811.mdc10(x)
+        y += mdcs0811.mdc11(x)
+        y += mdcs1221.mdc12(x)
+        y += mdcs1221.mdc13(x)
+        y += mdcs1221.mdc14(x)
+        y += mdcs1221.mdc15(x)
+        y += mdcs1221.mdc16(x)
+        y += mdcs1221.mdc17(x)
+        y += mdcs1221.mdc18(x)
+        y += mdcs1221.mdc19(x)
+        y += mdcs1221.mdc20(x)
+        y += mdcs1221.mdc21(x)
+        y += mdcs2225.mdc22(x)
+        y += mdcs2225.mdc23(x)
+        y += mdcs2225.mdc24(x)
+        y += mdcs2225.mdc25(x)
 
         return y
         
-         
-
+    def get_drg(self, dx_lst, pr_lst):
+        y_all = self.get_drg_all(dx_lst, pr_lst)
+        if len(y_all) > 0:
+            return y[0]
+        else:
+            return []
 
     
 
