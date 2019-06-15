@@ -1,9 +1,9 @@
 import unittest
 from drgpy.msdrg import DRGEngine
 
-class TestMCD05(unittest.TestCase):
+class TestMCD07(unittest.TestCase):
 
-    def test_mdcs05(self):
+    def test_mdcs07(self):
 
         de = DRGEngine()
 
