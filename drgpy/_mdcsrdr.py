@@ -30,7 +30,10 @@ def get_codetype(dx_lst, pr_lst, cache):
     return codetype
 
 def get_label(cache):
-    return "{}|{}".format(cache["C"], cache["D"])
+    label = "{}|{}".format(cache["C"], cache["D"])
+    while label in cache["L"]:
+        label = label + "*"
+    return label 
 
 def update_mapping(dxmap, prmap, cache):
     if len(cache["E"]) > 0:
@@ -38,7 +41,8 @@ def update_mapping(dxmap, prmap, cache):
         code = cache["E"][1]
         label = get_label(cache)
         if len(cache["E"]) > 2:
-            label = "{}|{}".format(label, cache["E"][2]) # additional code
+            for code_add in cache["E"][2:]:
+                label = "{}|{}".format(label, code_add) # additional code
         if codetype == "dx":
             dxmap[code].append(label)
         elif codetype == "pr":
@@ -71,6 +75,8 @@ def parse_C(line, cursor, cache, _cursor):
         drg = drg_lst[0]
         if _cursor != "C":
             cache["C"] = drg
+            cache["D"] = ""
+            cache["E"] = []
         else:
             cache["C"] += ("&" + drg)
 
@@ -83,10 +89,14 @@ def parse_D(line, cursor, cache, _cursor):
     if line == "":
         return
 
+    phrase = shorten(line)
     if _cursor != "D":
-        cache["D"] = shorten(line)
+        # NOTE: to keep track of duplicate names
+        cache["L"][get_label(cache)] = 1
+        cache["D"] = phrase
+        cache["E"] = []
     else:
-        cache["D"] += (" " + shorten(line))
+        cache["D"] += (" " + phrase)
 
 def is_E(line, cursor):
     return (cursor in {"D", "E"} and line[:2] == "  ")
@@ -140,7 +150,8 @@ def read(fn, dxmap, prmap):
             "C": "", 
             "D": "",
             "E": [],
-            "_": defaultdict(dict)}
+            "_": defaultdict(dict),
+            "L": {}}
     fn = rscfn(__name__, fn)
    
     with open(fn, "r") as fp:
@@ -183,7 +194,7 @@ if __name__=="__main__":
                 "data/mdcs_22_25.txt"]
     dxmap = defaultdict(list)
     prmap = defaultdict(list)
-    for fn in fn_lst[:1]:
+    for fn in fn_lst[:2]:
         dxmap, prmap = read(fn, dxmap, prmap)
 
     #import json

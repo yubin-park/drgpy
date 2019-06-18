@@ -60,7 +60,7 @@ class DRGEngine:
             for x_i in self.prmap[pr]:
                 tokens = x_i.split("|")
                 if len(tokens) > 2:
-                    if tokens[2] in pr_lst:
+                    if all((x in pr_lst) for x in tokens[2:]):
                         x.append(tokens[0] + "|" + tokens[1])
                 else:
                     x.append(x_i)

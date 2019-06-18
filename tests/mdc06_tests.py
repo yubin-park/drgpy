@@ -70,7 +70,7 @@ class TestMCD06(unittest.TestCase):
         drg_lst = de.get_drg_all(["A0832"], [])
         self.assertTrue("392" in drg_lst)
  
-        drg_lst = de.get_drg_all(["D0128"], [])
+        drg_lst = de.get_drg_all(["D131"], [])
         self.assertTrue("395" in drg_lst)
  
 if __name__=="__main__":

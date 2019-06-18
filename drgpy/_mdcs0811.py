@@ -315,6 +315,89 @@ def mdc09(x):
     if x["_MDC09"] == 0:
         return y
 
+    if x["573&574&575&576&577&578|SKIN GRAFT ORPCS"] > 0:
+        if x["573&574&575&576&577&578|SKIN ULCER OR CELLULITIS PDX"] > 0:
+            if x["_MCC"] > 0:
+                y.append("573")
+            elif x["_CC"] > 0:
+                y.append("574")
+            else:
+                y.append("575")
+        else:
+            if x["_MCC"] > 0:
+                y.append("576")
+            elif x["_CC"] > 0:
+                y.append("577")
+            else:
+                y.append("578")
+   
+    if x["579&580&581|ORPCS"] + x["579&580&581|OR NON-ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("579")
+        elif x["_CC"] > 0:
+            y.append("580")
+        else:
+            y.append("581")
+ 
+    if x["582&583|PSDX"]*x["582&583|ORPCS"] > 0:
+        if x["_MCC"] + x["_CC"] > 0:
+            y.append("582")
+        else:
+            y.append("583")
+
+    if x["584&585|ORPCS"] > 0:
+        if x["_MCC"] + x["_CC"] > 0:
+            y.append("584")
+        else:
+            y.append("585")
+
+    if x["573&574&575&576&577&578|SKIN ULCER OR CELLULITIS PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("592")
+        elif x["_CC"] > 0:
+            y.append("593")
+        else:
+            y.append("594")
+
+    if x["595&596|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("595")
+        else:
+            y.append("596")
+
+    s1 = "597&598&599&600&601|MALIGNANT BREAST DISORDERS PDX"
+    s2 = "597&598&599&600&601|NON-MALIGNANT BREAST DISORDERS PDX"
+    if x[s1] > 0:
+        if x["_MCC"] > 0:
+            y.append("597")
+        elif x["_CC"] > 0:
+            y.append("598")
+        else:
+            y.append("599")
+    elif x[s2] > 0:
+        if x["_MCC"] + x["_CC"] > 0:
+            y.append("600")
+        else:
+            y.append("601")
+
+    if x["602&603|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("602")
+        else:
+            y.append("603")
+
+    if x["604&605|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("604")
+        else:
+            y.append("605")
+
+    if x["606&607|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("606")
+        else:
+            y.append("607")
+
     return y
 
 def mdc10(x):
@@ -323,6 +406,77 @@ def mdc10(x):
     if x["_MDC10"] == 0:
         return y
 
+    if x["616&617&618|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("616")
+        elif x["_CC"] > 0:
+            y.append("617")
+        else:
+            y.append("618")
+
+    if x["619&620&621|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("619")
+        elif x["_CC"] > 0:
+            y.append("620")
+        else:
+            y.append("621")
+
+    if x["614&615|ORPCS"] > 0:
+        if x["_MCC"] + x["_CC"] > 0:
+            y.append("614")
+        else:
+            y.append("615")
+
+    if x["622&623&624|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("622")
+        elif x["_CC"] > 0:
+            y.append("623")
+        else:
+            y.append("624")
+
+    if x["625&626&627|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("625")
+        elif x["_CC"] > 0:
+            y.append("626")
+        else:
+            y.append("627")
+
+    if x["628&629&630|ORPCS"] + x["628&629&630|OR NON-ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("628")
+        elif x["_CC"] > 0:
+            y.append("629")
+        else:
+            y.append("630")
+
+    if x["637&638&639|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("637")
+        elif x["_CC"] > 0:
+            y.append("638")
+        else:
+            y.append("639")
+
+    if x["640&641|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("640")
+        else:
+            y.append("641")
+
+    if x["642|PDX"] > 0:
+        y.append("642")
+
+    if x["643&644&645|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("643")
+        elif x["_CC"] > 0:
+            y.append("644")
+        else:
+            y.append("645")
+
     return y
 
 def mdc11(x):
@@ -330,6 +484,126 @@ def mdc11(x):
     y = []
     if x["_MDC11"] == 0:
         return y
+
+    if x["652|ORPCS"] > 0:
+        y.append("652")
+
+    if x["653&654&655|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("653")
+        elif x["_CC"] > 0:
+            y.append("654")
+        else:
+            y.append("655")
+
+    s1 = "656&657&658&659&660&661|KIDNEY AND URETER PROCEDURE ORPCS"
+    s2 = "656&657&658&659&660&661|NEOPLASM PDX"
+    if x[s1] > 0:
+        if x[s2] > 0:
+            if x["_MCC"] > 0:
+                y.append("656")
+            elif x["_CC"] > 0:
+                y.append("657")
+            else:
+                y.append("658")
+        else:
+            if x["_MCC"] > 0:
+                y.append("659")
+            elif x["_CC"] > 0:
+                y.append("660")
+            else:
+                y.append("661")
+ 
+    if x["662&663&664|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("662")
+        elif x["_CC"] > 0:
+            y.append("663")
+        else:
+            y.append("664")
+
+    if x["665&666&667|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("665")
+        elif x["_CC"] > 0:
+            y.append("666")
+        else:
+            y.append("667")
+    
+    if x["668&669&670|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("668")
+        elif x["_CC"] > 0:
+            y.append("669")
+        else:
+            y.append("670")
+
+    if x["671&672|ORPCS"] > 0:
+        if x["_MCC"] + x["_CC"] > 0:
+            y.append("671")
+        else:
+            y.append("672")
+
+    if (x["673&674&675|ORPCS"] + 
+        x["673&674&675|OR PDX"]*x["673&674&675|AND NON-ORPCS"] + 
+        x["673&674&675|OR PDX*"]*x["673&674&675|AND NON-ORPCS*"] > 0):
+        if x["_MCC"] > 0:
+            y.append("673")
+        elif x["_CC"] > 0:
+            y.append("674")
+        else:
+            y.append("675")
+
+    if x["682&683&684|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("682")
+        elif x["_CC"] > 0:
+            y.append("683")
+        else:
+            y.append("684")
+
+    if x["686&687&688|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("686")
+        elif x["_CC"] > 0:
+            y.append("687")
+        else:
+            y.append("688")
+
+    if x["689&690|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("689")
+        else:
+            y.append("690")
+
+    if x["691&692&693&694|URINARY STONES PDX"] > 0:
+        if x["691&692&693&694|ESW LITHOTRIPSY NON-ORPCS"] > 0:
+            if x["_MCC"] + x["_CC"] > 0:
+                y.append("691")
+            else:
+                y.append("692")
+        else:
+            if x["_MCC"] > 0:
+                y.append("693")
+            else:
+                y.append("694")
+
+    if x["695&696|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("695")
+        else:
+            y.append("696")
+
+    if x["697|PDX"] > 0:
+        y.append("697")
+
+    if x["698&699&700|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("698")
+        elif x["_CC"] > 0:
+            y.append("699")
+        else:
+            y.append("700")
 
     return y
 
