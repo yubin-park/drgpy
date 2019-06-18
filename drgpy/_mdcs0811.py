@@ -211,7 +211,101 @@ def mdc08(x):
         else:
             y.append("517")
 
+    if x["533&534|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("533")
+        else:
+            y.append("534")
 
+    if x["535&536|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("535")
+        else:
+            y.append("536")
+
+    if x["537&538|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("537")
+        else:
+            y.append("538")
+
+    if x["539&540&541|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("539")
+        elif x["_CC"] > 0:
+            y.append("540")
+        else:
+            y.append("541")
+
+    if x["542&543&544|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("542")
+        elif x["_CC"] > 0:
+            y.append("543")
+        else:
+            y.append("544")
+
+    if x["545&546&547|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("545")
+        elif x["_CC"] > 0:
+            y.append("546")
+        else:
+            y.append("547")
+
+    if x["548&549&550|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("548")
+        elif x["_CC"] > 0:
+            y.append("549")
+        else:
+            y.append("550")
+
+    if x["551&552|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("551")
+        else:
+            y.append("552")
+
+    if x["553&554|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("553")
+        else:
+            y.append("554")
+
+    if x["555&556|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("555")
+        else:
+            y.append("556")
+
+    if x["557&558|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("557")
+        else:
+            y.append("558")
+
+    if x["559&560&561|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("559")
+        elif x["_CC"] > 0:
+            y.append("560")
+        else:
+            y.append("561")
+
+    if x["562&563|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("562")
+        else:
+            y.append("563")
+
+    if x["564&565&566|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("564")
+        elif x["_CC"] > 0:
+            y.append("565")
+        else:
+            y.append("566")
 
     return y
 

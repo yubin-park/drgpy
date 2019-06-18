@@ -94,6 +94,48 @@ class TestMCD08(unittest.TestCase):
         drg_lst = de.get_drg_all(["Z9716"], ["008G0ZZ"])
         self.assertTrue("517" in drg_lst)
 
+        drg_lst = de.get_drg_all(["S72301B"], [])
+        self.assertTrue("534" in drg_lst)
+
+        drg_lst = de.get_drg_all(["S32301B"], [])
+        self.assertTrue("536" in drg_lst)
+
+        drg_lst = de.get_drg_all(["S73022A"], [])
+        self.assertTrue("538" in drg_lst)
+
+        drg_lst = de.get_drg_all(["M4622"], [])
+        self.assertTrue("541" in drg_lst)
+
+        drg_lst = de.get_drg_all(["C4010"], [])
+        self.assertTrue("544" in drg_lst)
+
+        drg_lst = de.get_drg_all(["I7301"], [])
+        self.assertTrue("547" in drg_lst)
+
+        drg_lst = de.get_drg_all(["M00049"], [])
+        self.assertTrue("550" in drg_lst)
+
+        drg_lst = de.get_drg_all(["S335XXA"], [])
+        self.assertTrue("552" in drg_lst)
+
+        drg_lst = de.get_drg_all(["M02021", "E0800"], [])
+        self.assertTrue("553" in drg_lst)
+
+        drg_lst = de.get_drg_all(["M25111"], [])
+        self.assertTrue("556" in drg_lst)
+
+        drg_lst = de.get_drg_all(["M24242"], [])
+        self.assertTrue("558" in drg_lst)
+
+        drg_lst = de.get_drg_all(["M4842XD"], [])
+        self.assertTrue("561" in drg_lst)
+
+        drg_lst = de.get_drg_all(["M222X2"], [])
+        self.assertTrue("563" in drg_lst)
+
+        drg_lst = de.get_drg_all(["D1601"], [])
+        self.assertTrue("566" in drg_lst)
+
 
 
 
