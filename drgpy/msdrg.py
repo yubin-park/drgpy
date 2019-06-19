@@ -73,6 +73,7 @@ class DRGEngine:
         # TODO: need to identify if the patient is live at discharge
         # For now, we just assume all patients are alive
         x.append("_ALIVE")
+        x.append("_NDX{}".format(len(dx_lst)))
 
         return Counter(x)
 
