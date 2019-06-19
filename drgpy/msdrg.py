@@ -1,7 +1,6 @@
 
 import drgpy._mdcsrdr as mdcsrdr
 import drgpy._appndxrdr as appndxrdr
-import drgpy._exceptions as exceptions
 import drgpy._mdcs0007 as mdcs0007
 import drgpy._mdcs0811 as mdcs0811
 import drgpy._mdcs1221 as mdcs1221
@@ -30,9 +29,6 @@ class DRGEngine:
 
         uormap = appndxrdr.read_f()
         self.uormap = uormap
-
-        mdc08_ex = exceptions.read_mdc08()
-        self.mdc08_ex = mdc08_ex
 
     def get_features(self, dx_lst, pr_lst):
 
@@ -96,7 +92,7 @@ class DRGEngine:
         y += mdcs0007.mdc05(x)
         y += mdcs0007.mdc06(x)
         y += mdcs0007.mdc07(x)
-        y += mdcs0811.mdc08(x, pr_lst, self.mdc08_ex)
+        y += mdcs0811.mdc08(x)
         y += mdcs0811.mdc09(x)
         y += mdcs0811.mdc10(x)
         y += mdcs0811.mdc11(x)
@@ -139,7 +135,7 @@ class DRGEngine:
         if len(y_all) > 0:
             return y[0]
         else:
-            return None
+            return "000"
 
     
 

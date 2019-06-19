@@ -1,5 +1,5 @@
 
-def mdc08(x, pr_lst, excmap):
+def mdc08(x):
 
     y = []
     if x["_MDC08"] == 0:
@@ -23,16 +23,8 @@ def mdc08(x, pr_lst, excmap):
     s1 = "456&457&458|SPINAL FUSION EXCEPT CERVICAL ORPCS"
     s2 = "456&457&458|SPINAL CURVATURE / MALIGNANCY / INFECTION PDX"
     s3 = "456&457&458|OR SDX"
-    z = 0
-    if x["456&457&458|EXTENSIVE FUSIONS ORPCS"] > 0:
-        flst = list(set([excmap[pr] for pr in pr_lst if pr in excmap]))
-        if len(flst) == 0:
-            z = 1
-        elif "ab" in "".join(sorted(flst)):
-            z = 1
-        elif "cd" in "".join(sorted(flst)):
-            z = 1
-    if x[s1] + x[s2] + x[s3] + z > 0:
+    s4 = "456&457&458|EXTENSIVE FUSIONS ORPCS"
+    if x[s1] + x[s2] + x[s3] + x[s4] > 0:
         if x["_MCC"] > 0:
             y.append("456")
         elif x["_CC"] > 0:
