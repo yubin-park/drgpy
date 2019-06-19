@@ -75,6 +75,27 @@ def mdc24(x):
     if x["_MDC24"] == 0:
         return y
 
+    if x["955|ORPCS"] > 0:
+        y.append("955")
+
+    if x["956|ORPCS"] > 0:
+        y.append("956")
+
+    if x["957&958&959|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("957")
+        elif x["_CC"] > 0:
+            y.append("958")
+        else:
+            y.append("959")
+
+    if x["_MCC"] > 0:
+        y.append("963")
+    elif x["_CC"] > 0:
+        y.append("964")
+    else:
+        y.append("965")
+
     return y
 
 def mdc25(x):
@@ -82,6 +103,26 @@ def mdc25(x):
     y = []
     if x["_MDC25"] == 0:
         return y
+
+    if x["_ORPCS*"] > 0:
+        if x["_MCC"] > 0:
+            y.append("969")
+        else:
+            y.append("970")
+
+    if (x["974&975&976|PSDX OF HIV INFECTION"] *
+        x["974&975&976|AND PSDX OF MAJOR RELATED CONDITION"] > 0):
+        if x["_MCC"] > 0:
+            y.append("974")
+        elif x["_CC"] > 0:
+            y.append("975")
+        else:
+            y.append("976")
+
+    if (x["974&975&976|PSDX OF HIV INFECTION"] > 0 and
+        x["974&975&976|AND PSDX OF MAJOR RELATED CONDITION"] == 0):
+        y.append("977")
+
 
     return y
 

@@ -1,6 +1,7 @@
 
 import drgpy._mdcsrdr as mdcsrdr
 import drgpy._appndxrdr as appndxrdr
+import drgpy._exceptions as exceptions
 import drgpy._mdcs0007 as mdcs0007
 import drgpy._mdcs0811 as mdcs0811
 import drgpy._mdcs1221 as mdcs1221
@@ -29,6 +30,9 @@ class DRGEngine:
 
         uormap = appndxrdr.read_f()
         self.uormap = uormap
+
+        mdc08_ex = exceptions.read_mdc08()
+        self.mdc08_ex = mdc08_ex
 
     def get_features(self, dx_lst, pr_lst):
 
@@ -67,6 +71,8 @@ class DRGEngine:
                 
             if pr in self.orpcsmap:
                 x.append("_ORPCS")
+                if pr not in self.uormap:
+                    x.append("_ORPCS*")
             if pr in self.uormap:
                 x.append("_UNREALTED_ORPCS")
     
@@ -90,7 +96,7 @@ class DRGEngine:
         y += mdcs0007.mdc05(x)
         y += mdcs0007.mdc06(x)
         y += mdcs0007.mdc07(x)
-        y += mdcs0811.mdc08(x)
+        y += mdcs0811.mdc08(x, pr_lst, self.mdc08_ex)
         y += mdcs0811.mdc09(x)
         y += mdcs0811.mdc10(x)
         y += mdcs0811.mdc11(x)
@@ -109,6 +115,23 @@ class DRGEngine:
         y += mdcs2225.mdc24(x)
         y += mdcs2225.mdc25(x)
 
+        # NOTE: Appendix F - No PDX mapped
+        if len(y) == 0:
+            if x["_ORPCS*"] > 0:
+                if x["_MCC"] > 0:
+                    y.append("981")
+                elif x["_CC"] > 0:
+                    y.append("982")
+                else:
+                    y.append("983")
+            elif x["_UNRELATED_ORPCS"] > 0:
+                if x["_MCC"] > 0:
+                    y.append("987")
+                elif x["_CC"] > 0:
+                    y.append("988")
+                else:
+                    y.append("989")
+ 
         return y
         
     def get_drg(self, dx_lst, pr_lst):
@@ -116,7 +139,7 @@ class DRGEngine:
         if len(y_all) > 0:
             return y[0]
         else:
-            return []
+            return None
 
     
 

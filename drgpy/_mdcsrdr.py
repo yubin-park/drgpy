@@ -62,8 +62,8 @@ def parse_A(line, cursor, dxmap, cache):
         dxmap[dx].append(cache["A"])
 
 def is_B(line, cursor):
-    return (cursor in {"A", "B", "D", "E"} and 
-            (line[:2] == "+-" or line[0]=="|"))
+    return ((cursor in {"A", "B", "D", "E"} and (line[:2] == "+-" )) or 
+            (cursor in {"B"} and line[0]=="|"))
 
 def is_C(line, cursor):
     return (cursor in {"B", "C", "D", "E"} and line[:4] == "DRG ")
@@ -194,7 +194,7 @@ if __name__=="__main__":
                 "data/mdcs_22_25.txt"]
     dxmap = defaultdict(list)
     prmap = defaultdict(list)
-    for fn in fn_lst[:2]:
+    for fn in fn_lst[3:]:
         dxmap, prmap = read(fn, dxmap, prmap)
 
     #import json

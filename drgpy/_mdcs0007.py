@@ -19,7 +19,7 @@ def mdc00(x):
     c1 = (x["003&004|TRACHEOSTOMY ORPCS"] + x["003&004|OR NON-ORPCS"])
     c2 = (x["003&004|MECHANICAL VENTILATION >96 HOURS NON-ORPCS"] + 
             int(x["011&012&013|PDX"] == 0))
-    c3 = (x["_ORPCS"] > x["_UNRELATED_ORPCS"]) 
+    c3 = (x["_ORPCS*"] > 0) 
     if x["003&004|ECMO ORPCS"] > 0:
         y.append("003")
     elif c1 * c2 > 0:
