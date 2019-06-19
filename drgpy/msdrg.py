@@ -74,6 +74,7 @@ class DRGEngine:
         # For now, we just assume all patients are alive
         x.append("_ALIVE")
         x.append("_NDX{}".format(len(dx_lst)))
+        x.append("_STATUS01") # NOTE: AMA, other statuses ignored
 
         return Counter(x)
 

@@ -267,6 +267,47 @@ def mdc16(x):
     if x["_MDC16"] == 0:
         return y
 
+    if x["799&800&801|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("799")
+        elif x["_CC"] > 0:
+            y.append("800")
+        else:
+            y.append("801")
+    
+    if x["802&803&804|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("802")
+        elif x["_CC"] > 0:
+            y.append("803")
+        else:
+            y.append("804")
+
+    if x["808&809&810|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("808")
+        elif x["_CC"] > 0:
+            y.append("809")
+        else:
+            y.append("810")
+    
+    if x["811&812|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("811")
+        else:
+            y.append("812")
+
+    if x["813|PDX"] > 0:
+        y.append("813")
+
+    if x["814&815&816|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("814")
+        elif x["_CC"] > 0:
+            y.append("815")
+        else:
+            y.append("816")
+ 
     return y
 
 def mdc17(x):
@@ -274,6 +315,95 @@ def mdc17(x):
     y = []
     if x["_MDC17"] == 0:
         return y
+
+    if x["820&821&822|PDX"] * x["820&821&822|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("820")
+        elif x["_CC"] > 0:
+            y.append("821")
+        else:
+            y.append("822")
+
+    s1 = ("823&824&825|ANY OTHER ORPCS NOT LISTED IN DRGS 820-822 OR " + 
+        "ANY OF THE FOLLOWING NON-ORPCS")
+    if (x["823&824&825|PDX"] > 0 and
+        ((x["_ORPCS"] > 0 and x["820&821&822|ORPCS"] == 0) or 
+            x[s1] > 0)):
+        if x["_MCC"] > 0:
+            y.append("823")
+        elif x["_CC"] > 0:
+            y.append("824")
+        else:
+            y.append("825")
+
+    s1 = ("826&827&828|MYELOPROLIFERATIVE DISORDERS OR " + 
+            "POORLY DIFFERENTIATED NEOPLASMS PDX")
+    s2 = "826&827&828|MAJOR O.R. PROCEDURE ORPCS"
+    if x[s1] * x[s2] > 0:
+        if x["_MCC"] > 0:
+            y.append("826")
+        elif x["_CC"] > 0:
+            y.append("827")
+        else:
+            y.append("828")
+
+    s1 = ("829&830|MYELOPROLIFERATIVE DISORDERS OR " + 
+            "POORLY DIFFERENTIATED NEOPLASMS PDX")
+    s2 = "829&830|NON-ORPCS"
+    if x[s1] * (x[s2] + x["_ORPCS"]) > 0:
+        if x["_MCC"] + x["_CC"] > 0:
+            y.append("829")
+        else:
+            y.append("830")
+
+    if x["834&835&836|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("834")
+        elif x["_CC"] > 0:
+            y.append("835")
+        else:
+            y.append("836")
+
+    if x["837&838&839|CHEMOTHERAPY PDX"] > 0:
+        if x["837&838&839|ACUTE LEUKEMIA SDX"] > 0:
+            if x["_MCC"] > 0:
+                y.append("837")
+            elif x["_CC"] > 0:
+                y.append("838")
+            else:
+                y.append("839")
+        elif x["837&838&839|HIGH DOSE CHEMO AGENT"] > 0:
+            if x["_MCC"] > 0:
+                y.append("837")
+            else:
+                y.append("838")
+
+    if x["840&841&842|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("840")
+        elif x["_CC"] > 0:
+            y.append("841")
+        else:
+            y.append("842")
+
+    if x["843&844&845|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("843")
+        elif x["_CC"] > 0:
+            y.append("844")
+        else:
+            y.append("845")
+
+    if x["846&847&848|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("846")
+        elif x["_CC"] > 0:
+            y.append("847")
+        else:
+            y.append("848")
+
+    if x["849|PDX"] > 0:
+        y.append("849")
 
     return y
 
@@ -283,6 +413,54 @@ def mdc18(x):
     if x["_MDC18"] == 0:
         return y
 
+    if x["856&857&858|PDX"] * x["_ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("856")
+        elif x["_CC"] > 0:
+            y.append("857")
+        else:
+            y.append("858")
+
+    if x["853&854&855|PDX FROM MDC 18 EXCEPT"]==0 and x["_ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("853")
+        elif x["_CC"] > 0:
+            y.append("854")
+        else:
+            y.append("855")
+
+    if x["862&863|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("862")
+        else:
+            y.append("863")
+
+    if x["864|PDX"] > 0:
+        y.append("864")
+
+    if x["865&866|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("865")
+        else:
+            y.append("866")
+
+    if x["867&868&869|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("867")
+        elif x["_CC"] > 0:
+            y.append("868")
+        else:
+            y.append("869")
+
+    if x["870&871&872|SEPTICEMIA PDX"] > 0:
+        if (x["870&871&872|ECMO NON-ORPCS"] + 
+            x["870&871&872|MECHANICAL VENTILATION >96 HOURS"] > 0):
+            y.append("870")
+        elif x["_MCC"] > 0:
+            y.append("871")
+        else:
+            y.append("872")
+
     return y
 
 def mdc19(x):
@@ -290,6 +468,33 @@ def mdc19(x):
     y = []
     if x["_MDC19"] == 0:
         return y
+
+    if x["_ORPCS"] > 0:
+        y.append("876")
+
+    if x["880|PDX"] > 0:
+        y.append("880")
+
+    if x["881|PDX"] > 0:
+        y.append("881")
+
+    if x["882|PDX"] > 0:
+        y.append("882")
+
+    if x["883|PDX"] > 0:
+        y.append("883")
+
+    if x["884|PDX"] > 0:
+        y.append("884")
+
+    if x["885|PDX"] > 0:
+        y.append("885")
+
+    if x["886|PDX"] > 0:
+        y.append("886")
+
+    if x["887|PDX"] > 0:
+        y.append("887")
 
     return y
 
@@ -299,6 +504,18 @@ def mdc20(x):
     if x["_MDC20"] == 0:
         return y
 
+    if x["_STATUS07"] > 0:
+        y.append("894")
+
+    s1 = ("895&896&897|ALCOHOL/DRUG ABUSE OR DEPENDENCE PDX " + 
+            "IN MDC 20 REHABILITATION THERAPY NON-ORPCS")
+    if x[s1] > 0:
+        y.append("895")
+    elif x["_MCC"] > 0:
+        y.append("896")
+    else:
+        y.append("897")
+
     return y
 
 def mdc21(x):
@@ -306,6 +523,63 @@ def mdc21(x):
     y = []
     if x["_MDC21"] == 0:
         return y
+
+    if x["901&902&903|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("901")
+        elif x["_CC"] > 0:
+            y.append("902")
+        else:
+            y.append("903")
+
+    if x["904&905|ORPCS"] > 0:
+        if x["_MCC"] + x["_CC"] > 0:
+            y.append("904")
+        else:
+            y.append("905")
+
+    if x["906|ORPCS"] > 0:
+        y.append("906")
+
+    if x["907&908&909|ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("907")
+        elif x["_CC"] > 0:
+            y.append("908")
+        else:
+            y.append("909")
+
+    if x["913&914|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("913")
+        else:
+            y.append("914")
+
+    if x["915&916|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("915")
+        else:
+            y.append("916")
+    
+    if x["917&918|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("917")
+        else:
+            y.append("918")
+
+    if x["919&920&921|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("919")
+        elif x["_CC"] > 0:
+            y.append("920")
+        else:
+            y.append("921")
+
+    if x["922&923|PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("922")
+        else:
+            y.append("923")
 
     return y
 
