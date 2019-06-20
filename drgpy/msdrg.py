@@ -131,11 +131,20 @@ class DRGEngine:
         return y
         
     def get_drg(self, dx_lst, pr_lst):
-        y_all = self.get_drg_all(dx_lst, pr_lst)
-        if len(y_all) > 0:
-            return y[0]
-        else:
-            return "000"
+        """
+        Return the corresponding DRG code for the diagnoses and procedures
+
+        Parameters
+        ----------
+        dx_lst : list
+                A list of ICD-10 diagnosis codes
+        pr_lst : list
+                A list of ICD-10 procedure codes
+        """
+
+        y_all = self.get_drg_all(dx_lst, pr_lst) 
+        y_all = y_all + ["000"]
+        return y_all[0]
 
     
 
