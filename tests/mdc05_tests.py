@@ -139,7 +139,6 @@ class TestMCD05(unittest.TestCase):
         drg_lst = de.get_drg_all(["A3681", "A000"],[])
         self.assertTrue("315" in drg_lst) 
 
-   
 
 
 if __name__=="__main__":

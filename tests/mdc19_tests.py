@@ -33,6 +33,9 @@ class TestMCD19(unittest.TestCase):
  
         drg_lst = de.get_drg_all(["F4489"], [])
         self.assertTrue("887" in drg_lst)
+
+        drg_lst = de.get_drg_all(['T6591XA','F23'],[])
+        self.assertTrue("918" in drg_lst)
  
 if __name__=="__main__":
     unittest.main()

@@ -53,7 +53,7 @@ class DRGEngine:
                             x.append(x_i)
                 if dx in self.ccmap and not is_pdx:
                     cc_info = self.ccmap[dx]
-                    if pdx not in self.exmap[cc_info["pdx"]]:
+                    if pdx not in self.exmap.get(cc_info["pdx"],[]):
                         x.append("_" + cc_info["level"])
 
         for pr in pr_lst:
