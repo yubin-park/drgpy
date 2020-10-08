@@ -19,6 +19,8 @@ class DRGEngine:
         dxmap, prmap = mdcsrdr.read("data/mdcs_22_25.txt", dxmap, prmap)
         self.dxmap = dxmap
         self.prmap = prmap
+
+        self.drgmap = appndxrdr.read_a()
         
         ccmap, exmap = appndxrdr.read_c()
         self.ccmap = ccmap
@@ -129,7 +131,16 @@ class DRGEngine:
                     y.append("989")
  
         return y
-        
+  
+    def get_drg_all2(self, dx_lst, pr_lst):
+
+        y = []
+        drg_lst = self.get_drg_all(dx_lst, pr_lst)
+        for drg in drg_lst:
+            y.append(self.drgmap.get(drg, None))
+        y = [item for item in y if item is not None]
+        return y
+
     def get_drg(self, dx_lst, pr_lst):
         """
         Return the corresponding DRG code for the diagnoses and procedures
@@ -146,7 +157,7 @@ class DRGEngine:
         y_all = y_all + ["000"]
         return y_all[0]
 
-    
+        
 
 
 

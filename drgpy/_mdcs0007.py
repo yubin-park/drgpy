@@ -207,7 +207,7 @@ def mdc01(x):
             y.append("064")
         elif x["_CC"] > 0:
             y.append("065")
-        elif x["064&065&066|tPA within 24 hours Secondary diagnosis"] > 0:
+        elif x["064&065&066|TPA WITHIN 24 HOURS SDX"] > 0:
             y.append("065")
         else:
             y.append("066")
@@ -494,8 +494,8 @@ def mdc04(x):
             y.append("168")
 
     # 207 - 208
-    if (x["207&208|ANY PDX IN MDC 4 ECMO NON-ORPCS"] +
-        x["207&208|MECHANICAL VENTILATION >96 HOURS NON-ORPCS"] > 0):
+    if (x[("207&208|ANY PDX IN MDC 4 "
+        +"MECHANICAL VENTILATION >96 HOURS NON-ORPCS")] > 0):
         y.append("207")   
     elif x["207&208|MECHANICAL VENTILATION <96 HOURS NON-ORPCS"] > 0:
         y.append("208")
@@ -506,7 +506,10 @@ def mdc04(x):
             y.append("175")
         else:
             y.append("176")
-    
+    if x["175&176|ACUTE COR PULMONALE PSDX"] > 0:
+        y.append("175")   
+
+
     # 177 - 179
     if (x["177&178&179|PDX"] * x["793|OR SDX"] + 
             x["177&178&179|or PDX"] > 0):

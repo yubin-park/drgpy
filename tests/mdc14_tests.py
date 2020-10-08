@@ -17,14 +17,14 @@ class TestMCD14(unittest.TestCase):
         drg_lst = de.get_drg_all(["Z640"], ["10D00Z0", "0UB50ZZ"])
         self.assertTrue("788" not in drg_lst)
  
-        drg_lst = de.get_drg_all(["Z640", "Z370"], ["10D07Z3"])
+        drg_lst = de.get_drg_all(["Z640", "Z370"], ["10D17Z9"])
         self.assertTrue("768" in drg_lst)
         drg_lst = de.get_drg_all(["Z640", "Z370"], ["10D07Z3", "0KQM0ZZ"])
         self.assertTrue("768" not in drg_lst)
  
-        drg_lst = de.get_drg_all(["Z640", "Z370"], ["10D07Z3"])
+        drg_lst = de.get_drg_all(["Z640", "Z370"], ["10D17Z9"])
         self.assertTrue("798" not in drg_lst)
-        drg_lst = de.get_drg_all(["Z640", "Z370"], ["10D07Z3", "0U573ZZ"])
+        drg_lst = de.get_drg_all(["Z640", "Z370"], ["10D17Z9", "0U573ZZ"])
         self.assertTrue("798" in drg_lst)
  
         drg_lst = de.get_drg_all(["Z640"], ["10A00ZZ"])

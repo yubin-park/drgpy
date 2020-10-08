@@ -48,9 +48,10 @@ class TestMCD00(unittest.TestCase):
         drg_lst = de.get_drg_all([], ["XW033C3"])
         self.assertTrue("016" in drg_lst)
         drg_lst = de.get_drg_all(["I10", "E0800"], ["30230AZ"])
-        self.assertTrue("016" in drg_lst)
+        self.assertTrue("304" in drg_lst)
         drg_lst = de.get_drg_all([], ["30230AZ"])
-        self.assertTrue("017" in drg_lst)
+        # in v37, this is 983, used to be 017
+        self.assertTrue("983" in drg_lst) 
 
         drg_lst = de.get_drg_all(["E0800"], ["0FYG0Z0"])
         self.assertTrue("010" in drg_lst)

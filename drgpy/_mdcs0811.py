@@ -576,17 +576,11 @@ def mdc11(x):
         else:
             y.append("690")
 
-    if x["691&692&693&694|URINARY STONES PDX"] > 0:
-        if x["691&692&693&694|ESW LITHOTRIPSY NON-ORPCS"] > 0:
-            if x["_MCC"] + x["_CC"] > 0:
-                y.append("691")
-            else:
-                y.append("692")
+    if x["693&694|URINARY STONES PDX"] > 0:
+        if x["_MCC"] > 0:
+            y.append("693")
         else:
-            if x["_MCC"] > 0:
-                y.append("693")
-            else:
-                y.append("694")
+            y.append("694")
 
     if x["695&696|PDX"] > 0:
         if x["_MCC"] > 0:

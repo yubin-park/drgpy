@@ -177,8 +177,9 @@ def mdc14(x):
         else:
             y.append("788")
 
-    if (x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0 and
-        x["768|WITH ANY ORPCS EXCEPT"] == 0):
+    if ((x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0) or
+        (x["768|SDX"] * x["768|NON-ORPCS"] > 0 and 
+            x["768|WITH ANY ORPCS EXCEPT"] == 0)):
         y.append("768")
         
     if ((x["796&797&798|SDX"] * x["796&797&798|AND ORPCS"] * 
@@ -202,7 +203,8 @@ def mdc14(x):
         else:
             y.append("819")
 
-    if (x["805&806&807|SDX"] * x["805&806&807|AND ORPCS"] > 0):
+    if ((x["805&806&807|SDX"] * x["805&806&807|AND ORPCS"] > 0) or
+            (x["805&806&807|SDX"] * x["805&806&807|NON-ORPCS"] > 0)):
         if x["_MCC"] > 0:
             y.append("805")
         elif x["_CC"] > 0:
@@ -453,8 +455,7 @@ def mdc18(x):
             y.append("869")
 
     if x["870&871&872|SEPTICEMIA PDX"] > 0:
-        if (x["870&871&872|ECMO NON-ORPCS"] + 
-            x["870&871&872|MECHANICAL VENTILATION >96 HOURS"] > 0):
+        if x["870&871&872|MECHANICAL VENTILATION >96 HOURS"] > 0:
             y.append("870")
         elif x["_MCC"] > 0:
             y.append("871")

@@ -48,8 +48,9 @@ class TestMCD11(unittest.TestCase):
         drg_lst = de.get_drg_all(["A1810"], [])
         self.assertTrue("690" in drg_lst)
 
-        drg_lst = de.get_drg_all(["N200"], ["0TF7XZZ"])
-        self.assertTrue("692" in drg_lst)
+        # 692 is removed in v37
+        #drg_lst = de.get_drg_all(["N200"], ["0TF7XZZ"])
+        #self.assertTrue("692" in drg_lst)
         drg_lst = de.get_drg_all(["N200"], [])
         self.assertTrue("694" in drg_lst)
         drg_lst = de.get_drg_all(["N200", "E0800"], [])

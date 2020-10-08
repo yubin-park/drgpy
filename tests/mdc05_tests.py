@@ -108,13 +108,15 @@ class TestMCD05(unittest.TestCase):
         self.assertTrue("288" in drg_lst) 
 
         drg_lst = de.get_drg_all(["I0981"],["5A1522G"])
-        self.assertTrue("291" in drg_lst) 
+        # used to be 291, now 293 in v37
+        self.assertTrue("293" in drg_lst) 
 
         drg_lst = de.get_drg_all(["I8010"],[])
         self.assertTrue("295" in drg_lst) 
 
         drg_lst = de.get_drg_all(["I462"],["5A1522G"])
-        self.assertTrue("296" in drg_lst) 
+        # used to be 296, now 298 in v37
+        self.assertTrue("298" in drg_lst) 
 
         drg_lst = de.get_drg_all(["E0851", "D593"],[])
         self.assertTrue("299" in drg_lst) 

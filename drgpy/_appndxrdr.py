@@ -17,7 +17,8 @@ def read_a(fn="data/appendix_A.txt"):
             mdc = line[4:8].strip()
             medsurg = line[8:11].strip()
             desc = line[11:].strip()
-            drgmap[drg] = {"mdc": mdc,
+            drgmap[drg] = {"drg": drg,
+                        "mdc": mdc,
                         "is_medical": medsurg=="M",
                         "is_surgical": medsurg=="P",
                         "desc": desc}

@@ -2,6 +2,9 @@
 
 `drgpy` is a Python library for assigning a combination of diagnosis and procedure codes to Diagnosis Related Groups (MS-DRG) that is used in Medicare inpatient reimbursement today.
 
+NOTE the current version is configured as MSDRG v37.2
+Rawfiles: https://www.cms.gov/files/zip/icd-10-ms-drg-definitions-manual-files-v372.zip
+
 ## Installing
 
 Installing from the source:
@@ -71,7 +74,7 @@ Yubin Park, PhD
 
 ## References
 - https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html
-
+- https://www.cms.gov/files/zip/icd-10-ms-drg-definitions-manual-files-v372.zip
 
 
 

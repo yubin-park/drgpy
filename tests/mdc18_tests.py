@@ -25,10 +25,9 @@ class TestMCD18(unittest.TestCase):
         drg_lst = de.get_drg_all(["A0100"], [])
         self.assertTrue("869" in drg_lst)
  
-        drg_lst = de.get_drg_all(["A021"], ["5A1522G"])
-        self.assertTrue("870" in drg_lst)
         drg_lst = de.get_drg_all(["A021"], ["5A1955Z"])
         self.assertTrue("870" in drg_lst)
+        
         drg_lst = de.get_drg_all(["A021", "E0800"], [])
         self.assertTrue("871" in drg_lst)
  

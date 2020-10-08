@@ -665,6 +665,7 @@ ONLY OPERATING ROOM PROCEDURES
   04L20DZ Occlusion of Gastric Artery with Intraluminal Device, Open Approach
   04L20ZZ Occlusion of Gastric Artery, Open Approach
   04L23CZ Occlusion of Gastric Artery with Extraluminal Device, Percutaneous Approach
+  04L23DZ Occlusion of Gastric Artery with Intraluminal Device, Percutaneous Approach
   04L23ZZ Occlusion of Gastric Artery, Percutaneous Approach
   04L24CZ Occlusion of Gastric Artery with Extraluminal Device, Percutaneous Endoscopic Approach
   04L24DZ Occlusion of Gastric Artery with Intraluminal Device, Percutaneous Endoscopic Approach
@@ -2572,6 +2573,7 @@ ONLY OPERATING ROOM PROCEDURES
   099570Z Drainage of Right Middle Ear with Drainage Device, Via Natural or Artificial Opening
   099600Z Drainage of Left Middle Ear with Drainage Device, Open Approach
   09960ZX Drainage of Left Middle Ear, Open Approach, Diagnostic
+  099670Z Drainage of Left Middle Ear with Drainage Device, Via Natural or Artificial Opening
   099700Z Drainage of Right Tympanic Membrane with Drainage Device, Open Approach
   09970ZX Drainage of Right Tympanic Membrane, Open Approach, Diagnostic
   099730Z Drainage of Right Tympanic Membrane with Drainage Device, Percutaneous Approach
@@ -3005,10 +3007,6 @@ ONLY OPERATING ROOM PROCEDURES
   09UN87Z Supplement Nasopharynx with Autologous Tissue Substitute, Via Natural or Artificial Opening Endoscopic
   09UN8JZ Supplement Nasopharynx with Synthetic Substitute, Via Natural or Artificial Opening Endoscopic
   09UN8KZ Supplement Nasopharynx with Nonautologous Tissue Substitute, Via Natural or Artificial Opening Endoscopic
-  0B9H8ZX Drainage of Lung Lingula, Via Natural or Artificial Opening Endoscopic, Diagnostic
-  0B9K8ZX Drainage of Right Lung, Via Natural or Artificial Opening Endoscopic, Diagnostic
-  0B9L8ZX Drainage of Left Lung, Via Natural or Artificial Opening Endoscopic, Diagnostic
-  0B9M8ZX Drainage of Bilateral Lungs, Via Natural or Artificial Opening Endoscopic, Diagnostic
   0BBC7ZX Excision of Right Upper Lung Lobe, Via Natural or Artificial Opening, Diagnostic
   0BBC8ZX Excision of Right Upper Lung Lobe, Via Natural or Artificial Opening Endoscopic, Diagnostic
   0BBD7ZX Excision of Right Middle Lung Lobe, Via Natural or Artificial Opening, Diagnostic
@@ -3692,40 +3690,28 @@ ONLY OPERATING ROOM PROCEDURES
   0H0T0KZ Alteration of Right Breast with Nonautologous Tissue Substitute, Open Approach
   0H0T37Z Alteration of Right Breast with Autologous Tissue Substitute, Percutaneous Approach
   0H0T3KZ Alteration of Right Breast with Nonautologous Tissue Substitute, Percutaneous Approach
-  0H0TX7Z Alteration of Right Breast with Autologous Tissue Substitute, External Approach
-  0H0TXJZ Alteration of Right Breast with Synthetic Substitute, External Approach
-  0H0TXKZ Alteration of Right Breast with Nonautologous Tissue Substitute, External Approach
   0H0U07Z Alteration of Left Breast with Autologous Tissue Substitute, Open Approach
   0H0U0JZ Alteration of Left Breast with Synthetic Substitute, Open Approach
   0H0U0KZ Alteration of Left Breast with Nonautologous Tissue Substitute, Open Approach
   0H0U37Z Alteration of Left Breast with Autologous Tissue Substitute, Percutaneous Approach
   0H0U3KZ Alteration of Left Breast with Nonautologous Tissue Substitute, Percutaneous Approach
-  0H0UX7Z Alteration of Left Breast with Autologous Tissue Substitute, External Approach
-  0H0UXJZ Alteration of Left Breast with Synthetic Substitute, External Approach
-  0H0UXKZ Alteration of Left Breast with Nonautologous Tissue Substitute, External Approach
   0H0V07Z Alteration of Bilateral Breast with Autologous Tissue Substitute, Open Approach
   0H0V0JZ Alteration of Bilateral Breast with Synthetic Substitute, Open Approach
   0H0V0KZ Alteration of Bilateral Breast with Nonautologous Tissue Substitute, Open Approach
   0H0V37Z Alteration of Bilateral Breast with Autologous Tissue Substitute, Percutaneous Approach
   0H0V3KZ Alteration of Bilateral Breast with Nonautologous Tissue Substitute, Percutaneous Approach
-  0H0VX7Z Alteration of Bilateral Breast with Autologous Tissue Substitute, External Approach
-  0H0VXJZ Alteration of Bilateral Breast with Synthetic Substitute, External Approach
-  0H0VXKZ Alteration of Bilateral Breast with Nonautologous Tissue Substitute, External Approach
   0H5T0ZZ Destruction of Right Breast, Open Approach
   0H5T3ZZ Destruction of Right Breast, Percutaneous Approach
   0H5T7ZZ Destruction of Right Breast, Via Natural or Artificial Opening
   0H5T8ZZ Destruction of Right Breast, Via Natural or Artificial Opening Endoscopic
-  0H5TXZZ Destruction of Right Breast, External Approach
   0H5U0ZZ Destruction of Left Breast, Open Approach
   0H5U3ZZ Destruction of Left Breast, Percutaneous Approach
   0H5U7ZZ Destruction of Left Breast, Via Natural or Artificial Opening
   0H5U8ZZ Destruction of Left Breast, Via Natural or Artificial Opening Endoscopic
-  0H5UXZZ Destruction of Left Breast, External Approach
   0H5V0ZZ Destruction of Bilateral Breast, Open Approach
   0H5V3ZZ Destruction of Bilateral Breast, Percutaneous Approach
   0H5V7ZZ Destruction of Bilateral Breast, Via Natural or Artificial Opening
   0H5V8ZZ Destruction of Bilateral Breast, Via Natural or Artificial Opening Endoscopic
-  0H5VXZZ Destruction of Bilateral Breast, External Approach
   0H99X0Z Drainage of Perineum Skin with Drainage Device, External Approach
   0H99XZZ Drainage of Perineum Skin, External Approach
   0H9T0ZX Drainage of Right Breast, Open Approach, Diagnostic
@@ -3743,19 +3729,16 @@ ONLY OPERATING ROOM PROCEDURES
   0HBT3ZZ Excision of Right Breast, Percutaneous Approach
   0HBT7ZZ Excision of Right Breast, Via Natural or Artificial Opening
   0HBT8ZZ Excision of Right Breast, Via Natural or Artificial Opening Endoscopic
-  0HBTXZZ Excision of Right Breast, External Approach
   0HBU0ZX Excision of Left Breast, Open Approach, Diagnostic
   0HBU0ZZ Excision of Left Breast, Open Approach
   0HBU3ZZ Excision of Left Breast, Percutaneous Approach
   0HBU7ZZ Excision of Left Breast, Via Natural or Artificial Opening
   0HBU8ZZ Excision of Left Breast, Via Natural or Artificial Opening Endoscopic
-  0HBUXZZ Excision of Left Breast, External Approach
   0HBV0ZX Excision of Bilateral Breast, Open Approach, Diagnostic
   0HBV0ZZ Excision of Bilateral Breast, Open Approach
   0HBV3ZZ Excision of Bilateral Breast, Percutaneous Approach
   0HBV7ZZ Excision of Bilateral Breast, Via Natural or Artificial Opening
   0HBV8ZZ Excision of Bilateral Breast, Via Natural or Artificial Opening Endoscopic
-  0HBVXZZ Excision of Bilateral Breast, External Approach
   0HBW0ZX Excision of Right Nipple, Open Approach, Diagnostic
   0HBX0ZX Excision of Left Nipple, Open Approach, Diagnostic
   0HBY0ZX Excision of Supernumerary Breast, Open Approach, Diagnostic
@@ -3773,7 +3756,6 @@ ONLY OPERATING ROOM PROCEDURES
   0HHT7NZ Insertion of Tissue Expander into Right Breast, Via Natural or Artificial Opening
   0HHT81Z Insertion of Radioactive Element into Right Breast, Via Natural or Artificial Opening Endoscopic
   0HHT8NZ Insertion of Tissue Expander into Right Breast, Via Natural or Artificial Opening Endoscopic
-  0HHTX1Z Insertion of Radioactive Element into Right Breast, External Approach
   0HHU01Z Insertion of Radioactive Element into Left Breast, Open Approach
   0HHU0NZ Insertion of Tissue Expander into Left Breast, Open Approach
   0HHU0YZ Insertion of Other Device into Left Breast, Open Approach
@@ -3783,7 +3765,6 @@ ONLY OPERATING ROOM PROCEDURES
   0HHU7NZ Insertion of Tissue Expander into Left Breast, Via Natural or Artificial Opening
   0HHU81Z Insertion of Radioactive Element into Left Breast, Via Natural or Artificial Opening Endoscopic
   0HHU8NZ Insertion of Tissue Expander into Left Breast, Via Natural or Artificial Opening Endoscopic
-  0HHUX1Z Insertion of Radioactive Element into Left Breast, External Approach
   0HHV01Z Insertion of Radioactive Element into Bilateral Breast, Open Approach
   0HHV0NZ Insertion of Tissue Expander into Bilateral Breast, Open Approach
   0HHV31Z Insertion of Radioactive Element into Bilateral Breast, Percutaneous Approach
@@ -3792,7 +3773,6 @@ ONLY OPERATING ROOM PROCEDURES
   0HHV7NZ Insertion of Tissue Expander into Bilateral Breast, Via Natural or Artificial Opening
   0HHV81Z Insertion of Radioactive Element into Bilateral Breast, Via Natural or Artificial Opening Endoscopic
   0HHV8NZ Insertion of Tissue Expander into Bilateral Breast, Via Natural or Artificial Opening Endoscopic
-  0HHVX1Z Insertion of Radioactive Element into Bilateral Breast, External Approach
   0HHW01Z Insertion of Radioactive Element into Right Nipple, Open Approach
   0HHW0NZ Insertion of Tissue Expander into Right Nipple, Open Approach
   0HHW31Z Insertion of Radioactive Element into Right Nipple, Percutaneous Approach
@@ -3868,6 +3848,7 @@ ONLY OPERATING ROOM PROCEDURES
   0HPU0YZ Removal of Other Device from Left Breast, Open Approach
   0HPU3JZ Removal of Synthetic Substitute from Left Breast, Percutaneous Approach
   0HPU3NZ Removal of Tissue Expander from Left Breast, Percutaneous Approach
+  0HR2X72 Replacement of Right Ear Skin with Autologous Tissue Substitute, Cell Suspension Technique, External Approach
   0HR2X73 Replacement of Right Ear Skin with Autologous Tissue Substitute, Full Thickness, External Approach
   0HR2X74 Replacement of Right Ear Skin with Autologous Tissue Substitute, Partial Thickness, External Approach
   0HR2XJ3 Replacement of Right Ear Skin with Synthetic Substitute, Full Thickness, External Approach
@@ -3875,6 +3856,7 @@ ONLY OPERATING ROOM PROCEDURES
   0HR2XJZ Replacement of Right Ear Skin with Synthetic Substitute, External Approach
   0HR2XK3 Replacement of Right Ear Skin with Nonautologous Tissue Substitute, Full Thickness, External Approach
   0HR2XK4 Replacement of Right Ear Skin with Nonautologous Tissue Substitute, Partial Thickness, External Approach
+  0HR3X72 Replacement of Left Ear Skin with Autologous Tissue Substitute, Cell Suspension Technique, External Approach
   0HR3X73 Replacement of Left Ear Skin with Autologous Tissue Substitute, Full Thickness, External Approach
   0HR3X74 Replacement of Left Ear Skin with Autologous Tissue Substitute, Partial Thickness, External Approach
   0HR3XJ3 Replacement of Left Ear Skin with Synthetic Substitute, Full Thickness, External Approach
@@ -3882,6 +3864,7 @@ ONLY OPERATING ROOM PROCEDURES
   0HR3XJZ Replacement of Left Ear Skin with Synthetic Substitute, External Approach
   0HR3XK3 Replacement of Left Ear Skin with Nonautologous Tissue Substitute, Full Thickness, External Approach
   0HR3XK4 Replacement of Left Ear Skin with Nonautologous Tissue Substitute, Partial Thickness, External Approach
+  0HR9X72 Replacement of Perineum Skin with Autologous Tissue Substitute, Cell Suspension Technique, External Approach
   0HR9X73 Replacement of Perineum Skin with Autologous Tissue Substitute, Full Thickness, External Approach
   0HR9X74 Replacement of Perineum Skin with Autologous Tissue Substitute, Partial Thickness, External Approach
   0HR9XJ3 Replacement of Perineum Skin with Synthetic Substitute, Full Thickness, External Approach
@@ -3889,7 +3872,9 @@ ONLY OPERATING ROOM PROCEDURES
   0HR9XJZ Replacement of Perineum Skin with Synthetic Substitute, External Approach
   0HR9XK3 Replacement of Perineum Skin with Nonautologous Tissue Substitute, Full Thickness, External Approach
   0HR9XK4 Replacement of Perineum Skin with Nonautologous Tissue Substitute, Partial Thickness, External Approach
+  0HRFX72 Replacement of Right Hand Skin with Autologous Tissue Substitute, Cell Suspension Technique, External Approach
   0HRFX74 Replacement of Right Hand Skin with Autologous Tissue Substitute, Partial Thickness, External Approach
+  0HRGX72 Replacement of Left Hand Skin with Autologous Tissue Substitute, Cell Suspension Technique, External Approach
   0HRGX74 Replacement of Left Hand Skin with Autologous Tissue Substitute, Partial Thickness, External Approach
   0HRSXJZ Replacement of Hair with Synthetic Substitute, External Approach
   0HRSXKZ Replacement of Hair with Nonautologous Tissue Substitute, External Approach
@@ -3974,7 +3959,9 @@ ONLY OPERATING ROOM PROCEDURES
   0JHW01Z Insertion of Radioactive Element into Lower Extremity Subcutaneous Tissue and Fascia, Open Approach
   0JHW0YZ Insertion of Other Device into Lower Extremity Subcutaneous Tissue and Fascia, Open Approach
   0JHW31Z Insertion of Radioactive Element into Lower Extremity Subcutaneous Tissue and Fascia, Percutaneous Approach
+  0JPT0FZ Removal of Subcutaneous Defibrillator Lead from Trunk Subcutaneous Tissue and Fascia, Open Approach
   0JPT0PZ Removal of Cardiac Rhythm Related Device from Trunk Subcutaneous Tissue and Fascia, Open Approach
+  0JPT3FZ Removal of Subcutaneous Defibrillator Lead from Trunk Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JPT3PZ Removal of Cardiac Rhythm Related Device from Trunk Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JQ10ZZ Repair Face Subcutaneous Tissue and Fascia, Open Approach
   0JQ40ZZ Repair Right Neck Subcutaneous Tissue and Fascia, Open Approach
@@ -8823,7 +8810,6 @@ ONLY OPERATING ROOM PROCEDURES
   0W9H3ZX Drainage of Retroperitoneum, Percutaneous Approach, Diagnostic
   0W9H4ZX Drainage of Retroperitoneum, Percutaneous Endoscopic Approach, Diagnostic
   0W9J0ZX Drainage of Pelvic Cavity, Open Approach, Diagnostic
-  0W9J3ZX Drainage of Pelvic Cavity, Percutaneous Approach, Diagnostic
   0W9J4ZX Drainage of Pelvic Cavity, Percutaneous Endoscopic Approach, Diagnostic
   0W9N00Z Drainage of Female Perineum with Drainage Device, Open Approach
   0W9N0ZZ Drainage of Female Perineum, Open Approach
@@ -11533,7 +11519,10 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   D810    Severe combined immunodeficiency [SCID] with reticular dysgenesis
   D811    Severe combined immunodeficiency [SCID] with low T- and B-cell numbers
   D812    Severe combined immunodeficiency [SCID] with low or normal B-cell numbers
-  D813    Adenosine deaminase [ADA] deficiency
+  D8130   Adenosine deaminase deficiency, unspecified
+  D8131   Severe combined immunodeficiency due to adenosine deaminase deficiency
+  D8132   Adenosine deaminase 2 deficiency
+  D8139   Other adenosine deaminase deficiency
   D814    Nezelof's syndrome
   D815    Purine nucleoside phosphorylase [PNP] deficiency
   D816    Major histocompatibility complex class I deficiency
@@ -12574,7 +12563,10 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   I470    Re-entry ventricular arrhythmia
   I471    Supraventricular tachycardia
   I472    Ventricular tachycardia
-  I481    Persistent atrial fibrillation
+  I4811   Longstanding persistent atrial fibrillation
+  I4819   Other persistent atrial fibrillation
+  I4820   Chronic atrial fibrillation, unspecified
+  I4821   Permanent atrial fibrillation
   I483    Typical atrial flutter
   I484    Atypical atrial flutter
   I4892   Unspecified atrial flutter
@@ -12768,6 +12760,10 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   I80232  Phlebitis and thrombophlebitis of left tibial vein
   I80233  Phlebitis and thrombophlebitis of tibial vein, bilateral
   I80239  Phlebitis and thrombophlebitis of unspecified tibial vein
+  I80241  Phlebitis and thrombophlebitis of right peroneal vein
+  I80242  Phlebitis and thrombophlebitis of left peroneal vein
+  I80243  Phlebitis and thrombophlebitis of peroneal vein, bilateral
+  I80249  Phlebitis and thrombophlebitis of unspecified peroneal vein
   I80291  Phlebitis and thrombophlebitis of other deep vessels of right lower extremity
   I80292  Phlebitis and thrombophlebitis of other deep vessels of left lower extremity
   I80293  Phlebitis and thrombophlebitis of other deep vessels of lower extremity, bilateral
@@ -12798,6 +12794,10 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   I82442  Acute embolism and thrombosis of left tibial vein
   I82443  Acute embolism and thrombosis of tibial vein, bilateral
   I82449  Acute embolism and thrombosis of unspecified tibial vein
+  I82451  Acute embolism and thrombosis of right peroneal vein
+  I82452  Acute embolism and thrombosis of left peroneal vein
+  I82453  Acute embolism and thrombosis of peroneal vein, bilateral
+  I82459  Acute embolism and thrombosis of unspecified peroneal vein
   I82491  Acute embolism and thrombosis of other specified deep vein of right lower extremity
   I82492  Acute embolism and thrombosis of other specified deep vein of left lower extremity
   I82493  Acute embolism and thrombosis of other specified deep vein of lower extremity, bilateral
@@ -12830,6 +12830,10 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   I82542  Chronic embolism and thrombosis of left tibial vein
   I82543  Chronic embolism and thrombosis of tibial vein, bilateral
   I82549  Chronic embolism and thrombosis of unspecified tibial vein
+  I82551  Chronic embolism and thrombosis of right peroneal vein
+  I82552  Chronic embolism and thrombosis of left peroneal vein
+  I82553  Chronic embolism and thrombosis of peroneal vein, bilateral
+  I82559  Chronic embolism and thrombosis of unspecified peroneal vein
   I82591  Chronic embolism and thrombosis of other specified deep vein of right lower extremity
   I82592  Chronic embolism and thrombosis of other specified deep vein of left lower extremity
   I82593  Chronic embolism and thrombosis of other specified deep vein of lower extremity, bilateral
@@ -12984,7 +12988,7 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   J36     Peritonsillar abscess
   J390    Retropharyngeal and parapharyngeal abscess
   J391    Other abscess of pharynx
-  J440    Chronic obstructive pulmonary disease with acute lower respiratory infection
+  J440    Chronic obstructive pulmonary disease with (acute) lower respiratory infection
   J441    Chronic obstructive pulmonary disease with (acute) exacerbation
   J4521   Mild intermittent asthma with (acute) exacerbation
   J4522   Mild intermittent asthma with status asthmaticus
@@ -15783,11 +15787,16 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   Q772    Short rib syndrome
   Q780    Osteogenesis imperfecta
   Q782    Osteopetrosis
-  Q796    Ehlers-Danlos syndrome
+  Q7960   Ehlers-Danlos syndrome, unspecified
+  Q7961   Classical Ehlers-Danlos syndrome
+  Q7962   Hypermobile Ehlers-Danlos syndrome
+  Q7963   Vascular Ehlers-Danlos syndrome
+  Q7969   Other Ehlers-Danlos syndromes
   Q851    Tuberous sclerosis
   Q858    Other phakomatoses, not elsewhere classified
   Q859    Phakomatosis, unspecified
-  Q871    Congenital malformation syndromes predominantly associated with short stature
+  Q8711   Prader-Willi syndrome
+  Q8719   Other congenital malformation syndromes predominantly associated with short stature
   Q872    Congenital malformation syndromes predominantly involving limbs
   Q873    Congenital malformation syndromes involving early overgrowth
   Q8740   Marfan's syndrome, unspecified
@@ -15890,6 +15899,12 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   S0211GK Other fracture of occiput, right side, subsequent encounter for fracture with nonunion
   S0211HA Other fracture of occiput, left side, initial encounter for closed fracture
   S0211HK Other fracture of occiput, left side, subsequent encounter for fracture with nonunion
+  S02121A Fracture of orbital roof, right side, initial encounter for closed fracture
+  S02121K Fracture of orbital roof, right side, subsequent encounter for fracture with nonunion
+  S02122A Fracture of orbital roof, left side, initial encounter for closed fracture
+  S02122K Fracture of orbital roof, left side, subsequent encounter for fracture with nonunion
+  S02129A Fracture of orbital roof, unspecified side, initial encounter for closed fracture
+  S02129K Fracture of orbital roof, unspecified side, subsequent encounter for fracture with nonunion
   S0219XA Other fracture of base of skull, initial encounter for closed fracture
   S0219XK Other fracture of base of skull, subsequent encounter for fracture with nonunion
   S022XXB Fracture of nasal bones, initial encounter for open fracture
@@ -16024,6 +16039,27 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   S0282XA Fracture of other specified skull and facial bones, left side, initial encounter for closed fracture
   S0282XB Fracture of other specified skull and facial bones, left side, initial encounter for open fracture
   S0282XK Fracture of other specified skull and facial bones, left side, subsequent encounter for fracture with nonunion
+  S02831A Fracture of medial orbital wall, right side, initial encounter for closed fracture
+  S02831B Fracture of medial orbital wall, right side, initial encounter for open fracture
+  S02831K Fracture of medial orbital wall, right side, subsequent encounter for fracture with nonunion
+  S02832A Fracture of medial orbital wall, left side, initial encounter for closed fracture
+  S02832B Fracture of medial orbital wall, left side, initial encounter for open fracture
+  S02832K Fracture of medial orbital wall, left side, subsequent encounter for fracture with nonunion
+  S02839A Fracture of medial orbital wall, unspecified side, initial encounter for closed fracture
+  S02839B Fracture of medial orbital wall, unspecified side, initial encounter for open fracture
+  S02839K Fracture of medial orbital wall, unspecified side, subsequent encounter for fracture with nonunion
+  S02841A Fracture of lateral orbital wall, right side, initial encounter for closed fracture
+  S02841B Fracture of lateral orbital wall, right side, initial encounter for open fracture
+  S02841K Fracture of lateral orbital wall, right side, subsequent encounter for fracture with nonunion
+  S02842A Fracture of lateral orbital wall, left side, initial encounter for closed fracture
+  S02842B Fracture of lateral orbital wall, left side, initial encounter for open fracture
+  S02842K Fracture of lateral orbital wall, left side, subsequent encounter for fracture with nonunion
+  S02849A Fracture of lateral orbital wall, unspecified side, initial encounter for closed fracture
+  S02849B Fracture of lateral orbital wall, unspecified side, initial encounter for open fracture
+  S02849K Fracture of lateral orbital wall, unspecified side, subsequent encounter for fracture with nonunion
+  S0285XA Fracture of orbit, unspecified, initial encounter for closed fracture
+  S0285XB Fracture of orbit, unspecified, initial encounter for open fracture
+  S0285XK Fracture of orbit, unspecified, subsequent encounter for fracture with nonunion
   S0291XA Unspecified fracture of skull, initial encounter for closed fracture
   S0291XK Unspecified fracture of skull, subsequent encounter for fracture with nonunion
   S0292XA Unspecified fracture of facial bones, initial encounter for closed fracture
@@ -23933,7 +23969,9 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   T34839A Frostbite with tissue necrosis of unspecified toe(s), initial encounter
   T3490XA Frostbite with tissue necrosis of unspecified sites, initial encounter
   T3499XA Frostbite with tissue necrosis of other sites, initial encounter
-  T670XXA Heatstroke and sunstroke, initial encounter
+  T6701XA Heatstroke and sunstroke, initial encounter
+  T6702XA Exertional heatstroke, initial encounter
+  T6709XA Other heatstroke and sunstroke, initial encounter
   T69021A Immersion foot, right foot, initial encounter
   T69022A Immersion foot, left foot, initial encounter
   T69029A Immersion foot, unspecified foot, initial encounter
@@ -24584,6 +24622,24 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   T882XXA Shock due to anesthesia, initial encounter
   T883XXA Malignant hyperthermia due to anesthesia, initial encounter
   T886XXA Anaphylactic reaction due to adverse effect of correct drug or medicament properly administered, initial encounter
+  Z1610   Resistance to unspecified beta lactam antibiotics
+  Z1611   Resistance to penicillins
+  Z1612   Extended spectrum beta lactamase (ESBL) resistance
+  Z1619   Resistance to other specified beta lactam antibiotics
+  Z1620   Resistance to unspecified antibiotic
+  Z1621   Resistance to vancomycin
+  Z1622   Resistance to vancomycin related antibiotics
+  Z1623   Resistance to quinolones and fluoroquinolones
+  Z1624   Resistance to multiple antibiotics
+  Z1629   Resistance to other single specified antibiotic
+  Z1630   Resistance to unspecified antimicrobial drugs
+  Z1631   Resistance to antiparasitic drug(s)
+  Z1632   Resistance to antifungal drug(s)
+  Z1633   Resistance to antiviral drug(s)
+  Z16341  Resistance to single antimycobacterial drug
+  Z16342  Resistance to multiple antimycobacterial drugs
+  Z1635   Resistance to multiple antimicrobial drugs
+  Z1639   Resistance to other specified antimicrobial drug
   Z431    Encounter for attention to gastrostomy
   Z4821   Encounter for aftercare following heart transplant
   Z4822   Encounter for aftercare following kidney transplant
@@ -24594,7 +24650,7 @@ diagnosis in the corresponding CC Exclusion List in Appendix C.
   Z681    Body mass index (BMI) 19.9 or less, adult
   Z6841   Body mass index (BMI) 40.0-44.9, adult
   Z6842   Body mass index (BMI) 45.0-49.9, adult
-  Z6843   Body mass index (BMI) 50-59.9, adult
+  Z6843   Body mass index (BMI) 50.0-59.9, adult
   Z6844   Body mass index (BMI) 60.0-69.9, adult
   Z6845   Body mass index (BMI) 70 or greater, adult
   Z940    Kidney transplant status
@@ -24916,6 +24972,8 @@ discharged alive, otherwise they will be assigned as a non CC
   I2609   Other pulmonary embolism with acute cor pulmonale
   I2690   Septic pulmonary embolism without acute cor pulmonale
   I2692   Saddle embolus of pulmonary artery without acute cor pulmonale
+  I2693   Single subsegmental pulmonary embolism without acute cor pulmonale
+  I2694   Multiple subsegmental pulmonary emboli without acute cor pulmonale
   I2699   Other pulmonary embolism without acute cor pulmonale
   I330    Acute and subacute infective endocarditis
   I339    Acute and subacute endocarditis, unspecified
@@ -25803,6 +25861,9 @@ discharged alive, otherwise they will be assigned as a non CC
   S0211FB Type III occipital condyle fracture, left side, initial encounter for open fracture
   S0211GB Other fracture of occiput, right side, initial encounter for open fracture
   S0211HB Other fracture of occiput, left side, initial encounter for open fracture
+  S02121B Fracture of orbital roof, right side, initial encounter for open fracture
+  S02122B Fracture of orbital roof, left side, initial encounter for open fracture
+  S02129B Fracture of orbital roof, unspecified side, initial encounter for open fracture
   S0219XB Other fracture of base of skull, initial encounter for open fracture
   S0291XB Unspecified fracture of skull, initial encounter for open fracture
   S061X0A Traumatic cerebral edema without loss of consciousness, initial encounter
@@ -27872,6 +27933,7 @@ discharged alive, otherwise they will be assigned as a non CC
   T8111XA Postprocedural cardiogenic shock, initial encounter
   T8112XA Postprocedural septic shock, initial encounter
   T8119XA Other postprocedural shock, initial encounter
+  U071    COVID-19
 
 
 
@@ -28061,6 +28123,12 @@ SECONDARY DIAGNOSIS
   S0211GB MCC Other fracture of occiput, right side, initial encounter for open fracture
   S0211HA CC  Other fracture of occiput, left side, initial encounter for closed fracture
   S0211HB MCC Other fracture of occiput, left side, initial encounter for open fracture
+  S02121A CC  Fracture of orbital roof, right side, initial encounter for closed fracture
+  S02121B MCC Fracture of orbital roof, right side, initial encounter for open fracture
+  S02122A CC  Fracture of orbital roof, left side, initial encounter for closed fracture
+  S02122B MCC Fracture of orbital roof, left side, initial encounter for open fracture
+  S02129A CC  Fracture of orbital roof, unspecified side, initial encounter for closed fracture
+  S02129B MCC Fracture of orbital roof, unspecified side, initial encounter for open fracture
   S0219XA CC  Other fracture of base of skull, initial encounter for closed fracture
   S0219XB MCC Other fracture of base of skull, initial encounter for open fracture
   S022XXB CC  Fracture of nasal bones, initial encounter for open fracture
@@ -28150,6 +28218,20 @@ SECONDARY DIAGNOSIS
   S0281XB CC  Fracture of other specified skull and facial bones, right side, initial encounter for open fracture
   S0282XA CC  Fracture of other specified skull and facial bones, left side, initial encounter for closed fracture
   S0282XB CC  Fracture of other specified skull and facial bones, left side, initial encounter for open fracture
+  S02831A CC  Fracture of medial orbital wall, right side, initial encounter for closed fracture
+  S02831B CC  Fracture of medial orbital wall, right side, initial encounter for open fracture
+  S02832A CC  Fracture of medial orbital wall, left side, initial encounter for closed fracture
+  S02832B CC  Fracture of medial orbital wall, left side, initial encounter for open fracture
+  S02839A CC  Fracture of medial orbital wall, unspecified side, initial encounter for closed fracture
+  S02839B CC  Fracture of medial orbital wall, unspecified side, initial encounter for open fracture
+  S02841A CC  Fracture of lateral orbital wall, right side, initial encounter for closed fracture
+  S02841B CC  Fracture of lateral orbital wall, right side, initial encounter for open fracture
+  S02842A CC  Fracture of lateral orbital wall, left side, initial encounter for closed fracture
+  S02842B CC  Fracture of lateral orbital wall, left side, initial encounter for open fracture
+  S02849A CC  Fracture of lateral orbital wall, unspecified side, initial encounter for closed fracture
+  S02849B CC  Fracture of lateral orbital wall, unspecified side, initial encounter for open fracture
+  S0285XA CC  Fracture of orbit, unspecified, initial encounter for closed fracture
+  S0285XB CC  Fracture of orbit, unspecified, initial encounter for open fracture
   S0291XA CC  Unspecified fracture of skull, initial encounter for closed fracture
   S0291XB MCC Unspecified fracture of skull, initial encounter for open fracture
   S0292XA CC  Unspecified fracture of facial bones, initial encounter for closed fracture
@@ -31711,7 +31793,9 @@ SECONDARY DIAGNOSIS
   T34839A CC  Frostbite with tissue necrosis of unspecified toe(s), initial encounter
   T3490XA CC  Frostbite with tissue necrosis of unspecified sites, initial encounter
   T3499XA CC  Frostbite with tissue necrosis of other sites, initial encounter
-  T670XXA CC  Heatstroke and sunstroke, initial encounter
+  T6701XA CC  Heatstroke and sunstroke, initial encounter
+  T6702XA CC  Exertional heatstroke, initial encounter
+  T6709XA CC  Other heatstroke and sunstroke, initial encounter
   T69021A CC  Immersion foot, right foot, initial encounter
   T69022A CC  Immersion foot, left foot, initial encounter
   T69029A CC  Immersion foot, unspecified foot, initial encounter
@@ -31755,7 +31839,7 @@ SECONDARY DIAGNOSIS
   T83511A CC  Infection and inflammatory reaction due to indwelling urethral catheter, initial encounter
   T83518A CC  Infection and inflammatory reaction due to other urinary catheter, initial encounter
 
-OR SECONDARY DIAGNOSIS
+IN ADDITION, MARK THE FOLLOWING SECONDARY DIAGNOSIS CODES IF THEY ARE PRESENT ON THE CLAIM
 
   B3741 CC  Candidal cystitis and urethritis
   B3749 CC  Other urogenital candidiasis
@@ -31771,11 +31855,6 @@ OR SECONDARY DIAGNOSIS
   N3001 CC  Acute cystitis with hematuria
   N340  CC  Urethral abscess
   N390  CC  Urinary tract infection, site not specified
-
-WITH SECONDARY DIAGNOSIS
-
-  T83511A CC  Infection and inflammatory reaction due to indwelling urethral catheter, initial encounter
-  T83518A CC  Infection and inflammatory reaction due to other urinary catheter, initial encounter
 
 HAC 07: VASCULAR CATHETER-ASSOCIATED INFECTION
 SECONDARY DIAGNOSIS
@@ -32256,6 +32335,8 @@ SECONDARY DIAGNOSIS
   I2602  MCC Saddle embolus of pulmonary artery with acute cor pulmonale
   I2609  MCC Other pulmonary embolism with acute cor pulmonale
   I2692  MCC Saddle embolus of pulmonary artery without acute cor pulmonale
+  I2693  MCC Single subsegmental pulmonary embolism without acute cor pulmonale
+  I2694  MCC Multiple subsegmental pulmonary emboli without acute cor pulmonale
   I2699  MCC Other pulmonary embolism without acute cor pulmonale
   I82401 CC  Acute embolism and thrombosis of unspecified deep veins of right lower extremity
   I82402 CC  Acute embolism and thrombosis of unspecified deep veins of left lower extremity
@@ -32277,6 +32358,10 @@ SECONDARY DIAGNOSIS
   I82442 CC  Acute embolism and thrombosis of left tibial vein
   I82443 CC  Acute embolism and thrombosis of tibial vein, bilateral
   I82449 CC  Acute embolism and thrombosis of unspecified tibial vein
+  I82451 CC  Acute embolism and thrombosis of right peroneal vein
+  I82452 CC  Acute embolism and thrombosis of left peroneal vein
+  I82453 CC  Acute embolism and thrombosis of peroneal vein, bilateral
+  I82459 CC  Acute embolism and thrombosis of unspecified peroneal vein
   I82491 CC  Acute embolism and thrombosis of other specified deep vein of right lower extremity
   I82492 CC  Acute embolism and thrombosis of other specified deep vein of left lower extremity
   I82493 CC  Acute embolism and thrombosis of other specified deep vein of lower extremity, bilateral
@@ -32733,35 +32818,27 @@ PROCEDURES
   0RQE0ZZ  Repair Right Sternoclavicular Joint, Open Approach
   0RQE3ZZ  Repair Right Sternoclavicular Joint, Percutaneous Approach
   0RQE4ZZ  Repair Right Sternoclavicular Joint, Percutaneous Endoscopic Approach
-  0RQEXZZ* Repair Right Sternoclavicular Joint, External Approach
   0RQF0ZZ  Repair Left Sternoclavicular Joint, Open Approach
   0RQF3ZZ  Repair Left Sternoclavicular Joint, Percutaneous Approach
   0RQF4ZZ  Repair Left Sternoclavicular Joint, Percutaneous Endoscopic Approach
-  0RQFXZZ* Repair Left Sternoclavicular Joint, External Approach
   0RQG0ZZ  Repair Right Acromioclavicular Joint, Open Approach
   0RQG3ZZ  Repair Right Acromioclavicular Joint, Percutaneous Approach
   0RQG4ZZ  Repair Right Acromioclavicular Joint, Percutaneous Endoscopic Approach
-  0RQGXZZ* Repair Right Acromioclavicular Joint, External Approach
   0RQH0ZZ  Repair Left Acromioclavicular Joint, Open Approach
   0RQH3ZZ  Repair Left Acromioclavicular Joint, Percutaneous Approach
   0RQH4ZZ  Repair Left Acromioclavicular Joint, Percutaneous Endoscopic Approach
-  0RQHXZZ* Repair Left Acromioclavicular Joint, External Approach
   0RQJ0ZZ  Repair Right Shoulder Joint, Open Approach
   0RQJ3ZZ  Repair Right Shoulder Joint, Percutaneous Approach
   0RQJ4ZZ  Repair Right Shoulder Joint, Percutaneous Endoscopic Approach
-  0RQJXZZ* Repair Right Shoulder Joint, External Approach
   0RQK0ZZ  Repair Left Shoulder Joint, Open Approach
   0RQK3ZZ  Repair Left Shoulder Joint, Percutaneous Approach
   0RQK4ZZ  Repair Left Shoulder Joint, Percutaneous Endoscopic Approach
-  0RQKXZZ* Repair Left Shoulder Joint, External Approach
   0RQL0ZZ  Repair Right Elbow Joint, Open Approach
   0RQL3ZZ  Repair Right Elbow Joint, Percutaneous Approach
   0RQL4ZZ  Repair Right Elbow Joint, Percutaneous Endoscopic Approach
-  0RQLXZZ* Repair Right Elbow Joint, External Approach
   0RQM0ZZ  Repair Left Elbow Joint, Open Approach
   0RQM3ZZ  Repair Left Elbow Joint, Percutaneous Approach
   0RQM4ZZ  Repair Left Elbow Joint, Percutaneous Endoscopic Approach
-  0RQMXZZ* Repair Left Elbow Joint, External Approach
   0RUE07Z  Supplement Right Sternoclavicular Joint with Autologous Tissue Substitute, Open Approach
   0RUE0JZ  Supplement Right Sternoclavicular Joint with Synthetic Substitute, Open Approach
   0RUE0KZ  Supplement Right Sternoclavicular Joint with Nonautologous Tissue Substitute, Open Approach
@@ -32980,9 +33057,26 @@ PROCEDURES
   XRGD092  Fusion of Lumbosacral Joint using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2
   XRGD0F3  Fusion of Lumbosacral Joint using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3
 
+NON-OPERATING ROOM PROCEDURES
+0RQEXZZ* Repair Right Sternoclavicular Joint, External Approach
+0RQFXZZ* Repair Left Sternoclavicular Joint, External Approach
+0RQGXZZ* Repair Right Acromioclavicular Joint, External Approach
+0RQHXZZ* Repair Left Acromioclavicular Joint, External Approach
+0RQJXZZ* Repair Right Shoulder Joint, External Approach
+0RQKXZZ* Repair Left Shoulder Joint, External Approach
+0RQLXZZ* Repair Right Elbow Joint, External Approach
+0RQMXZZ* Repair Left Elbow Joint, External Approach
+
 AND
 SECONDARY DIAGNOSIS
 
+  K6811   CC  Postprocedural retroperitoneal abscess
+  T8140XA CC  Infection following a procedure, unspecified, initial encounter
+  T8141XA CC  Infection following a procedure, superficial incisional surgical site, initial encounter
+  T8142XA CC  Infection following a procedure, deep incisional surgical site, initial encounter
+  T8143XA CC  Infection following a procedure, organ and space surgical site, initial encounter
+  T8144XA CC  Sepsis following a procedure, initial encounter
+  T8149XA CC  Infection following a procedure, other surgical site, initial encounter
   T8460XA CC  Infection and inflammatory reaction due to internal fixation device of unspecified site, initial encounter
   T84610A CC  Infection and inflammatory reaction due to internal fixation device of right humerus, initial encounter
   T84611A CC  Infection and inflammatory reaction due to internal fixation device of left humerus, initial encounter
@@ -32995,72 +33089,69 @@ SECONDARY DIAGNOSIS
   T8469XA CC  Infection and inflammatory reaction due to internal fixation device of other site, initial encounter
   T847XXA CC  Infection and inflammatory reaction due to other internal orthopedic prosthetic devices, implants and grafts, initial encounter
 
-
-  K6811   CC  Postprocedural retroperitoneal abscess
-  T8140XA CC  Infection following a procedure, unspecified, initial encounter
-  T8141XA CC  Infection following a procedure, superficial incisional surgical site, initial encounter
-  T8142XA CC  Infection following a procedure, deep incisional surgical site, initial encounter
-  T8143XA CC  Infection following a procedure, organ and space surgical site, initial encounter
-  T8144XA CC  Sepsis following a procedure, initial encounter
-  T8149XA CC  Infection following a procedure, other surgical site, initial encounter
-
 HAC 13: SURGICAL SITE INFECTION (SSI) FOLLOWING CARDIAC IMPLANTABLE ELECTRONIC DEVICE (CIED) PROCEDURES
 PROCEDURES
 
-  02H43JZ* Insertion of Pacemaker Lead into Coronary Vein, Percutaneous Approach
   02H43KZ  Insertion of Defibrillator Lead into Coronary Vein, Percutaneous Approach
-  02H43MZ* Insertion of Cardiac Lead into Coronary Vein, Percutaneous Approach
-  02H63JZ* Insertion of Pacemaker Lead into Right Atrium, Percutaneous Approach
-  02H63MZ* Insertion of Cardiac Lead into Right Atrium, Percutaneous Approach
-  02H73JZ* Insertion of Pacemaker Lead into Left Atrium, Percutaneous Approach
-  02H73MZ* Insertion of Cardiac Lead into Left Atrium, Percutaneous Approach
-  02HK3JZ* Insertion of Pacemaker Lead into Right Ventricle, Percutaneous Approach
-  02HL3JZ* Insertion of Pacemaker Lead into Left Ventricle, Percutaneous Approach
-  02HN0JZ* Insertion of Pacemaker Lead into Pericardium, Open Approach
-  02HN0MZ* Insertion of Cardiac Lead into Pericardium, Open Approach
-  02HN3JZ* Insertion of Pacemaker Lead into Pericardium, Percutaneous Approach
-  02HN3MZ* Insertion of Cardiac Lead into Pericardium, Percutaneous Approach
-  02HN4JZ* Insertion of Pacemaker Lead into Pericardium, Percutaneous Endoscopic Approach
-  02HN4MZ* Insertion of Cardiac Lead into Pericardium, Percutaneous Endoscopic Approach
   02PA0MZ  Removal of Cardiac Lead from Heart, Open Approach
   02PA3MZ  Removal of Cardiac Lead from Heart, Percutaneous Approach
   02PA4MZ  Removal of Cardiac Lead from Heart, Percutaneous Endoscopic Approach
-  02PAXMZ* Removal of Cardiac Lead from Heart, External Approach
   02WA0MZ  Revision of Cardiac Lead in Heart, Open Approach
   02WA3MZ  Revision of Cardiac Lead in Heart, Percutaneous Approach
   02WA4MZ  Revision of Cardiac Lead in Heart, Percutaneous Endoscopic Approach
-  0JH604Z* Insertion of Pacemaker, Single Chamber into Chest Subcutaneous Tissue and Fascia, Open Approach
-  0JH605Z* Insertion of Pacemaker, Single Chamber Rate Responsive into Chest Subcutaneous Tissue and Fascia, Open Approach
-  0JH606Z* Insertion of Pacemaker, Dual Chamber into Chest Subcutaneous Tissue and Fascia, Open Approach
-  0JH607Z* Insertion of Cardiac Resynchronization Pacemaker Pulse Generator into Chest Subcutaneous Tissue and Fascia, Open Approach
   0JH608Z  Insertion of Defibrillator Generator into Chest Subcutaneous Tissue and Fascia, Open Approach
   0JH609Z  Insertion of Cardiac Resynchronization Defibrillator Pulse Generator into Chest Subcutaneous Tissue and Fascia, Open Approach
-  0JH60PZ* Insertion of Cardiac Rhythm Related Device into Chest Subcutaneous Tissue and Fascia, Open Approach
-  0JH634Z* Insertion of Pacemaker, Single Chamber into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
-  0JH635Z* Insertion of Pacemaker, Single Chamber Rate Responsive into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
-  0JH636Z* Insertion of Pacemaker, Dual Chamber into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
-  0JH637Z* Insertion of Cardiac Resynchronization Pacemaker Pulse Generator into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH638Z  Insertion of Defibrillator Generator into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH639Z  Insertion of Cardiac Resynchronization Defibrillator Pulse Generator into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
-  0JH63PZ* Insertion of Cardiac Rhythm Related Device into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
-  0JH804Z* Insertion of Pacemaker, Single Chamber into Abdomen Subcutaneous Tissue and Fascia, Open Approach
-  0JH805Z* Insertion of Pacemaker, Single Chamber Rate Responsive into Abdomen Subcutaneous Tissue and Fascia, Open Approach
-  0JH806Z* Insertion of Pacemaker, Dual Chamber into Abdomen Subcutaneous Tissue and Fascia, Open Approach
-  0JH807Z* Insertion of Cardiac Resynchronization Pacemaker Pulse Generator into Abdomen Subcutaneous Tissue and Fascia, Open Approach
   0JH808Z  Insertion of Defibrillator Generator into Abdomen Subcutaneous Tissue and Fascia, Open Approach
   0JH809Z  Insertion of Cardiac Resynchronization Defibrillator Pulse Generator into Abdomen Subcutaneous Tissue and Fascia, Open Approach
-  0JH80PZ* Insertion of Cardiac Rhythm Related Device into Abdomen Subcutaneous Tissue and Fascia, Open Approach
-  0JH834Z* Insertion of Pacemaker, Single Chamber into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
-  0JH835Z* Insertion of Pacemaker, Single Chamber Rate Responsive into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
-  0JH836Z* Insertion of Pacemaker, Dual Chamber into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
-  0JH837Z* Insertion of Cardiac Resynchronization Pacemaker Pulse Generator into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH838Z  Insertion of Defibrillator Generator into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH839Z  Insertion of Cardiac Resynchronization Defibrillator Pulse Generator into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
-  0JH83PZ* Insertion of Cardiac Rhythm Related Device into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
+  0JPT0FZ  Removal of Subcutaneous Defibrillator Lead from Trunk Subcutaneous Tissue and Fascia, Open Approach
   0JPT0PZ  Removal of Cardiac Rhythm Related Device from Trunk Subcutaneous Tissue and Fascia, Open Approach
+  0JPT3FZ  Removal of Subcutaneous Defibrillator Lead from Trunk Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JPT3PZ  Removal of Cardiac Rhythm Related Device from Trunk Subcutaneous Tissue and Fascia, Percutaneous Approach
+  0JWT0FZ  Revision of Subcutaneous Defibrillator Lead in Trunk Subcutaneous Tissue and Fascia, Open Approach
   0JWT0PZ  Revision of Cardiac Rhythm Related Device in Trunk Subcutaneous Tissue and Fascia, Open Approach
+  0JWT3FZ  Revision of Subcutaneous Defibrillator Lead in Trunk Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JWT3PZ  Revision of Cardiac Rhythm Related Device in Trunk Subcutaneous Tissue and Fascia, Percutaneous Approach
+
+NON-OPERATING ROOM PROCEDURES
+02H43JZ* Insertion of Pacemaker Lead into Coronary Vein, Percutaneous Approach
+02H43MZ* Insertion of Cardiac Lead into Coronary Vein, Percutaneous Approach
+02H63JZ* Insertion of Pacemaker Lead into Right Atrium, Percutaneous Approach
+02H63MZ* Insertion of Cardiac Lead into Right Atrium, Percutaneous Approach
+02H73JZ* Insertion of Pacemaker Lead into Left Atrium, Percutaneous Approach
+02H73MZ* Insertion of Cardiac Lead into Left Atrium, Percutaneous Approach
+02HK3JZ* Insertion of Pacemaker Lead into Right Ventricle, Percutaneous Approach
+02HL3JZ* Insertion of Pacemaker Lead into Left Ventricle, Percutaneous Approach
+02HN0JZ* Insertion of Pacemaker Lead into Pericardium, Open Approach
+02HN0MZ* Insertion of Cardiac Lead into Pericardium, Open Approach
+02HN3JZ* Insertion of Pacemaker Lead into Pericardium, Percutaneous Approach
+02HN3MZ* Insertion of Cardiac Lead into Pericardium, Percutaneous Approach
+02HN4JZ* Insertion of Pacemaker Lead into Pericardium, Percutaneous Endoscopic Approach
+02HN4MZ* Insertion of Cardiac Lead into Pericardium, Percutaneous Endoscopic Approach
+02PAXMZ* Removal of Cardiac Lead from Heart, External Approach
+0JH604Z* Insertion of Pacemaker, Single Chamber into Chest Subcutaneous Tissue and Fascia, Open Approach
+0JH605Z* Insertion of Pacemaker, Single Chamber Rate Responsive into Chest Subcutaneous Tissue and Fascia, Open Approach
+0JH606Z* Insertion of Pacemaker, Dual Chamber into Chest Subcutaneous Tissue and Fascia, Open Approach
+0JH607Z* Insertion of Cardiac Resynchronization Pacemaker Pulse Generator into Chest Subcutaneous Tissue and Fascia, Open Approach
+0JH60PZ* Insertion of Cardiac Rhythm Related Device into Chest Subcutaneous Tissue and Fascia, Open Approach
+0JH634Z* Insertion of Pacemaker, Single Chamber into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
+0JH635Z* Insertion of Pacemaker, Single Chamber Rate Responsive into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
+0JH636Z* Insertion of Pacemaker, Dual Chamber into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
+0JH637Z* Insertion of Cardiac Resynchronization Pacemaker Pulse Generator into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
+0JH63PZ* Insertion of Cardiac Rhythm Related Device into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
+0JH804Z* Insertion of Pacemaker, Single Chamber into Abdomen Subcutaneous Tissue and Fascia, Open Approach
+0JH805Z* Insertion of Pacemaker, Single Chamber Rate Responsive into Abdomen Subcutaneous Tissue and Fascia, Open Approach
+0JH806Z* Insertion of Pacemaker, Dual Chamber into Abdomen Subcutaneous Tissue and Fascia, Open Approach
+0JH807Z* Insertion of Cardiac Resynchronization Pacemaker Pulse Generator into Abdomen Subcutaneous Tissue and Fascia, Open Approach
+0JH80PZ* Insertion of Cardiac Rhythm Related Device into Abdomen Subcutaneous Tissue and Fascia, Open Approach
+0JH834Z* Insertion of Pacemaker, Single Chamber into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
+0JH835Z* Insertion of Pacemaker, Single Chamber Rate Responsive into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
+0JH836Z* Insertion of Pacemaker, Dual Chamber into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
+0JH837Z* Insertion of Cardiac Resynchronization Pacemaker Pulse Generator into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
+0JH83PZ* Insertion of Cardiac Rhythm Related Device into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
 
 AND
 SECONDARY DIAGNOSIS
