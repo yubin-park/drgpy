@@ -1,5 +1,6 @@
 
 import drgpy._mdcsrdr as mdcsrdr
+import drgpy._icd9to10 as icd9to10
 import drgpy._appndxrdr as appndxrdr
 import drgpy._mdcs0007 as mdcs0007
 import drgpy._mdcs0811 as mdcs0811
@@ -17,6 +18,7 @@ class DRGEngine:
         dxmap, prmap = mdcsrdr.read("data/mdcs_08_11.txt", dxmap, prmap)
         dxmap, prmap = mdcsrdr.read("data/mdcs_12_21.txt", dxmap, prmap)
         dxmap, prmap = mdcsrdr.read("data/mdcs_22_25.txt", dxmap, prmap)
+        self.icd9to10map = icd9to10.read("data/who/icd9to10_procedure.txt")
         self.dxmap = dxmap
         self.prmap = prmap
 
@@ -141,7 +143,7 @@ class DRGEngine:
         y = [item for item in y if item is not None]
         return y
 
-    def get_drg(self, dx_lst, pr_lst):
+    def _get_drg(self, dx_lst, pr_lst):
         """
         Return the corresponding DRG code for the diagnoses and procedures
 
@@ -157,9 +159,32 @@ class DRGEngine:
         y_all = y_all + ["000"]
         return y_all[0]
 
-        
+    def get_drg(self, dx_lst, pr_lst, dx_icd9_lst=None, pr_icd9_lst=None):
+        """
+        Return the corresponding DRG code for the diagnoses and procedures
 
-
-
-
-
+        Parameters
+        ----------
+        Args:
+            dx_lst ([list]):
+                A list of ICD-10 diagnosis codes
+            pr_lst ([list]): 
+                A list of ICD-10 diagnosis codes
+            dx_icd9_lst ([list]): 
+                A list of ICD-9 diagnosis codes
+            pr_icd9_lst ([list]): 
+                A list of ICD-9 diagnosis codes
+        """
+        dx_in_lst = []
+        pr_in_lst = []
+        if dx_icd9_lst is not None:
+            for icd9 in dx_icd9_lst:
+                dx_in_lst.append(self.icd9to10map.get(icd9, "000"))
+        else:
+            dx_in_lst = dx_lst
+        if pr_icd9_lst is not None:
+            for icd9 in pr_icd9_lst:
+                pr_in_lst.append(self.icd9to10map.get(icd9, "000"))
+        else:
+            pr_in_lst = pr_lst
+        return self._get_drg(dx_in_lst, pr_in_lst)
