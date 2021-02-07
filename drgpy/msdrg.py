@@ -18,7 +18,8 @@ class DRGEngine:
         dxmap, prmap = mdcsrdr.read("data/mdcs_08_11.txt", dxmap, prmap)
         dxmap, prmap = mdcsrdr.read("data/mdcs_12_21.txt", dxmap, prmap)
         dxmap, prmap = mdcsrdr.read("data/mdcs_22_25.txt", dxmap, prmap)
-        self.icd9to10map = icd9to10.read("data/who/icd9to10_procedure.txt")
+        self.icd9to10dx_map = icd9to10.read_dx("data/who/icd9to10_procedure.txt")
+        self.icd9to10pr_map = icd9to10.read_pr("data/who/icd9toicd10pcsgem.csv")
         self.dxmap = dxmap
         self.prmap = prmap
 
@@ -179,12 +180,12 @@ class DRGEngine:
         pr_in_lst = []
         if dx_icd9_lst is not None:
             for icd9 in dx_icd9_lst:
-                dx_in_lst.append(self.icd9to10map.get(icd9, "000"))
+                dx_in_lst.append(self.icd9to10dx_map.get(icd9, "000"))
         else:
             dx_in_lst = dx_lst
         if pr_icd9_lst is not None:
             for icd9 in pr_icd9_lst:
-                pr_in_lst.append(self.icd9to10map.get(icd9, "000"))
+                pr_in_lst.append(self.icd9to10pr_map.get(icd9, "000"))
         else:
             pr_in_lst = pr_lst
         return self._get_drg(dx_in_lst, pr_in_lst)
