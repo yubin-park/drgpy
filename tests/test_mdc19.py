@@ -8,7 +8,7 @@ class TestMCD19(unittest.TestCase):
         de = DRGEngine(version="v37")
 
         drg_lst = de.get_drg_all(["R4582"], ["00BF0ZZ"])
-        self.assertTrue("876" in drg_lst)
+        self.assertTrue("876" not in drg_lst) # No OR Proc for 876
  
         drg_lst = de.get_drg_all(["F05"], [])
         self.assertTrue("880" in drg_lst)

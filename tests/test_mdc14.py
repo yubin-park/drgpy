@@ -31,7 +31,7 @@ class TestMCD14(unittest.TestCase):
         self.assertTrue("770" in drg_lst)
  
         drg_lst = de.get_drg_all(["O0000"], ["10A00ZZ"])
-        self.assertTrue("819" in drg_lst)
+        self.assertTrue("819" not in drg_lst) # OR Procedure depends on DRG
  
         drg_lst = de.get_drg_all(["O0000", "Z370"], ["10D07Z3"])
         self.assertTrue("807" in drg_lst)

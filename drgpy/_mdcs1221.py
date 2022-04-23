@@ -195,7 +195,7 @@ def mdc14(x):
     if x["770|PDX"] * x["770|AND ORPCS"] > 0:
         y.append("770")
 
-    if x["817&818&819|PDX"] * x["_ORPCS"] > 0:
+    if x["817&818&819|PDX"] * x["_ORPCS|817"] > 0:
         if x["_MCC"] > 0:
             y.append("817")
         elif x["_CC"] > 0:
@@ -240,7 +240,7 @@ def mdc15(x):
     # NOTE: DRG 789 skipped
 
     if (x["795|PDX"] *
-        (x["_NDX1"] + x["_NDX2"]*x["795|AND NO SDX OR ONLY SDX"]) > 0):
+        (x["_NDX1"] + x["_NDX2+"] * x["795|AND NO SDX OR ONLY SDX"]) > 0):
         y.append("795")
 
     if x["790|PSDX"] > 0:
@@ -329,7 +329,8 @@ def mdc17(x):
     s1 = ("823&824&825|ANY OTHER ORPCS NOT LISTED IN DRGS 820-822 OR " + 
         "ANY OF THE FOLLOWING NON-ORPCS")
     if (x["823&824&825|PDX"] > 0 and
-        ((x["_ORPCS"] > 0 and x["820&821&822|ORPCS"] == 0) or 
+        ((x["_ORPCS|823"] > 0 and 
+            x["820&821&822|ORPCS"] == 0) or 
             x[s1] > 0)):
         if x["_MCC"] > 0:
             y.append("823")
@@ -352,7 +353,7 @@ def mdc17(x):
     s1 = ("829&830|MYELOPROLIFERATIVE DISORDERS OR " + 
             "POORLY DIFFERENTIATED NEOPLASMS PDX")
     s2 = "829&830|NON-ORPCS"
-    if x[s1] * (x[s2] + x["_ORPCS"]) > 0:
+    if x[s1] * (x[s2] + x["_ORPCS|829"]) > 0:
         if x["_MCC"] + x["_CC"] > 0:
             y.append("829")
         else:
@@ -415,20 +416,20 @@ def mdc18(x):
     if x["_MDC18"] == 0:
         return y
 
-    if x["856&857&858|PDX"] * x["_ORPCS"] > 0:
-        if x["_MCC"] > 0:
+    if x["856&857&858|PDX"] > 0:
+        if x["_MCC"] * x["_ORPCS|856"] > 0:
             y.append("856")
-        elif x["_CC"] > 0:
+        elif x["_CC"] * x["_ORPCS|857"] > 0:
             y.append("857")
-        else:
+        elif x["_ORPCS|858"]:
             y.append("858")
 
-    if x["853&854&855|PDX FROM MDC 18 EXCEPT"]==0 and x["_ORPCS"] > 0:
-        if x["_MCC"] > 0:
+    if x["853&854&855|PDX FROM MDC 18 EXCEPT"]==0:
+        if x["_MCC"] * x["_ORPCS|853"] > 0:
             y.append("853")
-        elif x["_CC"] > 0:
+        elif x["_CC"] * x["_ORPCS|854"] > 0:
             y.append("854")
-        else:
+        elif x["_ORPCS|855"]:
             y.append("855")
 
     if x["862&863|PDX"] > 0:
@@ -470,7 +471,7 @@ def mdc19(x):
     if x["_MDC19"] == 0:
         return y
 
-    if x["_ORPCS"] > 0:
+    if x["_ORPCS|876"] > 0:
         y.append("876")
 
     if x["880|PDX"] > 0:

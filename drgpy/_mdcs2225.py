@@ -36,13 +36,12 @@ def mdc23(x):
     if x["_MDC23"] == 0:
         return y
 
-    if x["_ORPCS"] > 0:
-        if x["_MCC"] > 0:
-            y.append("939")
-        elif x["_CC"] > 0:
-            y.append("940")
-        else:
-            y.append("941")
+    if x["_ORPCS|939"] * x["_MCC"] > 0:
+        y.append("939")
+    elif x["_ORPCS|940"] * x["_CC"] > 0:
+        y.append("940")
+    elif x["_ORPCS|941"]:
+        y.append("941")
 
     if (x["945&946|PDX"] > 0 or
         (x["945&946|OR FIRST CONDITION - ANY MDC 23 PDX EXCEPT"] == 0 and

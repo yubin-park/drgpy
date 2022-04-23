@@ -25,6 +25,9 @@ class TestMCD04(unittest.TestCase):
         # used to be 176, now 175 in v37
         self.assertTrue("175" in drg_lst)
 
+        drg_lst = de.get_drg_all(["A0222", "A202"], [])
+        self.assertTrue("177" in drg_lst)
+
         drg_lst = de.get_drg_all(["J1000"], [])
         self.assertTrue("179" not in drg_lst)
         drg_lst = de.get_drg_all(["J1000", "A481"], [])

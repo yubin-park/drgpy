@@ -76,7 +76,8 @@ class DRGEngine:
                     x.append(x_i)
                 
             if pr in self.orpcsmap:
-                x.append("_ORPCS")
+                for matched_drg in self.orpcsmap[pr]:
+                    x.append(f"_ORPCS|{matched_drg}")
                 if pr not in self.uormap:
                     x.append("_ORPCS*")
             if pr in self.uormap:
@@ -85,7 +86,10 @@ class DRGEngine:
         # TODO: need to identify if the patient is live at discharge
         # For now, we just assume all patients are alive
         x.append("_ALIVE")
-        x.append("_NDX{}".format(len(dx_lst)))
+        if len(dx_lst) == 1:
+            x.append("_NDX1")
+        elif len(dx_lst) > 1:
+            x.append("_NDX2+")
         x.append("_STATUS01") # NOTE: AMA, other statuses ignored
 
         return Counter(x)

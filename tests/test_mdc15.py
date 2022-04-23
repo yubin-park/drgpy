@@ -15,7 +15,7 @@ class TestMCD15(unittest.TestCase):
         drg_lst = de.get_drg_all(["P003", "J341"], [])
         self.assertTrue("795" in drg_lst)
         drg_lst = de.get_drg_all(["P003", "J341", "J340"], [])
-        self.assertTrue("795" not in drg_lst)
+        self.assertTrue("795" in drg_lst)
 
         drg_lst = de.get_drg_all(["P0701"], [])
         self.assertTrue("790" in drg_lst)

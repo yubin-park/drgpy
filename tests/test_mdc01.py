@@ -52,6 +52,9 @@ class TestMCD01(unittest.TestCase):
         # used to be 036, now 101 in v37
         self.assertTrue("101" in drg_lst)
 
+        drg_lst = de.get_drg_all(["I63232", "G8191"], ["03CL0ZZ"])
+        self.assertTrue("038" in drg_lst)
+
         drg_lst = de.get_drg_all(["G40001"], ["021W08B"])
         self.assertTrue("039" in drg_lst)
 
@@ -75,6 +78,12 @@ class TestMCD01(unittest.TestCase):
 
         drg_lst = de.get_drg_all(["G450"], ["3E03017"])
         self.assertTrue("063" in drg_lst)
+
+        drg_lst = de.get_drg_all(["I6000", "A0222"], [])
+        self.assertTrue("064" in drg_lst)
+
+        drg_lst = de.get_drg_all(["I6000"], [])
+        self.assertTrue("066" in drg_lst)
 
         drg_lst = de.get_drg_all(["I6000", "Z9282"], [])
         self.assertTrue("065" in drg_lst)
