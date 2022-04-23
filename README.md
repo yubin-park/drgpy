@@ -75,6 +75,6 @@ Yubin Park, PhD
 ## References
 - https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html
 - https://www.cms.gov/files/zip/icd-10-ms-drg-definitions-manual-files-v372.zip
-
+- https://content.findacode.com/files/tutorials/DRG-Grouper-2019.pdf
 
 
