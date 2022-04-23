@@ -188,10 +188,10 @@ def read(fn, dxmap, prmap):
                 
 if __name__=="__main__":
 
-    fn_lst = ["data/mdcs_00_07.txt",
-                "data/mdcs_08_11.txt",
-                "data/mdcs_12_21.txt",
-                "data/mdcs_22_25.txt"]
+    fn_lst = ["data/v40/mdcs_00_07.txt",
+                "data/v40/mdcs_08_11.txt",
+                "data/v40/mdcs_12_21.txt",
+                "data/v40/mdcs_22_25.txt"]
     dxmap = defaultdict(list)
     prmap = defaultdict(list)
     for fn in fn_lst[3:]:

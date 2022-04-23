@@ -1,0 +1,484 @@
+2303c2303,2305
+<   M311    Thrombotic microangiopathy
+---
+>   M3110   Thrombotic microangiopathy, unspecified
+>   M3111   Hematopoietic stem cell transplantation-associated thrombotic microangiopathy [HSCT-TMA]
+>   M3119   Other thrombotic microangiopathy
+2346,2351c2348,2360
+<   M3500   Sicca syndrome, unspecified
+<   M3501   Sicca syndrome with keratoconjunctivitis
+<   M3502   Sicca syndrome with lung involvement
+<   M3503   Sicca syndrome with myopathy
+<   M3504   Sicca syndrome with tubulo-interstitial nephropathy
+<   M3509   Sicca syndrome with other organ involvement
+---
+>   M3500   Sjogren syndrome, unspecified
+>   M3501   Sjogren syndrome with keratoconjunctivitis
+>   M3502   Sjogren syndrome with lung involvement
+>   M3503   Sjogren syndrome with myopathy
+>   M3504   Sjogren syndrome with tubulo-interstitial nephropathy
+>   M3505   Sjogren syndrome with inflammatory arthritis
+>   M3506   Sjogren syndrome with peripheral nervous system involvement
+>   M3507   Sjogren syndrome with central nervous system involvement
+>   M3508   Sjogren syndrome with gastrointestinal involvement
+>   M3509   Sjogren syndrome with other organ involvement
+>   M350A   Sjogren syndrome with glomerular disease
+>   M350B   Sjogren syndrome with vasculitis
+>   M350C   Sjogren syndrome with dental involvement
+2533a2543,2552
+>   M45A0   Non-radiographic axial spondyloarthritis of unspecified sites in spine
+>   M45A1   Non-radiographic axial spondyloarthritis of occipito-atlanto-axial region
+>   M45A2   Non-radiographic axial spondyloarthritis of cervical region
+>   M45A3   Non-radiographic axial spondyloarthritis of cervicothoracic region
+>   M45A4   Non-radiographic axial spondyloarthritis of thoracic region
+>   M45A5   Non-radiographic axial spondyloarthritis of thoracolumbar region
+>   M45A6   Non-radiographic axial spondyloarthritis of lumbar region
+>   M45A7   Non-radiographic axial spondyloarthritis of lumbosacral region
+>   M45A8   Non-radiographic axial spondyloarthritis of sacral and sacrococcygeal region
+>   M45AB   Non-radiographic axial spondyloarthritis of multiple sites in spine
+2882c2901,2903
+<   M545    Low back pain
+---
+>   M5450   Low back pain, unspecified
+>   M5451   Vertebrogenic low back pain
+>   M5459   Other low back pain
+25451a25473,25475
+>   XRGA0R7 Fusion of Thoracolumbar Vertebral Joint using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGA3R7 Fusion of Thoracolumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGA4R7 Fusion of Thoracolumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+25453a25478,25480
+>   XRGB0R7 Fusion of Lumbar Vertebral Joint using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGB3R7 Fusion of Lumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGB4R7 Fusion of Lumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+25455a25483,25485
+>   XRGC0R7 Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGC3R7 Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGC4R7 Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+25457a25488,25490
+>   XRGD0R7 Fusion of Lumbosacral Joint using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGD3R7 Fusion of Lumbosacral Joint using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGD4R7 Fusion of Lumbosacral Joint using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+25883a25917,25919
+>   XRGA0R7 Fusion of Thoracolumbar Vertebral Joint using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGA3R7 Fusion of Thoracolumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGA4R7 Fusion of Thoracolumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+25885a25922,25924
+>   XRGB0R7 Fusion of Lumbar Vertebral Joint using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGB3R7 Fusion of Lumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGB4R7 Fusion of Lumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+25887a25927,25929
+>   XRGC0R7 Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGC3R7 Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGC4R7 Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+25889a25932,25934
+>   XRGD0R7 Fusion of Lumbosacral Joint using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGD3R7 Fusion of Lumbosacral Joint using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGD4R7 Fusion of Lumbosacral Joint using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+26099a26145,26147
+>     XRGC0R7     Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>     XRGC3R7     Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>     XRGC4R7     Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+26451a26500,26502
+>   XRGA0R7 Fusion of Thoracolumbar Vertebral Joint using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGA3R7 Fusion of Thoracolumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGA4R7 Fusion of Thoracolumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+26453a26505,26507
+>   XRGB0R7 Fusion of Lumbar Vertebral Joint using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGB3R7 Fusion of Lumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGB4R7 Fusion of Lumbar Vertebral Joint using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+26455a26510,26512
+>   XRGC0R7 Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGC3R7 Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGC4R7 Fusion of 2 or more Lumbar Vertebral Joints using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+26457a26515,26517
+>   XRGD0R7 Fusion of Lumbosacral Joint using Customizable Interbody Fusion Device, Open Approach, New Technology Group 7
+>   XRGD3R7 Fusion of Lumbosacral Joint using Customizable Interbody Fusion Device, Percutaneous Approach, New Technology Group 7
+>   XRGD4R7 Fusion of Lumbosacral Joint using Customizable Interbody Fusion Device, Percutaneous Endoscopic Approach, New Technology Group 7
+30058a30119,30127
+>   0SPT4JZ       Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+>   0SPV4JZ       Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+>   0SPC4JC       Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+31420a31490
+>   XHRPXF7 Replacement of Skin with Bioengineered Allogeneic Construct, External Approach, New Technology Group 7
+36125a36196,36204
+>   0SPT4JZ       Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+>   0SPV4JZ       Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+>   0SPC4JC       Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+38907a38987
+>   0SS934Z Reposition Right Hip Joint with Internal Fixation Device, Percutaneous Approach
+38910a38991
+>   0SSB34Z Reposition Left Hip Joint with Internal Fixation Device, Percutaneous Approach
+39326,39327d39406
+<   XR2G021       Monitoring of Right Knee Joint using Intraoperative Knee Replacement Sensor, Open Approach, New Technology Group 1
+<   XR2H021       Monitoring of Left Knee Joint using Intraoperative Knee Replacement Sensor, Open Approach, New Technology Group 1
+39615a39695
+>   0PS403Z Reposition Thoracic Vertebra with Spinal Stabilization Device, Vertebral Body Tether, Open Approach
+39618a39699
+>   0PS443Z Reposition Thoracic Vertebra with Spinal Stabilization Device, Vertebral Body Tether, Percutaneous Endoscopic Approach
+39620a39702
+>   0QS003Z Reposition Lumbar Vertebra with Spinal Stabilization Device, Vertebral Body Tether, Open Approach
+39623a39706
+>   0QS043Z Reposition Lumbar Vertebra with Spinal Stabilization Device, Vertebral Body Tether, Percutaneous Endoscopic Approach
+39775a39859
+>   XNS00C7 Reposition of Lumbar Vertebra using Posterior (Dynamic) Distraction Device, Open Approach, New Technology Group 7
+39776a39861
+>   XNS03C7 Reposition of Lumbar Vertebra using Posterior (Dynamic) Distraction Device, Percutaneous Approach, New Technology Group 7
+39779a39865
+>   XNS40C7 Reposition of Thoracic Vertebra using Posterior (Dynamic) Distraction Device, Open Approach, New Technology Group 7
+39780a39867
+>   XNS43C7 Reposition of Thoracic Vertebra using Posterior (Dynamic) Distraction Device, Percutaneous Approach, New Technology Group 7
+42814a42902,42903
+>   0RPJ0J6 Removal of Synthetic Substitute from Right Shoulder Joint, Humeral Surface, Open Approach
+>   0RPJ0J7 Removal of Synthetic Substitute from Right Shoulder Joint, Glenoid Surface, Open Approach
+42815a42905,42906
+>   0RPJ3J6 Removal of Synthetic Substitute from Right Shoulder Joint, Humeral Surface, Percutaneous Approach
+>   0RPJ3J7 Removal of Synthetic Substitute from Right Shoulder Joint, Glenoid Surface, Percutaneous Approach
+42816a42908,42909
+>   0RPJ4J6 Removal of Synthetic Substitute from Right Shoulder Joint, Humeral Surface, Percutaneous Endoscopic Approach
+>   0RPJ4J7 Removal of Synthetic Substitute from Right Shoulder Joint, Glenoid Surface, Percutaneous Endoscopic Approach
+42817a42911,42912
+>   0RPK0J6 Removal of Synthetic Substitute from Left Shoulder Joint, Humeral Surface, Open Approach
+>   0RPK0J7 Removal of Synthetic Substitute from Left Shoulder Joint, Glenoid Surface, Open Approach
+42818a42914,42915
+>   0RPK3J6 Removal of Synthetic Substitute from Left Shoulder Joint, Humeral Surface, Percutaneous Approach
+>   0RPK3J7 Removal of Synthetic Substitute from Left Shoulder Joint, Glenoid Surface, Percutaneous Approach
+42819a42917,42918
+>   0RPK4J6 Removal of Synthetic Substitute from Left Shoulder Joint, Humeral Surface, Percutaneous Endoscopic Approach
+>   0RPK4J7 Removal of Synthetic Substitute from Left Shoulder Joint, Glenoid Surface, Percutaneous Endoscopic Approach
+43277,43295d43375
+<   0J900ZZ Drainage of Scalp Subcutaneous Tissue and Fascia, Open Approach
+<   0J940ZZ Drainage of Right Neck Subcutaneous Tissue and Fascia, Open Approach
+<   0J950ZZ Drainage of Left Neck Subcutaneous Tissue and Fascia, Open Approach
+<   0J960ZZ Drainage of Chest Subcutaneous Tissue and Fascia, Open Approach
+<   0J970ZZ Drainage of Back Subcutaneous Tissue and Fascia, Open Approach
+<   0J980ZZ Drainage of Abdomen Subcutaneous Tissue and Fascia, Open Approach
+<   0J990ZZ Drainage of Buttock Subcutaneous Tissue and Fascia, Open Approach
+<   0J9B0ZZ Drainage of Perineum Subcutaneous Tissue and Fascia, Open Approach
+<   0J9C0ZZ Drainage of Pelvic Region Subcutaneous Tissue and Fascia, Open Approach
+<   0J9D0ZZ Drainage of Right Upper Arm Subcutaneous Tissue and Fascia, Open Approach
+<   0J9F0ZZ Drainage of Left Upper Arm Subcutaneous Tissue and Fascia, Open Approach
+<   0J9G0ZZ Drainage of Right Lower Arm Subcutaneous Tissue and Fascia, Open Approach
+<   0J9H0ZZ Drainage of Left Lower Arm Subcutaneous Tissue and Fascia, Open Approach
+<   0J9L0ZZ Drainage of Right Upper Leg Subcutaneous Tissue and Fascia, Open Approach
+<   0J9M0ZZ Drainage of Left Upper Leg Subcutaneous Tissue and Fascia, Open Approach
+<   0J9N0ZZ Drainage of Right Lower Leg Subcutaneous Tissue and Fascia, Open Approach
+<   0J9P0ZZ Drainage of Left Lower Leg Subcutaneous Tissue and Fascia, Open Approach
+<   0J9Q0ZZ Drainage of Right Foot Subcutaneous Tissue and Fascia, Open Approach
+<   0J9R0ZZ Drainage of Left Foot Subcutaneous Tissue and Fascia, Open Approach
+47666a47747
+>   0QBN0Z2 Excision of Right Metatarsal, Sesamoid Bone(s) 1st Toe, Open Approach
+47667a47749
+>   0QBN3Z2 Excision of Right Metatarsal, Sesamoid Bone(s) 1st Toe, Percutaneous Approach
+47668a47751
+>   0QBN4Z2 Excision of Right Metatarsal, Sesamoid Bone(s) 1st Toe, Percutaneous Endoscopic Approach
+47669a47753
+>   0QBP0Z2 Excision of Left Metatarsal, Sesamoid Bone(s) 1st Toe, Open Approach
+47670a47755
+>   0QBP3Z2 Excision of Left Metatarsal, Sesamoid Bone(s) 1st Toe, Percutaneous Approach
+47671a47757
+>   0QBP4Z2 Excision of Left Metatarsal, Sesamoid Bone(s) 1st Toe, Percutaneous Endoscopic Approach
+50262a50349,50352
+>   0RHJ08Z Insertion of Spacer into Right Shoulder Joint, Open Approach
+>   0RHJ48Z Insertion of Spacer into Right Shoulder Joint, Percutaneous Endoscopic Approach
+>   0RHK08Z Insertion of Spacer into Left Shoulder Joint, Open Approach
+>   0RHK48Z Insertion of Spacer into Left Shoulder Joint, Percutaneous Endoscopic Approach
+50286a50377,50380
+>   0RPJ08Z Removal of Spacer from Right Shoulder Joint, Open Approach
+>   0RPJ48Z Removal of Spacer from Right Shoulder Joint, Percutaneous Endoscopic Approach
+>   0RPK08Z Removal of Spacer from Left Shoulder Joint, Open Approach
+>   0RPK48Z Removal of Spacer from Left Shoulder Joint, Percutaneous Endoscopic Approach
+50352,50353d50445
+<   0J9J0ZZ Drainage of Right Hand Subcutaneous Tissue and Fascia, Open Approach
+<   0J9K0ZZ Drainage of Left Hand Subcutaneous Tissue and Fascia, Open Approach
+55055a55148,55149
+>   0RWJ0J6       Revision of Synthetic Substitute in Right Shoulder Joint, Humeral Surface, Open Approach
+>   0RWJ0J7       Revision of Synthetic Substitute in Right Shoulder Joint, Glenoid Surface, Open Approach
+55056a55151,55152
+>   0RWJ3J6       Revision of Synthetic Substitute in Right Shoulder Joint, Humeral Surface, Percutaneous Approach
+>   0RWJ3J7       Revision of Synthetic Substitute in Right Shoulder Joint, Glenoid Surface, Percutaneous Approach
+55057a55154,55155
+>   0RWJ4J6       Revision of Synthetic Substitute in Right Shoulder Joint, Humeral Surface, Percutaneous Endoscopic Approach
+>   0RWJ4J7       Revision of Synthetic Substitute in Right Shoulder Joint, Glenoid Surface, Percutaneous Endoscopic Approach
+55058a55157,55158
+>   0RWK0J6       Revision of Synthetic Substitute in Left Shoulder Joint, Humeral Surface, Open Approach
+>   0RWK0J7       Revision of Synthetic Substitute in Left Shoulder Joint, Glenoid Surface, Open Approach
+55059a55160,55161
+>   0RWK3J6       Revision of Synthetic Substitute in Left Shoulder Joint, Humeral Surface, Percutaneous Approach
+>   0RWK3J7       Revision of Synthetic Substitute in Left Shoulder Joint, Glenoid Surface, Percutaneous Approach
+55060a55163,55164
+>   0RWK4J6       Revision of Synthetic Substitute in Left Shoulder Joint, Humeral Surface, Percutaneous Endoscopic Approach
+>   0RWK4J7       Revision of Synthetic Substitute in Left Shoulder Joint, Glenoid Surface, Percutaneous Endoscopic Approach
+55345a55450
+>   0SS734Z       Reposition Right Sacroiliac Joint with Internal Fixation Device, Percutaneous Approach
+55347a55453
+>   0SS834Z       Reposition Left Sacroiliac Joint with Internal Fixation Device, Percutaneous Approach
+57709c57815,57817
+<   M311   Thrombotic microangiopathy
+---
+>   M3110  Thrombotic microangiopathy, unspecified
+>   M3111  Hematopoietic stem cell transplantation-associated thrombotic microangiopathy [HSCT-TMA]
+>   M3119  Other thrombotic microangiopathy
+57749,57754c57857,57869
+<   M3500  Sicca syndrome, unspecified
+<   M3501  Sicca syndrome with keratoconjunctivitis
+<   M3502  Sicca syndrome with lung involvement
+<   M3503  Sicca syndrome with myopathy
+<   M3504  Sicca syndrome with tubulo-interstitial nephropathy
+<   M3509  Sicca syndrome with other organ involvement
+---
+>   M3500  Sjogren syndrome, unspecified
+>   M3501  Sjogren syndrome with keratoconjunctivitis
+>   M3502  Sjogren syndrome with lung involvement
+>   M3503  Sjogren syndrome with myopathy
+>   M3504  Sjogren syndrome with tubulo-interstitial nephropathy
+>   M3505  Sjogren syndrome with inflammatory arthritis
+>   M3506  Sjogren syndrome with peripheral nervous system involvement
+>   M3507  Sjogren syndrome with central nervous system involvement
+>   M3508  Sjogren syndrome with gastrointestinal involvement
+>   M3509  Sjogren syndrome with other organ involvement
+>   M350A  Sjogren syndrome with glomerular disease
+>   M350B  Sjogren syndrome with vasculitis
+>   M350C  Sjogren syndrome with dental involvement
+57773a57889,57898
+>   M45A0  Non-radiographic axial spondyloarthritis of unspecified sites in spine
+>   M45A1  Non-radiographic axial spondyloarthritis of occipito-atlanto-axial region
+>   M45A2  Non-radiographic axial spondyloarthritis of cervical region
+>   M45A3  Non-radiographic axial spondyloarthritis of cervicothoracic region
+>   M45A4  Non-radiographic axial spondyloarthritis of thoracic region
+>   M45A5  Non-radiographic axial spondyloarthritis of thoracolumbar region
+>   M45A6  Non-radiographic axial spondyloarthritis of lumbar region
+>   M45A7  Non-radiographic axial spondyloarthritis of lumbosacral region
+>   M45A8  Non-radiographic axial spondyloarthritis of sacral and sacrococcygeal region
+>   M45AB  Non-radiographic axial spondyloarthritis of multiple sites in spine
+58359c58484,58486
+<   M545    Low back pain
+---
+>   M5450   Low back pain, unspecified
+>   M5451   Vertebrogenic low back pain
+>   M5459   Other low back pain
+81920a82048,82055
+>   L24A0   Irritant contact dermatitis due to friction or contact with body fluids, unspecified
+>   L24A1   Irritant contact dermatitis due to saliva
+>   L24A2   Irritant contact dermatitis due to fecal, urinary or dual incontinence
+>   L24A9   Irritant contact dermatitis due friction or contact with other specified body fluids
+>   L24B0   Irritant contact dermatitis related to unspecified stoma or fistula
+>   L24B1   Irritant contact dermatitis related to digestive stoma or fistula
+>   L24B2   Irritant contact dermatitis related to respiratory stoma or fistula
+>   L24B3   Irritant contact dermatitis related to fecal or urinary stoma or fistula
+87071a87207
+>   XHRPXF7 Replacement of Skin with Bioengineered Allogeneic Construct, External Approach, New Technology Group 7
+90039,90060d90174
+<   0J900ZZ Drainage of Scalp Subcutaneous Tissue and Fascia, Open Approach
+<   0J910ZZ Drainage of Face Subcutaneous Tissue and Fascia, Open Approach
+<   0J940ZZ Drainage of Right Neck Subcutaneous Tissue and Fascia, Open Approach
+<   0J950ZZ Drainage of Left Neck Subcutaneous Tissue and Fascia, Open Approach
+<   0J960ZZ Drainage of Chest Subcutaneous Tissue and Fascia, Open Approach
+<   0J970ZZ Drainage of Back Subcutaneous Tissue and Fascia, Open Approach
+<   0J980ZZ Drainage of Abdomen Subcutaneous Tissue and Fascia, Open Approach
+<   0J990ZZ Drainage of Buttock Subcutaneous Tissue and Fascia, Open Approach
+<   0J9B0ZZ Drainage of Perineum Subcutaneous Tissue and Fascia, Open Approach
+<   0J9C0ZZ Drainage of Pelvic Region Subcutaneous Tissue and Fascia, Open Approach
+<   0J9D0ZZ Drainage of Right Upper Arm Subcutaneous Tissue and Fascia, Open Approach
+<   0J9F0ZZ Drainage of Left Upper Arm Subcutaneous Tissue and Fascia, Open Approach
+<   0J9G0ZZ Drainage of Right Lower Arm Subcutaneous Tissue and Fascia, Open Approach
+<   0J9H0ZZ Drainage of Left Lower Arm Subcutaneous Tissue and Fascia, Open Approach
+<   0J9J0ZZ Drainage of Right Hand Subcutaneous Tissue and Fascia, Open Approach
+<   0J9K0ZZ Drainage of Left Hand Subcutaneous Tissue and Fascia, Open Approach
+<   0J9L0ZZ Drainage of Right Upper Leg Subcutaneous Tissue and Fascia, Open Approach
+<   0J9M0ZZ Drainage of Left Upper Leg Subcutaneous Tissue and Fascia, Open Approach
+<   0J9N0ZZ Drainage of Right Lower Leg Subcutaneous Tissue and Fascia, Open Approach
+<   0J9P0ZZ Drainage of Left Lower Leg Subcutaneous Tissue and Fascia, Open Approach
+<   0J9Q0ZZ Drainage of Right Foot Subcutaneous Tissue and Fascia, Open Approach
+<   0J9R0ZZ Drainage of Left Foot Subcutaneous Tissue and Fascia, Open Approach
+90064a90179,90200
+>   0JC00ZZ Extirpation of Matter from Scalp Subcutaneous Tissue and Fascia, Open Approach
+>   0JC10ZZ Extirpation of Matter from Face Subcutaneous Tissue and Fascia, Open Approach
+>   0JC40ZZ Extirpation of Matter from Right Neck Subcutaneous Tissue and Fascia, Open Approach
+>   0JC50ZZ Extirpation of Matter from Left Neck Subcutaneous Tissue and Fascia, Open Approach
+>   0JC60ZZ Extirpation of Matter from Chest Subcutaneous Tissue and Fascia, Open Approach
+>   0JC70ZZ Extirpation of Matter from Back Subcutaneous Tissue and Fascia, Open Approach
+>   0JC80ZZ Extirpation of Matter from Abdomen Subcutaneous Tissue and Fascia, Open Approach
+>   0JC90ZZ Extirpation of Matter from Buttock Subcutaneous Tissue and Fascia, Open Approach
+>   0JCB0ZZ Extirpation of Matter from Perineum Subcutaneous Tissue and Fascia, Open Approach
+>   0JCC0ZZ Extirpation of Matter from Pelvic Region Subcutaneous Tissue and Fascia, Open Approach
+>   0JCD0ZZ Extirpation of Matter from Right Upper Arm Subcutaneous Tissue and Fascia, Open Approach
+>   0JCF0ZZ Extirpation of Matter from Left Upper Arm Subcutaneous Tissue and Fascia, Open Approach
+>   0JCG0ZZ Extirpation of Matter from Right Lower Arm Subcutaneous Tissue and Fascia, Open Approach
+>   0JCH0ZZ Extirpation of Matter from Left Lower Arm Subcutaneous Tissue and Fascia, Open Approach
+>   0JCJ0ZZ Extirpation of Matter from Right Hand Subcutaneous Tissue and Fascia, Open Approach
+>   0JCK0ZZ Extirpation of Matter from Left Hand Subcutaneous Tissue and Fascia, Open Approach
+>   0JCL0ZZ Extirpation of Matter from Right Upper Leg Subcutaneous Tissue and Fascia, Open Approach
+>   0JCM0ZZ Extirpation of Matter from Left Upper Leg Subcutaneous Tissue and Fascia, Open Approach
+>   0JCN0ZZ Extirpation of Matter from Right Lower Leg Subcutaneous Tissue and Fascia, Open Approach
+>   0JCP0ZZ Extirpation of Matter from Left Lower Leg Subcutaneous Tissue and Fascia, Open Approach
+>   0JCQ0ZZ Extirpation of Matter from Right Foot Subcutaneous Tissue and Fascia, Open Approach
+>   0JCR0ZZ Extirpation of Matter from Left Foot Subcutaneous Tissue and Fascia, Open Approach
+94661,94667d94796
+<   DBY0KZZ       Laser Interstitial Thermal Therapy of Trachea
+<   DBY1KZZ       Laser Interstitial Thermal Therapy of Bronchus
+<   DBY2KZZ       Laser Interstitial Thermal Therapy of Lung
+<   DBY5KZZ       Laser Interstitial Thermal Therapy of Pleura
+<   DBY6KZZ       Laser Interstitial Thermal Therapy of Mediastinum
+<   DBY7KZZ       Laser Interstitial Thermal Therapy of Chest Wall
+<   DBY8KZZ       Laser Interstitial Thermal Therapy of Diaphragm
+94670d94798
+<   DVY0KZZ       Laser Interstitial Thermal Therapy of Prostate
+99650a99779,99786
+>   L24A0   Irritant contact dermatitis due to friction or contact with body fluids, unspecified
+>   L24A1   Irritant contact dermatitis due to saliva
+>   L24A2   Irritant contact dermatitis due to fecal, urinary or dual incontinence
+>   L24A9   Irritant contact dermatitis due friction or contact with other specified body fluids
+>   L24B0   Irritant contact dermatitis related to unspecified stoma or fistula
+>   L24B1   Irritant contact dermatitis related to digestive stoma or fistula
+>   L24B2   Irritant contact dermatitis related to respiratory stoma or fistula
+>   L24B3   Irritant contact dermatitis related to fecal or urinary stoma or fistula
+100559a100696
+>   E75244  Niemann-Pick disease type A/B
+100678c100815,100818
+<   R633    Feeding difficulties
+---
+>   R6330   Feeding difficulties, unspecified
+>   R6331   Pediatric feeding disorder, acute
+>   R6332   Pediatric feeding disorder, chronic
+>   R6339   Other feeding difficulties
+100702c100842
+<   Z6841   Body mass index [BMI]40.0-44.9, adult
+---
+>   Z6841   Body mass index [BMI] 40.0-44.9, adult
+101623a101764
+>   XHRPXF7 Replacement of Skin with Bioengineered Allogeneic Construct, External Approach, New Technology Group 7
+102044a102186
+>   03173ZF       Bypass Right Brachial Artery to Lower Arm Vein, Percutaneous Approach
+102064a102207
+>   03183ZF       Bypass Left Brachial Artery to Lower Arm Vein, Percutaneous Approach
+104146d104288
+<   0DH60UZ       Insertion of Feeding Device into Stomach, Open Approach
+105150a105293
+>   0QBN0Z2       Excision of Right Metatarsal, Sesamoid Bone(s) 1st Toe, Open Approach
+105152a105296
+>   0QBN3Z2       Excision of Right Metatarsal, Sesamoid Bone(s) 1st Toe, Percutaneous Approach
+105154a105299
+>   0QBN4Z2       Excision of Right Metatarsal, Sesamoid Bone(s) 1st Toe, Percutaneous Endoscopic Approach
+105156a105302
+>   0QBP0Z2       Excision of Left Metatarsal, Sesamoid Bone(s) 1st Toe, Open Approach
+105158a105305
+>   0QBP3Z2       Excision of Left Metatarsal, Sesamoid Bone(s) 1st Toe, Percutaneous Approach
+105160a105308
+>   0QBP4Z2       Excision of Left Metatarsal, Sesamoid Bone(s) 1st Toe, Percutaneous Endoscopic Approach
+105553a105702
+>   DGY2KZZ       Laser Interstitial Thermal Therapy of Adrenal Glands
+105561a105711,105713
+>   X2KB317       Bypass Right Radial Artery using Thermal Resistance Energy, Percutaneous Approach, New Technology Group 7
+>   X2KC317       Bypass Left Radial Artery using Thermal Resistance Energy, Percutaneous Approach, New Technology Group 7
+>   XW0Q316       Introduction of Eladocagene exuparvovec into Cranial Cavity and Brain, Percutaneous Approach, New Technology Group 6
+105759a105912,105914
+>   0SPC0JZ       Removal of Synthetic Substitute from Right Knee Joint, Open Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+107055a107211,107213
+>   0SPC4JZ       Removal of Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+107281a107440,107442
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+>   0SPC0JC       Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Open Approach
+108010a108172,108174
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+>   0SPT0JZ       Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Open Approach
+108064a108229,108231
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+>   0SPV0JZ       Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Open Approach
+108345a108513,108515
+>   0SRV0JZ       Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+>    and 0SPC0LZ  Removal of Medial Unicondylar Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+108357a108528,108530
+>   0SRV0JZ       Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+>    and 0SPC0MZ  Removal of Lateral Unicondylar Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+108369a108543,108545
+>   0SRV0JZ       Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+>    and 0SPC0NZ  Removal of Patellofemoral Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+108381a108558,108560
+>   0SRV0JZ       Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+>    and 0SPC4LZ  Removal of Medial Unicondylar Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+108393a108573,108575
+>   0SRV0JZ       Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+>    and 0SPC4MZ  Removal of Lateral Unicondylar Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+108405a108588,108590
+>   0SRV0JZ       Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+>    and 0SPC4NZ  Removal of Patellofemoral Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+108531a108717,108725
+>   0SPT4JZ       Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+>   0SPV4JZ       Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+>   0SPC4JC       Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+>    and 0SRV0JZ  Replacement of Right Knee Joint, Tibial Surface with Synthetic Substitute, Open Approach
+> 
+108946c109140,109143
+<   R633   Feeding difficulties
+---
+>   R6330  Feeding difficulties, unspecified
+>   R6331  Pediatric feeding disorder, acute
+>   R6332  Pediatric feeding disorder, chronic
+>   R6339  Other feeding difficulties
+108957c109154
+<   Z6841  Body mass index [BMI]40.0-44.9, adult
+---
+>   Z6841  Body mass index [BMI] 40.0-44.9, adult
+109093a109291
+>   E75244 Niemann-Pick disease type A/B
+109865c110063,110064
+<   R358    Other polyuria
+---
+>   R3581   Nocturnal polyuria
+>   R3589   Other polyuria
+110905d111103
+<   0TC08ZZ Extirpation of Matter from Right Kidney, Via Natural or Artificial Opening Endoscopic
+110910d111107
+<   0TC18ZZ Extirpation of Matter from Left Kidney, Via Natural or Artificial Opening Endoscopic
+111862d112058
+<   0TC38ZZ Extirpation of Matter from Right Kidney Pelvis, Via Natural or Artificial Opening Endoscopic
+111864d112059
+<   0TC48ZZ Extirpation of Matter from Left Kidney Pelvis, Via Natural or Artificial Opening Endoscopic
+111866d112060
+<   0TC68ZZ Extirpation of Matter from Right Ureter, Via Natural or Artificial Opening Endoscopic
+111868d112061
+<   0TC78ZZ Extirpation of Matter from Left Ureter, Via Natural or Artificial Opening Endoscopic
+112185a112379
+>   03173ZF Bypass Right Brachial Artery to Lower Arm Vein, Percutaneous Approach
+112200a112395
+>   03183ZF Bypass Left Brachial Artery to Lower Arm Vein, Percutaneous Approach
+113823a114019,114023
+>   X2CS3T7 Extirpation of Matter from Right Lower Extremity Artery using Computer-aided Mechanical Aspiration, Percutaneous Approach, New Technology Group 7
+>   X2CT3T7 Extirpation of Matter from Left Lower Extremity Artery using Computer-aided Mechanical Aspiration, Percutaneous Approach, New Technology Group 7
+>   X2KB317 Bypass Right Radial Artery using Thermal Resistance Energy, Percutaneous Approach, New Technology Group 7
+>   X2KC317 Bypass Left Radial Artery using Thermal Resistance Energy, Percutaneous Approach, New Technology Group 7
+>   X2VW0N7 Restriction of Thoracic Aorta, Descending using Branched Synthetic Substitute with Intraluminal Device, Open Approach, New Technology Group 7
+114170c114370,114371
+<   R358   Other polyuria
+---
+>   R3581  Nocturnal polyuria
+>   R3589  Other polyuria

@@ -1,0 +1,695 @@
+2862a2863,2868
+>   M51A0   Intervertebral annulus fibrosus defect, lumbar region, unspecified size
+>   M51A1   Intervertebral annulus fibrosus defect, small, lumbar region
+>   M51A2   Intervertebral annulus fibrosus defect, large, lumbar region
+>   M51A3   Intervertebral annulus fibrosus defect, lumbosacral region, unspecified size
+>   M51A4   Intervertebral annulus fibrosus defect, small, lumbosacral region
+>   M51A5   Intervertebral annulus fibrosus defect, large, lumbosacral region
+3290a3297,3300
+>   M625A0  Muscle wasting and atrophy, not elsewhere classified, back, cervical
+>   M625A1  Muscle wasting and atrophy, not elsewhere classified, back, thoracic
+>   M625A2  Muscle wasting and atrophy, not elsewhere classified, back, lumbosacral
+>   M625A9  Muscle wasting and atrophy, not elsewhere classified, back, unspecified level
+6211,6219c6221,6249
+<   M93011  Acute slipped upper femoral epiphysis (nontraumatic), right hip
+<   M93012  Acute slipped upper femoral epiphysis (nontraumatic), left hip
+<   M93013  Acute slipped upper femoral epiphysis (nontraumatic), unspecified hip
+<   M93021  Chronic slipped upper femoral epiphysis (nontraumatic), right hip
+<   M93022  Chronic slipped upper femoral epiphysis (nontraumatic), left hip
+<   M93023  Chronic slipped upper femoral epiphysis (nontraumatic), unspecified hip
+<   M93031  Acute on chronic slipped upper femoral epiphysis (nontraumatic), right hip
+<   M93032  Acute on chronic slipped upper femoral epiphysis (nontraumatic), left hip
+<   M93033  Acute on chronic slipped upper femoral epiphysis (nontraumatic), unspecified hip
+---
+>   M93004  Unspecified slipped upper femoral epiphysis (nontraumatic), bilateral hips
+>   M93011  Acute slipped upper femoral epiphysis, stable (nontraumatic), right hip
+>   M93012  Acute slipped upper femoral epiphysis, stable (nontraumatic), left hip
+>   M93013  Acute slipped upper femoral epiphysis, stable (nontraumatic), unspecified hip
+>   M93014  Acute slipped upper femoral epiphysis, stable (nontraumatic), bilateral hips
+>   M93021  Chronic slipped upper femoral epiphysis, stable (nontraumatic), right hip
+>   M93022  Chronic slipped upper femoral epiphysis, stable (nontraumatic), left hip
+>   M93023  Chronic slipped upper femoral epiphysis, stable (nontraumatic), unspecified hip
+>   M93024  Chronic slipped upper femoral epiphysis, stable (nontraumatic), bilateral hips
+>   M93031  Acute on chronic slipped upper femoral epiphysis, stable (nontraumatic), right hip
+>   M93032  Acute on chronic slipped upper femoral epiphysis, stable (nontraumatic), left hip
+>   M93033  Acute on chronic slipped upper femoral epiphysis, stable (nontraumatic), unspecified hip
+>   M93034  Acute on chronic slipped upper femoral epiphysis, stable (nontraumatic), bilateral hips
+>   M93041  Acute slipped upper femoral epiphysis, unstable (nontraumatic), right hip
+>   M93042  Acute slipped upper femoral epiphysis, unstable (nontraumatic), left hip
+>   M93043  Acute slipped upper femoral epiphysis, unstable (nontraumatic), unspecified hip
+>   M93044  Acute slipped upper femoral epiphysis, unstable (nontraumatic), bilateral hips
+>   M93051  Acute on chronic slipped upper femoral epiphysis, unstable (nontraumatic), right hip
+>   M93052  Acute on chronic slipped upper femoral epiphysis, unstable (nontraumatic), left hip
+>   M93053  Acute on chronic slipped upper femoral epiphysis, unstable (nontraumatic), unspecified hip
+>   M93054  Acute on chronic slipped upper femoral epiphysis, unstable (nontraumatic), bilateral hips
+>   M93061  Acute slipped upper femoral epiphysis, unspecified stability (nontraumatic), right hip
+>   M93062  Acute slipped upper femoral epiphysis, unspecified stability (nontraumatic), left hip
+>   M93063  Acute slipped upper femoral epiphysis, unspecified stability (nontraumatic), unspecified hip
+>   M93064  Acute slipped upper femoral epiphysis, unspecified stability (nontraumatic), bilateral hips
+>   M93071  Acute on chronic slipped upper femoral epiphysis, unspecified stability (nontraumatic), right hip
+>   M93072  Acute on chronic slipped upper femoral epiphysis, unspecified stability (nontraumatic), left hip
+>   M93073  Acute on chronic slipped upper femoral epiphysis, unspecified stability (nontraumatic), unspecified hip
+>   M93074  Acute on chronic slipped upper femoral epiphysis, unspecified stability (nontraumatic), bilateral hips
+6357a6388,6391
+>   M96A1   Fracture of sternum associated with chest compression and cardiopulmonary resuscitation
+>   M96A2   Fracture of one rib associated with chest compression and cardiopulmonary resuscitation
+>   M96A3   Multiple fractures of ribs associated with chest compression and cardiopulmonary resuscitation
+>   M96A9   Other fracture associated with chest compression and cardiopulmonary resuscitation
+29236a29271,29272
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+30127a30164,30277
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC08Z  Removal of Spacer from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC08Z  Removal of Spacer from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC09Z  Removal of Liner from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC09Z  Removal of Liner from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0EZ  Removal of Articulating Spacer from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0EZ  Removal of Articulating Spacer from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0JC  Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0JC  Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0JZ  Removal of Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0JZ  Removal of Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0LZ  Removal of Medial Unicondylar Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0LZ  Removal of Medial Unicondylar Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0MZ  Removal of Lateral Unicondylar Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0MZ  Removal of Lateral Unicondylar Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0NZ  Removal of Patellofemoral Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0NZ  Removal of Patellofemoral Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC38Z  Removal of Spacer from Right Knee Joint, Percutaneous Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC38Z  Removal of Spacer from Right Knee Joint, Percutaneous Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC48Z  Removal of Spacer from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC48Z  Removal of Spacer from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4JC  Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4JC  Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4JZ  Removal of Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4JZ  Removal of Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4LZ  Removal of Medial Unicondylar Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4LZ  Removal of Medial Unicondylar Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4MZ  Removal of Lateral Unicondylar Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4MZ  Removal of Lateral Unicondylar Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4NZ  Removal of Patellofemoral Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4NZ  Removal of Patellofemoral Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPT0JZ  Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPT0JZ  Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPT4JZ  Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPT4JZ  Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPV0JZ  Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPV0JZ  Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPV4JZ  Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPV4JZ  Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+> 
+30156a30307,30308
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+31047a31200,31313
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD08Z  Removal of Spacer from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD08Z  Removal of Spacer from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD09Z  Removal of Liner from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD09Z  Removal of Liner from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0EZ  Removal of Articulating Spacer from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0EZ  Removal of Articulating Spacer from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0JC  Removal of Synthetic Substitute from Left Knee Joint, Patellar Surface, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0JC  Removal of Synthetic Substitute from Left Knee Joint, Patellar Surface, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0JZ  Removal of Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0JZ  Removal of Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0LZ  Removal of Medial Unicondylar Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0LZ  Removal of Medial Unicondylar Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0MZ  Removal of Lateral Unicondylar Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0MZ  Removal of Lateral Unicondylar Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0NZ  Removal of Patellofemoral Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0NZ  Removal of Patellofemoral Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD38Z  Removal of Spacer from Left Knee Joint, Percutaneous Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD38Z  Removal of Spacer from Left Knee Joint, Percutaneous Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD48Z  Removal of Spacer from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD48Z  Removal of Spacer from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4JC  Removal of Synthetic Substitute from Left Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4JC  Removal of Synthetic Substitute from Left Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4JZ  Removal of Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4JZ  Removal of Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4LZ  Removal of Medial Unicondylar Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4LZ  Removal of Medial Unicondylar Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4MZ  Removal of Lateral Unicondylar Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4MZ  Removal of Lateral Unicondylar Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4NZ  Removal of Patellofemoral Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4NZ  Removal of Patellofemoral Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPU0JZ  Removal of Synthetic Substitute from Left Knee Joint, Femoral Surface, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPU0JZ  Removal of Synthetic Substitute from Left Knee Joint, Femoral Surface, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPU4JZ  Removal of Synthetic Substitute from Left Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPU4JZ  Removal of Synthetic Substitute from Left Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPW0JZ  Removal of Synthetic Substitute from Left Knee Joint, Tibial Surface, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPW0JZ  Removal of Synthetic Substitute from Left Knee Joint, Tibial Surface, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPW4JZ  Removal of Synthetic Substitute from Left Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPW4JZ  Removal of Synthetic Substitute from Left Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+> 
+36204a36471,36698
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC08Z  Removal of Spacer from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC08Z  Removal of Spacer from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC09Z  Removal of Liner from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC09Z  Removal of Liner from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0EZ  Removal of Articulating Spacer from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0EZ  Removal of Articulating Spacer from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0JC  Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0JC  Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0JZ  Removal of Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0JZ  Removal of Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0LZ  Removal of Medial Unicondylar Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0LZ  Removal of Medial Unicondylar Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0MZ  Removal of Lateral Unicondylar Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0MZ  Removal of Lateral Unicondylar Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0NZ  Removal of Patellofemoral Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC0NZ  Removal of Patellofemoral Synthetic Substitute from Right Knee Joint, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC38Z  Removal of Spacer from Right Knee Joint, Percutaneous Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC38Z  Removal of Spacer from Right Knee Joint, Percutaneous Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC48Z  Removal of Spacer from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC48Z  Removal of Spacer from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4JC  Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4JC  Removal of Synthetic Substitute from Right Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4JZ  Removal of Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4JZ  Removal of Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4LZ  Removal of Medial Unicondylar Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4LZ  Removal of Medial Unicondylar Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4MZ  Removal of Lateral Unicondylar Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4MZ  Removal of Lateral Unicondylar Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4NZ  Removal of Patellofemoral Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC4NZ  Removal of Patellofemoral Synthetic Substitute from Right Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD08Z  Removal of Spacer from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD08Z  Removal of Spacer from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD09Z  Removal of Liner from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD09Z  Removal of Liner from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0EZ  Removal of Articulating Spacer from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0EZ  Removal of Articulating Spacer from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0JC  Removal of Synthetic Substitute from Left Knee Joint, Patellar Surface, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0JC  Removal of Synthetic Substitute from Left Knee Joint, Patellar Surface, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0JZ  Removal of Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0JZ  Removal of Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0LZ  Removal of Medial Unicondylar Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0LZ  Removal of Medial Unicondylar Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0MZ  Removal of Lateral Unicondylar Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0MZ  Removal of Lateral Unicondylar Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0NZ  Removal of Patellofemoral Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD0NZ  Removal of Patellofemoral Synthetic Substitute from Left Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD38Z  Removal of Spacer from Left Knee Joint, Percutaneous Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD38Z  Removal of Spacer from Left Knee Joint, Percutaneous Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD48Z  Removal of Spacer from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD48Z  Removal of Spacer from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4JC  Removal of Synthetic Substitute from Left Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4JC  Removal of Synthetic Substitute from Left Knee Joint, Patellar Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4JZ  Removal of Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4JZ  Removal of Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4LZ  Removal of Medial Unicondylar Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4LZ  Removal of Medial Unicondylar Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4MZ  Removal of Lateral Unicondylar Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4MZ  Removal of Lateral Unicondylar Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4NZ  Removal of Patellofemoral Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD4NZ  Removal of Patellofemoral Synthetic Substitute from Left Knee Joint, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPT0JZ  Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPT0JZ  Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPT4JZ  Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPT4JZ  Removal of Synthetic Substitute from Right Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPU0JZ  Removal of Synthetic Substitute from Left Knee Joint, Femoral Surface, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPU0JZ  Removal of Synthetic Substitute from Left Knee Joint, Femoral Surface, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPU4JZ  Removal of Synthetic Substitute from Left Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPU4JZ  Removal of Synthetic Substitute from Left Knee Joint, Femoral Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPV0JZ  Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPV0JZ  Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Open Approach
+> 
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPV4JZ  Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPV4JZ  Removal of Synthetic Substitute from Right Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPW0JZ  Removal of Synthetic Substitute from Left Knee Joint, Tibial Surface, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPW0JZ  Removal of Synthetic Substitute from Left Knee Joint, Tibial Surface, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPW4JZ  Removal of Synthetic Substitute from Left Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPW4JZ  Removal of Synthetic Substitute from Left Knee Joint, Tibial Surface, Percutaneous Endoscopic Approach
+> 
+37704a38199,38202
+>   XRRG0L8 Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>   XRRG0M8 Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>   XRRH0L8 Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>   XRRH0M8 Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+44197,44198d44694
+<   0KBN3ZX Excision of Right Hip Muscle, Percutaneous Approach, Diagnostic
+<   0KBN3ZZ Excision of Right Hip Muscle, Percutaneous Approach
+44203,44204d44698
+<   0KBP3ZX Excision of Left Hip Muscle, Percutaneous Approach, Diagnostic
+<   0KBP3ZZ Excision of Left Hip Muscle, Percutaneous Approach
+58452a58947,58952
+>   M51A0   Intervertebral annulus fibrosus defect, lumbar region, unspecified size
+>   M51A1   Intervertebral annulus fibrosus defect, small, lumbar region
+>   M51A2   Intervertebral annulus fibrosus defect, large, lumbar region
+>   M51A3   Intervertebral annulus fibrosus defect, lumbosacral region, unspecified size
+>   M51A4   Intervertebral annulus fibrosus defect, small, lumbosacral region
+>   M51A5   Intervertebral annulus fibrosus defect, large, lumbosacral region
+60763,60771c61263,61291
+<   M93011  Acute slipped upper femoral epiphysis (nontraumatic), right hip
+<   M93012  Acute slipped upper femoral epiphysis (nontraumatic), left hip
+<   M93013  Acute slipped upper femoral epiphysis (nontraumatic), unspecified hip
+<   M93021  Chronic slipped upper femoral epiphysis (nontraumatic), right hip
+<   M93022  Chronic slipped upper femoral epiphysis (nontraumatic), left hip
+<   M93023  Chronic slipped upper femoral epiphysis (nontraumatic), unspecified hip
+<   M93031  Acute on chronic slipped upper femoral epiphysis (nontraumatic), right hip
+<   M93032  Acute on chronic slipped upper femoral epiphysis (nontraumatic), left hip
+<   M93033  Acute on chronic slipped upper femoral epiphysis (nontraumatic), unspecified hip
+---
+>   M93004  Unspecified slipped upper femoral epiphysis (nontraumatic), bilateral hips
+>   M93011  Acute slipped upper femoral epiphysis, stable (nontraumatic), right hip
+>   M93012  Acute slipped upper femoral epiphysis, stable (nontraumatic), left hip
+>   M93013  Acute slipped upper femoral epiphysis, stable (nontraumatic), unspecified hip
+>   M93014  Acute slipped upper femoral epiphysis, stable (nontraumatic), bilateral hips
+>   M93021  Chronic slipped upper femoral epiphysis, stable (nontraumatic), right hip
+>   M93022  Chronic slipped upper femoral epiphysis, stable (nontraumatic), left hip
+>   M93023  Chronic slipped upper femoral epiphysis, stable (nontraumatic), unspecified hip
+>   M93024  Chronic slipped upper femoral epiphysis, stable (nontraumatic), bilateral hips
+>   M93031  Acute on chronic slipped upper femoral epiphysis, stable (nontraumatic), right hip
+>   M93032  Acute on chronic slipped upper femoral epiphysis, stable (nontraumatic), left hip
+>   M93033  Acute on chronic slipped upper femoral epiphysis, stable (nontraumatic), unspecified hip
+>   M93034  Acute on chronic slipped upper femoral epiphysis, stable (nontraumatic), bilateral hips
+>   M93041  Acute slipped upper femoral epiphysis, unstable (nontraumatic), right hip
+>   M93042  Acute slipped upper femoral epiphysis, unstable (nontraumatic), left hip
+>   M93043  Acute slipped upper femoral epiphysis, unstable (nontraumatic), unspecified hip
+>   M93044  Acute slipped upper femoral epiphysis, unstable (nontraumatic), bilateral hips
+>   M93051  Acute on chronic slipped upper femoral epiphysis, unstable (nontraumatic), right hip
+>   M93052  Acute on chronic slipped upper femoral epiphysis, unstable (nontraumatic), left hip
+>   M93053  Acute on chronic slipped upper femoral epiphysis, unstable (nontraumatic), unspecified hip
+>   M93054  Acute on chronic slipped upper femoral epiphysis, unstable (nontraumatic), bilateral hips
+>   M93061  Acute slipped upper femoral epiphysis, unspecified stability (nontraumatic), right hip
+>   M93062  Acute slipped upper femoral epiphysis, unspecified stability (nontraumatic), left hip
+>   M93063  Acute slipped upper femoral epiphysis, unspecified stability (nontraumatic), unspecified hip
+>   M93064  Acute slipped upper femoral epiphysis, unspecified stability (nontraumatic), bilateral hips
+>   M93071  Acute on chronic slipped upper femoral epiphysis, unspecified stability (nontraumatic), right hip
+>   M93072  Acute on chronic slipped upper femoral epiphysis, unspecified stability (nontraumatic), left hip
+>   M93073  Acute on chronic slipped upper femoral epiphysis, unspecified stability (nontraumatic), unspecified hip
+>   M93074  Acute on chronic slipped upper femoral epiphysis, unspecified stability (nontraumatic), bilateral hips
+61533a62054,62057
+>   M625A0 Muscle wasting and atrophy, not elsewhere classified, back, cervical
+>   M625A1 Muscle wasting and atrophy, not elsewhere classified, back, thoracic
+>   M625A2 Muscle wasting and atrophy, not elsewhere classified, back, lumbosacral
+>   M625A9 Muscle wasting and atrophy, not elsewhere classified, back, unspecified level
+75811a76336,76339
+>   M96A1   Fracture of sternum associated with chest compression and cardiopulmonary resuscitation
+>   M96A2   Fracture of one rib associated with chest compression and cardiopulmonary resuscitation
+>   M96A3   Multiple fractures of ribs associated with chest compression and cardiopulmonary resuscitation
+>   M96A9   Other fracture associated with chest compression and cardiopulmonary resuscitation
+90893d91420
+<   0KBN3ZZ Excision of Right Hip Muscle, Percutaneous Approach
+90897d91423
+<   0KBP3ZZ Excision of Left Hip Muscle, Percutaneous Approach
+100517c101043,101049
+<   E343    Short stature due to endocrine disorder
+---
+>   E3430   Short stature due to endocrine disorder, unspecified
+>   E3431   Constitutional short stature
+>   E34321  Primary insulin-like growth factor-1 (IGF-1) deficiency
+>   E34322  Insulin-like growth factor-1 (IGF-1) resistance
+>   E34328  Other genetic causes of short stature
+>   E34329  Unspecified genetic causes of short stature
+>   E3439   Other short stature due to endocrine disorder
+100773c101305,101308
+<   E872    Acidosis
+---
+>   E8720   Acidosis, unspecified
+>   E8721   Acute metabolic acidosis
+>   E8722   Chronic metabolic acidosis
+>   E8729   Other acidosis
+108725a109261,109272
+>   XRRG0L8       Replacement of Right Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC09Z  Removal of Liner from Right Knee Joint, Open Approach
+> 
+>   XRRG0M8       Replacement of Right Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPC09Z  Removal of Liner from Right Knee Joint, Open Approach
+> 
+>   XRRH0L8       Replacement of Left Knee Joint with Synthetic Substitute, Lateral Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD09Z  Removal of Liner from Left Knee Joint, Open Approach
+> 
+>   XRRH0M8       Replacement of Left Knee Joint with Synthetic Substitute, Medial Meniscus, Open Approach, New Technology Group 8
+>    and 0SPD09Z  Removal of Liner from Left Knee Joint, Open Approach
+> 
+109119c109666,109669
+<   E872   Acidosis
+---
+>   E8720  Acidosis, unspecified
+>   E8721  Acute metabolic acidosis
+>   E8722  Chronic metabolic acidosis
+>   E8729  Other acidosis
+109541c110091,110097
+<   E343    Short stature due to endocrine disorder
+---
+>   E3430   Short stature due to endocrine disorder, unspecified
+>   E3431   Constitutional short stature
+>   E34321  Primary insulin-like growth factor-1 (IGF-1) deficiency
+>   E34322  Insulin-like growth factor-1 (IGF-1) resistance
+>   E34328  Other genetic causes of short stature
+>   E34329  Unspecified genetic causes of short stature
+>   E3439   Other short stature due to endocrine disorder
+109820c110376,110377
+<   N141    Nephropathy induced by other drugs, medicaments and biological substances
+---
+>   N1411   Contrast-induced nephropathy
+>   N1419   Nephropathy induced by other drugs, medicaments and biological substances
+109958a110516,110530
+>   N80A0   Endometriosis of bladder, unspecified depth
+>   N80A1   Superficial endometriosis of bladder
+>   N80A2   Deep endometriosis of bladder
+>   N80A41  Superficial endometriosis of right ureter
+>   N80A42  Superficial endometriosis of left ureter
+>   N80A43  Superficial endometriosis of bilateral ureters
+>   N80A49  Superficial endometriosis of unspecified ureter
+>   N80A51  Deep endometriosis of right ureter
+>   N80A52  Deep endometriosis of left ureter
+>   N80A53  Deep endometriosis of bilateral ureters
+>   N80A59  Deep endometriosis of unspecified ureter
+>   N80A61  Endometriosis of right ureter, unspecified depth
+>   N80A62  Endometriosis of left ureter, unspecified depth
+>   N80A63  Endometriosis of bilateral ureters, unspecified depth
+>   N80A69  Endometriosis of unspecified ureter, unspecified depth
+110322a110895,110898
+>   0DX80ZB Transfer Small Intestine to Bladder, Open Approach
+>   0DX84ZB Transfer Small Intestine to Bladder, Percutaneous Endoscopic Approach
+>   0DXE0ZB Transfer Large Intestine to Bladder, Open Approach
+>   0DXE4ZB Transfer Large Intestine to Bladder, Percutaneous Endoscopic Approach
+110592a111169,111174
+>   0DX80ZC Transfer Small Intestine to Right Ureter, Open Approach
+>   0DX80ZD Transfer Small Intestine to Left Ureter, Open Approach
+>   0DX80ZF Transfer Small Intestine to Bilateral Ureters, Open Approach
+>   0DX84ZC Transfer Small Intestine to Right Ureter, Percutaneous Endoscopic Approach
+>   0DX84ZD Transfer Small Intestine to Left Ureter, Percutaneous Endoscopic Approach
+>   0DX84ZF Transfer Small Intestine to Bilateral Ureters, Percutaneous Endoscopic Approach
+114631c115213,115214
+<   N141    Nephropathy induced by other drugs, medicaments and biological substances
+---
+>   N1411   Contrast-induced nephropathy
+>   N1419   Nephropathy induced by other drugs, medicaments and biological substances
+114683a115267,115281
+>   N80A0   Endometriosis of bladder, unspecified depth
+>   N80A1   Superficial endometriosis of bladder
+>   N80A2   Deep endometriosis of bladder
+>   N80A41  Superficial endometriosis of right ureter
+>   N80A42  Superficial endometriosis of left ureter
+>   N80A43  Superficial endometriosis of bilateral ureters
+>   N80A49  Superficial endometriosis of unspecified ureter
+>   N80A51  Deep endometriosis of right ureter
+>   N80A52  Deep endometriosis of left ureter
+>   N80A53  Deep endometriosis of bilateral ureters
+>   N80A59  Deep endometriosis of unspecified ureter
+>   N80A61  Endometriosis of right ureter, unspecified depth
+>   N80A62  Endometriosis of left ureter, unspecified depth
+>   N80A63  Endometriosis of bilateral ureters, unspecified depth
+>   N80A69  Endometriosis of unspecified ureter, unspecified depth

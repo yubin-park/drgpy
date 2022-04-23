@@ -10,13 +10,17 @@ from collections import Counter
 
 class DRGEngine:
 
-    def __init__(self):
+    def __init__(self, version="40"):
         dxmap = defaultdict(list)
         prmap = defaultdict(list)
-        dxmap, prmap = mdcsrdr.read("data/mdcs_00_07.txt", dxmap, prmap)
-        dxmap, prmap = mdcsrdr.read("data/mdcs_08_11.txt", dxmap, prmap)
-        dxmap, prmap = mdcsrdr.read("data/mdcs_12_21.txt", dxmap, prmap)
-        dxmap, prmap = mdcsrdr.read("data/mdcs_22_25.txt", dxmap, prmap)
+        dxmap, prmap = mdcsrdr.read(
+                f"data/v{version}/mdcs_00_07.txt", dxmap, prmap)
+        dxmap, prmap = mdcsrdr.read(
+                f"data/v{version}/mdcs_08_11.txt", dxmap, prmap)
+        dxmap, prmap = mdcsrdr.read(
+                f"data/v{version}/mdcs_12_21.txt", dxmap, prmap)
+        dxmap, prmap = mdcsrdr.read(
+                f"data/v{version}/mdcs_22_25.txt", dxmap, prmap)
         self.dxmap = dxmap
         self.prmap = prmap
 
