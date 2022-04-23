@@ -10,26 +10,34 @@ from collections import Counter
 
 class DRGEngine:
 
-    def __init__(self):
+    def __init__(self, version="v40"):
         dxmap = defaultdict(list)
         prmap = defaultdict(list)
-        dxmap, prmap = mdcsrdr.read("data/mdcs_00_07.txt", dxmap, prmap)
-        dxmap, prmap = mdcsrdr.read("data/mdcs_08_11.txt", dxmap, prmap)
-        dxmap, prmap = mdcsrdr.read("data/mdcs_12_21.txt", dxmap, prmap)
-        dxmap, prmap = mdcsrdr.read("data/mdcs_22_25.txt", dxmap, prmap)
+        dxmap, prmap = mdcsrdr.read(
+                f"data/{version}/mdcs_00_07.txt", dxmap, prmap)
+        dxmap, prmap = mdcsrdr.read(
+                f"data/{version}/mdcs_08_11.txt", dxmap, prmap)
+        dxmap, prmap = mdcsrdr.read(
+                f"data/{version}/mdcs_12_21.txt", dxmap, prmap)
+        dxmap, prmap = mdcsrdr.read(
+                f"data/{version}/mdcs_22_25.txt", dxmap, prmap)
         self.dxmap = dxmap
         self.prmap = prmap
 
-        self.drgmap = appndxrdr.read_a()
+        self.drgmap = appndxrdr.read_a(
+            f"data/{version}/appendix_A.txt")
         
-        ccmap, exmap = appndxrdr.read_c()
+        ccmap, exmap = appndxrdr.read_c(
+            f"data/{version}/appendix_C.txt")
         self.ccmap = ccmap
         self.exmap = exmap
 
-        orpcsmap = appndxrdr.read_e()
+        orpcsmap = appndxrdr.read_e(
+            f"data/{version}/appendix_D_E.txt")
         self.orpcsmap = orpcsmap
 
-        uormap = appndxrdr.read_f()
+        uormap = appndxrdr.read_f(
+            f"data/{version}/appendix_F_J.txt")
         self.uormap = uormap
 
     def get_features(self, dx_lst, pr_lst):

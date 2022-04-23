@@ -2,7 +2,7 @@
 
 `drgpy` is a Python library for assigning a combination of diagnosis and procedure codes to Diagnosis Related Groups (MS-DRG) that is used in Medicare inpatient reimbursement today.
 
-NOTE the current version is configured as MSDRG v37.2
+NOTE the current default version is configured as MSDRG v40. However, the latest version is not thoroughly tested yet.
 Rawfiles: https://www.cms.gov/files/zip/icd-10-ms-drg-definitions-manual-files-v372.zip
 
 ## Installing
@@ -43,7 +43,7 @@ please type `print(<instance>.<function>.__doc__)`.
 
 ```python
 >>> from drgpy.msdrg import DRGEngine
->>> de = DRGEngine()
+>>> de = DRGEngine(version="v40")
 >>> print(de.get_drg.__doc__)
 
         Return the corresponding DRG code for the diagnoses and procedures

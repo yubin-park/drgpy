@@ -5,7 +5,7 @@ class TestMCD10(unittest.TestCase):
 
     def test_mdcs10(self):
 
-        de = DRGEngine()
+        de = DRGEngine(version="v37")
 
         drg_lst = de.get_drg_all(["Z6845"], ["0Y6X0Z3"])
         self.assertTrue("618" in drg_lst)
