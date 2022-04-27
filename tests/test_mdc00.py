@@ -3,7 +3,7 @@ from drgpy.msdrg import DRGEngine
 
 class TestMCD00(unittest.TestCase):
 
-    def test_mdcs00(self):
+    def test_mdcs00_v37(self):
 
         de = DRGEngine(version="v37")
 

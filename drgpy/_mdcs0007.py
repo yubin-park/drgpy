@@ -506,13 +506,13 @@ def mdc04(x):
             y.append("175")
         else:
             y.append("176")
-    if x["175&176|ACUTE COR PULMONALE PSDX"] > 0:
+    if x["175&176|ACUTE COR PULMONALE PSDX"] + x["175&176|ACUTE COR PULMONALE"] > 0:
         y.append("175")   
 
 
     # 177 - 179
     if (x["177&178&179|PDX"] * x["793|OR SDX"] + 
-            x["177&178&179|or PDX"] > 0):
+            x["177&178&179|OR PDX"] > 0):
         if x["_MCC"] > 0:
             y.append("177")
         elif x["_CC"] > 0:
@@ -647,9 +647,10 @@ def mdc05(x):
     s1 = "222&223&224&225&226&227|CARDIAC DEFIBRILLATOR IMPLANT ORPCS"
     s2 = "222&223&224&225&226&227|CARDIAC CATHETERIZATION NON-ORPCS"
     s3 = "222&223&224&225&226&227|AMI / HF / SHOCK PDX"
+    s3v40 = "222&223&224&225&226&227|PDX AMI / HF / SHOCK"
     if x[s1] > 0:
         if x[s2] > 0:
-            if x[s3] > 0:
+            if x[s3] + x[s3v40] > 0:
                 if x["_MCC"] > 0:
                     y.append("222")
                 else:
@@ -743,14 +744,13 @@ def mdc05(x):
             y.append("274")
 
     # 246 - 249
+    # NOTE: v38+, two sets of DRGs (246, 247) and (248, 249)
+    # This section applies to v36, v37
     s1 = "246&247&248&249|PERCUTANEOUS CARDIOVASCULAR PROCEDURE ORPCS"
     s2 = "246&247&248&249|OR NON-ORPCS"
     s3 = "246&247&248&249|DRUG-ELUTING STENT"
     s4 = "246&247&248&249|NON-DRUG-ELUTING STENT"
-    s5 = ("246&247&248&249|COMBINATION OF CODES IN THE NEXT FOUR " +
-            "LISTS THAT ADD UP TO FOUR OR MORE ARTERIES/STENTS " + 
-            "SELECT DRG 246 OVER DRG 247 or DRG 248 " + 
-            "OVER DRG 249 ONE STENT")
+    s5 = "246&247&248&249|ONE STENT"
     s6 = "246&247&248&249|TWO STENTS"
     s7 = "246&247&248&249|THREE STENTS"
     s8 = "246&247&248&249|FOUR OR MORE STENTS"
@@ -758,15 +758,56 @@ def mdc05(x):
     s10 = "246&247&248&249|TWO ARTERIES"
     s11 = "246&247&248&249|THREE ARTERIES"
     s12 = "246&247&248&249|FOUR OR MORE ARTERIES"
+    base_cnt = x[s1] + x[s2]
+    drug_eluting_stent = x[s3]
+    non_drug_eluting_stent = x[s4]
     stent_cnt = (x[s5] + 2 * x[s6] + 3 * x[s7] + 4 * x[s8])
     artery_cnt = (x[s9] + 2 * x[s10] + 3 * x[s11] + 4 * x[s12])
-    if x[s1] + x[s2] > 0:
-        if x[s3] > 0:
+    
+    
+    # This section applies to v38+
+    s1 = '246&247|PERCUTANEOUS CARDIOVASCULAR PROCEDURE WITHOUT STENT ORPCS'
+    s2 = '246&247|OR NON-ORPCS'
+    s3 = '246&247|DRUG-ELUTING STENT'
+    s5 = '246&247|ONE STENT'
+    s6 = '246&247|TWO STENTS'
+    s7 = '246&247|THREE STENTS'
+    s8 = '246&247|FOUR OR MORE STENTS'
+    s9 = '246&247|ONE ARTERY'
+    s10 = '246&247|TWO ARTERIES'
+    s11 = '246&247|THREE ARTERIES'
+    s12 = '246&247|FOUR OR MORE ARTERIES'
+    base_cnt += (x[s1] + x[s2])
+    drug_eluting_stent += x[s3]
+    non_drug_eluting_stent += x[s4]
+    stent_cnt += (x[s5] + 2 * x[s6] + 3 * x[s7] + 4 * x[s8])
+    artery_cnt += (x[s9] + 2 * x[s10] + 3 * x[s11] + 4 * x[s12])
+
+    s1 = '248&249|PERCUTANEOUS CARDIOVASCULAR PROCEDURE WITHOUT STENT ORPCS'
+    s2 = '248&249|OR NON-ORPCS'
+    s4 = '248&249|NON-DRUG-ELUTING STENT'
+    s5 = '248&249|ONE STENT'
+    s6 = '248&249|TWO STENTS'
+    s7 = '248&249|THREE STENTS'
+    s8 = '248&249|FOUR OR MORE STENTS'
+    s9 = '248&249|ONE ARTERY'
+    s10 = '248&249|TWO ARTERIES'
+    s11 = '248&249|THREE ARTERIES'
+    s12 = '248&249|FOUR OR MORE ARTERIES'
+    base_cnt += (x[s1] + x[s2])
+    drug_eluting_stent += x[s3]
+    non_drug_eluting_stent += x[s4]
+    # stent and artery counts should not need to add up
+    #stent_cnt += (x[s5] + 2 * x[s6] + 3 * x[s7] + 4 * x[s8])
+    #artery_cnt += (x[s9] + 2 * x[s10] + 3 * x[s11] + 4 * x[s12])
+
+    if base_cnt > 0:
+        if drug_eluting_stent > 0:
             if (x["_MCC"] > 0 or stent_cnt > 3 or artery_cnt > 3):
                 y.append("246")
             else:
                 y.append("247")
-        elif x[s4] > 0:
+        elif non_drug_eluting_stent > 0:
             if (x["_MCC"] > 0 or stent_cnt > 3 or artery_cnt > 3):
                 y.append("248")
             else:

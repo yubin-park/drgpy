@@ -2,7 +2,7 @@
 
 `drgpy` is a Python library for assigning a combination of diagnosis and procedure codes to Diagnosis Related Groups (MS-DRG) that is used in Medicare inpatient reimbursement today.
 
-NOTE the current default version is configured as MSDRG v40. However, the latest version is not thoroughly tested yet.
+NOTE the current default version is configured as MSDRG v40. However, the latest version is not thoroughly tested yet. Please use at your own risk.
 Rawfiles: https://www.cms.gov/files/zip/icd-10-ms-drg-definitions-manual-files-v372.zip
 
 ## Installing
@@ -65,6 +65,61 @@ please type `print(<instance>.<function>.__doc__)`.
 ```
 
 Please refer to the test scripts under the `tests/` folder if you want to see other example use cases.
+
+## Raw Data Change Log
+
+1. For v38+, in `mdcs_00_07.txt`, edit
+```
+NON-OPERATING ROOM PROCEDURES
+02H63JZ*
+``` 
+to
+```
+NON-OPERATING ROOM PROCEDURES
+
+  02H63JZ*
+```
+2. For any version, in `mdcs_08_11.txt`, remove
+```
+To qualify as bilateral or multiple joint procedures you must have at least one code from two different lower extremity sites as listed below.
+Examples: left hip  and right hip - bilateral; left hip and left knee - multiple;  left hip and right ankle - multiple; left knee and right knee - bilateral
+```
+3. In `mdcs_00_07.txt`, remove
+```
+COMBINATION OF CODES IN THE NEXT FOUR LISTS
+...
+```
+Alos, in v40, duplicate sections exist for this part. 
+
+4. In `mdcs_12_21.txt`, remove
+```
+Principal or secondary diagnosis of newborn or neonate,with other significant problems, not assigned to DRG 789 through 793 or 795
+```
+
+5. In `mdcs_12_21.txt`, for v38+ DRG 768 and 798, edit
+```
+NON-OPERATING ROOM PROCEDURES
+10D07Z3* Extraction of Products of Conception, Low Forceps, Via Natural or Artificial Opening
+``` 
+to
+```
+NON-OPERATING ROOM PROCEDURES
+
+  10D07Z3* Extraction of Products of Conception, Low Forceps, Via Natural or Artificial Opening
+```
+
+6. In `mdcs_12_21.txt`, for DRG 807, 
+```
+NON-OPERATING ROOM PROCEDURES
+10D07Z3*
+```
+to 
+```
+NON-OPERATING ROOM PROCEDURES
+
+  10D07Z3*
+```
+
 
 ## License
 Apache 2.0

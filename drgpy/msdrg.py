@@ -53,14 +53,10 @@ class DRGEngine:
                 is_pdx = j==0
                 for x_i in self.dxmap[dx]:
                     if is_pdx:
-                        if ("PDX" in x_i or 
-                            "PSDX" in x_i or 
-                            "_MDC" in x_i):
-                            x.append(x_i)
-                    else:
-                        if ("PDX" not in x_i and 
-                            "_MDC" not in x_i):
-                            x.append(x_i)
+                        x.append(x_i)
+                    elif ("PDX" not in x_i and 
+                        "_MDC" not in x_i):
+                        x.append(x_i)
                 if dx in self.ccmap and not is_pdx:
                     cc_info = self.ccmap[dx]
                     if pdx not in self.exmap.get(cc_info["pdx"],[]):
@@ -98,6 +94,11 @@ class DRGEngine:
 
         y = []
         x = self.get_features(dx_lst, pr_lst)
+        
+        # NOTE: This is for debugging.
+        #from pprint import pprint
+        #pprint(x)
+        
         y += mdcs0007.mdc00(x)
         y += mdcs0007.mdc01(x)
         y += mdcs0007.mdc02(x)

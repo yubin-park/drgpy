@@ -255,9 +255,7 @@ def mdc15(x):
     if x["793|MAJOR PROBLEMS PSDX"] + x["793|OR SDX"] > 0:
         y.append("793")
 
-    s1 = ("794|Principal or secondary diagnosis of newborn or " + 
-        "neonate,with other significant problems, not assigned to " + 
-        "DRG 789 through 793 or 795 PSDX")
+    s1 = "794|PSDX"
     if x[s1] > 0 and len(y) == 0: 
         y.append("794")
 

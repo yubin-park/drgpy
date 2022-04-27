@@ -7,7 +7,7 @@ dx_pttrn = "[A-TV-Z][0-9][0-9AB][0-9A-TV-Z]{0,4}"
 pr_pttrn = "[A-HJ-NP-Z0-9]{7}"
 
 def shorten(x):
-    x = " ".join(x.split())
+    x = " ".join(x.upper().split())
     x = x.replace("DIAGNOSES", "DIAGNOSIS")
     x = x.replace("PROCEDURES", "PROCEDURE")
     x = x.replace("PRINCIPAL OR SECONDARY DIAGNOSIS", "PSDX")
@@ -30,7 +30,7 @@ def get_codetype(dx_lst, pr_lst, cache):
     return codetype
 
 def get_label(cache):
-    label = "{}|{}".format(cache["C"], cache["D"])
+    label = f'{cache["C"]}|{cache["D"]}'
     while label in cache["L"]:
         label = label + "*"
     return label 
@@ -42,7 +42,7 @@ def update_mapping(dxmap, prmap, cache):
         label = get_label(cache)
         if len(cache["E"]) > 2:
             for code_add in cache["E"][2:]:
-                label = "{}|{}".format(label, code_add) # additional code
+                label = f"{label}|{code_add}" # additional code
         if codetype == "dx":
             dxmap[code].append(label)
         elif codetype == "pr":
@@ -102,7 +102,6 @@ def is_E(line, cursor):
     return (cursor in {"D", "E"} and line[:2] == "  ")
 
 def parse_E(line, cursor, dxmap, prmap, cache, _cursor):
-
 
     line = line.strip() 
     if line == "":
@@ -194,9 +193,17 @@ if __name__=="__main__":
                 "data/v40/mdcs_22_25.txt"]
     dxmap = defaultdict(list)
     prmap = defaultdict(list)
-    for fn in fn_lst[3:]:
+    for fn in fn_lst[:1]:
         dxmap, prmap = read(fn, dxmap, prmap)
 
-    #import json
+    import json
     #print(json.dumps(prmap, indent=2, sort_keys=True))
+    x = {}
+    for k, v in prmap.items():
+        for vv in v:
+            if "246&247" in vv or "248&249" in vv:
+                x[vv] = 1
+    #from pprint import pprint
+    #pprint(x)
+    print(dxmap["I2601"])
 

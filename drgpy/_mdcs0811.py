@@ -38,12 +38,7 @@ def mdc08(x):
         else:
             y.append("460")
 
-    s1 = ("461&462|To qualify as bilateral or multiple joint " +
-            "procedures you must have at least one code from " + 
-            "two different lower extremity sites as listed below. " + 
-            "Examples: left hip and right hip - bilateral; left hip " + 
-            "and left knee - multiple; left hip and right ankle - " + 
-            "multiple; left knee and right knee - bilateral RIGHT HIP")
+    s1 = "461&462|RIGHT HIP"
     s2 = "461&462|LEFT HIP"
     s3 = "461&462|RIGHT KNEE"
     s4 = "461&462|LEFT KNEE"
@@ -367,14 +362,16 @@ def mdc09(x):
 
     s1 = "597&598&599&600&601|MALIGNANT BREAST DISORDERS PDX"
     s2 = "597&598&599&600&601|NON-MALIGNANT BREAST DISORDERS PDX"
-    if x[s1] > 0:
+    s1v40 = "597&598&599|MALIGNANT BREAST DISORDERS PDX"
+    s2v40 = "600&601|NON-MALIGNANT BREAST DISORDERS PDX"
+    if x[s1] + x[s1v40] > 0:
         if x["_MCC"] > 0:
             y.append("597")
         elif x["_CC"] > 0:
             y.append("598")
         else:
             y.append("599")
-    elif x[s2] > 0:
+    elif x[s2] + x[s2v40] > 0:
         if x["_MCC"] + x["_CC"] > 0:
             y.append("600")
         else:
@@ -544,9 +541,10 @@ def mdc11(x):
         else:
             y.append("672")
 
-    if (x["673&674&675|ORPCS"] + 
-        x["673&674&675|OR PDX"]*x["673&674&675|AND NON-ORPCS"] + 
-        x["673&674&675|OR PDX*"]*x["673&674&675|AND NON-ORPCS*"] > 0):
+    if (x["673&674&675|ORPCS"] 
+        + x["673&674&675|OR PDX"] * x["673&674&675|AND NON-ORPCS"] 
+        + ((x["673&674&675|OR PDX*"] + x["673&674&675|OR PDX**"]) 
+            * x["673&674&675|AND NON-ORPCS*"] > 0)):
         if x["_MCC"] > 0:
             y.append("673")
         elif x["_CC"] > 0:
