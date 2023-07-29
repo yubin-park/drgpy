@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(packages=find_packages(),
     name="drgpy",
-    version="0.0.4",
+    version="0.0.5",
     description="drgpy is a Python library for assigning a combination of diagnosis and procedure codes to Diagnosis Related Groups (MS-DRG) that is used in Medicare inpatient reimbursement today.",
     long_description=long_description,
     long_description_content_type="text/markdown",

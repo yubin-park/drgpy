@@ -5,7 +5,7 @@ def mdc08(x):
     if x["_MDC08"] == 0:
         return y
     
-    if (x["453&454&455|ANTERIOR SPINAL FUSION ORPCS"] +
+    if (x["453&454&455|ANTERIOR SPINAL FUSION ORPCS"] > 0 and 
         x["453&454&455|POSTERIOR SPINAL FUSION ORPCS"] > 0):
         if x["_MCC"] > 0:
             y.append("453")
@@ -24,7 +24,7 @@ def mdc08(x):
     s2 = "456&457&458|SPINAL CURVATURE / MALIGNANCY / INFECTION PDX"
     s3 = "456&457&458|OR SDX"
     s4 = "456&457&458|EXTENSIVE FUSIONS ORPCS"
-    if x[s1] + x[s2] + x[s3] + x[s4] > 0:
+    if (((x[s1] > 0) and (x[s2] + x[s3]) > 0)) or (x[s4] > 0):
         if x["_MCC"] > 0:
             y.append("456")
         elif x["_CC"] > 0:

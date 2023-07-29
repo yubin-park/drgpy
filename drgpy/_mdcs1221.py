@@ -154,7 +154,7 @@ def mdc13(x):
 
     return y
 
-def mdc14(x):
+def mdc14(x, version):
 
     y = []
     if x["_MDC14"] == 0:
@@ -177,10 +177,19 @@ def mdc14(x):
         else:
             y.append("788")
 
-    if ((x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0) or
-        (x["768|SDX"] * x["768|NON-ORPCS"] > 0 and 
-            x["768|WITH ANY ORPCS EXCEPT"] == 0)):
-        y.append("768")
+    if version=="v36":
+        # Version 36 had a different logic 
+        # EXCEPT... TODO
+        if (x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0 and 
+                x["768|WITH ANY ORPCS EXCEPT"] == 0 and 
+                x["_UNREALTED_ORPCS"]):
+            y.append("768")
+    else:
+        if ((x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0) or
+            (x["768|SDX"] * x["768|NON-ORPCS"] > 0 and 
+                x["768|WITH ANY ORPCS EXCEPT"] == 0 and 
+                x["_UNREALTED_ORPCS"])):
+            y.append("768")
         
     if ((x["796&797&798|SDX"] * x["796&797&798|AND ORPCS"] * 
         (x["796&797&798|AND ORPCS*"] + 

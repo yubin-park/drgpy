@@ -7,7 +7,7 @@ class TestMCD08(unittest.TestCase):
 
         de = DRGEngine(version="v37")
 
-        drg_lst = de.get_drg_all(["Z9716"], ["0RG1070"])
+        drg_lst = de.get_drg_all(["Z9716"], ["0RG1070", "0RG1071"])
         self.assertTrue("455" in drg_lst)
 
         drg_lst = de.get_drg_all(["Z9716"], ["0RG8070"])
@@ -144,7 +144,7 @@ class TestMCD08(unittest.TestCase):
 
         de = DRGEngine(version="v40")
 
-        drg_lst = de.get_drg_all(["Z9716"], ["0RG1070"])
+        drg_lst = de.get_drg_all(["Z9716"], ["0RG1070", "0RG1071"])
         self.assertTrue("455" in drg_lst)
 
         drg_lst = de.get_drg_all(["Z9716"], ["0RG8070"])

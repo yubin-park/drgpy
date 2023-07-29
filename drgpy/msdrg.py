@@ -23,6 +23,7 @@ class DRGEngine:
                 f"data/{version}/mdcs_22_25.txt", dxmap, prmap)
         self.dxmap = dxmap
         self.prmap = prmap
+        self.version = version
 
         self.drgmap = appndxrdr.read_a(
             f"data/{version}/appendix_A.txt")
@@ -62,15 +63,25 @@ class DRGEngine:
                     if pdx not in self.exmap.get(cc_info["pdx"],[]):
                         x.append("_" + cc_info["level"])
 
+        # keep the procedures that made the multi-proc definitions
+        multi_proc_set = {} 
+        for pr_1 in pr_lst:
+            for x_i in self.prmap[pr_1]:
+                tokens = x_i.split("|")
+                if len(tokens) > 2:
+                    # multi-procedure rule  
+                    if all((pr_i in pr_lst) for pr_i in tokens[2:]):
+                        x.append(tokens[0] + "|" + tokens[1])
+                        multi_proc_set[pr_1] = 1
+                        for pr_i in tokens[2:]:
+                            multi_proc_set[pr_i] = 1
+
         for pr in pr_lst:
             for x_i in self.prmap[pr]:
                 tokens = x_i.split("|")
-                if len(tokens) > 2:
-                    if all((x in pr_lst) for x in tokens[2:]):
-                        x.append(tokens[0] + "|" + tokens[1])
-                else:
+                if pr not in multi_proc_set:
                     x.append(x_i)
-                
+
             if pr in self.orpcsmap:
                 for matched_drg in self.orpcsmap[pr]:
                     x.append(f"_ORPCS|{matched_drg}")
@@ -78,7 +89,7 @@ class DRGEngine:
                     x.append("_ORPCS*")
             if pr in self.uormap:
                 x.append("_UNREALTED_ORPCS")
-    
+
         # TODO: need to identify if the patient is live at discharge
         # For now, we just assume all patients are alive
         x.append("_ALIVE")
@@ -87,7 +98,8 @@ class DRGEngine:
         elif len(dx_lst) > 1:
             x.append("_NDX2+")
         x.append("_STATUS01") # NOTE: AMA, other statuses ignored
-
+        #from pprint import pprint
+        #pprint(Counter(x))
         return Counter(x)
 
     def get_drg_all(self, dx_lst, pr_lst):
@@ -113,7 +125,7 @@ class DRGEngine:
         y += mdcs0811.mdc11(x)
         y += mdcs1221.mdc12(x)
         y += mdcs1221.mdc13(x)
-        y += mdcs1221.mdc14(x)
+        y += mdcs1221.mdc14(x, self.version)
         y += mdcs1221.mdc15(x)
         y += mdcs1221.mdc16(x)
         y += mdcs1221.mdc17(x)

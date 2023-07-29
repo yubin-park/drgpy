@@ -120,7 +120,13 @@ NON-OPERATING ROOM PROCEDURES
   10D07Z3*
 ```
 
+7. For v36, in appendix_D_E.txt, 
 
+Removed 
+ 10D17Z9   14  768
+ 10D18Z9   14  796
+
+As the DRG definition say other OR procedures except for these two above, but these are included as OR procedures in the appendix. Rather than changing the algorithm to deal with the discrepancy, we edit the underlying data to maintain consistency.
 ## License
 Apache 2.0
 
