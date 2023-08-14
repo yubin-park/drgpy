@@ -15,16 +15,20 @@ def mdc08(x):
             y.append("455")
 
     # NOTE IMPORTANT
-    # The joint procedure codes for "Extensive Fusions",
-    #     such as 0RG7370 + 0RG707J, are not taken into account
-    # This will provide different results from the original MS-DRG
-    # NEEDS TO BE ADDRESSED BEFORE DEPLOYMENT
-    # THIS WILL RESULTS MS-DRG 456/460 to be coded to 456/457/458
+    # EXTENSIVE FUSION PART A/B/1/2 are manually edited values...
     s1 = "456&457&458|SPINAL FUSION EXCEPT CERVICAL ORPCS"
     s2 = "456&457&458|SPINAL CURVATURE / MALIGNANCY / INFECTION PDX"
     s3 = "456&457&458|OR SDX"
     s4 = "456&457&458|EXTENSIVE FUSIONS ORPCS"
-    if (((x[s1] > 0) and (x[s2] + x[s3]) > 0)) or (x[s4] > 0):
+    sa1 = "456&457&458|EXTENSIVE FUSION PART A1"
+    sa2 = "456&457&458|EXTENSIVE FUSION PART A2"
+    sb1 = "456&457&458|EXTENSIVE FUSION PART B1"
+    sb2 = "456&457&458|EXTENSIVE FUSION PART B2"
+
+    if ((((x[s1] > 0) and (x[s2] + x[s3]) > 0)) or 
+        (x[s4] > 0) or 
+        (x[sa1] * x[sa2] > 0) or 
+        (x[sb1] * x[sb2] > 0)):
         if x["_MCC"] > 0:
             y.append("456")
         elif x["_CC"] > 0:
@@ -67,6 +71,12 @@ def mdc08(x):
             y.append("467")
         else:
             y.append("468")
+
+    if x["521&522|PDX"] * x["521&522|AND ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("521")
+        else:
+            y.append("522")
 
     if x["469&470|ORPCS"] > 0:
         if x["_MCC"] > 0:
@@ -309,7 +319,15 @@ def mdc09(x):
     y = []
     if x["_MDC09"] == 0:
         return y
-
+    
+    if x["570&571&572|SKIN DEBRIDEMENT ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("570")
+        elif x["_CC"] > 0:
+            y.append("571")
+        else:
+            y.append("572")
+            
     if x["573&574&575&576&577&578|SKIN GRAFT ORPCS"] > 0:
         if x["573&574&575&576&577&578|SKIN ULCER OR CELLULITIS PDX"] > 0:
             if x["_MCC"] > 0:
@@ -346,7 +364,7 @@ def mdc09(x):
         else:
             y.append("585")
 
-    if x["573&574&575&576&577&578|SKIN ULCER OR CELLULITIS PDX"] > 0:
+    if x["592&593&594|PDX"] > 0:
         if x["_MCC"] > 0:
             y.append("592")
         elif x["_CC"] > 0:
@@ -481,6 +499,12 @@ def mdc11(x):
     y = []
     if x["_MDC11"] == 0:
         return y
+
+    if x['650&651|ORPCS'] * x['650&651|AND NON-ORPCS'] > 0:
+        if x["_MCC"] > 0:
+            y.append("650")
+        else:
+            y.append("651")
 
     if x["652|ORPCS"] > 0:
         y.append("652")

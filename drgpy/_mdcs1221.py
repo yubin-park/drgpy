@@ -2,7 +2,7 @@
 def mdc12(x):
 
     y = []
-    if x["_MDC12"] == 0:
+    if x["_MDC12"] * x["_MALE"] == 0:
         return y
 
     if x["707&708|ORPCS"] > 0:
@@ -75,7 +75,7 @@ def mdc12(x):
 def mdc13(x):
 
     y = []
-    if x["_MDC13"] == 0:
+    if x["_MDC13"] * x["_FEMALE"] == 0:
         return y
 
     if x["734&735|ORPCS"] > 0:
@@ -182,13 +182,13 @@ def mdc14(x, version):
         # EXCEPT... TODO
         if (x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0 and 
                 x["768|WITH ANY ORPCS EXCEPT"] == 0 and 
-                x["_UNREALTED_ORPCS"]):
+                x["_ORPCS_ANY"]):
             y.append("768")
     else:
         if ((x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0) or
             (x["768|SDX"] * x["768|NON-ORPCS"] > 0 and 
                 x["768|WITH ANY ORPCS EXCEPT"] == 0 and 
-                x["_UNREALTED_ORPCS"])):
+                x["_ORPCS_ANY"])):
             y.append("768")
         
     if ((x["796&797&798|SDX"] * x["796&797&798|AND ORPCS"] * 
@@ -336,9 +336,7 @@ def mdc17(x):
     s1 = ("823&824&825|ANY OTHER ORPCS NOT LISTED IN DRGS 820-822 OR " + 
         "ANY OF THE FOLLOWING NON-ORPCS")
     if (x["823&824&825|PDX"] > 0 and
-        ((x["_ORPCS|823"] > 0 and 
-            x["820&821&822|ORPCS"] == 0) or 
-            x[s1] > 0)):
+        ((x["820&821&822|ORPCS"]==0 and x["_ORPCS_ANY"] > 0) or x[s1] > 0)):
         if x["_MCC"] > 0:
             y.append("823")
         elif x["_CC"] > 0:
@@ -424,19 +422,19 @@ def mdc18(x):
         return y
 
     if x["856&857&858|PDX"] > 0:
-        if x["_MCC"] * x["_ORPCS|856"] > 0:
+        if x["_MCC"] * (x["_ORPCS|856"] + x["_ORPCS_ANY"]) > 0:
             y.append("856")
-        elif x["_CC"] * x["_ORPCS|857"] > 0:
+        elif x["_CC"] * (x["_ORPCS|857"] + x["_ORPCS_ANY"]) > 0:
             y.append("857")
         elif x["_ORPCS|858"]:
             y.append("858")
 
-    if x["853&854&855|PDX FROM MDC 18 EXCEPT"]==0:
-        if x["_MCC"] * x["_ORPCS|853"] > 0:
+    if x["853&854&855|PDX"] * x["_ORPCS_ANY"] > 0:
+        if x["_MCC"] > 0:
             y.append("853")
-        elif x["_CC"] * x["_ORPCS|854"] > 0:
+        elif x["_CC"] > 0:
             y.append("854")
-        elif x["_ORPCS|855"]:
+        else:
             y.append("855")
 
     if x["862&863|PDX"] > 0:

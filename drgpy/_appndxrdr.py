@@ -118,24 +118,24 @@ def read_e(fn="data/appendix_D_E.txt"):
 
 def read_f(fn="data/appendix_F_J.txt"):
 
-    uormap = {}
-    is_uor_section = False
+    oormap = {} # oor = Only Operating Room
+    is_oor_section = False
     fn = rscfn(__name__, fn)
     with open(fn, "r") as fp:
         for line in fp:
             if "DRG 989 NON-EXTENSIVE O.R. PROCEDURE" in line:
-                is_uor_section = True
+                is_oor_section = True
                 continue
-            elif is_uor_section and len(line) > 0 and line[0]==":":
+            elif is_oor_section and len(line) > 0 and line[0]==":":
                 break
 
-            if is_uor_section:
+            if is_oor_section:
                 if len(line) < 9:
                     continue
                 code = line[:9].strip()
                 if code != "" and len(code) == 7:
-                    uormap[code] = 1 
-    return uormap
+                    oormap[code] = 1 
+    return oormap
 
 
 if __name__=="__main__":

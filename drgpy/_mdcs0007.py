@@ -19,8 +19,8 @@ def mdc00(x):
     c1 = (x["003&004|TRACHEOSTOMY ORPCS"] + x["003&004|OR NON-ORPCS"])
     c2 = (x["003&004|MECHANICAL VENTILATION >96 HOURS NON-ORPCS"] + 
             int(x["011&012&013|PDX"] == 0))
-    c3 = (x["_ORPCS*"] > 0) 
-    if x["003&004|ECMO ORPCS"] > 0:
+    c3 = x["_ORPCS_EXTENSIVE"] - x["_ORPCS|003"] # NOTE: ORPRCS other than 003 ORPCS
+    if x["003&004|ECMO ORPCS"] + x["003&004|NON-ORPCS"] > 0:
         y.append("003")
     elif c1 * c2 > 0:
         if c3 > 0:
@@ -90,9 +90,9 @@ def mdc01(x):
             y.append("022")
 
     # 023 - 024
-    c1 = ((x["023&024|CRANIOTOMY ORPCS"] * 
-            x["023&024|MAJOR DEVICE IMPLANT"]) + 
-            x["023&024|ACUTE COMPLEX CNS PDX"])
+    c1 = (x["023&024|CRANIOTOMY ORPCS"] * (
+            x["023&024|MAJOR DEVICE IMPLANT"] + 
+            x["023&024|ACUTE COMPLEX CNS PDX"]))
     c2 = x["023&024|CHEMOTHERAPY IMPLANT NON-ORPCS"]
     c3 = x["023&024|EPILEPSY PDX"] * x["023&024|NEUROSTIMULATOR"]
     if c1*x["_MCC"] + c2 + c3 > 0:
@@ -213,7 +213,7 @@ def mdc01(x):
             y.append("066")
 
     # 067 - 068
-    if x["061&062&063|PDX"] > 0:
+    if x["067&068|PDX"] > 0:
         if x["_MCC"] > 0:
             y.append("067")
         else:
@@ -227,7 +227,7 @@ def mdc01(x):
     if x["070&071&072|PDX"] > 0:
         if x["_MCC"] > 0:
             y.append("070")
-        elif x["_MCC"] > 0:
+        elif x["_CC"] > 0:
             y.append("071")
         else:
             y.append("072")
@@ -511,7 +511,7 @@ def mdc04(x):
 
 
     # 177 - 179
-    if (x["177&178&179|PDX"] * x["793|OR SDX"] + 
+    if (x["177&178&179|PDX"] * x["177&178&179|WITH SDX"] + 
             x["177&178&179|OR PDX"] > 0):
         if x["_MCC"] > 0:
             y.append("177")
@@ -607,7 +607,7 @@ def mdc04(x):
 
     return y
 
-def mdc05(x):
+def mdc05(x, version):
     y = []
     if x["_MDC05"] == 0:
         return y
@@ -758,7 +758,7 @@ def mdc05(x):
     s10 = "246&247&248&249|TWO ARTERIES"
     s11 = "246&247&248&249|THREE ARTERIES"
     s12 = "246&247&248&249|FOUR OR MORE ARTERIES"
-    base_cnt = x[s1] + x[s2]
+    base_cnt = x[s1] + x[s2] 
     drug_eluting_stent = x[s3]
     non_drug_eluting_stent = x[s4]
     stent_cnt = (x[s5] + 2 * x[s6] + 3 * x[s7] + 4 * x[s8])
@@ -766,40 +766,42 @@ def mdc05(x):
     
     
     # This section applies to v38+
-    s1 = '246&247|PERCUTANEOUS CARDIOVASCULAR PROCEDURE WITHOUT STENT ORPCS'
-    s2 = '246&247|OR NON-ORPCS'
-    s3 = '246&247|DRUG-ELUTING STENT'
-    s5 = '246&247|ONE STENT'
-    s6 = '246&247|TWO STENTS'
-    s7 = '246&247|THREE STENTS'
-    s8 = '246&247|FOUR OR MORE STENTS'
-    s9 = '246&247|ONE ARTERY'
-    s10 = '246&247|TWO ARTERIES'
-    s11 = '246&247|THREE ARTERIES'
-    s12 = '246&247|FOUR OR MORE ARTERIES'
-    base_cnt += (x[s1] + x[s2])
-    drug_eluting_stent += x[s3]
-    non_drug_eluting_stent += x[s4]
-    stent_cnt += (x[s5] + 2 * x[s6] + 3 * x[s7] + 4 * x[s8])
-    artery_cnt += (x[s9] + 2 * x[s10] + 3 * x[s11] + 4 * x[s12])
+    if version > "v37":
+        s1 = '246&247|PERCUTANEOUS CARDIOVASCULAR PROCEDURE WITHOUT STENT ORPCS'
+        s2 = '246&247|OR NON-ORPCS'
+        s3 = '246&247|DRUG-ELUTING STENT'
+        s5 = '246&247|ONE STENT'
+        s6 = '246&247|TWO STENTS'
+        s7 = '246&247|THREE STENTS'
+        s8 = '246&247|FOUR OR MORE STENTS'
+        s9 = '246&247|ONE ARTERY'
+        s10 = '246&247|TWO ARTERIES'
+        s11 = '246&247|THREE ARTERIES'
+        s12 = '246&247|FOUR OR MORE ARTERIES'
+        # NOTE: After checking with real data, base_cnt seems 
+        #   to be overwritten by drug_eluting_stent. So, here base_cnt doesn't carry
+        #   much meaing.
+        base_cnt += (x[s1] + x[s2] + x[s3]) 
+        drug_eluting_stent = x[s3]
+        stent_cnt = (x[s5] + 2 * x[s6] + 3 * x[s7] + 4 * x[s8])
+        artery_cnt = (x[s9] + 2 * x[s10] + 3 * x[s11] + 4 * x[s12])
 
-    s1 = '248&249|PERCUTANEOUS CARDIOVASCULAR PROCEDURE WITHOUT STENT ORPCS'
-    s2 = '248&249|OR NON-ORPCS'
-    s4 = '248&249|NON-DRUG-ELUTING STENT'
-    s5 = '248&249|ONE STENT'
-    s6 = '248&249|TWO STENTS'
-    s7 = '248&249|THREE STENTS'
-    s8 = '248&249|FOUR OR MORE STENTS'
-    s9 = '248&249|ONE ARTERY'
-    s10 = '248&249|TWO ARTERIES'
-    s11 = '248&249|THREE ARTERIES'
-    s12 = '248&249|FOUR OR MORE ARTERIES'
-    base_cnt += (x[s1] + x[s2])
-    drug_eluting_stent += x[s3]
-    non_drug_eluting_stent += x[s4]
-    # stent and artery counts should not need to add up
-    #stent_cnt += (x[s5] + 2 * x[s6] + 3 * x[s7] + 4 * x[s8])
-    #artery_cnt += (x[s9] + 2 * x[s10] + 3 * x[s11] + 4 * x[s12])
+        s1 = '248&249|PERCUTANEOUS CARDIOVASCULAR PROCEDURE WITHOUT STENT ORPCS'
+        s2 = '248&249|OR NON-ORPCS'
+        s4 = '248&249|NON-DRUG-ELUTING STENT' # NOTE; it is s4, not s3
+        #s5 = '248&249|ONE STENT'
+        #s6 = '248&249|TWO STENTS'
+        #s7 = '248&249|THREE STENTS'
+        #s8 = '248&249|FOUR OR MORE STENTS'
+        #s9 = '248&249|ONE ARTERY'
+        #s10 = '248&249|TWO ARTERIES'
+        #s11 = '248&249|THREE ARTERIES'
+        #s12 = '248&249|FOUR OR MORE ARTERIES'
+        # NOTE: After checking with real data, base_cnt seems 
+        #   to be overwritten by non_drug_eluting_stent. So, here base_cnt doesn't carry
+        #   much meaing.
+        base_cnt += (x[s1] + x[s2] + x[s4])
+        non_drug_eluting_stent = x[s4]
 
     if base_cnt > 0:
         if drug_eluting_stent > 0:
@@ -1154,13 +1156,13 @@ def mdc07(x):
             y.append("407")
 
     if x["408&409&410|ORPCS"] + x["408&409&410|OR ORPCS"] > 0:
-        if x["408&409&410|WITHOUT ORPCS"] == 0:
-            if x["_MCC"] > 0:
-                y.append("408")
-            elif x["_CC"] > 0:
-                y.append("409")
-            else:
-                y.append("410")
+        #if x["408&409&410|WITHOUT ORPCS"] == 0:
+        if x["_MCC"] > 0:
+            y.append("408")
+        elif x["_CC"] > 0:
+            y.append("409")
+        else:
+            y.append("410")
 
     s1 = "411&412&413&414&415&416&417&418&419|ORPCS" 
     s2 = "411&412&413&414&415&416&417&418&419|C.D.E. ORPCS"

@@ -11,7 +11,7 @@ class TestMCD18(unittest.TestCase):
         self.assertTrue("858" not in drg_lst) # No OR Proc for 858
  
         drg_lst = de.get_drg_all(["Z21"], ["00BF0ZZ"])
-        self.assertTrue("855" not in drg_lst) # No OR Proc for 855
+        self.assertTrue("855" in drg_lst) # ANY ORPCS
  
         drg_lst = de.get_drg_all(["K6811"], [])
         self.assertTrue("863" in drg_lst)
@@ -39,7 +39,7 @@ class TestMCD18(unittest.TestCase):
         self.assertTrue("858" not in drg_lst) # No OR Proc for 858
  
         drg_lst = de.get_drg_all(["Z21"], ["00BF0ZZ"])
-        self.assertTrue("855" not in drg_lst) # No OR Proc for 855
+        self.assertTrue("855" in drg_lst) # ANY ORPCS
  
         drg_lst = de.get_drg_all(["K6811"], [])
         self.assertTrue("863" in drg_lst)

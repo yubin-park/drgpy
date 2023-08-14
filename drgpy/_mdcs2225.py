@@ -103,7 +103,7 @@ def mdc25(x):
     if x["_MDC25"] == 0:
         return y
 
-    if x["_ORPCS*"] > 0:
+    if x["_ORPCS_EXTENSIVE"] > 0:
         if x["_MCC"] > 0:
             y.append("969")
         else:

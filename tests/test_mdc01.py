@@ -17,8 +17,8 @@ class TestMCD01(unittest.TestCase):
         drg_lst = de.get_drg_all(["I6000", "E0800"], 
                                 ["001607B", "0JH60DZ", "0JH60DZ"])
         self.assertTrue("023" in drg_lst)
-        drg_lst = de.get_drg_all(["I6000", "E0800", "A066"], [])
-        self.assertTrue("023" in drg_lst)
+        drg_lst = de.get_drg_all(["I6000"], ["001607A"])
+        self.assertTrue("024" in drg_lst)
         drg_lst = de.get_drg_all(["I6000"], ["00H004Z"])
         self.assertTrue("023" in drg_lst)
         drg_lst = de.get_drg_all(["G40001"], 
@@ -143,9 +143,10 @@ class TestMCD01(unittest.TestCase):
 
         drg_lst = de.get_drg_all(["I6000", "E0800"], 
                                 ["001607B", "0JH60DZ", "0JH60DZ"])
+        
         self.assertTrue("023" in drg_lst)
-        drg_lst = de.get_drg_all(["I6000", "E0800", "A066"], [])
-        self.assertTrue("023" in drg_lst)
+        drg_lst = de.get_drg_all(["I6000"], ["001607A"])
+        self.assertTrue("024" in drg_lst)
         drg_lst = de.get_drg_all(["I6000"], ["00H004Z"])
         self.assertTrue("023" in drg_lst)
         drg_lst = de.get_drg_all(["G40001"], 

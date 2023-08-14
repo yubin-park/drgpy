@@ -3,13 +3,15 @@ import re
 from pkg_resources import resource_filename as rscfn
 from collections import defaultdict
 
-dx_pttrn = "[A-TV-Z][0-9][0-9AB][0-9A-TV-Z]{0,4}"
+#dx_pttrn = "[A-TV-Z][0-9][0-9AB][0-9A-TV-Z]{0,4}"
+dx_pttrn = "[A-Z][0-9][0-9AB][0-9A-TV-Z]{0,4}" # NOTE: COVID-19 starts with "U"
 pr_pttrn = "[A-HJ-NP-Z0-9]{7}"
 
 def shorten(x):
     x = " ".join(x.upper().split())
     x = x.replace("DIAGNOSES", "DIAGNOSIS")
     x = x.replace("PROCEDURES", "PROCEDURE")
+    x = x.replace("PROCDURES", "PROCEDURE")
     x = x.replace("PRINCIPAL OR SECONDARY DIAGNOSIS", "PSDX")
     x = x.replace("PRINCIPAL DIAGNOSIS", "PDX")
     x = x.replace("SECONDARY DIAGNOSIS", "SDX")
@@ -55,6 +57,7 @@ def is_A(line, cursor):
 def parse_A(line, cursor, dxmap, cache):
     mdc_lst = re.findall("MDC\s(\d{2})\s", line)
     dx_lst = re.findall("\s{2}" + dx_pttrn + "\s+", line)
+
     if len(mdc_lst) > 0:
         cache["A"] = "_MDC" + mdc_lst[0] 
     elif len(dx_lst) > 0:
@@ -121,6 +124,11 @@ def parse_E(line, cursor, dxmap, prmap, cache, _cursor):
         if len(cache["E"]) > 0:
             update_mapping(dxmap, prmap, cache)
         cache["E"] = [codetype, code]
+    
+    #if cache["C"] == "040&041&042":
+    #    if cache["D"] != "PERIPHERAL NEUROSTIMULATORS":
+    #        
+    #        print(cache["D"], code, codetype)
 
 def read(fn, dxmap, prmap):
 
