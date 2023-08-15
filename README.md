@@ -52,6 +52,7 @@ To use a wrapper model for all versions from 36 to 40, please use as follows:
 ```python
 >>> from drgpy.msdrg_allvers import DRGEngineAllVers
 >>> de = DRGEngineAllVers()
+>>> print(de.get_drg.__doc__)
 
         Return the corresponding DRG code for the diagnoses and procedures
 
