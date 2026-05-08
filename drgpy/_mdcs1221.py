@@ -181,8 +181,11 @@ def mdc14(x, version):
         if x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0 and x["768|WITH ANY ORPCS EXCEPT"] == 0 and x["_ORPCS_ANY"]:
             y.append("768")
     elif (x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0) or (
-        x["768|SDX"] * x["768|NON-ORPCS"] > 0 and x["768|WITH ANY ORPCS EXCEPT"] == 0 and x["_ORPCS_ANY"]
+        x["768|SDX"] * x["768|NON-ORPCS"] > 0 and x["_ORPCS_UNIQUE"] > x["768|WITH ANY ORPCS EXCEPT"]
     ):
+        # NOTE: CMS "WITH ANY OPERATING ROOM PROCEDURES EXCEPT [list]" means the claim
+        # must have at least one OR procedure NOT in the EXCEPT list. Checking
+        # _ORPCS_UNIQUE > EXCEPT count ensures at least one non-excluded ORPCS exists.
         y.append("768")
 
     if (
@@ -256,16 +259,29 @@ def mdc15(x):
     if x["793|MAJOR PROBLEMS PSDX"] + x["793|OR SDX"] > 0:
         y.append("793")
 
-    if x["794|PSDX"] > 0 and x["793|MAJOR PROBLEMS PSDX"] + x["793|OR SDX"] == 0:
+    # NOTE: v41+ renamed "794|PSDX" to the long form below. Support both.
+    _794_PSDX = (
+        x["794|PSDX"]
+        + x[
+            "794|PSDX OF NEWBORN OR NEONATE,WITH OTHER SIGNIFICANT PROBLEMS, "
+            "NOT ASSIGNED TO DRG 789 THROUGH 793 OR 795 PSDX"
+        ]
+    )
+    if _794_PSDX > 0 and x["793|MAJOR PROBLEMS PSDX"] + x["793|OR SDX"] == 0:
         y.append("794")
 
     # Route to 795 only when no significant secondary problem was found (793/794).
     # The "795|AND NO SDX OR ONLY SDX" feature (e.g. Z23 immunization encounter)
-    # indicates that the secondary is NOT a significant problem — it must NOT
-    # override 793/794 diagnoses already identified above.
-    if len(y) == 0:
-        if x["795|PDX"] * (x["_NDX1"] + x["_NDX2+"] * x["795|AND NO SDX OR ONLY SDX"]) > 0:
-            y.append("795")
+    # indicates that the secondary is NOT a significant problem.
+    # NOTE: Some valid 795 PDX codes (e.g. P599 neonatal jaundice, P081 large-for-GA,
+    # Z3800 single liveborn) are listed only in the 795|PDX section and NOT in the
+    # 795|AND NO SDX OR ONLY SDX section. When they appear as secondary diagnoses they
+    # do not trigger 793 or 794, yet they also fail the AND NO SDX check, producing an
+    # ungroupable result. Since 793 and 794 already handle ALL significant secondary
+    # neonatal problems, it is safe to route to 795 whenever y is empty and PDX is
+    # 795-eligible — the AND NO SDX restriction adds nothing beyond what 793/794 enforce.
+    if len(y) == 0 and x["795|PDX"] > 0:
+        y.append("795")
 
     return y
 

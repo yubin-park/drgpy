@@ -93,7 +93,8 @@ def mdc01(x):
         y.append("024")
 
     # 025 - 027
-    if x["025&026&027|CRANIOTOMY ORPCS"] > 0:
+    # NOTE: v41+ renamed the DRG 025-027 section from "CRANIOTOMY ORPCS" to "ORPCS"
+    if x["025&026&027|CRANIOTOMY ORPCS"] + x["025&026&027|ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("025")
         elif x["_CC"] > 0:

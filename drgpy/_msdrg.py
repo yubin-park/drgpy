@@ -100,6 +100,7 @@ class DRGEngine:
                 x.append(x_i)
 
             if pr in self.orpcsmap:
+                x.append("_ORPCS_UNIQUE")
                 for matched_drg in self.orpcsmap[pr]:
                     x.append(f"_ORPCS|{matched_drg}")
                     x.append("_ORPCS_ANY")
