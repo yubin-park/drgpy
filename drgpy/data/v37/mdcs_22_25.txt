@@ -897,16 +897,15 @@ MDC 22 Assignment of Diagnosis Codes
   T3298   Corrosions involving 90% or more of body surface with 80-89% third degree corrosion
   T3299   Corrosions involving 90% or more of body surface with 90% or more third degree corrosion
 
-+------------------------------------------+
-| Extensive Burns or Full Thickness Burns  |
-|     with MV >96 Hours with Skin Graft    |
-+------------------------+-----------------+
-|       Skin Graft       |       DRG       |
-+------------------------+-----------------+
-|          Yes           |       927       |
-+------------------------+-----------------+
-|           No           |       933       |
-+------------------------+-----------------+
++------------------------------------------------------------+
+| Extensive burns or full thickness burns with MV >96 hours  |
++---------------------------------+--------------------------+
+|           Skin Graft            |           DRG            |
++---------------------------------+--------------------------+
+|               Yes               |           927            |
++---------------------------------+--------------------------+
+|               No                |           933            |
++---------------------------------+--------------------------+
 
 DRG 927 EXTENSIVE BURNS OR FULL THICKNESS BURNS WITH MV >96 HOURS WITH SKIN GRAFT
 DRG 933 EXTENSIVE BURNS OR FULL THICKNESS BURNS WITH MV >96 HOURS WITHOUT SKIN GRAFT
@@ -1587,7 +1586,7 @@ OPERATING ROOM PROCEDURES
   XHRPXL2 Replacement of Skin using Porcine Liver Derived Skin Substitute, External Approach, New Technology Group 2
 
 +----------------------------------------------------------+
-| Full Thickness Burn with Skin Graft or Inhalation Injury |
+|                   Full thickness burn                    |
 +----------------------------------------+-----------+-----+
 | Skin Graft or SDX of Inhalation Injury | CC or MCC | DRG |
 +----------------------------------------+-----------+-----+
@@ -2219,7 +2218,7 @@ SECONDARY DIAGNOSIS
   T5994XA Toxic effect of unspecified gases, fumes and vapors, undetermined, initial encounter
 
 +---------------------+
-| Non-Extensive Burns |
+| Non-extensive burns |
 +---------------------+
 |         DRG         |
 +---------------------+
@@ -2844,9 +2843,9 @@ PRINCIPAL DIAGNOSIS
 
 
 
-==============================================================================
-MDC 23 Factors Influencing Health Status & Other Contacts with Health Services
-==============================================================================
+================================================================================
+MDC 23 Factors influencing health status and other contacts with health services
+================================================================================
 
 MDC 23 Assignment of Diagnosis Codes
 
@@ -3043,7 +3042,8 @@ MDC 23 Assignment of Diagnosis Codes
   R69     Illness, unspecified
   R700    Elevated erythrocyte sedimentation rate
   R701    Abnormal plasma viscosity
-  R740    Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH]
+  R7401   Elevation of levels of liver transaminase levels
+  R7402   Elevation of levels of lactic acid dehydrogenase [LDH]
   R748    Abnormal levels of other serum enzymes
   R749    Abnormal serum enzyme level, unspecified
   R770    Abnormality of albumin
@@ -3846,30 +3846,48 @@ MDC 23 Assignment of Diagnosis Codes
   S2020XD Contusion of thorax, unspecified, subsequent encounter
   S20211D Contusion of right front wall of thorax, subsequent encounter
   S20212D Contusion of left front wall of thorax, subsequent encounter
+  S20213D Contusion of bilateral front wall of thorax, subsequent encounter
+  S20214D Contusion of middle front wall of thorax, subsequent encounter
   S20219D Contusion of unspecified front wall of thorax, subsequent encounter
   S20221D Contusion of right back wall of thorax, subsequent encounter
   S20222D Contusion of left back wall of thorax, subsequent encounter
+  S20223D Contusion of bilateral back wall of thorax, subsequent encounter
+  S20224D Contusion of middle back wall of thorax, subsequent encounter
   S20229D Contusion of unspecified back wall of thorax, subsequent encounter
   S20301D Unspecified superficial injuries of right front wall of thorax, subsequent encounter
   S20302D Unspecified superficial injuries of left front wall of thorax, subsequent encounter
+  S20303D Unspecified superficial injuries of bilateral front wall of thorax, subsequent encounter
+  S20304D Unspecified superficial injuries of middle front wall of thorax, subsequent encounter
   S20309D Unspecified superficial injuries of unspecified front wall of thorax, subsequent encounter
   S20311D Abrasion of right front wall of thorax, subsequent encounter
   S20312D Abrasion of left front wall of thorax, subsequent encounter
+  S20313D Abrasion of bilateral front wall of thorax, subsequent encounter
+  S20314D Abrasion of middle front wall of thorax, subsequent encounter
   S20319D Abrasion of unspecified front wall of thorax, subsequent encounter
   S20321D Blister (nonthermal) of right front wall of thorax, subsequent encounter
   S20322D Blister (nonthermal) of left front wall of thorax, subsequent encounter
+  S20323D Blister (nonthermal) of bilateral front wall of thorax, subsequent encounter
+  S20324D Blister (nonthermal) of middle front wall of thorax, subsequent encounter
   S20329D Blister (nonthermal) of unspecified front wall of thorax, subsequent encounter
   S20341D External constriction of right front wall of thorax, subsequent encounter
   S20342D External constriction of left front wall of thorax, subsequent encounter
+  S20343D External constriction of bilateral front wall of thorax, subsequent encounter
+  S20344D External constriction of middle front wall of thorax, subsequent encounter
   S20349D External constriction of unspecified front wall of thorax, subsequent encounter
   S20351D Superficial foreign body of right front wall of thorax, subsequent encounter
   S20352D Superficial foreign body of left front wall of thorax, subsequent encounter
+  S20353D Superficial foreign body of bilateral front wall of thorax, subsequent encounter
+  S20354D Superficial foreign body of middle front wall of thorax, subsequent encounter
   S20359D Superficial foreign body of unspecified front wall of thorax, subsequent encounter
   S20361D Insect bite (nonvenomous) of right front wall of thorax, subsequent encounter
   S20362D Insect bite (nonvenomous) of left front wall of thorax, subsequent encounter
+  S20363D Insect bite (nonvenomous) of bilateral front wall of thorax, subsequent encounter
+  S20364D Insect bite (nonvenomous) of middle front wall of thorax, subsequent encounter
   S20369D Insect bite (nonvenomous) of unspecified front wall of thorax, subsequent encounter
   S20371D Other superficial bite of right front wall of thorax, subsequent encounter
   S20372D Other superficial bite of left front wall of thorax, subsequent encounter
+  S20373D Other superficial bite of bilateral front wall of thorax, subsequent encounter
+  S20374D Other superficial bite of middle front wall of thorax, subsequent encounter
   S20379D Other superficial bite of unspecified front wall of thorax, subsequent encounter
   S20401D Unspecified superficial injuries of right back wall of thorax, subsequent encounter
   S20402D Unspecified superficial injuries of left back wall of thorax, subsequent encounter
@@ -9426,14 +9444,30 @@ MDC 23 Assignment of Diagnosis Codes
   T403X6A Underdosing of methadone, initial encounter
   T403X6D Underdosing of methadone, subsequent encounter
   T403X6S Underdosing of methadone, sequela
-  T404X1D Poisoning by other synthetic narcotics, accidental (unintentional), subsequent encounter
-  T404X2D Poisoning by other synthetic narcotics, intentional self-harm, subsequent encounter
-  T404X3D Poisoning by other synthetic narcotics, assault, subsequent encounter
-  T404X4D Poisoning by other synthetic narcotics, undetermined, subsequent encounter
-  T404X5D Adverse effect of other synthetic narcotics, subsequent encounter
-  T404X6A Underdosing of other synthetic narcotics, initial encounter
-  T404X6D Underdosing of other synthetic narcotics, subsequent encounter
-  T404X6S Underdosing of other synthetic narcotics, sequela
+  T40411D Poisoning by fentanyl or fentanyl analogs, accidental (unintentional), subsequent encounter
+  T40412D Poisoning by fentanyl or fentanyl analogs, intentional self-harm, subsequent encounter
+  T40413D Poisoning by fentanyl or fentanyl analogs, assault, subsequent encounter
+  T40414D Poisoning by fentanyl or fentanyl analogs, undetermined, subsequent encounter
+  T40415D Adverse effect of fentanyl or fentanyl analogs, subsequent encounter
+  T40416A Underdosing of fentanyl or fentanyl analogs, initial encounter
+  T40416D Underdosing of fentanyl or fentanyl analogs, subsequent encounter
+  T40416S Underdosing of fentanyl or fentanyl analogs, sequela
+  T40421D Poisoning by tramadol, accidental (unintentional), subsequent encounter
+  T40422D Poisoning by tramadol, intentional self-harm, subsequent encounter
+  T40423D Poisoning by tramadol, assault, subsequent encounter
+  T40424D Poisoning by tramadol, undetermined, subsequent encounter
+  T40425D Adverse effect of tramadol, subsequent encounter
+  T40426A Underdosing of tramadol, initial encounter
+  T40426D Underdosing of tramadol, subsequent encounter
+  T40426S Underdosing of tramadol, sequela
+  T40491D Poisoning by other synthetic narcotics, accidental (unintentional), subsequent encounter
+  T40492D Poisoning by other synthetic narcotics, intentional self-harm, subsequent encounter
+  T40493D Poisoning by other synthetic narcotics, assault, subsequent encounter
+  T40494D Poisoning by other synthetic narcotics, undetermined, subsequent encounter
+  T40495D Adverse effect of other synthetic narcotics, subsequent encounter
+  T40496A Underdosing of other synthetic narcotics, initial encounter
+  T40496D Underdosing of other synthetic narcotics, subsequent encounter
+  T40496S Underdosing of other synthetic narcotics, sequela
   T405X1D Poisoning by cocaine, accidental (unintentional), subsequent encounter
   T405X2D Poisoning by cocaine, intentional self-harm, subsequent encounter
   T405X3D Poisoning by cocaine, assault, subsequent encounter
@@ -11713,6 +11747,9 @@ MDC 23 Assignment of Diagnosis Codes
   Z0379   Encounter for other suspected maternal and fetal conditions ruled out
   Z03810  Encounter for observation for suspected exposure to anthrax ruled out
   Z03818  Encounter for observation for suspected exposure to other biological agents ruled out
+  Z03821  Encounter for observation for suspected ingested foreign body ruled out
+  Z03822  Encounter for observation for suspected aspirated (inhaled) foreign body ruled out
+  Z03823  Encounter for observation for suspected inserted (injected) foreign body ruled out
   Z0389   Encounter for observation for other suspected diseases and conditions ruled out
   Z0441   Encounter for examination and observation following alleged adult rape
   Z0442   Encounter for examination and observation following alleged child rape
@@ -11744,6 +11781,7 @@ MDC 23 Assignment of Diagnosis Codes
   Z113    Encounter for screening for infections with a predominantly sexual mode of transmission
   Z114    Encounter for screening for human immunodeficiency virus [HIV]
   Z1151   Encounter for screening for human papillomavirus (HPV)
+  Z1152   Encounter for screening for COVID-19
   Z1159   Encounter for screening for other viral diseases
   Z116    Encounter for screening for other protozoal diseases and helminthiases
   Z117    Encounter for testing for latent tuberculosis infection
@@ -11842,6 +11880,7 @@ MDC 23 Assignment of Diagnosis Codes
   Z20818  Contact with and (suspected) exposure to other bacterial communicable diseases
   Z20820  Contact with and (suspected) exposure to varicella
   Z20821  Contact with and (suspected) exposure to Zika virus
+  Z20822  Contact with and (suspected) exposure to COVID-19
   Z20828  Contact with and (suspected) exposure to other viral communicable diseases
   Z2089   Contact with and (suspected) exposure to other communicable diseases
   Z209    Contact with and (suspected) exposure to unspecified communicable disease
@@ -12207,31 +12246,31 @@ MDC 23 Assignment of Diagnosis Codes
   Z6741   Type O blood, Rh negative
   Z6790   Unspecified blood type, Rh positive
   Z6791   Unspecified blood type, Rh negative
-  Z681    Body mass index (BMI) 19.9 or less, adult
-  Z6820   Body mass index (BMI) 20.0-20.9, adult
-  Z6821   Body mass index (BMI) 21.0-21.9, adult
-  Z6822   Body mass index (BMI) 22.0-22.9, adult
-  Z6823   Body mass index (BMI) 23.0-23.9, adult
-  Z6824   Body mass index (BMI) 24.0-24.9, adult
-  Z6825   Body mass index (BMI) 25.0-25.9, adult
-  Z6826   Body mass index (BMI) 26.0-26.9, adult
-  Z6827   Body mass index (BMI) 27.0-27.9, adult
-  Z6828   Body mass index (BMI) 28.0-28.9, adult
-  Z6829   Body mass index (BMI) 29.0-29.9, adult
-  Z6830   Body mass index (BMI) 30.0-30.9, adult
-  Z6831   Body mass index (BMI) 31.0-31.9, adult
-  Z6832   Body mass index (BMI) 32.0-32.9, adult
-  Z6833   Body mass index (BMI) 33.0-33.9, adult
-  Z6834   Body mass index (BMI) 34.0-34.9, adult
-  Z6835   Body mass index (BMI) 35.0-35.9, adult
-  Z6836   Body mass index (BMI) 36.0-36.9, adult
-  Z6837   Body mass index (BMI) 37.0-37.9, adult
-  Z6838   Body mass index (BMI) 38.0-38.9, adult
-  Z6839   Body mass index (BMI) 39.0-39.9, adult
-  Z6851   Body mass index (BMI) pediatric, less than 5th percentile for age
-  Z6852   Body mass index (BMI) pediatric, 5th percentile to less than 85th percentile for age
-  Z6853   Body mass index (BMI) pediatric, 85th percentile to less than 95th percentile for age
-  Z6854   Body mass index (BMI) pediatric, greater than or equal to 95th percentile for age
+  Z681    Body mass index [BMI] 19.9 or less, adult
+  Z6820   Body mass index [BMI] 20.0-20.9, adult
+  Z6821   Body mass index [BMI] 21.0-21.9, adult
+  Z6822   Body mass index [BMI] 22.0-22.9, adult
+  Z6823   Body mass index [BMI] 23.0-23.9, adult
+  Z6824   Body mass index [BMI] 24.0-24.9, adult
+  Z6825   Body mass index [BMI] 25.0-25.9, adult
+  Z6826   Body mass index [BMI] 26.0-26.9, adult
+  Z6827   Body mass index [BMI] 27.0-27.9, adult
+  Z6828   Body mass index [BMI] 28.0-28.9, adult
+  Z6829   Body mass index [BMI] 29.0-29.9, adult
+  Z6830   Body mass index [BMI]30.0-30.9, adult
+  Z6831   Body mass index [BMI] 31.0-31.9, adult
+  Z6832   Body mass index [BMI] 32.0-32.9, adult
+  Z6833   Body mass index [BMI] 33.0-33.9, adult
+  Z6834   Body mass index [BMI] 34.0-34.9, adult
+  Z6835   Body mass index [BMI] 35.0-35.9, adult
+  Z6836   Body mass index [BMI] 36.0-36.9, adult
+  Z6837   Body mass index [BMI] 37.0-37.9, adult
+  Z6838   Body mass index [BMI] 38.0-38.9, adult
+  Z6839   Body mass index [BMI] 39.0-39.9, adult
+  Z6851   Body mass index [BMI] pediatric, less than 5th percentile for age
+  Z6852   Body mass index [BMI] pediatric, 5th percentile to less than 85th percentile for age
+  Z6853   Body mass index [BMI] pediatric, 85th percentile to less than 95th percentile for age
+  Z6854   Body mass index [BMI] pediatric, greater than or equal to 95th percentile for age
   Z69010  Encounter for mental health services for victim of parental child abuse
   Z69011  Encounter for mental health services for perpetrator of parental child abuse
   Z69020  Encounter for mental health services for victim of non-parental child abuse
@@ -12428,6 +12467,7 @@ MDC 23 Assignment of Diagnosis Codes
   Z8613   Personal history of malaria
   Z8614   Personal history of Methicillin resistant Staphylococcus aureus infection
   Z8615   Personal history of latent tuberculosis infection
+  Z8616   Personal history of COVID-19
   Z8619   Personal history of other infectious and parasitic diseases
   Z862    Personal history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism
   Z8631   Personal history of diabetic foot ulcer
@@ -12483,15 +12523,15 @@ MDC 23 Assignment of Diagnosis Codes
   Z87892  Personal history of anaphylaxis
   Z87898  Personal history of other specified conditions
   Z880    Allergy status to penicillin
-  Z881    Allergy status to other antibiotic agents status
-  Z882    Allergy status to sulfonamides status
-  Z883    Allergy status to other anti-infective agents status
-  Z884    Allergy status to anesthetic agent status
-  Z885    Allergy status to narcotic agent status
-  Z886    Allergy status to analgesic agent status
-  Z887    Allergy status to serum and vaccine status
-  Z888    Allergy status to other drugs, medicaments and biological substances status
-  Z889    Allergy status to unspecified drugs, medicaments and biological substances status
+  Z881    Allergy status to other antibiotic agents
+  Z882    Allergy status to sulfonamides
+  Z883    Allergy status to other anti-infective agents
+  Z884    Allergy status to anesthetic agent
+  Z885    Allergy status to narcotic agent
+  Z886    Allergy status to analgesic agent
+  Z887    Allergy status to serum and vaccine
+  Z888    Allergy status to other drugs, medicaments and biological substances
+  Z889    Allergy status to unspecified drugs, medicaments and biological substances
   Z89011  Acquired absence of right thumb
   Z89012  Acquired absence of left thumb
   Z89019  Acquired absence of unspecified thumb
@@ -12673,7 +12713,7 @@ MDC 23 Assignment of Diagnosis Codes
   Z9989   Dependence on other enabling machines and devices
 
 +-----------------------------------------------------------------------+
-| Major Procedures with Diagnosis of Other Contact with Health Services |
+| O.R. procedures with diagnoses of other contact with health services  |
 +-----------------------+-----------------------+-----------------------+
 |          MCC          |          CC           |          DRG          |
 +-----------------------+-----------------------+-----------------------+
@@ -13967,7 +14007,7 @@ SECOND CONDITION -  REHABILITATION PROCEDURES
   F0FZJZZ* Caregiver Training in Communication Skills
 
 +---------------------+
-| Signs and Symptoms  |
+| Signs and symptoms  |
 +----------+----------+
 |   MCC    |   DRG    |
 +----------+----------+
@@ -14021,7 +14061,8 @@ PRINCIPAL DIAGNOSIS
   R6889  Other general symptoms and signs
   R700   Elevated erythrocyte sedimentation rate
   R701   Abnormal plasma viscosity
-  R740   Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH]
+  R7401  Elevation of levels of liver transaminase levels
+  R7402  Elevation of levels of lactic acid dehydrogenase [LDH]
   R748   Abnormal levels of other serum enzymes
   R749   Abnormal serum enzyme level, unspecified
   R770   Abnormality of albumin
@@ -14839,30 +14880,48 @@ PRINCIPAL DIAGNOSIS
   S2020XD Contusion of thorax, unspecified, subsequent encounter
   S20211D Contusion of right front wall of thorax, subsequent encounter
   S20212D Contusion of left front wall of thorax, subsequent encounter
+  S20213D Contusion of bilateral front wall of thorax, subsequent encounter
+  S20214D Contusion of middle front wall of thorax, subsequent encounter
   S20219D Contusion of unspecified front wall of thorax, subsequent encounter
   S20221D Contusion of right back wall of thorax, subsequent encounter
   S20222D Contusion of left back wall of thorax, subsequent encounter
+  S20223D Contusion of bilateral back wall of thorax, subsequent encounter
+  S20224D Contusion of middle back wall of thorax, subsequent encounter
   S20229D Contusion of unspecified back wall of thorax, subsequent encounter
   S20301D Unspecified superficial injuries of right front wall of thorax, subsequent encounter
   S20302D Unspecified superficial injuries of left front wall of thorax, subsequent encounter
+  S20303D Unspecified superficial injuries of bilateral front wall of thorax, subsequent encounter
+  S20304D Unspecified superficial injuries of middle front wall of thorax, subsequent encounter
   S20309D Unspecified superficial injuries of unspecified front wall of thorax, subsequent encounter
   S20311D Abrasion of right front wall of thorax, subsequent encounter
   S20312D Abrasion of left front wall of thorax, subsequent encounter
+  S20313D Abrasion of bilateral front wall of thorax, subsequent encounter
+  S20314D Abrasion of middle front wall of thorax, subsequent encounter
   S20319D Abrasion of unspecified front wall of thorax, subsequent encounter
   S20321D Blister (nonthermal) of right front wall of thorax, subsequent encounter
   S20322D Blister (nonthermal) of left front wall of thorax, subsequent encounter
+  S20323D Blister (nonthermal) of bilateral front wall of thorax, subsequent encounter
+  S20324D Blister (nonthermal) of middle front wall of thorax, subsequent encounter
   S20329D Blister (nonthermal) of unspecified front wall of thorax, subsequent encounter
   S20341D External constriction of right front wall of thorax, subsequent encounter
   S20342D External constriction of left front wall of thorax, subsequent encounter
+  S20343D External constriction of bilateral front wall of thorax, subsequent encounter
+  S20344D External constriction of middle front wall of thorax, subsequent encounter
   S20349D External constriction of unspecified front wall of thorax, subsequent encounter
   S20351D Superficial foreign body of right front wall of thorax, subsequent encounter
   S20352D Superficial foreign body of left front wall of thorax, subsequent encounter
+  S20353D Superficial foreign body of bilateral front wall of thorax, subsequent encounter
+  S20354D Superficial foreign body of middle front wall of thorax, subsequent encounter
   S20359D Superficial foreign body of unspecified front wall of thorax, subsequent encounter
   S20361D Insect bite (nonvenomous) of right front wall of thorax, subsequent encounter
   S20362D Insect bite (nonvenomous) of left front wall of thorax, subsequent encounter
+  S20363D Insect bite (nonvenomous) of bilateral front wall of thorax, subsequent encounter
+  S20364D Insect bite (nonvenomous) of middle front wall of thorax, subsequent encounter
   S20369D Insect bite (nonvenomous) of unspecified front wall of thorax, subsequent encounter
   S20371D Other superficial bite of right front wall of thorax, subsequent encounter
   S20372D Other superficial bite of left front wall of thorax, subsequent encounter
+  S20373D Other superficial bite of bilateral front wall of thorax, subsequent encounter
+  S20374D Other superficial bite of middle front wall of thorax, subsequent encounter
   S20379D Other superficial bite of unspecified front wall of thorax, subsequent encounter
   S20401D Unspecified superficial injuries of right back wall of thorax, subsequent encounter
   S20402D Unspecified superficial injuries of left back wall of thorax, subsequent encounter
@@ -20376,13 +20435,27 @@ PRINCIPAL DIAGNOSIS
   T403X5D Adverse effect of methadone, subsequent encounter
   T403X6D Underdosing of methadone, subsequent encounter
   T403X6S Underdosing of methadone, sequela
-  T404X1D Poisoning by other synthetic narcotics, accidental (unintentional), subsequent encounter
-  T404X2D Poisoning by other synthetic narcotics, intentional self-harm, subsequent encounter
-  T404X3D Poisoning by other synthetic narcotics, assault, subsequent encounter
-  T404X4D Poisoning by other synthetic narcotics, undetermined, subsequent encounter
-  T404X5D Adverse effect of other synthetic narcotics, subsequent encounter
-  T404X6D Underdosing of other synthetic narcotics, subsequent encounter
-  T404X6S Underdosing of other synthetic narcotics, sequela
+  T40411D Poisoning by fentanyl or fentanyl analogs, accidental (unintentional), subsequent encounter
+  T40412D Poisoning by fentanyl or fentanyl analogs, intentional self-harm, subsequent encounter
+  T40413D Poisoning by fentanyl or fentanyl analogs, assault, subsequent encounter
+  T40414D Poisoning by fentanyl or fentanyl analogs, undetermined, subsequent encounter
+  T40415D Adverse effect of fentanyl or fentanyl analogs, subsequent encounter
+  T40416D Underdosing of fentanyl or fentanyl analogs, subsequent encounter
+  T40416S Underdosing of fentanyl or fentanyl analogs, sequela
+  T40421D Poisoning by tramadol, accidental (unintentional), subsequent encounter
+  T40422D Poisoning by tramadol, intentional self-harm, subsequent encounter
+  T40423D Poisoning by tramadol, assault, subsequent encounter
+  T40424D Poisoning by tramadol, undetermined, subsequent encounter
+  T40425D Adverse effect of tramadol, subsequent encounter
+  T40426D Underdosing of tramadol, subsequent encounter
+  T40426S Underdosing of tramadol, sequela
+  T40491D Poisoning by other synthetic narcotics, accidental (unintentional), subsequent encounter
+  T40492D Poisoning by other synthetic narcotics, intentional self-harm, subsequent encounter
+  T40493D Poisoning by other synthetic narcotics, assault, subsequent encounter
+  T40494D Poisoning by other synthetic narcotics, undetermined, subsequent encounter
+  T40495D Adverse effect of other synthetic narcotics, subsequent encounter
+  T40496D Underdosing of other synthetic narcotics, subsequent encounter
+  T40496S Underdosing of other synthetic narcotics, sequela
   T405X1D Poisoning by cocaine, accidental (unintentional), subsequent encounter
   T405X2D Poisoning by cocaine, intentional self-harm, subsequent encounter
   T405X3D Poisoning by cocaine, assault, subsequent encounter
@@ -22525,7 +22598,7 @@ PRINCIPAL DIAGNOSIS
   Z9229   Personal history of other drug therapy
 
 +-----------------------------------------+
-| Other Factors Influencing Health Status |
+| Other factors influencing health status |
 +-----------------------------------------+
 |                   DRG                   |
 +-----------------------------------------+
@@ -22733,7 +22806,9 @@ PRINCIPAL DIAGNOSIS
   T400X6A Underdosing of opium, initial encounter
   T402X6A Underdosing of other opioids, initial encounter
   T403X6A Underdosing of methadone, initial encounter
-  T404X6A Underdosing of other synthetic narcotics, initial encounter
+  T40416A Underdosing of fentanyl or fentanyl analogs, initial encounter
+  T40426A Underdosing of tramadol, initial encounter
+  T40496A Underdosing of other synthetic narcotics, initial encounter
   T405X6A Underdosing of cocaine, initial encounter
   T40606A Underdosing of unspecified narcotics, initial encounter
   T40696A Underdosing of other narcotics, initial encounter
@@ -22918,6 +22993,9 @@ PRINCIPAL DIAGNOSIS
   Z0379   Encounter for other suspected maternal and fetal conditions ruled out
   Z03810  Encounter for observation for suspected exposure to anthrax ruled out
   Z03818  Encounter for observation for suspected exposure to other biological agents ruled out
+  Z03821  Encounter for observation for suspected ingested foreign body ruled out
+  Z03822  Encounter for observation for suspected aspirated (inhaled) foreign body ruled out
+  Z03823  Encounter for observation for suspected inserted (injected) foreign body ruled out
   Z0389   Encounter for observation for other suspected diseases and conditions ruled out
   Z0441   Encounter for examination and observation following alleged adult rape
   Z0442   Encounter for examination and observation following alleged child rape
@@ -22949,6 +23027,7 @@ PRINCIPAL DIAGNOSIS
   Z113    Encounter for screening for infections with a predominantly sexual mode of transmission
   Z114    Encounter for screening for human immunodeficiency virus [HIV]
   Z1151   Encounter for screening for human papillomavirus (HPV)
+  Z1152   Encounter for screening for COVID-19
   Z1159   Encounter for screening for other viral diseases
   Z116    Encounter for screening for other protozoal diseases and helminthiases
   Z117    Encounter for testing for latent tuberculosis infection
@@ -23047,6 +23126,7 @@ PRINCIPAL DIAGNOSIS
   Z20818  Contact with and (suspected) exposure to other bacterial communicable diseases
   Z20820  Contact with and (suspected) exposure to varicella
   Z20821  Contact with and (suspected) exposure to Zika virus
+  Z20822  Contact with and (suspected) exposure to COVID-19
   Z20828  Contact with and (suspected) exposure to other viral communicable diseases
   Z2089   Contact with and (suspected) exposure to other communicable diseases
   Z209    Contact with and (suspected) exposure to unspecified communicable disease
@@ -23385,31 +23465,31 @@ PRINCIPAL DIAGNOSIS
   Z6741   Type O blood, Rh negative
   Z6790   Unspecified blood type, Rh positive
   Z6791   Unspecified blood type, Rh negative
-  Z681    Body mass index (BMI) 19.9 or less, adult
-  Z6820   Body mass index (BMI) 20.0-20.9, adult
-  Z6821   Body mass index (BMI) 21.0-21.9, adult
-  Z6822   Body mass index (BMI) 22.0-22.9, adult
-  Z6823   Body mass index (BMI) 23.0-23.9, adult
-  Z6824   Body mass index (BMI) 24.0-24.9, adult
-  Z6825   Body mass index (BMI) 25.0-25.9, adult
-  Z6826   Body mass index (BMI) 26.0-26.9, adult
-  Z6827   Body mass index (BMI) 27.0-27.9, adult
-  Z6828   Body mass index (BMI) 28.0-28.9, adult
-  Z6829   Body mass index (BMI) 29.0-29.9, adult
-  Z6830   Body mass index (BMI) 30.0-30.9, adult
-  Z6831   Body mass index (BMI) 31.0-31.9, adult
-  Z6832   Body mass index (BMI) 32.0-32.9, adult
-  Z6833   Body mass index (BMI) 33.0-33.9, adult
-  Z6834   Body mass index (BMI) 34.0-34.9, adult
-  Z6835   Body mass index (BMI) 35.0-35.9, adult
-  Z6836   Body mass index (BMI) 36.0-36.9, adult
-  Z6837   Body mass index (BMI) 37.0-37.9, adult
-  Z6838   Body mass index (BMI) 38.0-38.9, adult
-  Z6839   Body mass index (BMI) 39.0-39.9, adult
-  Z6851   Body mass index (BMI) pediatric, less than 5th percentile for age
-  Z6852   Body mass index (BMI) pediatric, 5th percentile to less than 85th percentile for age
-  Z6853   Body mass index (BMI) pediatric, 85th percentile to less than 95th percentile for age
-  Z6854   Body mass index (BMI) pediatric, greater than or equal to 95th percentile for age
+  Z681    Body mass index [BMI] 19.9 or less, adult
+  Z6820   Body mass index [BMI] 20.0-20.9, adult
+  Z6821   Body mass index [BMI] 21.0-21.9, adult
+  Z6822   Body mass index [BMI] 22.0-22.9, adult
+  Z6823   Body mass index [BMI] 23.0-23.9, adult
+  Z6824   Body mass index [BMI] 24.0-24.9, adult
+  Z6825   Body mass index [BMI] 25.0-25.9, adult
+  Z6826   Body mass index [BMI] 26.0-26.9, adult
+  Z6827   Body mass index [BMI] 27.0-27.9, adult
+  Z6828   Body mass index [BMI] 28.0-28.9, adult
+  Z6829   Body mass index [BMI] 29.0-29.9, adult
+  Z6830   Body mass index [BMI]30.0-30.9, adult
+  Z6831   Body mass index [BMI] 31.0-31.9, adult
+  Z6832   Body mass index [BMI] 32.0-32.9, adult
+  Z6833   Body mass index [BMI] 33.0-33.9, adult
+  Z6834   Body mass index [BMI] 34.0-34.9, adult
+  Z6835   Body mass index [BMI] 35.0-35.9, adult
+  Z6836   Body mass index [BMI] 36.0-36.9, adult
+  Z6837   Body mass index [BMI] 37.0-37.9, adult
+  Z6838   Body mass index [BMI] 38.0-38.9, adult
+  Z6839   Body mass index [BMI] 39.0-39.9, adult
+  Z6851   Body mass index [BMI] pediatric, less than 5th percentile for age
+  Z6852   Body mass index [BMI] pediatric, 5th percentile to less than 85th percentile for age
+  Z6853   Body mass index [BMI] pediatric, 85th percentile to less than 95th percentile for age
+  Z6854   Body mass index [BMI] pediatric, greater than or equal to 95th percentile for age
   Z69010  Encounter for mental health services for victim of parental child abuse
   Z69011  Encounter for mental health services for perpetrator of parental child abuse
   Z69020  Encounter for mental health services for victim of non-parental child abuse
@@ -23593,6 +23673,7 @@ PRINCIPAL DIAGNOSIS
   Z8613   Personal history of malaria
   Z8614   Personal history of Methicillin resistant Staphylococcus aureus infection
   Z8615   Personal history of latent tuberculosis infection
+  Z8616   Personal history of COVID-19
   Z8619   Personal history of other infectious and parasitic diseases
   Z862    Personal history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism
   Z8631   Personal history of diabetic foot ulcer
@@ -23648,15 +23729,15 @@ PRINCIPAL DIAGNOSIS
   Z87892  Personal history of anaphylaxis
   Z87898  Personal history of other specified conditions
   Z880    Allergy status to penicillin
-  Z881    Allergy status to other antibiotic agents status
-  Z882    Allergy status to sulfonamides status
-  Z883    Allergy status to other anti-infective agents status
-  Z884    Allergy status to anesthetic agent status
-  Z885    Allergy status to narcotic agent status
-  Z886    Allergy status to analgesic agent status
-  Z887    Allergy status to serum and vaccine status
-  Z888    Allergy status to other drugs, medicaments and biological substances status
-  Z889    Allergy status to unspecified drugs, medicaments and biological substances status
+  Z881    Allergy status to other antibiotic agents
+  Z882    Allergy status to sulfonamides
+  Z883    Allergy status to other anti-infective agents
+  Z884    Allergy status to anesthetic agent
+  Z885    Allergy status to narcotic agent
+  Z886    Allergy status to analgesic agent
+  Z887    Allergy status to serum and vaccine
+  Z888    Allergy status to other drugs, medicaments and biological substances
+  Z889    Allergy status to unspecified drugs, medicaments and biological substances
   Z89011  Acquired absence of right thumb
   Z89012  Acquired absence of left thumb
   Z89019  Acquired absence of unspecified thumb
@@ -23834,7 +23915,7 @@ PRINCIPAL DIAGNOSIS
 
 
 :======================================================================:
-|                  MDC 24 Multiple Significant Trauma                  |
+|                  MDC 24 Multiple significant trauma                  |
 :======================================================================:
 
 PRINCIPAL DIAGNOSIS OF SIGNIFICANT TRAUMA
@@ -24876,30 +24957,48 @@ PRINCIPAL DIAGNOSIS
   S2020XA Contusion of thorax, unspecified, initial encounter
   S20211A Contusion of right front wall of thorax, initial encounter
   S20212A Contusion of left front wall of thorax, initial encounter
+  S20213A Contusion of bilateral front wall of thorax, initial encounter
+  S20214A Contusion of middle front wall of thorax, initial encounter
   S20219A Contusion of unspecified front wall of thorax, initial encounter
   S20221A Contusion of right back wall of thorax, initial encounter
   S20222A Contusion of left back wall of thorax, initial encounter
+  S20223A Contusion of bilateral back wall of thorax, initial encounter
+  S20224A Contusion of middle back wall of thorax, initial encounter
   S20229A Contusion of unspecified back wall of thorax, initial encounter
   S20301A Unspecified superficial injuries of right front wall of thorax, initial encounter
   S20302A Unspecified superficial injuries of left front wall of thorax, initial encounter
+  S20303A Unspecified superficial injuries of bilateral front wall of thorax, initial encounter
+  S20304A Unspecified superficial injuries of middle front wall of thorax, initial encounter
   S20309A Unspecified superficial injuries of unspecified front wall of thorax, initial encounter
   S20311A Abrasion of right front wall of thorax, initial encounter
   S20312A Abrasion of left front wall of thorax, initial encounter
+  S20313A Abrasion of bilateral front wall of thorax, initial encounter
+  S20314A Abrasion of middle front wall of thorax, initial encounter
   S20319A Abrasion of unspecified front wall of thorax, initial encounter
   S20321A Blister (nonthermal) of right front wall of thorax, initial encounter
   S20322A Blister (nonthermal) of left front wall of thorax, initial encounter
+  S20323A Blister (nonthermal) of bilateral front wall of thorax, initial encounter
+  S20324A Blister (nonthermal) of middle front wall of thorax, initial encounter
   S20329A Blister (nonthermal) of unspecified front wall of thorax, initial encounter
   S20341A External constriction of right front wall of thorax, initial encounter
   S20342A External constriction of left front wall of thorax, initial encounter
+  S20343A External constriction of bilateral front wall of thorax, initial encounter
+  S20344A External constriction of middle front wall of thorax, initial encounter
   S20349A External constriction of unspecified front wall of thorax, initial encounter
   S20351A Superficial foreign body of right front wall of thorax, initial encounter
   S20352A Superficial foreign body of left front wall of thorax, initial encounter
+  S20353A Superficial foreign body of bilateral front wall of thorax, initial encounter
+  S20354A Superficial foreign body of middle front wall of thorax, initial encounter
   S20359A Superficial foreign body of unspecified front wall of thorax, initial encounter
   S20361A Insect bite (nonvenomous) of right front wall of thorax, initial encounter
   S20362A Insect bite (nonvenomous) of left front wall of thorax, initial encounter
+  S20363A Insect bite (nonvenomous) of bilateral front wall of thorax, initial encounter
+  S20364A Insect bite (nonvenomous) of middle front wall of thorax, initial encounter
   S20369A Insect bite (nonvenomous) of unspecified front wall of thorax, initial encounter
   S20371A Other superficial bite of right front wall of thorax, initial encounter
   S20372A Other superficial bite of left front wall of thorax, initial encounter
+  S20373A Other superficial bite of bilateral front wall of thorax, initial encounter
+  S20374A Other superficial bite of middle front wall of thorax, initial encounter
   S20379A Other superficial bite of unspecified front wall of thorax, initial encounter
   S20401A Unspecified superficial injuries of right back wall of thorax, initial encounter
   S20402A Unspecified superficial injuries of left back wall of thorax, initial encounter
@@ -35228,7 +35327,7 @@ PRINCIPAL OR SECONDARY DIAGNOSIS
   T79A29A Traumatic compartment syndrome of unspecified lower extremity, initial encounter
 
 +--------------------------------------------+
-| Craniotomy for Multiple Significant Trauma |
+| Craniotomy for multiple significant trauma |
 +--------------------------------------------+
 |                    DRG                     |
 +--------------------------------------------+
@@ -35461,21 +35560,27 @@ OPERATING ROOM PROCEDURES
   00F60ZZ Fragmentation in Cerebral Ventricle, Open Approach
   00F63ZZ Fragmentation in Cerebral Ventricle, Percutaneous Approach
   00F64ZZ Fragmentation in Cerebral Ventricle, Percutaneous Endoscopic Approach
+  00H001Z Insertion of Radioactive Element into Brain, Open Approach
   00H002Z Insertion of Monitoring Device into Brain, Open Approach
   00H003Z Insertion of Infusion Device into Brain, Open Approach
   00H00YZ Insertion of Other Device into Brain, Open Approach
+  00H031Z Insertion of Radioactive Element into Brain, Percutaneous Approach
   00H032Z Insertion of Monitoring Device into Brain, Percutaneous Approach
   00H033Z Insertion of Infusion Device into Brain, Percutaneous Approach
   00H03YZ Insertion of Other Device into Brain, Percutaneous Approach
+  00H041Z Insertion of Radioactive Element into Brain, Percutaneous Endoscopic Approach
   00H042Z Insertion of Monitoring Device into Brain, Percutaneous Endoscopic Approach
   00H043Z Insertion of Infusion Device into Brain, Percutaneous Endoscopic Approach
   00H04YZ Insertion of Other Device into Brain, Percutaneous Endoscopic Approach
+  00H601Z Insertion of Radioactive Element into Cerebral Ventricle, Open Approach
   00H602Z Insertion of Monitoring Device into Cerebral Ventricle, Open Approach
   00H603Z Insertion of Infusion Device into Cerebral Ventricle, Open Approach
   00H60YZ Insertion of Other Device into Cerebral Ventricle, Open Approach
+  00H631Z Insertion of Radioactive Element into Cerebral Ventricle, Percutaneous Approach
   00H632Z Insertion of Monitoring Device into Cerebral Ventricle, Percutaneous Approach
   00H633Z Insertion of Infusion Device into Cerebral Ventricle, Percutaneous Approach
   00H63YZ Insertion of Other Device into Cerebral Ventricle, Percutaneous Approach
+  00H641Z Insertion of Radioactive Element into Cerebral Ventricle, Percutaneous Endoscopic Approach
   00H642Z Insertion of Monitoring Device into Cerebral Ventricle, Percutaneous Endoscopic Approach
   00H643Z Insertion of Infusion Device into Cerebral Ventricle, Percutaneous Endoscopic Approach
   00H64YZ Insertion of Other Device into Cerebral Ventricle, Percutaneous Endoscopic Approach
@@ -35914,8 +36019,8 @@ OPERATING ROOM PROCEDURES
   0WJ10ZZ Inspection of Cranial Cavity, Open Approach
 
 +---------------------------------------------+
-| Limb Reattachment, Hip and Femur Procedures |
-|       for Multiple Significant Trauma       |
+| Limb reattachment, hip and femur procedures |
+|       for multiple significant trauma       |
 +---------------------------------------------+
 |                     DRG                     |
 +---------------------------------------------+
@@ -36352,36 +36457,54 @@ OPERATING ROOM PROCEDURES
   0SBB0ZZ Excision of Left Hip Joint, Open Approach
   0SBB3ZZ Excision of Left Hip Joint, Percutaneous Approach
   0SBB4ZZ Excision of Left Hip Joint, Percutaneous Endoscopic Approach
+  0SG903Z Fusion of Right Hip Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SG904Z Fusion of Right Hip Joint with Internal Fixation Device, Open Approach
   0SG905Z Fusion of Right Hip Joint with External Fixation Device, Open Approach
   0SG907Z Fusion of Right Hip Joint with Autologous Tissue Substitute, Open Approach
   0SG90JZ Fusion of Right Hip Joint with Synthetic Substitute, Open Approach
   0SG90KZ Fusion of Right Hip Joint with Nonautologous Tissue Substitute, Open Approach
+  0SG933Z Fusion of Right Hip Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SG934Z Fusion of Right Hip Joint with Internal Fixation Device, Percutaneous Approach
   0SG935Z Fusion of Right Hip Joint with External Fixation Device, Percutaneous Approach
   0SG937Z Fusion of Right Hip Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SG93JZ Fusion of Right Hip Joint with Synthetic Substitute, Percutaneous Approach
   0SG93KZ Fusion of Right Hip Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SG943Z Fusion of Right Hip Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SG944Z Fusion of Right Hip Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SG945Z Fusion of Right Hip Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SG947Z Fusion of Right Hip Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SG94JZ Fusion of Right Hip Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SG94KZ Fusion of Right Hip Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGB03Z Fusion of Left Hip Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGB04Z Fusion of Left Hip Joint with Internal Fixation Device, Open Approach
   0SGB05Z Fusion of Left Hip Joint with External Fixation Device, Open Approach
   0SGB07Z Fusion of Left Hip Joint with Autologous Tissue Substitute, Open Approach
   0SGB0JZ Fusion of Left Hip Joint with Synthetic Substitute, Open Approach
   0SGB0KZ Fusion of Left Hip Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGB33Z Fusion of Left Hip Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGB34Z Fusion of Left Hip Joint with Internal Fixation Device, Percutaneous Approach
   0SGB35Z Fusion of Left Hip Joint with External Fixation Device, Percutaneous Approach
   0SGB37Z Fusion of Left Hip Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGB3JZ Fusion of Left Hip Joint with Synthetic Substitute, Percutaneous Approach
   0SGB3KZ Fusion of Left Hip Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGB43Z Fusion of Left Hip Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGB44Z Fusion of Left Hip Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGB45Z Fusion of Left Hip Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGB47Z Fusion of Left Hip Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGB4JZ Fusion of Left Hip Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGB4KZ Fusion of Left Hip Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SH904Z Insertion of Internal Fixation Device into Right Hip Joint, Open Approach
+  0SH905Z Insertion of External Fixation Device into Right Hip Joint, Open Approach
+  0SH934Z Insertion of Internal Fixation Device into Right Hip Joint, Percutaneous Approach
+  0SH935Z Insertion of External Fixation Device into Right Hip Joint, Percutaneous Approach
+  0SH944Z Insertion of Internal Fixation Device into Right Hip Joint, Percutaneous Endoscopic Approach
+  0SH945Z Insertion of External Fixation Device into Right Hip Joint, Percutaneous Endoscopic Approach
+  0SHB04Z Insertion of Internal Fixation Device into Left Hip Joint, Open Approach
+  0SHB05Z Insertion of External Fixation Device into Left Hip Joint, Open Approach
+  0SHB34Z Insertion of Internal Fixation Device into Left Hip Joint, Percutaneous Approach
+  0SHB35Z Insertion of External Fixation Device into Left Hip Joint, Percutaneous Approach
+  0SHB44Z Insertion of Internal Fixation Device into Left Hip Joint, Percutaneous Endoscopic Approach
+  0SHB45Z Insertion of External Fixation Device into Left Hip Joint, Percutaneous Endoscopic Approach
   0SN90ZZ Release Right Hip Joint, Open Approach
   0SN93ZZ Release Right Hip Joint, Percutaneous Approach
   0SN94ZZ Release Right Hip Joint, Percutaneous Endoscopic Approach
@@ -36569,17 +36692,17 @@ OPERATING ROOM PROCEDURES
   0YMM0ZZ Reattachment of Right Foot, Open Approach
   0YMN0ZZ Reattachment of Left Foot, Open Approach
 
-+--------------------------------------------------+
-| Other Procedures for Multiple Significant Trauma |
-+----------------+----------------+----------------+
-|      MCC       |       CC       |      DRG       |
-+----------------+----------------+----------------+
-|      Yes       |      n/a       |      957       |
-+----------------+----------------+----------------+
-|       No       |      Yes       |      958       |
-+----------------+----------------+----------------+
-|       No       |       No       |      959       |
-+----------------+----------------+----------------+
++--------------------------------------------------------+
+| Other O.R. procedures for multiple significant trauma  |
++------------------+------------------+------------------+
+|       MCC        |        CC        |       DRG        |
++------------------+------------------+------------------+
+|       Yes        |       n/a        |       957        |
++------------------+------------------+------------------+
+|        No        |       Yes        |       958        |
++------------------+------------------+------------------+
+|        No        |        No        |       959        |
++------------------+------------------+------------------+
 
 DRG 957 OTHER O.R. PROCEDURES FOR MULTIPLE SIGNIFICANT TRAUMA WITH MCC
 DRG 958 OTHER O.R. PROCEDURES FOR MULTIPLE SIGNIFICANT TRAUMA WITH CC
@@ -36786,17 +36909,23 @@ OPERATING ROOM PROCEDURES
   00HE0MZ  Insertion of Neurostimulator Lead into Cranial Nerve, Open Approach
   00HE3MZ  Insertion of Neurostimulator Lead into Cranial Nerve, Percutaneous Approach
   00HE4MZ  Insertion of Neurostimulator Lead into Cranial Nerve, Percutaneous Endoscopic Approach
+  00HU01Z  Insertion of Radioactive Element into Spinal Canal, Open Approach
   00HU02Z  Insertion of Monitoring Device into Spinal Canal, Open Approach
   00HU0MZ  Insertion of Neurostimulator Lead into Spinal Canal, Open Approach
   00HU0YZ  Insertion of Other Device into Spinal Canal, Open Approach
+  00HU31Z  Insertion of Radioactive Element into Spinal Canal, Percutaneous Approach
   00HU3MZ  Insertion of Neurostimulator Lead into Spinal Canal, Percutaneous Approach
+  00HU41Z  Insertion of Radioactive Element into Spinal Canal, Percutaneous Endoscopic Approach
   00HU42Z  Insertion of Monitoring Device into Spinal Canal, Percutaneous Endoscopic Approach
   00HU4MZ  Insertion of Neurostimulator Lead into Spinal Canal, Percutaneous Endoscopic Approach
+  00HV01Z  Insertion of Radioactive Element into Spinal Cord, Open Approach
   00HV02Z  Insertion of Monitoring Device into Spinal Cord, Open Approach
   00HV0MZ  Insertion of Neurostimulator Lead into Spinal Cord, Open Approach
   00HV0YZ  Insertion of Other Device into Spinal Cord, Open Approach
+  00HV31Z  Insertion of Radioactive Element into Spinal Cord, Percutaneous Approach
   00HV3MZ  Insertion of Neurostimulator Lead into Spinal Cord, Percutaneous Approach
   00HV3YZ  Insertion of Other Device into Spinal Cord, Percutaneous Approach
+  00HV41Z  Insertion of Radioactive Element into Spinal Cord, Percutaneous Endoscopic Approach
   00HV42Z  Insertion of Monitoring Device into Spinal Cord, Percutaneous Endoscopic Approach
   00HV4MZ  Insertion of Neurostimulator Lead into Spinal Cord, Percutaneous Endoscopic Approach
   00HV4YZ  Insertion of Other Device into Spinal Cord, Percutaneous Endoscopic Approach
@@ -42365,7 +42494,6 @@ OPERATING ROOM PROCEDURES
   06CY3ZZ  Extirpation of Matter from Lower Vein, Percutaneous Approach
   06CY4ZZ  Extirpation of Matter from Lower Vein, Percutaneous Endoscopic Approach
   06H00DZ  Insertion of Intraluminal Device into Inferior Vena Cava, Open Approach
-  06H03DZ  Insertion of Intraluminal Device into Inferior Vena Cava, Percutaneous Approach
   06H04DZ  Insertion of Intraluminal Device into Inferior Vena Cava, Percutaneous Endoscopic Approach
   06H10DZ  Insertion of Intraluminal Device into Splenic Vein, Open Approach
   06H13DZ  Insertion of Intraluminal Device into Splenic Vein, Percutaneous Approach
@@ -43030,13 +43158,21 @@ OPERATING ROOM PROCEDURES
   07CM3ZZ  Extirpation of Matter from Thymus, Percutaneous Approach
   07CM4ZZ  Extirpation of Matter from Thymus, Percutaneous Endoscopic Approach
   07CP0ZZ  Extirpation of Matter from Spleen, Open Approach
+  07HK01Z  Insertion of Radioactive Element into Thoracic Duct, Open Approach
   07HK0YZ  Insertion of Other Device into Thoracic Duct, Open Approach
+  07HK41Z  Insertion of Radioactive Element into Thoracic Duct, Percutaneous Endoscopic Approach
   07HK4YZ  Insertion of Other Device into Thoracic Duct, Percutaneous Endoscopic Approach
+  07HL01Z  Insertion of Radioactive Element into Cisterna Chyli, Open Approach
   07HL0YZ  Insertion of Other Device into Cisterna Chyli, Open Approach
+  07HL41Z  Insertion of Radioactive Element into Cisterna Chyli, Percutaneous Endoscopic Approach
   07HL4YZ  Insertion of Other Device into Cisterna Chyli, Percutaneous Endoscopic Approach
+  07HM01Z  Insertion of Radioactive Element into Thymus, Open Approach
   07HM0YZ  Insertion of Other Device into Thymus, Open Approach
+  07HM41Z  Insertion of Radioactive Element into Thymus, Percutaneous Endoscopic Approach
   07HM4YZ  Insertion of Other Device into Thymus, Percutaneous Endoscopic Approach
+  07HP01Z  Insertion of Radioactive Element into Spleen, Open Approach
   07HP0YZ  Insertion of Other Device into Spleen, Open Approach
+  07HP41Z  Insertion of Radioactive Element into Spleen, Percutaneous Endoscopic Approach
   07JM0ZZ  Inspection of Thymus, Open Approach
   07JM4ZZ  Inspection of Thymus, Percutaneous Endoscopic Approach
   07JP0ZZ  Inspection of Spleen, Open Approach
@@ -45507,7 +45643,6 @@ OPERATING ROOM PROCEDURES
   0DB60ZZ  Excision of Stomach, Open Approach
   0DB63Z3  Excision of Stomach, Percutaneous Approach, Vertical
   0DB63ZZ  Excision of Stomach, Percutaneous Approach
-  0DB64Z3  Excision of Stomach, Percutaneous Endoscopic Approach, Vertical
   0DB67Z3  Excision of Stomach, Via Natural or Artificial Opening, Vertical
   0DB67ZZ  Excision of Stomach, Via Natural or Artificial Opening
   0DB68Z3  Excision of Stomach, Via Natural or Artificial Opening Endoscopic, Vertical
@@ -46355,15 +46490,19 @@ OPERATING ROOM PROCEDURES
   0F194Z9  Bypass Common Bile Duct to Common Bile Duct, Percutaneous Endoscopic Approach
   0F194ZB  Bypass Common Bile Duct to Small Intestine, Percutaneous Endoscopic Approach
   0F1D0D3  Bypass Pancreatic Duct to Duodenum with Intraluminal Device, Open Approach
+  0F1D0D4  Bypass Pancreatic Duct to Stomach with Intraluminal Device, Open Approach
   0F1D0DB  Bypass Pancreatic Duct to Small Intestine with Intraluminal Device, Open Approach
   0F1D0DC  Bypass Pancreatic Duct to Large Intestine with Intraluminal Device, Open Approach
   0F1D0Z3  Bypass Pancreatic Duct to Duodenum, Open Approach
+  0F1D0Z4  Bypass Pancreatic Duct to Stomach, Open Approach
   0F1D0ZB  Bypass Pancreatic Duct to Small Intestine, Open Approach
   0F1D0ZC  Bypass Pancreatic Duct to Large Intestine, Open Approach
   0F1D4D3  Bypass Pancreatic Duct to Duodenum with Intraluminal Device, Percutaneous Endoscopic Approach
+  0F1D4D4  Bypass Pancreatic Duct to Stomach with Intraluminal Device, Percutaneous Endoscopic Approach
   0F1D4DB  Bypass Pancreatic Duct to Small Intestine with Intraluminal Device, Percutaneous Endoscopic Approach
   0F1D4DC  Bypass Pancreatic Duct to Large Intestine with Intraluminal Device, Percutaneous Endoscopic Approach
   0F1D4Z3  Bypass Pancreatic Duct to Duodenum, Percutaneous Endoscopic Approach
+  0F1D4Z4  Bypass Pancreatic Duct to Stomach, Percutaneous Endoscopic Approach
   0F1D4ZB  Bypass Pancreatic Duct to Small Intestine, Percutaneous Endoscopic Approach
   0F1D4ZC  Bypass Pancreatic Duct to Large Intestine, Percutaneous Endoscopic Approach
   0F1F0D3  Bypass Accessory Pancreatic Duct to Duodenum with Intraluminal Device, Open Approach
@@ -46491,9 +46630,11 @@ OPERATING ROOM PROCEDURES
   0FD04ZX  Extraction of Liver, Percutaneous Endoscopic Approach, Diagnostic
   0FD14ZX  Extraction of Right Lobe Liver, Percutaneous Endoscopic Approach, Diagnostic
   0FD24ZX  Extraction of Left Lobe Liver, Percutaneous Endoscopic Approach, Diagnostic
+  0FH001Z  Insertion of Radioactive Element into Liver, Open Approach
   0FH002Z  Insertion of Monitoring Device into Liver, Open Approach
   0FH00YZ  Insertion of Other Device into Liver, Open Approach
   0FH032Z  Insertion of Monitoring Device into Liver, Percutaneous Approach
+  0FH041Z  Insertion of Radioactive Element into Liver, Percutaneous Endoscopic Approach
   0FH042Z  Insertion of Monitoring Device into Liver, Percutaneous Endoscopic Approach
   0FH102Z  Insertion of Monitoring Device into Right Lobe Liver, Open Approach
   0FH132Z  Insertion of Monitoring Device into Right Lobe Liver, Percutaneous Approach
@@ -47022,11 +47163,13 @@ OPERATING ROOM PROCEDURES
   0GCR0ZZ  Extirpation of Matter from Parathyroid Gland, Open Approach
   0GCR3ZZ  Extirpation of Matter from Parathyroid Gland, Percutaneous Approach
   0GCR4ZZ  Extirpation of Matter from Parathyroid Gland, Percutaneous Endoscopic Approach
+  0GHS01Z  Insertion of Radioactive Element into Endocrine Gland, Open Approach
   0GHS02Z  Insertion of Monitoring Device into Endocrine Gland, Open Approach
   0GHS03Z  Insertion of Infusion Device into Endocrine Gland, Open Approach
   0GHS0YZ  Insertion of Other Device into Endocrine Gland, Open Approach
   0GHS32Z  Insertion of Monitoring Device into Endocrine Gland, Percutaneous Approach
   0GHS33Z  Insertion of Infusion Device into Endocrine Gland, Percutaneous Approach
+  0GHS41Z  Insertion of Radioactive Element into Endocrine Gland, Percutaneous Endoscopic Approach
   0GHS42Z  Insertion of Monitoring Device into Endocrine Gland, Percutaneous Endoscopic Approach
   0GHS43Z  Insertion of Infusion Device into Endocrine Gland, Percutaneous Endoscopic Approach
   0GJK0ZZ  Inspection of Thyroid Gland, Open Approach
@@ -47680,15 +47823,18 @@ OPERATING ROOM PROCEDURES
   0JH602Z  Insertion of Monitoring Device into Chest Subcutaneous Tissue and Fascia, Open Approach
   0JH60NZ  Insertion of Tissue Expander into Chest Subcutaneous Tissue and Fascia, Open Approach
   0JH60VZ  Insertion of Infusion Pump into Chest Subcutaneous Tissue and Fascia, Open Approach
+  0JH60YZ  Insertion of Other Device into Chest Subcutaneous Tissue and Fascia, Open Approach
   0JH632Z  Insertion of Monitoring Device into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH63NZ  Insertion of Tissue Expander into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH63VZ  Insertion of Infusion Pump into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH70NZ  Insertion of Tissue Expander into Back Subcutaneous Tissue and Fascia, Open Approach
   0JH70VZ  Insertion of Infusion Pump into Back Subcutaneous Tissue and Fascia, Open Approach
+  0JH70YZ  Insertion of Other Device into Back Subcutaneous Tissue and Fascia, Open Approach
   0JH73NZ  Insertion of Tissue Expander into Back Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH73VZ  Insertion of Infusion Pump into Back Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH80NZ  Insertion of Tissue Expander into Abdomen Subcutaneous Tissue and Fascia, Open Approach
   0JH80VZ  Insertion of Infusion Pump into Abdomen Subcutaneous Tissue and Fascia, Open Approach
+  0JH80YZ  Insertion of Other Device into Abdomen Subcutaneous Tissue and Fascia, Open Approach
   0JH83NZ  Insertion of Tissue Expander into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH83VZ  Insertion of Infusion Pump into Abdomen Subcutaneous Tissue and Fascia, Percutaneous Approach
   0JH90NZ  Insertion of Tissue Expander into Buttock Subcutaneous Tissue and Fascia, Open Approach
@@ -53229,231 +53375,311 @@ OPERATING ROOM PROCEDURES
   0RGD47Z  Fusion of Left Temporomandibular Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGD4JZ  Fusion of Left Temporomandibular Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGD4KZ  Fusion of Left Temporomandibular Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGL03Z  Fusion of Right Elbow Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGL04Z  Fusion of Right Elbow Joint with Internal Fixation Device, Open Approach
   0RGL05Z  Fusion of Right Elbow Joint with External Fixation Device, Open Approach
   0RGL07Z  Fusion of Right Elbow Joint with Autologous Tissue Substitute, Open Approach
   0RGL0JZ  Fusion of Right Elbow Joint with Synthetic Substitute, Open Approach
   0RGL0KZ  Fusion of Right Elbow Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGL33Z  Fusion of Right Elbow Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGL34Z  Fusion of Right Elbow Joint with Internal Fixation Device, Percutaneous Approach
   0RGL35Z  Fusion of Right Elbow Joint with External Fixation Device, Percutaneous Approach
   0RGL37Z  Fusion of Right Elbow Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGL3JZ  Fusion of Right Elbow Joint with Synthetic Substitute, Percutaneous Approach
   0RGL3KZ  Fusion of Right Elbow Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGL43Z  Fusion of Right Elbow Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGL44Z  Fusion of Right Elbow Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGL45Z  Fusion of Right Elbow Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGL47Z  Fusion of Right Elbow Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGL4JZ  Fusion of Right Elbow Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGL4KZ  Fusion of Right Elbow Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGM03Z  Fusion of Left Elbow Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGM04Z  Fusion of Left Elbow Joint with Internal Fixation Device, Open Approach
   0RGM05Z  Fusion of Left Elbow Joint with External Fixation Device, Open Approach
   0RGM07Z  Fusion of Left Elbow Joint with Autologous Tissue Substitute, Open Approach
   0RGM0JZ  Fusion of Left Elbow Joint with Synthetic Substitute, Open Approach
   0RGM0KZ  Fusion of Left Elbow Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGM33Z  Fusion of Left Elbow Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGM34Z  Fusion of Left Elbow Joint with Internal Fixation Device, Percutaneous Approach
   0RGM35Z  Fusion of Left Elbow Joint with External Fixation Device, Percutaneous Approach
   0RGM37Z  Fusion of Left Elbow Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGM3JZ  Fusion of Left Elbow Joint with Synthetic Substitute, Percutaneous Approach
   0RGM3KZ  Fusion of Left Elbow Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGM43Z  Fusion of Left Elbow Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGM44Z  Fusion of Left Elbow Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGM45Z  Fusion of Left Elbow Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGM47Z  Fusion of Left Elbow Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGM4JZ  Fusion of Left Elbow Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGM4KZ  Fusion of Left Elbow Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGN03Z  Fusion of Right Wrist Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGN04Z  Fusion of Right Wrist Joint with Internal Fixation Device, Open Approach
   0RGN05Z  Fusion of Right Wrist Joint with External Fixation Device, Open Approach
   0RGN07Z  Fusion of Right Wrist Joint with Autologous Tissue Substitute, Open Approach
   0RGN0JZ  Fusion of Right Wrist Joint with Synthetic Substitute, Open Approach
   0RGN0KZ  Fusion of Right Wrist Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGN33Z  Fusion of Right Wrist Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGN34Z  Fusion of Right Wrist Joint with Internal Fixation Device, Percutaneous Approach
   0RGN35Z  Fusion of Right Wrist Joint with External Fixation Device, Percutaneous Approach
   0RGN37Z  Fusion of Right Wrist Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGN3JZ  Fusion of Right Wrist Joint with Synthetic Substitute, Percutaneous Approach
   0RGN3KZ  Fusion of Right Wrist Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGN43Z  Fusion of Right Wrist Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGN44Z  Fusion of Right Wrist Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGN45Z  Fusion of Right Wrist Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGN47Z  Fusion of Right Wrist Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGN4JZ  Fusion of Right Wrist Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGN4KZ  Fusion of Right Wrist Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGP03Z  Fusion of Left Wrist Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGP04Z  Fusion of Left Wrist Joint with Internal Fixation Device, Open Approach
   0RGP05Z  Fusion of Left Wrist Joint with External Fixation Device, Open Approach
   0RGP07Z  Fusion of Left Wrist Joint with Autologous Tissue Substitute, Open Approach
   0RGP0JZ  Fusion of Left Wrist Joint with Synthetic Substitute, Open Approach
   0RGP0KZ  Fusion of Left Wrist Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGP33Z  Fusion of Left Wrist Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGP34Z  Fusion of Left Wrist Joint with Internal Fixation Device, Percutaneous Approach
   0RGP35Z  Fusion of Left Wrist Joint with External Fixation Device, Percutaneous Approach
   0RGP37Z  Fusion of Left Wrist Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGP3JZ  Fusion of Left Wrist Joint with Synthetic Substitute, Percutaneous Approach
   0RGP3KZ  Fusion of Left Wrist Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGP43Z  Fusion of Left Wrist Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGP44Z  Fusion of Left Wrist Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGP45Z  Fusion of Left Wrist Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGP47Z  Fusion of Left Wrist Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGP4JZ  Fusion of Left Wrist Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGP4KZ  Fusion of Left Wrist Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGQ03Z  Fusion of Right Carpal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGQ04Z  Fusion of Right Carpal Joint with Internal Fixation Device, Open Approach
   0RGQ05Z  Fusion of Right Carpal Joint with External Fixation Device, Open Approach
   0RGQ07Z  Fusion of Right Carpal Joint with Autologous Tissue Substitute, Open Approach
   0RGQ0JZ  Fusion of Right Carpal Joint with Synthetic Substitute, Open Approach
   0RGQ0KZ  Fusion of Right Carpal Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGQ33Z  Fusion of Right Carpal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGQ34Z  Fusion of Right Carpal Joint with Internal Fixation Device, Percutaneous Approach
   0RGQ35Z  Fusion of Right Carpal Joint with External Fixation Device, Percutaneous Approach
   0RGQ37Z  Fusion of Right Carpal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGQ3JZ  Fusion of Right Carpal Joint with Synthetic Substitute, Percutaneous Approach
   0RGQ3KZ  Fusion of Right Carpal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGQ43Z  Fusion of Right Carpal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGQ44Z  Fusion of Right Carpal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGQ45Z  Fusion of Right Carpal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGQ47Z  Fusion of Right Carpal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGQ4JZ  Fusion of Right Carpal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGQ4KZ  Fusion of Right Carpal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGR03Z  Fusion of Left Carpal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGR04Z  Fusion of Left Carpal Joint with Internal Fixation Device, Open Approach
   0RGR05Z  Fusion of Left Carpal Joint with External Fixation Device, Open Approach
   0RGR07Z  Fusion of Left Carpal Joint with Autologous Tissue Substitute, Open Approach
   0RGR0JZ  Fusion of Left Carpal Joint with Synthetic Substitute, Open Approach
   0RGR0KZ  Fusion of Left Carpal Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGR33Z  Fusion of Left Carpal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGR34Z  Fusion of Left Carpal Joint with Internal Fixation Device, Percutaneous Approach
   0RGR35Z  Fusion of Left Carpal Joint with External Fixation Device, Percutaneous Approach
   0RGR37Z  Fusion of Left Carpal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGR3JZ  Fusion of Left Carpal Joint with Synthetic Substitute, Percutaneous Approach
   0RGR3KZ  Fusion of Left Carpal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGR43Z  Fusion of Left Carpal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGR44Z  Fusion of Left Carpal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGR45Z  Fusion of Left Carpal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGR47Z  Fusion of Left Carpal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGR4JZ  Fusion of Left Carpal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGR4KZ  Fusion of Left Carpal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGS03Z  Fusion of Right Carpometacarpal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGS04Z  Fusion of Right Carpometacarpal Joint with Internal Fixation Device, Open Approach
   0RGS05Z  Fusion of Right Carpometacarpal Joint with External Fixation Device, Open Approach
   0RGS07Z  Fusion of Right Carpometacarpal Joint with Autologous Tissue Substitute, Open Approach
   0RGS0JZ  Fusion of Right Carpometacarpal Joint with Synthetic Substitute, Open Approach
   0RGS0KZ  Fusion of Right Carpometacarpal Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGS33Z  Fusion of Right Carpometacarpal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGS34Z  Fusion of Right Carpometacarpal Joint with Internal Fixation Device, Percutaneous Approach
   0RGS35Z  Fusion of Right Carpometacarpal Joint with External Fixation Device, Percutaneous Approach
   0RGS37Z  Fusion of Right Carpometacarpal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGS3JZ  Fusion of Right Carpometacarpal Joint with Synthetic Substitute, Percutaneous Approach
   0RGS3KZ  Fusion of Right Carpometacarpal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGS43Z  Fusion of Right Carpometacarpal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGS44Z  Fusion of Right Carpometacarpal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGS45Z  Fusion of Right Carpometacarpal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGS47Z  Fusion of Right Carpometacarpal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGS4JZ  Fusion of Right Carpometacarpal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGS4KZ  Fusion of Right Carpometacarpal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGT03Z  Fusion of Left Carpometacarpal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGT04Z  Fusion of Left Carpometacarpal Joint with Internal Fixation Device, Open Approach
   0RGT05Z  Fusion of Left Carpometacarpal Joint with External Fixation Device, Open Approach
   0RGT07Z  Fusion of Left Carpometacarpal Joint with Autologous Tissue Substitute, Open Approach
   0RGT0JZ  Fusion of Left Carpometacarpal Joint with Synthetic Substitute, Open Approach
   0RGT0KZ  Fusion of Left Carpometacarpal Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGT33Z  Fusion of Left Carpometacarpal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGT34Z  Fusion of Left Carpometacarpal Joint with Internal Fixation Device, Percutaneous Approach
   0RGT35Z  Fusion of Left Carpometacarpal Joint with External Fixation Device, Percutaneous Approach
   0RGT37Z  Fusion of Left Carpometacarpal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGT3JZ  Fusion of Left Carpometacarpal Joint with Synthetic Substitute, Percutaneous Approach
   0RGT3KZ  Fusion of Left Carpometacarpal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGT43Z  Fusion of Left Carpometacarpal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGT44Z  Fusion of Left Carpometacarpal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGT45Z  Fusion of Left Carpometacarpal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGT47Z  Fusion of Left Carpometacarpal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGT4JZ  Fusion of Left Carpometacarpal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGT4KZ  Fusion of Left Carpometacarpal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGU03Z  Fusion of Right Metacarpophalangeal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGU04Z  Fusion of Right Metacarpophalangeal Joint with Internal Fixation Device, Open Approach
   0RGU05Z  Fusion of Right Metacarpophalangeal Joint with External Fixation Device, Open Approach
   0RGU07Z  Fusion of Right Metacarpophalangeal Joint with Autologous Tissue Substitute, Open Approach
   0RGU0JZ  Fusion of Right Metacarpophalangeal Joint with Synthetic Substitute, Open Approach
   0RGU0KZ  Fusion of Right Metacarpophalangeal Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGU33Z  Fusion of Right Metacarpophalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGU34Z  Fusion of Right Metacarpophalangeal Joint with Internal Fixation Device, Percutaneous Approach
   0RGU35Z  Fusion of Right Metacarpophalangeal Joint with External Fixation Device, Percutaneous Approach
   0RGU37Z  Fusion of Right Metacarpophalangeal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGU3JZ  Fusion of Right Metacarpophalangeal Joint with Synthetic Substitute, Percutaneous Approach
   0RGU3KZ  Fusion of Right Metacarpophalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGU43Z  Fusion of Right Metacarpophalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGU44Z  Fusion of Right Metacarpophalangeal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGU45Z  Fusion of Right Metacarpophalangeal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGU47Z  Fusion of Right Metacarpophalangeal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGU4JZ  Fusion of Right Metacarpophalangeal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGU4KZ  Fusion of Right Metacarpophalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGV03Z  Fusion of Left Metacarpophalangeal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGV04Z  Fusion of Left Metacarpophalangeal Joint with Internal Fixation Device, Open Approach
   0RGV05Z  Fusion of Left Metacarpophalangeal Joint with External Fixation Device, Open Approach
   0RGV07Z  Fusion of Left Metacarpophalangeal Joint with Autologous Tissue Substitute, Open Approach
   0RGV0JZ  Fusion of Left Metacarpophalangeal Joint with Synthetic Substitute, Open Approach
   0RGV0KZ  Fusion of Left Metacarpophalangeal Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGV33Z  Fusion of Left Metacarpophalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGV34Z  Fusion of Left Metacarpophalangeal Joint with Internal Fixation Device, Percutaneous Approach
   0RGV35Z  Fusion of Left Metacarpophalangeal Joint with External Fixation Device, Percutaneous Approach
   0RGV37Z  Fusion of Left Metacarpophalangeal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGV3JZ  Fusion of Left Metacarpophalangeal Joint with Synthetic Substitute, Percutaneous Approach
   0RGV3KZ  Fusion of Left Metacarpophalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGV43Z  Fusion of Left Metacarpophalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGV44Z  Fusion of Left Metacarpophalangeal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGV45Z  Fusion of Left Metacarpophalangeal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGV47Z  Fusion of Left Metacarpophalangeal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGV4JZ  Fusion of Left Metacarpophalangeal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGV4KZ  Fusion of Left Metacarpophalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGW03Z  Fusion of Right Finger Phalangeal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGW04Z  Fusion of Right Finger Phalangeal Joint with Internal Fixation Device, Open Approach
   0RGW05Z  Fusion of Right Finger Phalangeal Joint with External Fixation Device, Open Approach
   0RGW07Z  Fusion of Right Finger Phalangeal Joint with Autologous Tissue Substitute, Open Approach
   0RGW0JZ  Fusion of Right Finger Phalangeal Joint with Synthetic Substitute, Open Approach
   0RGW0KZ  Fusion of Right Finger Phalangeal Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGW33Z  Fusion of Right Finger Phalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGW34Z  Fusion of Right Finger Phalangeal Joint with Internal Fixation Device, Percutaneous Approach
   0RGW35Z  Fusion of Right Finger Phalangeal Joint with External Fixation Device, Percutaneous Approach
   0RGW37Z  Fusion of Right Finger Phalangeal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGW3JZ  Fusion of Right Finger Phalangeal Joint with Synthetic Substitute, Percutaneous Approach
   0RGW3KZ  Fusion of Right Finger Phalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGW43Z  Fusion of Right Finger Phalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGW44Z  Fusion of Right Finger Phalangeal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGW45Z  Fusion of Right Finger Phalangeal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGW47Z  Fusion of Right Finger Phalangeal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGW4JZ  Fusion of Right Finger Phalangeal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGW4KZ  Fusion of Right Finger Phalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RGX03Z  Fusion of Left Finger Phalangeal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0RGX04Z  Fusion of Left Finger Phalangeal Joint with Internal Fixation Device, Open Approach
   0RGX05Z  Fusion of Left Finger Phalangeal Joint with External Fixation Device, Open Approach
   0RGX07Z  Fusion of Left Finger Phalangeal Joint with Autologous Tissue Substitute, Open Approach
   0RGX0JZ  Fusion of Left Finger Phalangeal Joint with Synthetic Substitute, Open Approach
   0RGX0KZ  Fusion of Left Finger Phalangeal Joint with Nonautologous Tissue Substitute, Open Approach
+  0RGX33Z  Fusion of Left Finger Phalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0RGX34Z  Fusion of Left Finger Phalangeal Joint with Internal Fixation Device, Percutaneous Approach
   0RGX35Z  Fusion of Left Finger Phalangeal Joint with External Fixation Device, Percutaneous Approach
   0RGX37Z  Fusion of Left Finger Phalangeal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0RGX3JZ  Fusion of Left Finger Phalangeal Joint with Synthetic Substitute, Percutaneous Approach
   0RGX3KZ  Fusion of Left Finger Phalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0RGX43Z  Fusion of Left Finger Phalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGX44Z  Fusion of Left Finger Phalangeal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0RGX45Z  Fusion of Left Finger Phalangeal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0RGX47Z  Fusion of Left Finger Phalangeal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0RGX4JZ  Fusion of Left Finger Phalangeal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0RGX4KZ  Fusion of Left Finger Phalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0RH004Z  Insertion of Internal Fixation Device into Occipital-cervical Joint, Open Approach
   0RH00BZ  Insertion of Interspinous Process Spinal Stabilization Device into Occipital-cervical Joint, Open Approach
   0RH00CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Occipital-cervical Joint, Open Approach
   0RH00DZ  Insertion of Facet Replacement Spinal Stabilization Device into Occipital-cervical Joint, Open Approach
+  0RH034Z  Insertion of Internal Fixation Device into Occipital-cervical Joint, Percutaneous Approach
   0RH03BZ  Insertion of Interspinous Process Spinal Stabilization Device into Occipital-cervical Joint, Percutaneous Approach
   0RH03CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Occipital-cervical Joint, Percutaneous Approach
   0RH03DZ  Insertion of Facet Replacement Spinal Stabilization Device into Occipital-cervical Joint, Percutaneous Approach
+  0RH044Z  Insertion of Internal Fixation Device into Occipital-cervical Joint, Percutaneous Endoscopic Approach
   0RH04BZ  Insertion of Interspinous Process Spinal Stabilization Device into Occipital-cervical Joint, Percutaneous Endoscopic Approach
   0RH04CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Occipital-cervical Joint, Percutaneous Endoscopic Approach
   0RH04DZ  Insertion of Facet Replacement Spinal Stabilization Device into Occipital-cervical Joint, Percutaneous Endoscopic Approach
+  0RH104Z  Insertion of Internal Fixation Device into Cervical Vertebral Joint, Open Approach
   0RH10BZ  Insertion of Interspinous Process Spinal Stabilization Device into Cervical Vertebral Joint, Open Approach
   0RH10CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Cervical Vertebral Joint, Open Approach
   0RH10DZ  Insertion of Facet Replacement Spinal Stabilization Device into Cervical Vertebral Joint, Open Approach
+  0RH134Z  Insertion of Internal Fixation Device into Cervical Vertebral Joint, Percutaneous Approach
   0RH13BZ  Insertion of Interspinous Process Spinal Stabilization Device into Cervical Vertebral Joint, Percutaneous Approach
   0RH13CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Cervical Vertebral Joint, Percutaneous Approach
   0RH13DZ  Insertion of Facet Replacement Spinal Stabilization Device into Cervical Vertebral Joint, Percutaneous Approach
+  0RH144Z  Insertion of Internal Fixation Device into Cervical Vertebral Joint, Percutaneous Endoscopic Approach
   0RH14BZ  Insertion of Interspinous Process Spinal Stabilization Device into Cervical Vertebral Joint, Percutaneous Endoscopic Approach
   0RH14CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Cervical Vertebral Joint, Percutaneous Endoscopic Approach
   0RH14DZ  Insertion of Facet Replacement Spinal Stabilization Device into Cervical Vertebral Joint, Percutaneous Endoscopic Approach
+  0RH404Z  Insertion of Internal Fixation Device into Cervicothoracic Vertebral Joint, Open Approach
   0RH40BZ  Insertion of Interspinous Process Spinal Stabilization Device into Cervicothoracic Vertebral Joint, Open Approach
   0RH40CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Cervicothoracic Vertebral Joint, Open Approach
   0RH40DZ  Insertion of Facet Replacement Spinal Stabilization Device into Cervicothoracic Vertebral Joint, Open Approach
+  0RH434Z  Insertion of Internal Fixation Device into Cervicothoracic Vertebral Joint, Percutaneous Approach
   0RH43BZ  Insertion of Interspinous Process Spinal Stabilization Device into Cervicothoracic Vertebral Joint, Percutaneous Approach
   0RH43CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Cervicothoracic Vertebral Joint, Percutaneous Approach
   0RH43DZ  Insertion of Facet Replacement Spinal Stabilization Device into Cervicothoracic Vertebral Joint, Percutaneous Approach
+  0RH444Z  Insertion of Internal Fixation Device into Cervicothoracic Vertebral Joint, Percutaneous Endoscopic Approach
   0RH44BZ  Insertion of Interspinous Process Spinal Stabilization Device into Cervicothoracic Vertebral Joint, Percutaneous Endoscopic Approach
   0RH44CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Cervicothoracic Vertebral Joint, Percutaneous Endoscopic Approach
   0RH44DZ  Insertion of Facet Replacement Spinal Stabilization Device into Cervicothoracic Vertebral Joint, Percutaneous Endoscopic Approach
+  0RH604Z  Insertion of Internal Fixation Device into Thoracic Vertebral Joint, Open Approach
   0RH60BZ  Insertion of Interspinous Process Spinal Stabilization Device into Thoracic Vertebral Joint, Open Approach
   0RH60CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Thoracic Vertebral Joint, Open Approach
   0RH60DZ  Insertion of Facet Replacement Spinal Stabilization Device into Thoracic Vertebral Joint, Open Approach
+  0RH634Z  Insertion of Internal Fixation Device into Thoracic Vertebral Joint, Percutaneous Approach
   0RH63BZ  Insertion of Interspinous Process Spinal Stabilization Device into Thoracic Vertebral Joint, Percutaneous Approach
   0RH63CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Thoracic Vertebral Joint, Percutaneous Approach
   0RH63DZ  Insertion of Facet Replacement Spinal Stabilization Device into Thoracic Vertebral Joint, Percutaneous Approach
+  0RH644Z  Insertion of Internal Fixation Device into Thoracic Vertebral Joint, Percutaneous Endoscopic Approach
   0RH64BZ  Insertion of Interspinous Process Spinal Stabilization Device into Thoracic Vertebral Joint, Percutaneous Endoscopic Approach
   0RH64CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Thoracic Vertebral Joint, Percutaneous Endoscopic Approach
   0RH64DZ  Insertion of Facet Replacement Spinal Stabilization Device into Thoracic Vertebral Joint, Percutaneous Endoscopic Approach
+  0RHA04Z  Insertion of Internal Fixation Device into Thoracolumbar Vertebral Joint, Open Approach
   0RHA0BZ  Insertion of Interspinous Process Spinal Stabilization Device into Thoracolumbar Vertebral Joint, Open Approach
   0RHA0CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Thoracolumbar Vertebral Joint, Open Approach
   0RHA0DZ  Insertion of Facet Replacement Spinal Stabilization Device into Thoracolumbar Vertebral Joint, Open Approach
+  0RHA34Z  Insertion of Internal Fixation Device into Thoracolumbar Vertebral Joint, Percutaneous Approach
   0RHA3BZ  Insertion of Interspinous Process Spinal Stabilization Device into Thoracolumbar Vertebral Joint, Percutaneous Approach
   0RHA3CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Thoracolumbar Vertebral Joint, Percutaneous Approach
   0RHA3DZ  Insertion of Facet Replacement Spinal Stabilization Device into Thoracolumbar Vertebral Joint, Percutaneous Approach
+  0RHA44Z  Insertion of Internal Fixation Device into Thoracolumbar Vertebral Joint, Percutaneous Endoscopic Approach
   0RHA4BZ  Insertion of Interspinous Process Spinal Stabilization Device into Thoracolumbar Vertebral Joint, Percutaneous Endoscopic Approach
   0RHA4CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Thoracolumbar Vertebral Joint, Percutaneous Endoscopic Approach
   0RHA4DZ  Insertion of Facet Replacement Spinal Stabilization Device into Thoracolumbar Vertebral Joint, Percutaneous Endoscopic Approach
+  0RHE04Z  Insertion of Internal Fixation Device into Right Sternoclavicular Joint, Open Approach
+  0RHE34Z  Insertion of Internal Fixation Device into Right Sternoclavicular Joint, Percutaneous Approach
+  0RHE44Z  Insertion of Internal Fixation Device into Right Sternoclavicular Joint, Percutaneous Endoscopic Approach
+  0RHF04Z  Insertion of Internal Fixation Device into Left Sternoclavicular Joint, Open Approach
+  0RHF34Z  Insertion of Internal Fixation Device into Left Sternoclavicular Joint, Percutaneous Approach
+  0RHF44Z  Insertion of Internal Fixation Device into Left Sternoclavicular Joint, Percutaneous Endoscopic Approach
+  0RHG04Z  Insertion of Internal Fixation Device into Right Acromioclavicular Joint, Open Approach
+  0RHG34Z  Insertion of Internal Fixation Device into Right Acromioclavicular Joint, Percutaneous Approach
+  0RHG44Z  Insertion of Internal Fixation Device into Right Acromioclavicular Joint, Percutaneous Endoscopic Approach
+  0RHH04Z  Insertion of Internal Fixation Device into Left Acromioclavicular Joint, Open Approach
+  0RHH34Z  Insertion of Internal Fixation Device into Left Acromioclavicular Joint, Percutaneous Approach
+  0RHH44Z  Insertion of Internal Fixation Device into Left Acromioclavicular Joint, Percutaneous Endoscopic Approach
+  0RHJ04Z  Insertion of Internal Fixation Device into Right Shoulder Joint, Open Approach
+  0RHJ34Z  Insertion of Internal Fixation Device into Right Shoulder Joint, Percutaneous Approach
+  0RHJ44Z  Insertion of Internal Fixation Device into Right Shoulder Joint, Percutaneous Endoscopic Approach
+  0RHK04Z  Insertion of Internal Fixation Device into Left Shoulder Joint, Open Approach
+  0RHK34Z  Insertion of Internal Fixation Device into Left Shoulder Joint, Percutaneous Approach
+  0RHK44Z  Insertion of Internal Fixation Device into Left Shoulder Joint, Percutaneous Endoscopic Approach
+  0RHL04Z  Insertion of Internal Fixation Device into Right Elbow Joint, Open Approach
+  0RHL05Z  Insertion of External Fixation Device into Right Elbow Joint, Open Approach
+  0RHL34Z  Insertion of Internal Fixation Device into Right Elbow Joint, Percutaneous Approach
+  0RHL35Z  Insertion of External Fixation Device into Right Elbow Joint, Percutaneous Approach
+  0RHL44Z  Insertion of Internal Fixation Device into Right Elbow Joint, Percutaneous Endoscopic Approach
+  0RHL45Z  Insertion of External Fixation Device into Right Elbow Joint, Percutaneous Endoscopic Approach
+  0RHM04Z  Insertion of Internal Fixation Device into Left Elbow Joint, Open Approach
+  0RHM05Z  Insertion of External Fixation Device into Left Elbow Joint, Open Approach
+  0RHM34Z  Insertion of Internal Fixation Device into Left Elbow Joint, Percutaneous Approach
+  0RHM35Z  Insertion of External Fixation Device into Left Elbow Joint, Percutaneous Approach
+  0RHM44Z  Insertion of Internal Fixation Device into Left Elbow Joint, Percutaneous Endoscopic Approach
   0RJ04ZZ  Inspection of Occipital-cervical Joint, Percutaneous Endoscopic Approach
   0RJ14ZZ  Inspection of Cervical Vertebral Joint, Percutaneous Endoscopic Approach
   0RJ34ZZ  Inspection of Cervical Vertebral Disc, Percutaneous Endoscopic Approach
@@ -54469,174 +54695,246 @@ OPERATING ROOM PROCEDURES
   0SG847Z  Fusion of Left Sacroiliac Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SG84JZ  Fusion of Left Sacroiliac Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SG84KZ  Fusion of Left Sacroiliac Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGC03Z  Fusion of Right Knee Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGC04Z  Fusion of Right Knee Joint with Internal Fixation Device, Open Approach
   0SGC05Z  Fusion of Right Knee Joint with External Fixation Device, Open Approach
   0SGC07Z  Fusion of Right Knee Joint with Autologous Tissue Substitute, Open Approach
   0SGC0JZ  Fusion of Right Knee Joint with Synthetic Substitute, Open Approach
   0SGC0KZ  Fusion of Right Knee Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGC33Z  Fusion of Right Knee Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGC34Z  Fusion of Right Knee Joint with Internal Fixation Device, Percutaneous Approach
   0SGC35Z  Fusion of Right Knee Joint with External Fixation Device, Percutaneous Approach
   0SGC37Z  Fusion of Right Knee Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGC3JZ  Fusion of Right Knee Joint with Synthetic Substitute, Percutaneous Approach
   0SGC3KZ  Fusion of Right Knee Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGC43Z  Fusion of Right Knee Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGC44Z  Fusion of Right Knee Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGC45Z  Fusion of Right Knee Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGC47Z  Fusion of Right Knee Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGC4JZ  Fusion of Right Knee Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGC4KZ  Fusion of Right Knee Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGD03Z  Fusion of Left Knee Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGD04Z  Fusion of Left Knee Joint with Internal Fixation Device, Open Approach
   0SGD05Z  Fusion of Left Knee Joint with External Fixation Device, Open Approach
   0SGD07Z  Fusion of Left Knee Joint with Autologous Tissue Substitute, Open Approach
   0SGD0JZ  Fusion of Left Knee Joint with Synthetic Substitute, Open Approach
   0SGD0KZ  Fusion of Left Knee Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGD33Z  Fusion of Left Knee Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGD34Z  Fusion of Left Knee Joint with Internal Fixation Device, Percutaneous Approach
   0SGD35Z  Fusion of Left Knee Joint with External Fixation Device, Percutaneous Approach
   0SGD37Z  Fusion of Left Knee Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGD3JZ  Fusion of Left Knee Joint with Synthetic Substitute, Percutaneous Approach
   0SGD3KZ  Fusion of Left Knee Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGD43Z  Fusion of Left Knee Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGD44Z  Fusion of Left Knee Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGD45Z  Fusion of Left Knee Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGD47Z  Fusion of Left Knee Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGD4JZ  Fusion of Left Knee Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGD4KZ  Fusion of Left Knee Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGF03Z  Fusion of Right Ankle Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGF04Z  Fusion of Right Ankle Joint with Internal Fixation Device, Open Approach
   0SGF05Z  Fusion of Right Ankle Joint with External Fixation Device, Open Approach
   0SGF07Z  Fusion of Right Ankle Joint with Autologous Tissue Substitute, Open Approach
   0SGF0JZ  Fusion of Right Ankle Joint with Synthetic Substitute, Open Approach
   0SGF0KZ  Fusion of Right Ankle Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGF33Z  Fusion of Right Ankle Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGF34Z  Fusion of Right Ankle Joint with Internal Fixation Device, Percutaneous Approach
   0SGF35Z  Fusion of Right Ankle Joint with External Fixation Device, Percutaneous Approach
   0SGF37Z  Fusion of Right Ankle Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGF3JZ  Fusion of Right Ankle Joint with Synthetic Substitute, Percutaneous Approach
   0SGF3KZ  Fusion of Right Ankle Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGF43Z  Fusion of Right Ankle Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGF44Z  Fusion of Right Ankle Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGF45Z  Fusion of Right Ankle Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGF47Z  Fusion of Right Ankle Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGF4JZ  Fusion of Right Ankle Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGF4KZ  Fusion of Right Ankle Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGG03Z  Fusion of Left Ankle Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGG04Z  Fusion of Left Ankle Joint with Internal Fixation Device, Open Approach
   0SGG05Z  Fusion of Left Ankle Joint with External Fixation Device, Open Approach
   0SGG07Z  Fusion of Left Ankle Joint with Autologous Tissue Substitute, Open Approach
   0SGG0JZ  Fusion of Left Ankle Joint with Synthetic Substitute, Open Approach
   0SGG0KZ  Fusion of Left Ankle Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGG33Z  Fusion of Left Ankle Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGG34Z  Fusion of Left Ankle Joint with Internal Fixation Device, Percutaneous Approach
   0SGG35Z  Fusion of Left Ankle Joint with External Fixation Device, Percutaneous Approach
   0SGG37Z  Fusion of Left Ankle Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGG3JZ  Fusion of Left Ankle Joint with Synthetic Substitute, Percutaneous Approach
   0SGG3KZ  Fusion of Left Ankle Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGG43Z  Fusion of Left Ankle Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGG44Z  Fusion of Left Ankle Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGG45Z  Fusion of Left Ankle Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGG47Z  Fusion of Left Ankle Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGG4JZ  Fusion of Left Ankle Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGG4KZ  Fusion of Left Ankle Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGH03Z  Fusion of Right Tarsal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGH04Z  Fusion of Right Tarsal Joint with Internal Fixation Device, Open Approach
   0SGH05Z  Fusion of Right Tarsal Joint with External Fixation Device, Open Approach
   0SGH07Z  Fusion of Right Tarsal Joint with Autologous Tissue Substitute, Open Approach
   0SGH0JZ  Fusion of Right Tarsal Joint with Synthetic Substitute, Open Approach
   0SGH0KZ  Fusion of Right Tarsal Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGH33Z  Fusion of Right Tarsal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGH34Z  Fusion of Right Tarsal Joint with Internal Fixation Device, Percutaneous Approach
   0SGH35Z  Fusion of Right Tarsal Joint with External Fixation Device, Percutaneous Approach
   0SGH37Z  Fusion of Right Tarsal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGH3JZ  Fusion of Right Tarsal Joint with Synthetic Substitute, Percutaneous Approach
   0SGH3KZ  Fusion of Right Tarsal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGH43Z  Fusion of Right Tarsal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGH44Z  Fusion of Right Tarsal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGH45Z  Fusion of Right Tarsal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGH47Z  Fusion of Right Tarsal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGH4JZ  Fusion of Right Tarsal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGH4KZ  Fusion of Right Tarsal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGJ03Z  Fusion of Left Tarsal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGJ04Z  Fusion of Left Tarsal Joint with Internal Fixation Device, Open Approach
   0SGJ05Z  Fusion of Left Tarsal Joint with External Fixation Device, Open Approach
   0SGJ07Z  Fusion of Left Tarsal Joint with Autologous Tissue Substitute, Open Approach
   0SGJ0JZ  Fusion of Left Tarsal Joint with Synthetic Substitute, Open Approach
   0SGJ0KZ  Fusion of Left Tarsal Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGJ33Z  Fusion of Left Tarsal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGJ34Z  Fusion of Left Tarsal Joint with Internal Fixation Device, Percutaneous Approach
   0SGJ35Z  Fusion of Left Tarsal Joint with External Fixation Device, Percutaneous Approach
   0SGJ37Z  Fusion of Left Tarsal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGJ3JZ  Fusion of Left Tarsal Joint with Synthetic Substitute, Percutaneous Approach
   0SGJ3KZ  Fusion of Left Tarsal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGJ43Z  Fusion of Left Tarsal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGJ44Z  Fusion of Left Tarsal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGJ45Z  Fusion of Left Tarsal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGJ47Z  Fusion of Left Tarsal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGJ4JZ  Fusion of Left Tarsal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGJ4KZ  Fusion of Left Tarsal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGK03Z  Fusion of Right Tarsometatarsal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGK04Z  Fusion of Right Tarsometatarsal Joint with Internal Fixation Device, Open Approach
   0SGK05Z  Fusion of Right Tarsometatarsal Joint with External Fixation Device, Open Approach
   0SGK07Z  Fusion of Right Tarsometatarsal Joint with Autologous Tissue Substitute, Open Approach
   0SGK0JZ  Fusion of Right Tarsometatarsal Joint with Synthetic Substitute, Open Approach
   0SGK0KZ  Fusion of Right Tarsometatarsal Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGK33Z  Fusion of Right Tarsometatarsal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGK34Z  Fusion of Right Tarsometatarsal Joint with Internal Fixation Device, Percutaneous Approach
   0SGK35Z  Fusion of Right Tarsometatarsal Joint with External Fixation Device, Percutaneous Approach
   0SGK37Z  Fusion of Right Tarsometatarsal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGK3JZ  Fusion of Right Tarsometatarsal Joint with Synthetic Substitute, Percutaneous Approach
   0SGK3KZ  Fusion of Right Tarsometatarsal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGK43Z  Fusion of Right Tarsometatarsal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGK44Z  Fusion of Right Tarsometatarsal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGK45Z  Fusion of Right Tarsometatarsal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGK47Z  Fusion of Right Tarsometatarsal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGK4JZ  Fusion of Right Tarsometatarsal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGK4KZ  Fusion of Right Tarsometatarsal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGL03Z  Fusion of Left Tarsometatarsal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGL04Z  Fusion of Left Tarsometatarsal Joint with Internal Fixation Device, Open Approach
   0SGL05Z  Fusion of Left Tarsometatarsal Joint with External Fixation Device, Open Approach
   0SGL07Z  Fusion of Left Tarsometatarsal Joint with Autologous Tissue Substitute, Open Approach
   0SGL0JZ  Fusion of Left Tarsometatarsal Joint with Synthetic Substitute, Open Approach
   0SGL0KZ  Fusion of Left Tarsometatarsal Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGL33Z  Fusion of Left Tarsometatarsal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGL34Z  Fusion of Left Tarsometatarsal Joint with Internal Fixation Device, Percutaneous Approach
   0SGL35Z  Fusion of Left Tarsometatarsal Joint with External Fixation Device, Percutaneous Approach
   0SGL37Z  Fusion of Left Tarsometatarsal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGL3JZ  Fusion of Left Tarsometatarsal Joint with Synthetic Substitute, Percutaneous Approach
   0SGL3KZ  Fusion of Left Tarsometatarsal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGL43Z  Fusion of Left Tarsometatarsal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGL44Z  Fusion of Left Tarsometatarsal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGL45Z  Fusion of Left Tarsometatarsal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGL47Z  Fusion of Left Tarsometatarsal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGL4JZ  Fusion of Left Tarsometatarsal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGL4KZ  Fusion of Left Tarsometatarsal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGM03Z  Fusion of Right Metatarsal-Phalangeal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGM04Z  Fusion of Right Metatarsal-Phalangeal Joint with Internal Fixation Device, Open Approach
   0SGM05Z  Fusion of Right Metatarsal-Phalangeal Joint with External Fixation Device, Open Approach
   0SGM07Z  Fusion of Right Metatarsal-Phalangeal Joint with Autologous Tissue Substitute, Open Approach
   0SGM0JZ  Fusion of Right Metatarsal-Phalangeal Joint with Synthetic Substitute, Open Approach
   0SGM0KZ  Fusion of Right Metatarsal-Phalangeal Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGM33Z  Fusion of Right Metatarsal-Phalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGM34Z  Fusion of Right Metatarsal-Phalangeal Joint with Internal Fixation Device, Percutaneous Approach
   0SGM35Z  Fusion of Right Metatarsal-Phalangeal Joint with External Fixation Device, Percutaneous Approach
   0SGM37Z  Fusion of Right Metatarsal-Phalangeal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGM3JZ  Fusion of Right Metatarsal-Phalangeal Joint with Synthetic Substitute, Percutaneous Approach
   0SGM3KZ  Fusion of Right Metatarsal-Phalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGM43Z  Fusion of Right Metatarsal-Phalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGM44Z  Fusion of Right Metatarsal-Phalangeal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGM45Z  Fusion of Right Metatarsal-Phalangeal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGM47Z  Fusion of Right Metatarsal-Phalangeal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGM4JZ  Fusion of Right Metatarsal-Phalangeal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGM4KZ  Fusion of Right Metatarsal-Phalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SGN03Z  Fusion of Left Metatarsal-Phalangeal Joint with Sustained Compression Internal Fixation Device, Open Approach
   0SGN04Z  Fusion of Left Metatarsal-Phalangeal Joint with Internal Fixation Device, Open Approach
   0SGN05Z  Fusion of Left Metatarsal-Phalangeal Joint with External Fixation Device, Open Approach
   0SGN07Z  Fusion of Left Metatarsal-Phalangeal Joint with Autologous Tissue Substitute, Open Approach
   0SGN0JZ  Fusion of Left Metatarsal-Phalangeal Joint with Synthetic Substitute, Open Approach
   0SGN0KZ  Fusion of Left Metatarsal-Phalangeal Joint with Nonautologous Tissue Substitute, Open Approach
+  0SGN33Z  Fusion of Left Metatarsal-Phalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Approach
   0SGN34Z  Fusion of Left Metatarsal-Phalangeal Joint with Internal Fixation Device, Percutaneous Approach
   0SGN35Z  Fusion of Left Metatarsal-Phalangeal Joint with External Fixation Device, Percutaneous Approach
   0SGN37Z  Fusion of Left Metatarsal-Phalangeal Joint with Autologous Tissue Substitute, Percutaneous Approach
   0SGN3JZ  Fusion of Left Metatarsal-Phalangeal Joint with Synthetic Substitute, Percutaneous Approach
   0SGN3KZ  Fusion of Left Metatarsal-Phalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Approach
+  0SGN43Z  Fusion of Left Metatarsal-Phalangeal Joint with Sustained Compression Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGN44Z  Fusion of Left Metatarsal-Phalangeal Joint with Internal Fixation Device, Percutaneous Endoscopic Approach
   0SGN45Z  Fusion of Left Metatarsal-Phalangeal Joint with External Fixation Device, Percutaneous Endoscopic Approach
   0SGN47Z  Fusion of Left Metatarsal-Phalangeal Joint with Autologous Tissue Substitute, Percutaneous Endoscopic Approach
   0SGN4JZ  Fusion of Left Metatarsal-Phalangeal Joint with Synthetic Substitute, Percutaneous Endoscopic Approach
   0SGN4KZ  Fusion of Left Metatarsal-Phalangeal Joint with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach
+  0SH004Z  Insertion of Internal Fixation Device into Lumbar Vertebral Joint, Open Approach
   0SH00BZ  Insertion of Interspinous Process Spinal Stabilization Device into Lumbar Vertebral Joint, Open Approach
   0SH00CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Lumbar Vertebral Joint, Open Approach
   0SH00DZ  Insertion of Facet Replacement Spinal Stabilization Device into Lumbar Vertebral Joint, Open Approach
+  0SH034Z  Insertion of Internal Fixation Device into Lumbar Vertebral Joint, Percutaneous Approach
   0SH03BZ  Insertion of Interspinous Process Spinal Stabilization Device into Lumbar Vertebral Joint, Percutaneous Approach
   0SH03CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Lumbar Vertebral Joint, Percutaneous Approach
   0SH03DZ  Insertion of Facet Replacement Spinal Stabilization Device into Lumbar Vertebral Joint, Percutaneous Approach
+  0SH044Z  Insertion of Internal Fixation Device into Lumbar Vertebral Joint, Percutaneous Endoscopic Approach
   0SH04BZ  Insertion of Interspinous Process Spinal Stabilization Device into Lumbar Vertebral Joint, Percutaneous Endoscopic Approach
   0SH04CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Lumbar Vertebral Joint, Percutaneous Endoscopic Approach
   0SH04DZ  Insertion of Facet Replacement Spinal Stabilization Device into Lumbar Vertebral Joint, Percutaneous Endoscopic Approach
+  0SH304Z  Insertion of Internal Fixation Device into Lumbosacral Joint, Open Approach
   0SH30BZ  Insertion of Interspinous Process Spinal Stabilization Device into Lumbosacral Joint, Open Approach
   0SH30CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Lumbosacral Joint, Open Approach
   0SH30DZ  Insertion of Facet Replacement Spinal Stabilization Device into Lumbosacral Joint, Open Approach
+  0SH334Z  Insertion of Internal Fixation Device into Lumbosacral Joint, Percutaneous Approach
   0SH33BZ  Insertion of Interspinous Process Spinal Stabilization Device into Lumbosacral Joint, Percutaneous Approach
   0SH33CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Lumbosacral Joint, Percutaneous Approach
   0SH33DZ  Insertion of Facet Replacement Spinal Stabilization Device into Lumbosacral Joint, Percutaneous Approach
+  0SH344Z  Insertion of Internal Fixation Device into Lumbosacral Joint, Percutaneous Endoscopic Approach
   0SH34BZ  Insertion of Interspinous Process Spinal Stabilization Device into Lumbosacral Joint, Percutaneous Endoscopic Approach
   0SH34CZ  Insertion of Pedicle-Based Spinal Stabilization Device into Lumbosacral Joint, Percutaneous Endoscopic Approach
   0SH34DZ  Insertion of Facet Replacement Spinal Stabilization Device into Lumbosacral Joint, Percutaneous Endoscopic Approach
+  0SH504Z  Insertion of Internal Fixation Device into Sacrococcygeal Joint, Open Approach
+  0SH534Z  Insertion of Internal Fixation Device into Sacrococcygeal Joint, Percutaneous Approach
+  0SH544Z  Insertion of Internal Fixation Device into Sacrococcygeal Joint, Percutaneous Endoscopic Approach
+  0SH604Z  Insertion of Internal Fixation Device into Coccygeal Joint, Open Approach
+  0SH634Z  Insertion of Internal Fixation Device into Coccygeal Joint, Percutaneous Approach
+  0SH644Z  Insertion of Internal Fixation Device into Coccygeal Joint, Percutaneous Endoscopic Approach
+  0SH704Z  Insertion of Internal Fixation Device into Right Sacroiliac Joint, Open Approach
+  0SH734Z  Insertion of Internal Fixation Device into Right Sacroiliac Joint, Percutaneous Approach
+  0SH744Z  Insertion of Internal Fixation Device into Right Sacroiliac Joint, Percutaneous Endoscopic Approach
+  0SH804Z  Insertion of Internal Fixation Device into Left Sacroiliac Joint, Open Approach
+  0SH834Z  Insertion of Internal Fixation Device into Left Sacroiliac Joint, Percutaneous Approach
+  0SH844Z  Insertion of Internal Fixation Device into Left Sacroiliac Joint, Percutaneous Endoscopic Approach
+  0SHC04Z  Insertion of Internal Fixation Device into Right Knee Joint, Open Approach
+  0SHC05Z  Insertion of External Fixation Device into Right Knee Joint, Open Approach
+  0SHC34Z  Insertion of Internal Fixation Device into Right Knee Joint, Percutaneous Approach
+  0SHC35Z  Insertion of External Fixation Device into Right Knee Joint, Percutaneous Approach
+  0SHC44Z  Insertion of Internal Fixation Device into Right Knee Joint, Percutaneous Endoscopic Approach
+  0SHC45Z  Insertion of External Fixation Device into Right Knee Joint, Percutaneous Endoscopic Approach
+  0SHD04Z  Insertion of Internal Fixation Device into Left Knee Joint, Open Approach
+  0SHD05Z  Insertion of External Fixation Device into Left Knee Joint, Open Approach
+  0SHD34Z  Insertion of Internal Fixation Device into Left Knee Joint, Percutaneous Approach
+  0SHD35Z  Insertion of External Fixation Device into Left Knee Joint, Percutaneous Approach
+  0SHD44Z  Insertion of Internal Fixation Device into Left Knee Joint, Percutaneous Endoscopic Approach
+  0SHD45Z  Insertion of External Fixation Device into Left Knee Joint, Percutaneous Endoscopic Approach
+  0SHF04Z  Insertion of Internal Fixation Device into Right Ankle Joint, Open Approach
+  0SHF05Z  Insertion of External Fixation Device into Right Ankle Joint, Open Approach
+  0SHF34Z  Insertion of Internal Fixation Device into Right Ankle Joint, Percutaneous Approach
+  0SHF35Z  Insertion of External Fixation Device into Right Ankle Joint, Percutaneous Approach
+  0SHF44Z  Insertion of Internal Fixation Device into Right Ankle Joint, Percutaneous Endoscopic Approach
+  0SHF45Z  Insertion of External Fixation Device into Right Ankle Joint, Percutaneous Endoscopic Approach
+  0SHG04Z  Insertion of Internal Fixation Device into Left Ankle Joint, Open Approach
+  0SHG05Z  Insertion of External Fixation Device into Left Ankle Joint, Open Approach
+  0SHG34Z  Insertion of Internal Fixation Device into Left Ankle Joint, Percutaneous Approach
+  0SHG35Z  Insertion of External Fixation Device into Left Ankle Joint, Percutaneous Approach
+  0SHG44Z  Insertion of Internal Fixation Device into Left Ankle Joint, Percutaneous Endoscopic Approach
+  0SHG45Z  Insertion of External Fixation Device into Left Ankle Joint, Percutaneous Endoscopic Approach
   0SJ04ZZ  Inspection of Lumbar Vertebral Joint, Percutaneous Endoscopic Approach
   0SJ34ZZ  Inspection of Lumbosacral Joint, Percutaneous Endoscopic Approach
   0SJ54ZZ  Inspection of Sacrococcygeal Joint, Percutaneous Endoscopic Approach
@@ -56516,6 +56814,12 @@ OPERATING ROOM PROCEDURES
   0VXT0ZS  Transfer Prepuce to Penis, Open Approach
   0VXTXZD  Transfer Prepuce to Urethra, External Approach
   0VXTXZS  Transfer Prepuce to Penis, External Approach
+  0VY50Z0  Transplantation of Scrotum, Allogeneic, Open Approach
+  0VY50Z1  Transplantation of Scrotum, Syngeneic, Open Approach
+  0VY50Z2  Transplantation of Scrotum, Zooplastic, Open Approach
+  0VYS0Z0  Transplantation of Penis, Allogeneic, Open Approach
+  0VYS0Z1  Transplantation of Penis, Syngeneic, Open Approach
+  0VYS0Z2  Transplantation of Penis, Zooplastic, Open Approach
   0W0207Z  Alteration of Face with Autologous Tissue Substitute, Open Approach
   0W020JZ  Alteration of Face with Synthetic Substitute, Open Approach
   0W020KZ  Alteration of Face with Nonautologous Tissue Substitute, Open Approach
@@ -56643,6 +56947,7 @@ OPERATING ROOM PROCEDURES
   0W3F0ZZ  Control Bleeding in Abdominal Wall, Open Approach
   0W3F3ZZ  Control Bleeding in Abdominal Wall, Percutaneous Approach
   0W3F4ZZ  Control Bleeding in Abdominal Wall, Percutaneous Endoscopic Approach
+  0W3G0ZZ  Control Bleeding in Peritoneal Cavity, Open Approach
   0W3G3ZZ  Control Bleeding in Peritoneal Cavity, Percutaneous Approach
   0W3G4ZZ  Control Bleeding in Peritoneal Cavity, Percutaneous Endoscopic Approach
   0W3H0ZZ  Control Bleeding in Retroperitoneum, Open Approach
@@ -57639,6 +57944,8 @@ OPERATING ROOM PROCEDURES
   XNS3332  Reposition of Cervical Vertebra using Magnetically Controlled Growth Rod(s), Percutaneous Approach, New Technology Group 2
   XNS4032  Reposition of Thoracic Vertebra using Magnetically Controlled Growth Rod(s), Open Approach, New Technology Group 2
   XNS4332  Reposition of Thoracic Vertebra using Magnetically Controlled Growth Rod(s), Percutaneous Approach, New Technology Group 2
+  XNU0356  Supplement Lumbar Vertebra with Mechanically Expandable (Paired) Synthetic Substitute, Percutaneous Approach, New Technology Group 6
+  XNU4356  Supplement Thoracic Vertebra with Mechanically Expandable (Paired) Synthetic Substitute, Percutaneous Approach, New Technology Group 6
   XRG0092  Fusion of Occipital-cervical Joint using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2
   XRG00F3  Fusion of Occipital-cervical Joint using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3
   XRG1092  Fusion of Cervical Vertebral Joint using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2
@@ -57669,7 +57976,7 @@ NON-OPERATING ROOM PROCEDURES
 02HL3JZ* Insertion of Pacemaker Lead into Left Ventricle, Percutaneous Approach
 
 +-----------------------------------+
-| Other Multiple Significant Trauma |
+| Other multiple significant trauma |
 +-----------+-----------+-----------+
 |    MCC    |    CC     |    DRG    |
 +-----------+-----------+-----------+
@@ -57692,7 +57999,7 @@ of the lower limb. See MDC 24 Principal Diagnosis Listings for details.
 
 
 :======================================================================:
-|            MDC 25 Human Immunodeficiency Virus Infections            |
+|            MDC 25 Human immunodeficiency virus infections            |
 :======================================================================:
 
 MDC 25 Assignment of Diagnosis Codes
@@ -58132,7 +58439,11 @@ AND PRINCIPAL DIAGNOSIS OF SIGNIFICANT HIV RELATED CONDITION
   D538    Other specified nutritional anemias
   D539    Nutritional anemia, unspecified
   D590    Drug-induced autoimmune hemolytic anemia
-  D591    Other autoimmune hemolytic anemias
+  D5910   Autoimmune hemolytic anemia, unspecified
+  D5911   Warm autoimmune hemolytic anemia
+  D5912   Cold autoimmune hemolytic anemia
+  D5913   Mixed type autoimmune hemolytic anemia
+  D5919   Other autoimmune hemolytic anemia
   D592    Drug-induced nonautoimmune hemolytic anemia
   D593    Hemolytic-uremic syndrome
   D594    Other nonautoimmune hemolytic anemias
@@ -58196,7 +58507,10 @@ AND PRINCIPAL DIAGNOSIS OF SIGNIFICANT HIV RELATED CONDITION
   D838    Other common variable immunodeficiencies
   D839    Common variable immunodeficiency, unspecified
   D840    Lymphocyte function antigen-1 [LFA-1] defect
-  D848    Other specified immunodeficiencies
+  D8481   Immunodeficiency due to conditions classified elsewhere
+  D84821  Immunodeficiency due to drugs
+  D84822  Immunodeficiency due to external causes
+  D8489   Other immunodeficiencies
   D849    Immunodeficiency, unspecified
   D893    Immune reconstitution syndrome
   D8940   Mast cell activation, unspecified
@@ -58205,6 +58519,12 @@ AND PRINCIPAL DIAGNOSIS OF SIGNIFICANT HIV RELATED CONDITION
   D8943   Secondary mast cell activation
   D8949   Other mast cell activation disorder
   D8982   Autoimmune lymphoproliferative syndrome [ALPS]
+  D89831  Cytokine release syndrome, grade 1
+  D89832  Cytokine release syndrome, grade 2
+  D89833  Cytokine release syndrome, grade 3
+  D89834  Cytokine release syndrome, grade 4
+  D89835  Cytokine release syndrome, grade 5
+  D89839  Cytokine release syndrome, grade unspecified
   D8989   Other specified disorders involving the immune mechanism, not elsewhere classified
   D899    Disorder involving the immune mechanism, unspecified
   E40     Kwashiorkor
@@ -58383,6 +58703,7 @@ AND PRINCIPAL DIAGNOSIS OF SIGNIFICANT HIV RELATED CONDITION
   J1008   Influenza due to other identified influenza virus with other specified pneumonia
   J123    Human metapneumovirus pneumonia
   J1281   Pneumonia due to SARS-associated coronavirus
+  J1282   Pneumonia due to coronavirus disease 2019
   J1289   Other viral pneumonia
   J129    Viral pneumonia, unspecified
   J13     Pneumonia due to Streptococcus pneumoniae
@@ -58672,23 +58993,23 @@ AND PRINCIPAL DIAGNOSIS OF SIGNIFICANT HIV RELATED CONDITION
   R64     Cachexia
   U071    COVID-19
 
-+-------------------------------+
-| HIV with Extensive Procedure  |
-+---------------+---------------+
-|      MCC      |      DRG      |
-+---------------+---------------+
-|      Yes      |      969      |
-+---------------+---------------+
-|      No       |      970      |
-+---------------+---------------+
++-------------------------------------+
+| HIV with extensive O.R. procedures  |
++------------------+------------------+
+|       MCC        |       DRG        |
++------------------+------------------+
+|       Yes        |       969        |
++------------------+------------------+
+|        No        |       970        |
++------------------+------------------+
 
-DRG 969 HIV WITH EXTENSIVE O.R. PROCEDURE WITH MCC
-DRG 970 HIV WITH EXTENSIVE O.R. PROCEDURE WITHOUT MCC
+DRG 969 HIV WITH EXTENSIVE O.R. PROCEDURES WITH MCC
+DRG 970 HIV WITH EXTENSIVE O.R. PROCEDURES WITHOUT MCC
 
 All procedures not listed in Appendix F, DRGs 987,988, or 989
 
 +-----------------------------------+
-| HIV with Major Related Condition  |
+| HIV with major related condition  |
 +-----------+-----------+-----------+
 |    MCC    |    CC     |    DRG    |
 +-----------+-----------+-----------+
@@ -59128,6 +59449,7 @@ PRINCIPAL OR SECONDARY DIAGNOSIS OF MAJOR RELATED CONDITION
   J1008  Influenza due to other identified influenza virus with other specified pneumonia
   J123   Human metapneumovirus pneumonia
   J1281  Pneumonia due to SARS-associated coronavirus
+  J1282  Pneumonia due to coronavirus disease 2019
   J1289  Other viral pneumonia
   J129   Viral pneumonia, unspecified
   J13    Pneumonia due to Streptococcus pneumoniae
@@ -59151,7 +59473,7 @@ PRINCIPAL OR SECONDARY DIAGNOSIS OF MAJOR RELATED CONDITION
   U071   COVID-19
 
 +---------------------------------------------+
-| HIV with or without Other Related Condition |
+| HIV with or without other related condition |
 +---------------------------------------------+
 |                     DRG                     |
 +---------------------------------------------+
