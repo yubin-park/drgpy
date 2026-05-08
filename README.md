@@ -212,7 +212,7 @@ Apache 2.0
 |---|---|
 | **Yubin Park, PhD** ([@yubin-park](https://github.com/yubin-park)) | Original library, v36–v40 data and grouper logic |
 | **syangdh** ([@syangdh](https://github.com/syangdh)) | v41 and v42 CMS data files, `DRGEngineAllVers` FY2022–FY2025 routing, `comparing_appendix_A.py` |
-| **Nick Vergos** ([@nvergos](https://github.com/nvergos)) | v43 CMS data files, `DRGEngineAllVers` FY2026 routing, `_appndxrdr.py` parser fix for Appendix C Part 3 (v42+) |
+| **Nikolaos Vergos** ([@nvergos](https://github.com/nvergos)) | v43 CMS data files, `DRGEngineAllVers` FY2026 routing, `_appndxrdr.py` parser fix for Appendix C Part 3 (v42+) |
 
 ## References
 
