@@ -244,9 +244,6 @@ def mdc15(x):
 
     # NOTE: DRG 789 skipped
 
-    if x["795|PDX"] * (x["_NDX1"] + x["_NDX2+"] * x["795|AND NO SDX OR ONLY SDX"]) > 0:
-        y.append("795")
-
     if x["790|PSDX"] > 0:
         y.append("790")
 
@@ -259,9 +256,16 @@ def mdc15(x):
     if x["793|MAJOR PROBLEMS PSDX"] + x["793|OR SDX"] > 0:
         y.append("793")
 
-    s1 = "794|PSDX"
-    if x[s1] > 0 and len(y) == 0:
+    if x["794|PSDX"] > 0 and x["793|MAJOR PROBLEMS PSDX"] + x["793|OR SDX"] == 0:
         y.append("794")
+
+    # Route to 795 only when no significant secondary problem was found (793/794).
+    # The "795|AND NO SDX OR ONLY SDX" feature (e.g. Z23 immunization encounter)
+    # indicates that the secondary is NOT a significant problem — it must NOT
+    # override 793/794 diagnoses already identified above.
+    if len(y) == 0:
+        if x["795|PDX"] * (x["_NDX1"] + x["_NDX2+"] * x["795|AND NO SDX OR ONLY SDX"]) > 0:
+            y.append("795")
 
     return y
 
