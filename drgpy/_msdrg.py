@@ -32,7 +32,7 @@ class DRGEngine:
         neoormap = appndxrdr.read_f(f"data/{version}/appendix_F_J.txt")
         self.neoormap = neoormap
 
-    def get_features(self, dx_lst, pr_lst, gender="F", is_alive=True):
+    def get_features(self, dx_lst, pr_lst, gender="F", is_alive=True, poa_lst=None):
 
         def remove_dups(seq):
             seen = set()
@@ -65,7 +65,10 @@ class DRGEngine:
                 if dx in self.ccmap and not is_pdx:
                     cc_info = self.ccmap[dx]
                     if pdx not in self.exmap.get(cc_info["pdx"], []):
-                        x.append("_" + cc_info["level"])
+                        # POA filter: skip CC/MCC credit when POA="N" (hospital-acquired)
+                        poa = poa_lst[j].upper() if poa_lst and j < len(poa_lst) else "Y"
+                        if poa != "N":
+                            x.append("_" + cc_info["level"])
 
             # NOTE: special cases to handle EXCEPT conditions
             if "_MDC18" in x and "853&854&855|PDX FROM MDC 18 EXCEPT" not in x:
@@ -121,10 +124,10 @@ class DRGEngine:
 
         return Counter(x)
 
-    def get_drg_all(self, dx_lst, pr_lst, gender="F", is_alive=True):
+    def get_drg_all(self, dx_lst, pr_lst, gender="F", is_alive=True, poa_lst=None):
 
         y = []
-        x = self.get_features(dx_lst, pr_lst, gender, is_alive)
+        x = self.get_features(dx_lst, pr_lst, gender, is_alive, poa_lst)
 
         # NOTE: This is for debugging.
         # from pprint import pprint
@@ -176,7 +179,7 @@ class DRGEngine:
 
         return y
 
-    def get_drg(self, dx_lst, pr_lst):
+    def get_drg(self, dx_lst, pr_lst, gender="F", is_alive=True, poa_lst=None):
         """
         Return the corresponding DRG code for the diagnoses and procedures
 
@@ -186,7 +189,15 @@ class DRGEngine:
                 A list of ICD-10 diagnosis codes
         pr_lst : list
                 A list of ICD-10 procedure codes
+        gender : str
+                "F" or "M"
+        is_alive : bool
+                True if patient was alive at discharge
+        poa_lst : list of str, optional
+                POA indicators parallel to dx_lst ("Y", "N", "U", "E", "W").
+                Secondary diagnoses with poa="N" are excluded from CC/MCC credit.
+                If None, all secondary diagnoses count (legacy behavior).
         """
-        y_all = self.get_drg_all(dx_lst, pr_lst)
+        y_all = self.get_drg_all(dx_lst, pr_lst, gender, is_alive, poa_lst)
         y_all = y_all + ["000"]
         return y_all[0]
