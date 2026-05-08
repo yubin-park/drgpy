@@ -1,12 +1,49 @@
-
-def mdc08(x):
+def mdc08(x, version="v40"):
 
     y = []
     if x["_MDC08"] == 0:
         return y
-    
-    if (x["453&454&455|ANTERIOR SPINAL FUSION ORPCS"] > 0 and 
-        x["453&454&455|POSTERIOR SPINAL FUSION ORPCS"] > 0):
+
+    # 426 - 428 (v42+): Multiple level combined anterior and posterior spinal
+    # fusion except cervical (replaces 453-455 for multiple level)
+    if version >= "v42":
+        s_ma = "426&427&428|MULTIPLE LEVEL ANTERIOR SPINAL FUSION ORPCS"
+        s_mp = "426&427&428|MULTIPLE LEVEL POSTERIOR SPINAL FUSION ORPCS"
+        s_sa = "426&427&428|SINGLE LEVEL ANTERIOR SPINAL FUSION ORPCS"
+        s_sp = "426&427&428|SINGLE LEVEL POSTERIOR SPINAL FUSION ORPCS"
+        s_cm_m = "426&427&428|MULTIPLE LEVEL CUSTOM-MADE ANATOMICALLY DESIGNED INTERBODY FUSION DEVICE (CMADIFD) ORPCS"
+        s_cm_s = "426&427&428|SINGLE LEVEL CUSTOM-MADE ANATOMICALLY DESIGNED INTERBODY FUSION DEVICE (CMADIFD) ORPCS"
+        # Multiple level: (multi anterior + multi posterior) OR
+        #   (single anterior + single posterior, i.e. each direction has one)
+        has_multi = (x[s_ma] > 0 and x[s_mp] > 0) or (x[s_sa] > 0 and x[s_sp] > 0)
+        if has_multi:
+            if x["_MCC"] > 0 or x[s_cm_m] + x[s_cm_s] > 0:
+                y.append("426")
+            elif x["_CC"] > 0:
+                y.append("427")
+            else:
+                y.append("428")
+
+    # 402 (v42+): Single level combined anterior and posterior spinal fusion
+    if version >= "v42":
+        s1 = "402|SINGLE LEVEL ANTERIOR SPINAL FUSION ORPCS"
+        s2 = "402|SINGLE LEVEL POSTERIOR SPINAL FUSION ORPCS"
+        if x[s1] > 0 and x[s2] > 0:
+            y.append("402")
+
+    # 429 - 430 (v42+): Combined anterior and posterior cervical spinal fusion
+    if version >= "v42":
+        s1 = "429&430|ANTERIOR CERVICAL SPINAL FUSION ORPCS"
+        s2 = "429&430|POSTERIOR CERVICAL SPINAL FUSION ORPCS"
+        if x[s1] > 0 and x[s2] > 0:
+            if x["_MCC"] > 0:
+                y.append("429")
+            else:
+                y.append("430")
+
+    # 453 - 455: Combined anterior and posterior spinal fusion
+    # (v42+ replaces with 426-428/402, but keys only exist in v36-v41 data)
+    if x["453&454&455|ANTERIOR SPINAL FUSION ORPCS"] > 0 and x["453&454&455|POSTERIOR SPINAL FUSION ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("453")
         elif x["_CC"] > 0:
@@ -25,10 +62,7 @@ def mdc08(x):
     sb1 = "456&457&458|EXTENSIVE FUSION PART B1"
     sb2 = "456&457&458|EXTENSIVE FUSION PART B2"
 
-    if ((((x[s1] > 0) and (x[s2] + x[s3]) > 0)) or 
-        (x[s4] > 0) or 
-        (x[sa1] * x[sa2] > 0) or 
-        (x[sb1] * x[sb2] > 0)):
+    if ((x[s1] > 0) and (x[s2] + x[s3]) > 0) or (x[s4] > 0) or (x[sa1] * x[sa2] > 0) or (x[sb1] * x[sb2] > 0):
         if x["_MCC"] > 0:
             y.append("456")
         elif x["_CC"] > 0:
@@ -36,6 +70,34 @@ def mdc08(x):
         else:
             y.append("458")
 
+    # 447 - 448 (v42+): Multiple level spinal fusion except cervical
+    # Multi-level OR 2+ single-level codes
+    if version >= "v42":
+        s_ma = "447&448|MULTIPLE LEVEL ANTERIOR SPINAL FUSION ORPCS"
+        s_mp = "447&448|MULTIPLE LEVEL POSTERIOR SPINAL FUSION ORPCS"
+        s_sa = "447&448|TWO OR MORE CODES FROM THE FOLLOWING LISTS SINGLE LEVEL ANTERIOR SPINAL FUSION ORPCS"
+        s_sp = "447&448|SINGLE LEVEL POSTERIOR SPINAL FUSION ORPCS"
+        s_cm_m = "447&448|MULTIPLE LEVEL CUSTOM-MADE ANATOMICALLY DESIGNED INTERBODY FUSION DEVICE (CMADIFD) ORPCS"
+        s_cm_s = "447&448|SINGLE LEVEL CUSTOM-MADE ANATOMICALLY DESIGNED INTERBODY FUSION DEVICE (CMADIFD) ORPCS"
+        has_multi = (x[s_ma] + x[s_mp] + x[s_sa] + x[s_sp]) > 0
+        if has_multi:
+            if x["_MCC"] > 0 or x[s_cm_m] + x[s_cm_s] > 0:
+                y.append("447")
+            else:
+                y.append("448")
+
+    # 450 - 451 (v42+): Single level spinal fusion except cervical
+    if version >= "v42":
+        s1 = "450&451|SINGLE LEVEL FUSION ORPCS"
+        s_cm = "450&451|SINGLE LEVEL CUSTOM-MADE ANATOMICALLY DESIGNED INTERBODY FUSION DEVICE (CMADIFD)"
+        if x[s1] > 0:
+            if x["_MCC"] > 0 or x[s_cm] > 0:
+                y.append("450")
+            else:
+                y.append("451")
+
+    # 459 - 460: Spinal fusion except cervical
+    # (v42+ replaces with 447-448/450-451, keys only exist in v36-v41)
     if x["459&460|ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("459")
@@ -127,11 +189,10 @@ def mdc08(x):
                 y.append("486")
             else:
                 y.append("487")
+        elif x["_MCC"] + x["_CC"] > 0:
+            y.append("488")
         else:
-            if x["_MCC"] + x["_CC"] > 0:
-                y.append("488")
-            else:
-                y.append("489")
+            y.append("489")
 
     if x["518&519&520|BACK & NECK EXCEPT DISC DEVICES ORPCS"] > 0:
         if x["_MCC"] > 0:
@@ -140,8 +201,7 @@ def mdc08(x):
             y.append("519")
         else:
             y.append("520")
-    elif (x["518&519&520|DISC DEVICES ORPCS"] + 
-            x["518&519&520|NEUROSTIMULATORS"] > 0):
+    elif x["518&519&520|DISC DEVICES ORPCS"] + x["518&519&520|NEUROSTIMULATORS"] > 0:
         y.append("518")
 
     if x["492&493&494|ORPCS"] > 0:
@@ -314,12 +374,13 @@ def mdc08(x):
 
     return y
 
+
 def mdc09(x):
 
     y = []
     if x["_MDC09"] == 0:
         return y
-    
+
     if x["570&571&572|SKIN DEBRIDEMENT ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("570")
@@ -327,7 +388,7 @@ def mdc09(x):
             y.append("571")
         else:
             y.append("572")
-            
+
     if x["573&574&575&576&577&578|SKIN GRAFT ORPCS"] > 0:
         if x["573&574&575&576&577&578|SKIN ULCER OR CELLULITIS PDX"] > 0:
             if x["_MCC"] > 0:
@@ -336,14 +397,13 @@ def mdc09(x):
                 y.append("574")
             else:
                 y.append("575")
+        elif x["_MCC"] > 0:
+            y.append("576")
+        elif x["_CC"] > 0:
+            y.append("577")
         else:
-            if x["_MCC"] > 0:
-                y.append("576")
-            elif x["_CC"] > 0:
-                y.append("577")
-            else:
-                y.append("578")
-   
+            y.append("578")
+
     if x["579&580&581|ORPCS"] + x["579&580&581|OR NON-ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("579")
@@ -351,8 +411,8 @@ def mdc09(x):
             y.append("580")
         else:
             y.append("581")
- 
-    if x["582&583|PSDX"]*x["582&583|ORPCS"] > 0:
+
+    if x["582&583|PSDX"] * x["582&583|ORPCS"] > 0:
         if x["_MCC"] + x["_CC"] > 0:
             y.append("582")
         else:
@@ -414,6 +474,7 @@ def mdc09(x):
             y.append("607")
 
     return y
+
 
 def mdc10(x):
 
@@ -494,13 +555,14 @@ def mdc10(x):
 
     return y
 
+
 def mdc11(x):
 
     y = []
     if x["_MDC11"] == 0:
         return y
 
-    if x['650&651|ORPCS'] * x['650&651|AND NON-ORPCS'] > 0:
+    if x["650&651|ORPCS"] * x["650&651|AND NON-ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("650")
         else:
@@ -527,14 +589,13 @@ def mdc11(x):
                 y.append("657")
             else:
                 y.append("658")
+        elif x["_MCC"] > 0:
+            y.append("659")
+        elif x["_CC"] > 0:
+            y.append("660")
         else:
-            if x["_MCC"] > 0:
-                y.append("659")
-            elif x["_CC"] > 0:
-                y.append("660")
-            else:
-                y.append("661")
- 
+            y.append("661")
+
     if x["662&663&664|ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("662")
@@ -550,7 +611,7 @@ def mdc11(x):
             y.append("666")
         else:
             y.append("667")
-    
+
     if x["668&669&670|ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("668")
@@ -565,10 +626,11 @@ def mdc11(x):
         else:
             y.append("672")
 
-    if (x["673&674&675|ORPCS"] 
-        + x["673&674&675|OR PDX"] * x["673&674&675|AND NON-ORPCS"] 
-        + ((x["673&674&675|OR PDX*"] + x["673&674&675|OR PDX**"]) 
-            * x["673&674&675|AND NON-ORPCS*"] > 0)):
+    if (
+        x["673&674&675|ORPCS"]
+        + x["673&674&675|OR PDX"] * x["673&674&675|AND NON-ORPCS"]
+        + ((x["673&674&675|OR PDX*"] + x["673&674&675|OR PDX**"]) * x["673&674&675|AND NON-ORPCS*"] > 0)
+    ):
         if x["_MCC"] > 0:
             y.append("673")
         elif x["_CC"] > 0:
@@ -622,7 +684,3 @@ def mdc11(x):
             y.append("700")
 
     return y
-
-
-
-

@@ -1,4 +1,3 @@
-
 def mdc12(x):
 
     y = []
@@ -29,8 +28,7 @@ def mdc12(x):
         else:
             y.append("714")
 
-    s1 = ("715&716&717&718|OTHER MALE REPRODUCTIVE SYSTEM O.R. " + 
-            "PROCEDURE ORPCS")
+    s1 = "715&716&717&718|OTHER MALE REPRODUCTIVE SYSTEM O.R. " + "PROCEDURE ORPCS"
     s2 = "715&716&717&718|MALIGNANCY PDX"
     if x[s1] > 0:
         if x[s2] > 0:
@@ -38,11 +36,10 @@ def mdc12(x):
                 y.append("715")
             else:
                 y.append("716")
+        elif x["_MCC"] + x["_CC"] > 0:
+            y.append("717")
         else:
-            if x["_MCC"] + x["_CC"] > 0:
-                y.append("717")
-            else:
-                y.append("718")
+            y.append("718")
 
     if x["722&723&724|PDX"] > 0:
         if x["_MCC"] > 0:
@@ -71,6 +68,7 @@ def mdc12(x):
             y.append("730")
 
     return y
+
 
 def mdc13(x):
 
@@ -123,7 +121,7 @@ def mdc13(x):
 
     if x["748|ORPCS"] > 0:
         y.append("748")
-        
+
     if x["749&750|ORPCS"] > 0:
         if x["_MCC"] + x["_CC"] > 0:
             y.append("749")
@@ -154,6 +152,7 @@ def mdc13(x):
 
     return y
 
+
 def mdc14(x, version):
 
     y = []
@@ -168,8 +167,7 @@ def mdc14(x, version):
         else:
             y.append("785")
 
-    if (x["786&787&788|ORPCS"] > 0 and 
-        x["786&787&788|WITHOUT ORPCS"] == 0):
+    if x["786&787&788|ORPCS"] > 0 and x["786&787&788|WITHOUT ORPCS"] == 0:
         if x["_MCC"] > 0:
             y.append("786")
         elif x["_CC"] > 0:
@@ -177,23 +175,19 @@ def mdc14(x, version):
         else:
             y.append("788")
 
-    if version=="v36":
-        # Version 36 had a different logic 
+    if version == "v36":
+        # Version 36 had a different logic
         # EXCEPT... TODO
-        if (x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0 and 
-                x["768|WITH ANY ORPCS EXCEPT"] == 0 and 
-                x["_ORPCS_ANY"]):
+        if x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0 and x["768|WITH ANY ORPCS EXCEPT"] == 0 and x["_ORPCS_ANY"]:
             y.append("768")
-    else:
-        if ((x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0) or
-            (x["768|SDX"] * x["768|NON-ORPCS"] > 0 and 
-                x["768|WITH ANY ORPCS EXCEPT"] == 0 and 
-                x["_ORPCS_ANY"])):
-            y.append("768")
-        
-    if ((x["796&797&798|SDX"] * x["796&797&798|AND ORPCS"] * 
-        (x["796&797&798|AND ORPCS*"] + 
-            x["796&797&798|OR ORPCS"])) > 0):
+    elif (x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0) or (
+        x["768|SDX"] * x["768|NON-ORPCS"] > 0 and x["768|WITH ANY ORPCS EXCEPT"] == 0 and x["_ORPCS_ANY"]
+    ):
+        y.append("768")
+
+    if (
+        x["796&797&798|SDX"] * x["796&797&798|AND ORPCS"] * (x["796&797&798|AND ORPCS*"] + x["796&797&798|OR ORPCS"])
+    ) > 0:
         if x["_MCC"] > 0:
             y.append("796")
         elif x["_CC"] > 0:
@@ -212,8 +206,9 @@ def mdc14(x, version):
         else:
             y.append("819")
 
-    if ((x["805&806&807|SDX"] * x["805&806&807|AND ORPCS"] > 0) or
-            (x["805&806&807|SDX"] * x["805&806&807|NON-ORPCS"] > 0)):
+    if (x["805&806&807|SDX"] * x["805&806&807|AND ORPCS"] > 0) or (
+        x["805&806&807|SDX"] * x["805&806&807|NON-ORPCS"] > 0
+    ):
         if x["_MCC"] > 0:
             y.append("805")
         elif x["_CC"] > 0:
@@ -240,6 +235,7 @@ def mdc14(x, version):
 
     return y
 
+
 def mdc15(x):
 
     y = []
@@ -248,8 +244,7 @@ def mdc15(x):
 
     # NOTE: DRG 789 skipped
 
-    if (x["795|PDX"] *
-        (x["_NDX1"] + x["_NDX2+"] * x["795|AND NO SDX OR ONLY SDX"]) > 0):
+    if x["795|PDX"] * (x["_NDX1"] + x["_NDX2+"] * x["795|AND NO SDX OR ONLY SDX"]) > 0:
         y.append("795")
 
     if x["790|PSDX"] > 0:
@@ -265,10 +260,11 @@ def mdc15(x):
         y.append("793")
 
     s1 = "794|PSDX"
-    if x[s1] > 0 and len(y) == 0: 
+    if x[s1] > 0 and len(y) == 0:
         y.append("794")
 
     return y
+
 
 def mdc16(x):
 
@@ -283,7 +279,7 @@ def mdc16(x):
             y.append("800")
         else:
             y.append("801")
-    
+
     if x["802&803&804|ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("802")
@@ -299,7 +295,7 @@ def mdc16(x):
             y.append("809")
         else:
             y.append("810")
-    
+
     if x["811&812|PDX"] > 0:
         if x["_MCC"] > 0:
             y.append("811")
@@ -316,10 +312,11 @@ def mdc16(x):
             y.append("815")
         else:
             y.append("816")
- 
+
     return y
 
-def mdc17(x):
+
+def mdc17(x, version="v40"):
 
     y = []
     if x["_MDC17"] == 0:
@@ -333,10 +330,15 @@ def mdc17(x):
         else:
             y.append("822")
 
-    s1 = ("823&824&825|ANY OTHER ORPCS NOT LISTED IN DRGS 820-822 OR " + 
-        "ANY OF THE FOLLOWING NON-ORPCS")
-    if (x["823&824&825|PDX"] > 0 and
-        ((x["820&821&822|ORPCS"]==0 and x["_ORPCS_ANY"] > 0) or x[s1] > 0)):
+    # 850 (v42+): Acute leukemia with other procedures
+    # Same structure as 823-825 but separate PDX set and single DRG output
+    if version >= "v42":
+        s1 = "850|ANY OTHER ORPCS NOT LISTED IN DRGS 820-822 OR ANY OF THE FOLLOWING NON-ORPCS"
+        if x["850|PDX"] > 0 and ((x["820&821&822|ORPCS"] == 0 and x["_ORPCS_ANY"] > 0) or x[s1] > 0):
+            y.append("850")
+
+    s1 = "823&824&825|ANY OTHER ORPCS NOT LISTED IN DRGS 820-822 OR " + "ANY OF THE FOLLOWING NON-ORPCS"
+    if x["823&824&825|PDX"] > 0 and ((x["820&821&822|ORPCS"] == 0 and x["_ORPCS_ANY"] > 0) or x[s1] > 0):
         if x["_MCC"] > 0:
             y.append("823")
         elif x["_CC"] > 0:
@@ -344,8 +346,7 @@ def mdc17(x):
         else:
             y.append("825")
 
-    s1 = ("826&827&828|MYELOPROLIFERATIVE DISORDERS OR " + 
-            "POORLY DIFFERENTIATED NEOPLASMS PDX")
+    s1 = "826&827&828|MYELOPROLIFERATIVE DISORDERS OR " + "POORLY DIFFERENTIATED NEOPLASMS PDX"
     s2 = "826&827&828|MAJOR O.R. PROCEDURE ORPCS"
     if x[s1] * x[s2] > 0:
         if x["_MCC"] > 0:
@@ -355,8 +356,7 @@ def mdc17(x):
         else:
             y.append("828")
 
-    s1 = ("829&830|MYELOPROLIFERATIVE DISORDERS OR " + 
-            "POORLY DIFFERENTIATED NEOPLASMS PDX")
+    s1 = "829&830|MYELOPROLIFERATIVE DISORDERS OR " + "POORLY DIFFERENTIATED NEOPLASMS PDX"
     s2 = "829&830|NON-ORPCS"
     if x[s1] * (x[s2] + x["_ORPCS|829"]) > 0:
         if x["_MCC"] + x["_CC"] > 0:
@@ -415,6 +415,7 @@ def mdc17(x):
 
     return y
 
+
 def mdc18(x):
 
     y = []
@@ -470,6 +471,7 @@ def mdc18(x):
 
     return y
 
+
 def mdc19(x):
 
     y = []
@@ -505,6 +507,7 @@ def mdc19(x):
 
     return y
 
+
 def mdc20(x):
 
     y = []
@@ -514,8 +517,7 @@ def mdc20(x):
     if x["_STATUS07"] > 0:
         y.append("894")
 
-    s1 = ("895&896&897|ALCOHOL/DRUG ABUSE OR DEPENDENCE PDX " + 
-            "IN MDC 20 REHABILITATION THERAPY NON-ORPCS")
+    s1 = "895&896&897|ALCOHOL/DRUG ABUSE OR DEPENDENCE PDX " + "IN MDC 20 REHABILITATION THERAPY NON-ORPCS"
     if x[s1] > 0:
         y.append("895")
     elif x["_MCC"] > 0:
@@ -524,6 +526,7 @@ def mdc20(x):
         y.append("897")
 
     return y
+
 
 def mdc21(x):
 
@@ -567,7 +570,7 @@ def mdc21(x):
             y.append("915")
         else:
             y.append("916")
-    
+
     if x["917&918|PDX"] > 0:
         if x["_MCC"] > 0:
             y.append("917")
@@ -589,7 +592,3 @@ def mdc21(x):
             y.append("923")
 
     return y
-
-
-
-
