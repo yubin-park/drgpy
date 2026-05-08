@@ -2,8 +2,9 @@
 
 `drgpy` is a Python library for assigning a combination of diagnosis and procedure codes to Diagnosis Related Groups (MS-DRG) that is used in Medicare inpatient reimbursement today.
 
-NOTE the current default version is configured as MSDRG v40. However, the latest version is not thoroughly tested yet. Please use at your own risk.
-Rawfiles: https://www.cms.gov/files/zip/icd-10-ms-drg-definitions-manual-files-v372.zip
+Versions **v36–v43** (FY2017–FY2026, effective through September 30, 2026) are supported.
+The `DRGEngineAllVers` wrapper automatically routes claims to the correct version based on admission date.
+Rawfiles (latest): https://www.cms.gov/files/zip/icd10-ms-drg-definitions-manual-files-v43.zip
 
 ## Installing
 
@@ -47,7 +48,7 @@ please type `print(<instance>.<function>.__doc__)`.
 
 ### A Wrapper Model for All Versions
 
-To use a wrapper model for all versions from 36 to 40, please use as follows:
+To use a wrapper model for all versions from 36 to 43, please use as follows:
 
 ```python
 >>> from drgpy.msdrg_allvers import DRGEngineAllVers
@@ -66,7 +67,9 @@ To use a wrapper model for all versions from 36 to 40, please use as follows:
                 YYYY-MM-DD format
                 Depending on the date of the claim,
                 the engine will choose the appropriate version.
-                e.g. date between 2020-10-01 will use v39...
+                e.g. date between 2020-10-01 will use v39;
+                date between 2024-10-01 and 2025-09-30 will use v42;
+                date between 2025-10-01 and 2026-09-30 will use v43.
         gender: str
                 "F" or "M"
         is_alive: boolean
@@ -205,10 +208,17 @@ Apache 2.0
 
 ## Authors
 
-Yubin Park, PhD
+| Contributor | Contribution |
+|---|---|
+| **Yubin Park, PhD** ([@yubin-park](https://github.com/yubin-park)) | Original library, v36–v40 data and grouper logic |
+| **syangdh** ([@syangdh](https://github.com/syangdh)) | v41 and v42 CMS data files, `DRGEngineAllVers` FY2022–FY2025 routing, `comparing_appendix_A.py` |
+| **Nick Vergos** ([@nvergos](https://github.com/nvergos)) | v43 CMS data files, `DRGEngineAllVers` FY2026 routing, `_appndxrdr.py` parser fix for Appendix C Part 3 (v42+) |
 
 ## References
 
 - https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html
-- https://www.cms.gov/files/zip/icd-10-ms-drg-definitions-manual-files-v372.zip
+- v43: https://www.cms.gov/files/zip/icd10-ms-drg-definitions-manual-files-v43.zip
+- v42: https://www.cms.gov/files/zip/icd10-ms-drg-definitions-manual-files-v42.zip
+- v41: https://www.cms.gov/files/zip/icd10-ms-drg-definitions-manual-files-v41.zip
+- v40: https://www.cms.gov/files/zip/icd-10-ms-drg-definitions-manual-files-v402.zip
 - https://content.findacode.com/files/tutorials/DRG-Grouper-2019.pdf
