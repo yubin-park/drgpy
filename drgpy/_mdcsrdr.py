@@ -1,16 +1,13 @@
 import re
 from collections import defaultdict
+from importlib.resources import files
 
-from pkg_resources import resource_filename as rscfn
-
-# dx_pttrn = "[A-TV-Z][0-9][0-9AB][0-9A-TV-Z]{0,4}"
 dx_pttrn = "[A-Z][0-9][0-9AB][0-9A-TV-Z]{0,4}"  # NOTE: COVID-19 starts with "U"
 pr_pttrn = "[A-HJ-NP-Z0-9]{7}"
 
 # CMS v41+ removed the 2-space indentation from NON-ORPCS code lines.
 # This regex detects unindented code lines (ICD-10 dx or px codes at line start).
 _code_line_re = re.compile(r"(?:[A-HJ-NP-Z0-9]{7}|[A-Z][0-9][0-9AB][0-9A-TV-Z]{0,4})\*?\s")
-
 
 def shorten(x):
     x = " ".join(x.upper().split())
@@ -22,7 +19,6 @@ def shorten(x):
     x = x.replace("SECONDARY DIAGNOSIS", "SDX")
     x = x.replace("OPERATING ROOM PROCEDURE", "ORPCS")
     return x
-
 
 def get_codetype(dx_lst, pr_lst, cache):
     codetype = ""
@@ -36,13 +32,11 @@ def get_codetype(dx_lst, pr_lst, cache):
         codetype = "pr"
     return codetype
 
-
 def get_label(cache):
     label = f"{cache['C']}|{cache['D']}"
     while label in cache["L"]:
         label = label + "*"
     return label
-
 
 def update_mapping(dxmap, prmap, cache):
     if len(cache["E"]) > 0:
@@ -58,10 +52,8 @@ def update_mapping(dxmap, prmap, cache):
             prmap[code].append(label)
         cache["E"] = []
 
-
 def is_A(line, cursor):
     return line[1:3] == "=="
-
 
 def parse_A(line, cursor, dxmap, cache):
     mdc_lst = re.findall(r"MDC\s(\d{2})\s", line)
@@ -73,17 +65,13 @@ def parse_A(line, cursor, dxmap, cache):
         dx = dx_lst[0].strip()
         dxmap[dx].append(cache["A"])
 
-
 def is_B(line, cursor):
     return (cursor in {"A", "B", "D", "E"} and (line[:2] == "+-")) or (cursor in {"B"} and line[0] == "|")
-
 
 def is_C(line, cursor):
     return cursor in {"B", "C", "D", "E"} and line[:4] == "DRG "
 
-
 def parse_C(line, cursor, cache, _cursor):
-
     drg_lst = re.findall(r"DRG\s(\d{3})\s", line)
     if len(drg_lst) > 0:
         drg = drg_lst[0]
@@ -94,26 +82,20 @@ def parse_C(line, cursor, cache, _cursor):
         else:
             cache["C"] += "&" + drg
 
-
 def is_D(line, cursor):
     return cursor in {"C", "D", "E"} and line[:2].strip() != ""
 
-
 def parse_D(line, cursor, cache, _cursor):
-
     line = line.strip()
     if line == "":
         return
-
     phrase = shorten(line)
     if _cursor != "D":
-        # NOTE: to keep track of duplicate names
         cache["L"][get_label(cache)] = 1
         cache["D"] = phrase
         cache["E"] = []
     else:
         cache["D"] += " " + phrase
-
 
 def is_E(line, cursor):
     # Standard: 2-space indented code line.
@@ -122,14 +104,11 @@ def is_E(line, cursor):
         return False
     return line[:2] == "  " or bool(_code_line_re.match(line))
 
-
 def parse_E(line, cursor, dxmap, prmap, cache, _cursor):
-
     line = line.strip()
     if line == "":
         update_mapping(dxmap, prmap, cache)
         return
-
     dx_lst = re.findall(dx_pttrn + r"\s+", line)
     pr_lst = re.findall(pr_pttrn + r"\*?\s+", line)
     pr_lst += re.findall(r"and\s" + pr_pttrn + r"\*?\s+", line)
@@ -143,12 +122,6 @@ def parse_E(line, cursor, dxmap, prmap, cache, _cursor):
         if len(cache["E"]) > 0:
             update_mapping(dxmap, prmap, cache)
         cache["E"] = [codetype, code]
-
-    # if cache["C"] == "040&041&042":
-    #    if cache["D"] != "PERIPHERAL NEUROSTIMULATORS":
-    #
-    #        print(cache["D"], code, codetype)
-
 
 def read(fn, dxmap, prmap):
     """
@@ -172,12 +145,11 @@ def read(fn, dxmap, prmap):
     _cursor = "F"
     cursor = "F"
     cache = {"A": "", "C": "", "D": "", "E": [], "_": defaultdict(dict), "L": {}}
-    fn = rscfn(__name__, fn)
-
-    with open(fn) as fp:
+    package = __package__ or __name__.split('.')[0]
+    fn_path = files(package) / fn
+    with fn_path.open('r', encoding='utf-8') as fp:
         for line in fp:
             line = line.replace("\n", "")
-
             if line.strip() == "":
                 pass
             elif is_A(line, cursor):
@@ -190,7 +162,6 @@ def read(fn, dxmap, prmap):
                 cursor = "E"
             elif is_D(line, cursor):
                 cursor = "D"
-
             if cursor == "A":
                 parse_A(line, cursor, dxmap, cache)
             elif cursor == "B":
@@ -201,11 +172,8 @@ def read(fn, dxmap, prmap):
                 parse_D(line, cursor, cache, _cursor)
             elif cursor == "E":
                 parse_E(line, cursor, dxmap, prmap, cache, _cursor)
-
             _cursor = cursor
-
     return dxmap, prmap
-
 
 if __name__ == "__main__":
     fn_lst = [
@@ -218,7 +186,6 @@ if __name__ == "__main__":
     prmap = defaultdict(list)
     for fn in fn_lst[:1]:
         dxmap, prmap = read(fn, dxmap, prmap)
-
     # print(json.dumps(prmap, indent=2, sort_keys=True))
     x = {}
     for k, v in prmap.items():
