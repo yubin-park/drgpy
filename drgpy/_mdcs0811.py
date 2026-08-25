@@ -178,16 +178,16 @@ def mdc08(x, version=40):
             else:
                 y.append("489")
 
-    if x["518&519&520|BACK & NECK EXCEPT DISC DEVICES ORPCS"] > 0:
+    if (x["518&519&520|DISC DEVICES ORPCS"] +
+            x["518&519&520|NEUROSTIMULATORS"] > 0):
+        y.append("518")
+    elif x["518&519&520|BACK & NECK EXCEPT DISC DEVICES ORPCS"] > 0:
         if x["_MCC"] > 0:
             y.append("518")
         elif x["_CC"] > 0:
             y.append("519")
         else:
             y.append("520")
-    elif (x["518&519&520|DISC DEVICES ORPCS"] + 
-            x["518&519&520|NEUROSTIMULATORS"] > 0):
-        y.append("518")
 
     if x["492&493&494|ORPCS"] > 0:
         if x["_MCC"] > 0:
@@ -667,4 +667,3 @@ def mdc11(x):
             y.append("700")
 
     return y
-

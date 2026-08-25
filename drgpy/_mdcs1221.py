@@ -187,8 +187,8 @@ def mdc14(x, version):
     else:
         if ((x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0) or
             (x["768|SDX"] * x["768|NON-ORPCS"] > 0 and 
-                x["768|WITH ANY ORPCS EXCEPT"] == 0 and 
-                x["_ORPCS_ANY"])):
+                x["_ORPCS_UNIQUE"] >
+                x["768|WITH ANY ORPCS EXCEPT"])):
             y.append("768")
         
     if ((x["796&797&798|SDX"] * x["796&797&798|AND ORPCS"] * 
@@ -248,10 +248,6 @@ def mdc15(x):
 
     # NOTE: DRG 789 skipped
 
-    if (x["795|PDX"] *
-        (x["_NDX1"] + x["_NDX2+"] * x["795|AND NO SDX OR ONLY SDX"]) > 0):
-        y.append("795")
-
     if x["790|PSDX"] > 0:
         y.append("790")
 
@@ -264,9 +260,18 @@ def mdc15(x):
     if x["793|MAJOR PROBLEMS PSDX"] + x["793|OR SDX"] > 0:
         y.append("793")
 
-    s1 = "794|PSDX"
-    if x[s1] > 0 and len(y) == 0: 
+    significant_problem = (
+        x["794|PSDX"] +
+        x[
+            "794|PSDX OF NEWBORN OR NEONATE,WITH OTHER SIGNIFICANT PROBLEMS, "
+            "NOT ASSIGNED TO DRG 789 THROUGH 793 OR 795 PSDX"
+        ]
+    )
+    if significant_problem > 0 and len(y) == 0:
         y.append("794")
+
+    if len(y) == 0 and x["795|PDX"] > 0:
+        y.append("795")
 
     return y
 
@@ -596,6 +601,5 @@ def mdc21(x):
             y.append("923")
 
     return y
-
 
 
