@@ -31,3 +31,51 @@ class DRGEngineAllVers:
             poa,
             discharge_status,
         )
+
+    def get_code_drg_candidates(self, code, date, code_type="diagnosis"):
+        """Return value-set DRG candidates for the version effective on a date."""
+        version = get_version_for_date(date)
+        return self.get_engine(version.name).get_code_drg_candidates(
+            code,
+            code_type,
+        )
+
+    def simulate_drg_permutations(
+            self,
+            dx_lst,
+            pr_lst,
+            date,
+            gender="F",
+            is_alive=True,
+            poa=None,
+            discharge_status="01"):
+        """Simulate principal-diagnosis choices for the effective version."""
+        version = get_version_for_date(date)
+        return self.get_engine(version.name).simulate_drg_permutations(
+            dx_lst,
+            pr_lst,
+            gender,
+            is_alive,
+            poa,
+            discharge_status,
+        )
+
+    def get_possible_drgs(
+            self,
+            dx_lst,
+            pr_lst,
+            date,
+            gender="F",
+            is_alive=True,
+            poa=None,
+            discharge_status="01"):
+        """Return distinct DRGs across principal choices for the effective version."""
+        version = get_version_for_date(date)
+        return self.get_engine(version.name).get_possible_drgs(
+            dx_lst,
+            pr_lst,
+            gender,
+            is_alive,
+            poa,
+            discharge_status,
+        )

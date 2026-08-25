@@ -7,6 +7,7 @@ import drgpy._mdcs1221 as mdcs1221
 import drgpy._mdcs2225 as mdcs2225
 from collections import defaultdict
 from collections import Counter
+import re
 
 from drgpy._versions import get_version
 
@@ -293,5 +294,101 @@ class DRGEngine:
         )
         y_all = y_all + ["000"]
         return y_all[0]
+
+    def get_code_drg_candidates(self, code, code_type="diagnosis"):
+        """Return DRGs directly referenced by a code's CMS value-set mappings."""
+        if code_type not in {"diagnosis", "procedure"}:
+            raise ValueError("code_type must be 'diagnosis' or 'procedure'")
+
+        code_map = self.dxmap if code_type == "diagnosis" else self.prmap
+        lookup_code = code
+        labels = code_map.get(lookup_code, [])
+        if code_type == "diagnosis" and not labels and lookup_code:
+            lookup_code = lookup_code[:-1]
+            labels = code_map.get(lookup_code, [])
+
+        candidates = set()
+        for label in labels:
+            prefix = label.split("|", 1)[0]
+            candidates.update(re.findall(r"(?<!\d)\d{3}(?!\d)", prefix))
+
+        if code_type == "procedure":
+            candidates.update(self.orpcsmap.get(lookup_code, []))
+
+        return sorted(candidates, key=int)
+
+    def simulate_drg_permutations(
+            self,
+            dx_lst,
+            pr_lst,
+            gender="F",
+            is_alive=True,
+            poa=None,
+            discharge_status="01"):
+        """Group once for each diagnosis selected as the principal diagnosis."""
+        original_diagnoses = list(dx_lst)
+        diagnoses = list(dict.fromkeys(original_diagnoses))
+        procedures = list(dict.fromkeys(pr_lst))
+
+        if isinstance(poa, dict) or poa is None:
+            poa_by_code = poa
+        else:
+            poa_by_code = {}
+            for index, code in enumerate(original_diagnoses):
+                if code not in poa_by_code:
+                    poa_by_code[code] = poa[index] if index < len(poa) else "Y"
+
+        principal_choices = diagnoses or [None]
+        simulations = []
+        for principal in principal_choices:
+            if principal is None:
+                ordered_diagnoses = []
+            else:
+                ordered_diagnoses = [principal] + [
+                    code for code in diagnoses if code != principal
+                ]
+
+            if isinstance(poa_by_code, dict) and not isinstance(poa, dict):
+                ordered_poa = [poa_by_code[code] for code in ordered_diagnoses]
+            else:
+                ordered_poa = poa_by_code
+
+            matching_drgs = self.get_drg_all(
+                ordered_diagnoses,
+                procedures,
+                gender,
+                is_alive,
+                ordered_poa,
+                discharge_status,
+            )
+            selected_drg = matching_drgs[0] if matching_drgs else "000"
+            simulations.append({
+                "principal_diagnosis": principal,
+                "secondary_diagnoses": ordered_diagnoses[1:],
+                "procedures": procedures.copy(),
+                "drg": selected_drg,
+                "matching_drgs": matching_drgs,
+            })
+
+        return simulations
+
+    def get_possible_drgs(
+            self,
+            dx_lst,
+            pr_lst,
+            gender="F",
+            is_alive=True,
+            poa=None,
+            discharge_status="01"):
+        """Return distinct selected DRGs across all principal-diagnosis choices."""
+        simulations = self.simulate_drg_permutations(
+            dx_lst,
+            pr_lst,
+            gender,
+            is_alive,
+            poa,
+            discharge_status,
+        )
+        return sorted({result["drg"] for result in simulations}, key=int)
 
         

@@ -152,6 +152,39 @@ drg = engine.get_drg(
 )
 ```
 
+### Outcome Simulation
+
+Use `get_code_drg_candidates` to inspect the DRGs directly referenced by a
+single diagnosis or procedure in the bundled CMS value sets. These are broad
+rule candidates, not final grouped outcomes.
+
+```python
+engine.get_code_drg_candidates("A419", code_type="diagnosis")
+engine.get_code_drg_candidates("0SG0071", code_type="procedure")
+```
+
+Use `simulate_drg_permutations` to group the same code set once for each
+diagnosis selected as principal. All remaining diagnoses are treated as
+secondary diagnoses. Procedure order and secondary-diagnosis order are not
+permuted because they do not change grouping semantics.
+
+```python
+simulations = engine.simulate_drg_permutations(
+    ["I469", "A021"],
+    ["B2151ZZ"],
+)
+
+possible_drgs = engine.get_possible_drgs(
+    ["I469", "A021"],
+    ["B2151ZZ"],
+)
+```
+
+Each simulation contains the selected principal diagnosis, secondary
+diagnoses, procedures, selected DRG, and all matching DRGs before hierarchy
+selection. These helpers support coding scenario review and audit workflows;
+they do not determine documentation or billing appropriateness.
+
 Please refer to the test scripts under the `tests/` folder if you want to see other example use cases.
 
 ## Raw Data Change Log
