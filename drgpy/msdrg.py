@@ -68,6 +68,11 @@ class DRGEngine:
         dx_lst = remove_dups(list(dx_lst))
         pr_lst = remove_dups(list(pr_lst))
         severity_exclusions = severity_exclusions or set()
+        if not isinstance(gender, str):
+            raise ValueError("gender must be 'F' or 'M'")
+        gender = gender.strip().upper()
+        if gender not in {"F", "M"}:
+            raise ValueError("gender must be 'F' or 'M'")
 
         def get_poa(index, dx):
             if poa is None:
@@ -149,7 +154,7 @@ class DRGEngine:
                 else:
                     x.append("_ORPCS_EXTENSIVE")
 
-        if gender=="F":
+        if gender == "F":
             x.append("_FEMALE")
         else:
             x.append("_MALE")

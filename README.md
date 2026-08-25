@@ -47,10 +47,10 @@ committed to this repository. Convert each confirmed mismatch into the smallest
 synthetic diagnosis/procedure combination that reproduces the relevant CMS rule,
 then add that minimized case to the version tests.
 
-Cases requiring unavailable inputs such as age, sex, or POA indicators should be
-tracked separately rather than treated as grouper mismatches. A successful claim
-sample comparison is useful regression evidence, but does not establish complete
-parity with the official CMS grouper.
+Cases requiring unavailable inputs such as age or birth weight should be tracked
+separately rather than treated as grouper mismatches. A successful claim sample
+comparison is useful regression evidence, but does not establish complete parity
+with the official CMS grouper.
 
 ## File Structure
 
@@ -151,6 +151,27 @@ drg = engine.get_drg(
     poa=["Y", "N"],
 )
 ```
+
+### Input Requirements and Limitations
+
+The first diagnosis in `dx_lst` is treated as the principal diagnosis. An
+admitting diagnosis is not used separately. Procedure order and the order of
+secondary diagnoses do not affect grouping.
+
+`drgpy` currently supports sex, alive-at-discharge status, patient discharge
+status, and POA indicators. Sex-sensitive MDCs require the correct `gender`
+value. The historical default is `"F"`, so callers should always pass `"M"` or
+`"F"` explicitly when grouping real claims.
+
+```python
+engine.get_drg(["N400"], [], gender="M")
+# "726" — Benign Prostatic Hypertrophy without MCC
+```
+
+Age and birth weight are not currently accepted, so diagnosis and procedure
+codes alone are not sufficient to reproduce every result from the official CMS
+grouper. `drgpy` should be treated as an open implementation of the bundled
+decision tables, not as a replacement for CMS validation software.
 
 ### Outcome Simulation
 

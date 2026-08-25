@@ -68,10 +68,26 @@ class TestMCD12(unittest.TestCase):
  
         drg_lst = de.get_drg_all(["L293"], [], "M")
         self.assertTrue("730" in drg_lst)
+
+    def test_n400_requires_male_gender(self):
+        de = DRGEngine(version="v43.1")
+
+        self.assertEqual(de.get_drg(["N400"], [], gender="M"), "726")
+        self.assertEqual(
+            de.get_drg(["N400", "A021"], [], gender="M"),
+            "725",
+        )
+        self.assertEqual(de.get_drg(["N400"], [], gender="F"), "000")
+
+    def test_gender_is_normalized_and_validated(self):
+        de = DRGEngine(version="v43.1")
+
+        self.assertEqual(de.get_drg(["N400"], [], gender="m"), "726")
+        with self.assertRaisesRegex(ValueError, "gender must be 'F' or 'M'"):
+            de.get_drg(["N400"], [], gender="unknown")
  
 if __name__=="__main__":
     unittest.main()
-
 
 
 
