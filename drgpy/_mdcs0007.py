@@ -74,7 +74,7 @@ def mdc00(x):
 
     return y
 
-def mdc01(x):
+def mdc01(x, version=40):
     y = []
     if x["_MDC01"] == 0:
         return y
@@ -101,7 +101,9 @@ def mdc01(x):
         y.append("024")
 
     # 025 - 027
-    if x["025&026&027|CRANIOTOMY ORPCS"] > 0:
+    craniotomy = (x["025&026&027|CRANIOTOMY ORPCS"] +
+                  x["025&026&027|ORPCS"])
+    if craniotomy > 0:
         if x["_MCC"] > 0:
             y.append("025")
         elif x["_CC"] > 0:
@@ -469,7 +471,7 @@ def mdc03(x):
 
     return y
 
-def mdc04(x):
+def mdc04(x, version=40):
 
     y = []
     if x["_MDC04"] == 0:
@@ -499,6 +501,9 @@ def mdc04(x):
         y.append("207")   
     elif x["207&208|MECHANICAL VENTILATION <96 HOURS NON-ORPCS"] > 0:
         y.append("208")
+
+    if version >= 41 and x["173|PULMONARY EMBOLISM PDX"] * x["173|AND ORPCS"] > 0:
+        y.append("173")
 
     # 175 - 176
     if x["175&176|PDX"] > 0:
@@ -611,6 +616,70 @@ def mdc05(x, version):
     y = []
     if x["_MDC05"] == 0:
         return y
+
+    if version >= 43:
+        if ((x["209|ORPCS"] * x["209|WITH ONE OF THE FOLLOWING"]) +
+                x["209|OR ORPCS"] + x["209|OR ORPCS*"] + x["209|OR ORPCS**"] > 0):
+            y.append("209")
+
+    if version >= 41:
+        aortic = "212|THREE CONDITIONS MUST BE MET FIRST CONDITION: SELECT ONE PROCEDURE FROM AORTIC VALVE PROCEDURE AORTIC VALVE PROCEDURE"
+        mitral = "212|SECOND CONDITION: SELECT ONE PROCEDURE FROM MITRAL VALVE PROCEDURE MITRAL VALVE PROCEDURE"
+        concomitant = "212|THIRD CONDITION: SELECT AT LEAST ONE PROCEDURE FROM CONCOMITANT PROCEDURE CONCOMITANT ORPCS"
+        if x[aortic] * x[mitral] * (x[concomitant] + x["212|CONCOMITANT NON-ORPCS"]) > 0:
+            y.append("212")
+
+    if version >= 43 and x["213|ONE OF THE FOLLOWING ORPCS"] * x["213|WITH ONE OF THE ORPCS"] > 0:
+        y.append("213")
+
+    if version >= 41:
+        defibrillator = (x["275&276&277|CARDIAC DEFIBRILLATOR IMPLANT ORPCS"] +
+                        x["276&277|CARDIAC DEFIBRILLATOR IMPLANT ORPCS"])
+        catheterization = (x["275&276&277|CARDIAC CATHETERIZATION NON-ORPCS"] +
+                           x["275|CARDIAC CATHETERIZATION NON-ORPCS"])
+        if defibrillator * catheterization * x["_MCC"] > 0:
+            y.append("275")
+        elif (defibrillator +
+              x["276&277|CAROTID SINUS NEUROSTIMULATOR ORPCS"] > 0):
+            y.append("276" if x["_MCC"] > 0 else "277")
+
+        if x["278&279|ORPCS"] > 0:
+            y.append("278" if x["_MCC"] > 0 else "279")
+
+    if version >= 42:
+        laa = "317|TWO CONDITIONS MUST BE MET FIRST CONDITION: SELECT ONE PROCEDURE FROM LEFT ATRIAL APPENDAGE CLOSURE PROCEDURE LEFT ATRIAL APPENDAGE CLOSURE PROCEDURE"
+        ablation = "317|SECOND CONDITION: SELECT ONE PROCEDURE FROM CARDIAC ABLATION PROCEDURE CARDIAC ABLATION PROCEDURE"
+        if x[laa] * x[ablation] > 0:
+            y.append("317")
+
+    if version >= 43:
+        atherectomy = x["318|CORONARY ATHERECTOMY ORPCS"]
+        atherectomy_device = x["359&360|CORONARY ATHERECTOMY ORPCS"] * x["359&360|INTRALUMINAL DEVICE ORPCS"]
+        if atherectomy_device > 0:
+            y.append("359" if x["_MCC"] > 0 else "360")
+        elif atherectomy > 0:
+            y.append("318")
+
+    if version >= 41:
+        lithotripsy = (x["323&324&325|LITHOTRIPSY ORPCS"] +
+                       x["323&324|LITHOTRIPSY ORPCS"])
+        intraluminal_device = (x["323&324&325|INTRALUMINAL DEVICE ORPCS"] +
+                              x["323&324|INTRALUMINAL DEVICE ORPCS"])
+        if lithotripsy * intraluminal_device > 0:
+            y.append("323" if x["_MCC"] > 0 else "324")
+        elif lithotripsy + x["325|LITHOTRIPSY ORPCS"] > 0:
+            y.append("325")
+
+        device = (x["321&322|DRUG-ELUTING INTRALUMINAL DEVICE"] +
+                  x["321&322|NON DRUG-ELUTING INTRALUMINAL DEVICE"] +
+                  x["321&322|PERCUTANEOUS CARDIOVASCULAR PROCEDURE WITHOUT INTRALUMINAL DEVICE ORPCS"])
+        artery_count = (x["321&322|ONE ARTERY"] + 2 * x["321&322|TWO ARTERIES"] +
+                        3 * x["321&322|THREE ARTERIES"] + 4 * x["321&322|FOUR OR MORE ARTERIES"])
+        device_count = (2 * x["321&322|TWO INTRALUMINAL DEVICES"] +
+                        3 * x["321&322|THREE INTRALUMINAL DEVICES"] +
+                        4 * x["321&322|FOUR OR MORE INTRALUMINAL DEVICES"])
+        if device > 0:
+            y.append("321" if x["_MCC"] > 0 or artery_count >= 4 or device_count >= 4 else "322")
 
     # 215
     if x["215|ORPCS"] > 0:
@@ -766,7 +835,7 @@ def mdc05(x, version):
     
     
     # This section applies to v38+
-    if version > "v37":
+    if 38 <= version <= 40:
         s1 = '246&247|PERCUTANEOUS CARDIOVASCULAR PROCEDURE WITHOUT STENT ORPCS'
         s2 = '246&247|OR NON-ORPCS'
         s3 = '246&247|DRUG-ELUTING STENT'
@@ -967,7 +1036,7 @@ def mdc05(x, version):
             
     return y
 
-def mdc06(x):
+def mdc06(x, version=40):
 
     y = []
     if x["_MDC06"] == 0:
@@ -1005,7 +1074,14 @@ def mdc06(x):
         else:
             y.append("337")
         
-    if x["338&339&340&341&342&343|APPENDECTOMY ORPCS"] > 0:
+    if version >= 41 and x["397&398&399|APPENDECTOMY ORPCS"] > 0:
+        if x["_MCC"] > 0:
+            y.append("397")
+        elif x["_CC"] > 0:
+            y.append("398")
+        else:
+            y.append("399")
+    elif x["338&339&340&341&342&343|APPENDECTOMY ORPCS"] > 0:
         if x["338&339&340&341&342&343|COMPLICATED PDX PDX"] > 0:
             if x["_MCC"] > 0:
                 y.append("338")
@@ -1250,6 +1326,3 @@ def mdc07(x):
             y.append("446")
 
     return y
-
-
-

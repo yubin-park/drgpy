@@ -1,0 +1,4 @@
+recursive-include drgpy/data/v* *.txt
+prune drgpy/data/diffs
+exclude drgpy/data/pbl-049_hcpcs-drg_defman.txt
+global-exclude .DS_Store *.py[cod]

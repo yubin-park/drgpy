@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drgpy"
+version = "0.1.0"
+description = "Assign diagnosis and procedure codes to Medicare Severity Diagnosis Related Groups (MS-DRGs)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+license-files = ["LICENSE.txt"]
+authors = [
+    { name = "Yubin Park", email = "yubin.park@gmail.com" },
+]
+keywords = ["healthcare", "icd-10", "medicare", "ms-drg"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Healthcare Industry",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/yubin-park/drgpy"
+Issues = "https://github.com/yubin-park/drgpy/issues"
+Repository = "https://github.com/yubin-park/drgpy.git"
+
+[dependency-groups]
+test = ["pytest>=8"]
+build = ["build>=1.2", "twine>=6"]
+dev = [
+    { include-group = "test" },
+    { include-group = "build" },
+]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ["drgpy*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+drgpy = ["data/v*/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
