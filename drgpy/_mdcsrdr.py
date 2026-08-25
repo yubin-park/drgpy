@@ -7,6 +7,9 @@ from drgpy._resources import open_text
 #dx_pttrn = "[A-TV-Z][0-9][0-9AB][0-9A-TV-Z]{0,4}"
 dx_pttrn = "[A-Z][0-9][0-9AB][0-9A-TV-Z]{0,4}" # NOTE: COVID-19 starts with "U"
 pr_pttrn = "[A-HJ-NP-Z0-9]{7}"
+_code_line_re = re.compile(
+    r"(?:[A-HJ-NP-Z0-9]{7}|[A-Z][0-9][0-9AB][0-9A-TV-Z]{0,4})\*?\s"
+)
 
 def shorten(x):
     x = " ".join(x.upper().split())
@@ -103,7 +106,9 @@ def parse_D(line, cursor, cache, _cursor):
         cache["D"] += (" " + phrase)
 
 def is_E(line, cursor):
-    return (cursor in {"D", "E"} and line[:2] == "  ")
+    if cursor not in {"D", "E"}:
+        return False
+    return line[:2] == "  " or bool(_code_line_re.match(line))
 
 def parse_E(line, cursor, dxmap, prmap, cache, _cursor):
 
@@ -172,10 +177,10 @@ def read(fn, dxmap, prmap):
                 cursor = "B"
             elif is_C(line, cursor):
                 cursor = "C"
-            elif is_D(line, cursor):
-                cursor = "D"
             elif is_E(line, cursor):
                 cursor = "E"
+            elif is_D(line, cursor):
+                cursor = "D"
 
             if cursor == "A":
                 parse_A(line, cursor, dxmap, cache)            

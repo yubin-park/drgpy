@@ -276,7 +276,12 @@ Apache 2.0
 
 ## Authors
 
-Yubin Park, PhD
+| Contributor | Contribution |
+|---|---|
+| **Yubin Park, PhD** ([@yubin-park](https://github.com/yubin-park)) | Original library, v36–v40 data and grouper logic |
+| **Shuo Yang** ([@syangdh](https://github.com/syangdh)) | v41 and v42 CMS data and initial modern-version routing |
+| **Nikolaos Vergos** ([@nvergos](https://github.com/nvergos)) | v43 data, modern parser and grouper concordance fixes |
+| **Svdmln** ([@Svdmln](https://github.com/Svdmln)) | Package-data and `importlib.resources` improvements |
 
 ## References
 

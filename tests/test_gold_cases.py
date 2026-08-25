@@ -110,6 +110,52 @@ class TestGoldCases(unittest.TestCase):
                     expected,
                 )
 
+    def test_ported_concordance_regressions(self):
+        cases = [
+            (
+                "disc_device_takes_priority",
+                ["Z9716"],
+                ["005W3ZZ", "0RH03BZ"],
+                "518",
+            ),
+            (
+                "delivery_with_only_excluded_or_procedure",
+                ["Z640", "Z370"],
+                ["10D07Z3", "0KQM0ZZ"],
+                "807",
+            ),
+            (
+                "delivery_with_additional_nonexcluded_or_procedure",
+                ["Z640", "Z370"],
+                ["10D07Z3", "0KQM0ZZ", "0W3N0ZZ"],
+                "768",
+            ),
+            (
+                "delivery_or_procedure_ignores_except_list",
+                ["Z640", "Z370"],
+                ["10D17Z9", "0KQM0ZZ"],
+                "768",
+            ),
+            (
+                "newborn_significant_problem_precedes_normal_newborn",
+                ["P003", "P221"],
+                [],
+                "794",
+            ),
+            (
+                "normal_newborn_fallback_with_secondary",
+                ["Z3800", "P599"],
+                [],
+                "795",
+            ),
+        ]
+        for name, diagnoses, procedures, expected in cases:
+            with self.subTest(name=name, expected=expected):
+                self.assertEqual(
+                    self.engine.get_drg(diagnoses, procedures),
+                    expected,
+                )
+
 
 if __name__ == "__main__":
     unittest.main()
