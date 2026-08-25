@@ -177,7 +177,7 @@ def mdc14(x, version):
         else:
             y.append("788")
 
-    if version=="v36":
+    if version == 36:
         # Version 36 had a different logic 
         # EXCEPT... TODO
         if (x["768|SDX"] * x["768|DELIVERY ORPCS"] > 0 and 
@@ -319,11 +319,18 @@ def mdc16(x):
  
     return y
 
-def mdc17(x):
+def mdc17(x, version=40):
 
     y = []
     if x["_MDC17"] == 0:
         return y
+
+    if version >= 42:
+        other_procedures = "850|ANY OTHER ORPCS NOT LISTED IN DRGS 820-822 OR ANY OF THE FOLLOWING NON-ORPCS"
+        if (x["850|PDX"] > 0 and
+                ((x["820&821&822|ORPCS"] == 0 and x["_ORPCS_ANY"] > 0) or
+                 x[other_procedures] > 0)):
+            y.append("850")
 
     if x["820&821&822|PDX"] * x["820&821&822|ORPCS"] > 0:
         if x["_MCC"] > 0:
@@ -589,7 +596,6 @@ def mdc21(x):
             y.append("923")
 
     return y
-
 
 
 

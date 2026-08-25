@@ -1,7 +1,8 @@
 import csv
 import re
-from pkg_resources import resource_filename as rscfn
 from collections import defaultdict
+
+from drgpy._resources import open_text
 
 #dx_pttrn = "[A-TV-Z][0-9][0-9AB][0-9A-TV-Z]{0,4}"
 dx_pttrn = "[A-Z][0-9][0-9AB][0-9A-TV-Z]{0,4}" # NOTE: COVID-19 starts with "U"
@@ -55,8 +56,8 @@ def is_A(line, cursor):
     return (line[1:3] == "==")
 
 def parse_A(line, cursor, dxmap, cache):
-    mdc_lst = re.findall("MDC\s(\d{2})\s", line)
-    dx_lst = re.findall("\s{2}" + dx_pttrn + "\s+", line)
+    mdc_lst = re.findall(r"MDC\s(\d{2})\s", line)
+    dx_lst = re.findall(r"\s{2}" + dx_pttrn + r"\s+", line)
 
     if len(mdc_lst) > 0:
         cache["A"] = "_MDC" + mdc_lst[0] 
@@ -73,7 +74,7 @@ def is_C(line, cursor):
 
 def parse_C(line, cursor, cache, _cursor):
 
-    drg_lst = re.findall("DRG\s(\d{3})\s", line)
+    drg_lst = re.findall(r"DRG\s(\d{3})\s", line)
     if len(drg_lst) > 0:
         drg = drg_lst[0]
         if _cursor != "C":
@@ -111,9 +112,9 @@ def parse_E(line, cursor, dxmap, prmap, cache, _cursor):
         update_mapping(dxmap, prmap, cache)
         return
 
-    dx_lst = re.findall(dx_pttrn + "\s+", line)
-    pr_lst = re.findall(pr_pttrn + "\*?\s+", line)
-    pr_lst += re.findall("and\s"+pr_pttrn + "\*?\s+", line)
+    dx_lst = re.findall(dx_pttrn + r"\s+", line)
+    pr_lst = re.findall(pr_pttrn + r"\*?\s+", line)
+    pr_lst += re.findall(r"and\s" + pr_pttrn + r"\*?\s+", line)
     codetype = get_codetype(dx_lst, pr_lst, cache)
     tokens = [x.replace("*", "") for x in line.split()]
     code = tokens[0]
@@ -159,9 +160,7 @@ def read(fn, dxmap, prmap):
             "E": [],
             "_": defaultdict(dict),
             "L": {}}
-    fn = rscfn(__name__, fn)
-   
-    with open(fn, "r") as fp:
+    with open_text(fn) as fp:
         for line in fp:
             line = line.replace("\n","")
 
@@ -214,4 +213,3 @@ if __name__=="__main__":
     #from pprint import pprint
     #pprint(x)
     print(dxmap["I2601"])
-

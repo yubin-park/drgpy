@@ -1,12 +1,20 @@
 import csv
 import re
-from pkg_resources import resource_filename as rscfn
+from dataclasses import dataclass
+
+from drgpy._resources import open_text
+
+
+@dataclass
+class AppendixCData:
+    ccmap: dict
+    exmap: dict
+    drg_exclusions: dict
 
 def read_a(fn="data/appendix_A.txt"):
     drgmap = {}
     is_drg_section = False
-    fn = rscfn(__name__, fn)
-    with open(fn, "r") as fp:
+    with open_text(fn) as fp:
         for line in fp:
             drg = line[:4].strip()
             if drg == "DRG":
@@ -27,51 +35,82 @@ def read_a(fn="data/appendix_A.txt"):
 def read_c(fn="data/appendix_C.txt"):
     ccmap = {}
     exmap = {}
-    is_cc_section = False
-    is_pdx_section = False
-    is_part2 = False
-    pdx_code = ""
-    fn = rscfn(__name__, fn)
-    with open(fn, "r") as fp:
+    drg_exclusions = {}
+    section = "intro"
+    pdx_collection = None
+    exclusion_drgs = ()
+    cc_pattern = re.compile(
+        r"^\s*([A-Z][A-Z0-9]{2,6})\s+(MCC|CC)(?:\s+(\d{2}))?\s+(\d{4}):"
+    )
+    code_pattern = re.compile(r"^\s*([A-Z][A-Z0-9]{2,6})(?:\s|$)")
+    collection_pattern = re.compile(r"PDX collection\s+(\d{4})")
+    drg_pattern = re.compile(r"^(?:MDC \d+ )?DRGs?\s+(\d{3})(?:-(\d{3}))?")
+
+    with open_text(fn) as fp:
         for line in fp:
-            if line.strip() == "":
-                continue
-            if "I10 Dx  Lev PDX Exclusions" in line:
-                is_cc_section = True
-                continue
-            elif "PDX collection " in line:
-                is_pdx_section = True
-                is_cc_section = False
-                pdx = line.split("collection")[1].strip()
-                continue
-            elif "Appendix C Part 2:" in line:
-                is_part2 = True
-                is_pdx_section = False
+            stripped = line.strip()
+            if not stripped:
                 continue
 
-            if is_cc_section:
-                dx = line[:9].strip()
-                cc = line[9:12].strip()
-                pdx = line[12:29].strip().split(":")[0]
-                ccmap[dx] = {"pdx": pdx,
-                            "level": cc,
-                            "aowa": False} # aowa: apply only when alive
-            elif is_pdx_section:
-                dx = line.split()[0]
-                if pdx not in exmap:
-                    exmap[pdx] = []
-                exmap[pdx].append(dx)
-            elif is_part2:
-                dx = line[:8].strip()
-                ccmap[dx]["aowa"] = True
-    return ccmap, exmap
+            if stripped.startswith("Appendix C Part 2:"):
+                section = "alive"
+                pdx_collection = None
+                continue
+            if (stripped.startswith("Appendix C Part 3:") or
+                    stripped == "Secondary Diagnosis CC/MCC Severity Exclusions in Select MS-DRGs"):
+                section = "drg_exclusions"
+                pdx_collection = None
+                continue
+            if "I10 Dx" in line and "Lev" in line:
+                section = "cc"
+                continue
+
+            collection_match = collection_pattern.search(line)
+            if collection_match and section in {"cc", "pdx_exclusions"}:
+                section = "pdx_exclusions"
+                pdx_collection = collection_match.group(1)
+                exmap.setdefault(pdx_collection, set())
+                continue
+
+            if section == "cc":
+                match = cc_pattern.match(line)
+                if match:
+                    dx, level, hac, pdx_collection_code = match.groups()
+                    ccmap[dx] = {
+                        "pdx": pdx_collection_code,
+                        "level": level,
+                        "hac": hac,
+                        "aowa": False,
+                    }
+            elif section == "pdx_exclusions" and pdx_collection:
+                match = code_pattern.match(line)
+                if match:
+                    exmap[pdx_collection].add(match.group(1))
+            elif section == "alive":
+                match = code_pattern.match(line)
+                if match and match.group(1) in ccmap:
+                    ccmap[match.group(1)]["aowa"] = True
+            elif section == "drg_exclusions":
+                drg_match = drg_pattern.match(stripped)
+                if drg_match:
+                    start = int(drg_match.group(1))
+                    end = int(drg_match.group(2) or start)
+                    exclusion_drgs = tuple(str(drg).zfill(3) for drg in range(start, end + 1))
+                    for drg in exclusion_drgs:
+                        drg_exclusions.setdefault(drg, set())
+                    continue
+                match = code_pattern.match(line)
+                if match:
+                    for drg in exclusion_drgs:
+                        drg_exclusions[drg].add(match.group(1))
+
+    return AppendixCData(ccmap, exmap, drg_exclusions)
 
 def read_d(fn="data/appendix_D_E.txt"):
     rankmap = {}
     rank = 0
     is_rank_section = False
-    fn = rscfn(__name__, fn)
-    with open(fn, "r") as fp:
+    with open_text(fn) as fp:
         for line in fp:
             if line[:3] == "MDC":
                 is_rank_section = True
@@ -93,8 +132,7 @@ def read_e(fn="data/appendix_D_E.txt"):
     # orpcs: Operating Room Procedures
     orpcsmap = {}
     is_orpcs_section = False
-    fn = rscfn(__name__, fn)
-    with open(fn, "r") as fp:
+    with open_text(fn) as fp:
         for line in fp:
             if line.strip() == "CODE    MDC MS-DRG  SURGICAL CATEGORY":
                 is_orpcs_section = True
@@ -120,10 +158,9 @@ def read_f(fn="data/appendix_F_J.txt"):
 
     oormap = {} # oor = Only Operating Room
     is_oor_section = False
-    fn = rscfn(__name__, fn)
-    with open(fn, "r") as fp:
+    with open_text(fn) as fp:
         for line in fp:
-            if "DRG 989 NON-EXTENSIVE O.R. PROCEDURE" in line:
+            if "DRG 989 NON-EXTENSIVE O.R. PROCEDURE" in line.upper():
                 is_oor_section = True
                 continue
             elif is_oor_section and len(line) > 0 and line[0]==":":
@@ -141,7 +178,5 @@ def read_f(fn="data/appendix_F_J.txt"):
 if __name__=="__main__":
 
     read_e()
-
-
 
 

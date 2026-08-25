@@ -2,8 +2,7 @@
 
 `drgpy` is a Python library for assigning a combination of diagnosis and procedure codes to Diagnosis Related Groups (MS-DRG) that is used in Medicare inpatient reimbursement today.
 
-NOTE the current default version is configured as MSDRG v40. However, the latest version is not thoroughly tested yet. Please use at your own risk.
-Rawfiles: https://www.cms.gov/files/zip/icd-10-ms-drg-definitions-manual-files-v372.zip
+The default version is MS-DRG v43.1, effective April 1, 2026. Bundled versions range from v36 through v43.1.
 
 ## Installing
 
@@ -12,7 +11,7 @@ Installing from the source:
 ```
 $ git clone git@github.com:yubin-park/drgpy.git
 $ cd drgpy
-$ python setup.py develop
+$ python -m pip install --editable .
 ```
 
 Or, simply using `pip`:
@@ -20,6 +19,38 @@ Or, simply using `pip`:
 ```
 $ pip install drgpy
 ```
+
+## Development
+
+Install the standardized development dependency group and run the tests:
+
+```bash
+$ python -m venv .venv
+$ source .venv/bin/activate
+$ python -m pip install --upgrade pip
+$ python -m pip install --editable . --group dev
+$ python -m pytest
+```
+
+Build and validate the source and wheel distributions:
+
+```bash
+$ python -m build
+$ python -m twine check dist/*
+```
+
+### Real-World Validation
+
+Real inpatient claim data may be used to discover mismatches, but raw claim
+rows, identifiers, service dates, and complete claim fingerprints should not be
+committed to this repository. Convert each confirmed mismatch into the smallest
+synthetic diagnosis/procedure combination that reproduces the relevant CMS rule,
+then add that minimized case to the version tests.
+
+Cases requiring unavailable inputs such as age, sex, or POA indicators should be
+tracked separately rather than treated as grouper mismatches. A successful claim
+sample comparison is useful regression evidence, but does not establish complete
+parity with the official CMS grouper.
 
 ## File Structure
 
@@ -35,7 +66,7 @@ $ pip install drgpy
 - `tests/`: test scripts to check the validity of the outputs.
 - `LICENSE.txt`: Apache 2.0.
 - `README.md`: This README file.
-- `setup.py`: a set-up script.
+- `pyproject.toml`: package metadata, build configuration, and development dependency groups.
 
 ## Code Examples
 
@@ -45,9 +76,9 @@ NOTE that all functions used below have docstrings.
 If you want to see the input parameter specifications,
 please type `print(<instance>.<function>.__doc__)`.
 
-### A Wrapper Model for All Versions
+### Date-Based Version Selection
 
-To use a wrapper model for all versions from 36 to 40, please use as follows:
+Use the wrapper to select the version effective on the supplied discharge date:
 
 ```python
 >>> from drgpy.msdrg_allvers import DRGEngineAllVers
@@ -66,7 +97,8 @@ To use a wrapper model for all versions from 36 to 40, please use as follows:
                 YYYY-MM-DD format
                 Depending on the date of the claim,
                 the engine will choose the appropriate version.
-                e.g. date between 2020-10-01 will use v39...
+                For example, 2025-10-01 selects v43 and
+                2026-04-01 selects v43.1.
         gender: str
                 "F" or "M"
         is_alive: boolean
@@ -79,7 +111,7 @@ NOTE that this usage doesn't require the date field.
 
 ```python
 >>> from drgpy.msdrg import DRGEngine
->>> de = DRGEngine(version="v40")
+>>> de = DRGEngine(version="v43.1")
 >>> print(de.get_drg.__doc__)
 
         Return the corresponding DRG code for the diagnoses and procedures
@@ -103,6 +135,55 @@ NOTE that this usage doesn't require the date field.
 '002'
 >>>
 ```
+
+Calling `DRGEngine()` without a version uses the latest bundled version. POA
+indicators may be supplied as a list aligned with the diagnoses or as a mapping
+keyed by diagnosis code. Missing POA values default to `"Y"` for backward
+compatibility.
+
+```python
+from drgpy.msdrg import DRGEngine
+
+engine = DRGEngine()
+drg = engine.get_drg(
+    ["I21A1", "E0800"],
+    [],
+    poa=["Y", "N"],
+)
+```
+
+### Outcome Simulation
+
+Use `get_code_drg_candidates` to inspect the DRGs directly referenced by a
+single diagnosis or procedure in the bundled CMS value sets. These are broad
+rule candidates, not final grouped outcomes.
+
+```python
+engine.get_code_drg_candidates("A419", code_type="diagnosis")
+engine.get_code_drg_candidates("0SG0071", code_type="procedure")
+```
+
+Use `simulate_drg_permutations` to group the same code set once for each
+diagnosis selected as principal. All remaining diagnoses are treated as
+secondary diagnoses. Procedure order and secondary-diagnosis order are not
+permuted because they do not change grouping semantics.
+
+```python
+simulations = engine.simulate_drg_permutations(
+    ["I469", "A021"],
+    ["B2151ZZ"],
+)
+
+possible_drgs = engine.get_possible_drgs(
+    ["I469", "A021"],
+    ["B2151ZZ"],
+)
+```
+
+Each simulation contains the selected principal diagnosis, secondary
+diagnoses, procedures, selected DRG, and all matching DRGs before hierarchy
+selection. These helpers support coding scenario review and audit workflows;
+they do not determine documentation or billing appropriateness.
 
 Please refer to the test scripts under the `tests/` folder if you want to see other example use cases.
 

@@ -1,0 +1,784 @@
+:======================================================================:
+|     Appendix A List of MS-DRGs Version 42.0     |
+:======================================================================:
+
+Appendix A contains a list of each MS-DRG with a specification of the
+MDC and whether the MS-DRG is medical or surgical. Some MS-DRGs which
+contain patients from multiple MDCs (e.g., 014 Allogeneic Bone Marrow Transplant)
+do not have an MDC specified. The letter M is used to designate a medical
+MS-DRG and the letter P is used to designate a surgical MS-DRG.
+
+DRG MDC MS Description
+001     P  Heart Transplant or Implant of Heart Assist System with MCC
+002     P  Heart Transplant or Implant of Heart Assist System without MCC
+003     P  ECMO or Tracheostomy with MV >96 Hours or Principal Diagnosis Except Face, Mouth and Neck with Major O.R. Procedures
+004     P  Tracheostomy with MV >96 Hours or Principal Diagnosis Except Face, Mouth and Neck without Major O.R. Procedures
+005     P  Liver Transplant with MCC or Intestinal Transplant
+006     P  Liver Transplant without MCC
+007     P  Lung Transplant
+008     P  Simultaneous Pancreas and Kidney Transplant
+010     P  Pancreas Transplant
+011     P  Tracheostomy for Face, Mouth and Neck Diagnoses or Laryngectomy with MCC
+012     P  Tracheostomy for Face, Mouth and Neck Diagnoses or Laryngectomy with CC
+013     P  Tracheostomy for Face, Mouth and Neck Diagnoses or Laryngectomy without CC/MCC
+014     M  Allogeneic Bone Marrow Transplant
+016     M  Autologous Bone Marrow Transplant with CC/MCC
+017     M  Autologous Bone Marrow Transplant without CC/MCC
+018     M  Chimeric Antigen Receptor (CAR) T-Cell and Other Immunotherapies
+019     P  Simultaneous Pancreas and Kidney Transplant with Hemodialysis
+020 01  P  Intracranial Vascular Procedures with Principal Diagnosis Hemorrhage with MCC
+021 01  P  Intracranial Vascular Procedures with Principal Diagnosis Hemorrhage with CC
+022 01  P  Intracranial Vascular Procedures with Principal Diagnosis Hemorrhage without CC/MCC
+023 01  P  Craniotomy with Major Device Implant or Acute Complex CNS Principal Diagnosis with MCC or Chemotherapy Implant or Epilepsy with Neurostimulator
+024 01  P  Craniotomy with Major Device Implant or Acute Complex CNS Principal Diagnosis without MCC
+025 01  P  Craniotomy and Endovascular Intracranial Procedures with MCC
+026 01  P  Craniotomy and Endovascular Intracranial Procedures with CC
+027 01  P  Craniotomy and Endovascular Intracranial Procedures without CC/MCC
+028 01  P  Spinal Procedures with MCC
+029 01  P  Spinal Procedures with CC or Spinal Neurostimulators
+030 01  P  Spinal Procedures without CC/MCC
+031 01  P  Ventricular Shunt Procedures with MCC
+032 01  P  Ventricular Shunt Procedures with CC
+033 01  P  Ventricular Shunt Procedures without CC/MCC
+034 01  P  Carotid Artery Stent Procedures with MCC
+035 01  P  Carotid Artery Stent Procedures with CC
+036 01  P  Carotid Artery Stent Procedures without CC/MCC
+037 01  P  Extracranial Procedures with MCC
+038 01  P  Extracranial Procedures with CC
+039 01  P  Extracranial Procedures without CC/MCC
+040 01  P  Peripheral, Cranial Nerve and Other Nervous System Procedures with MCC
+041 01  P  Peripheral, Cranial Nerve and Other Nervous System Procedures with CC or Peripheral Neurostimulator
+042 01  P  Peripheral, Cranial Nerve and Other Nervous System Procedures without CC/MCC
+052 01  M  Spinal Disorders and Injuries with CC/MCC
+053 01  M  Spinal Disorders and Injuries without CC/MCC
+054 01  M  Nervous System Neoplasms with MCC
+055 01  M  Nervous System Neoplasms without MCC
+056 01  M  Degenerative Nervous System Disorders with MCC
+057 01  M  Degenerative Nervous System Disorders without MCC
+058 01  M  Multiple Sclerosis and Cerebellar Ataxia with MCC
+059 01  M  Multiple Sclerosis and Cerebellar Ataxia with CC
+060 01  M  Multiple Sclerosis and Cerebellar Ataxia without CC/MCC
+061 01  M  Ischemic Stroke, Precerebral Occlusion or Transient Ischemia with Thrombolytic Agent with MCC
+062 01  M  Ischemic Stroke, Precerebral Occlusion or Transient Ischemia with Thrombolytic Agent with CC
+063 01  M  Ischemic Stroke, Precerebral Occlusion or Transient Ischemia with Thrombolytic Agent without CC/MCC
+064 01  M  Intracranial Hemorrhage or Cerebral Infarction with MCC
+065 01  M  Intracranial Hemorrhage or Cerebral Infarction with CC or TPA in 24 Hours
+066 01  M  Intracranial Hemorrhage or Cerebral Infarction without CC/MCC
+067 01  M  Nonspecific CVA and Precerebral Occlusion without Infarction with MCC
+068 01  M  Nonspecific CVA and Precerebral Occlusion without Infarction without MCC
+069 01  M  Transient Ischemia without Thrombolytic
+070 01  M  Nonspecific Cerebrovascular Disorders with MCC
+071 01  M  Nonspecific Cerebrovascular Disorders with CC
+072 01  M  Nonspecific Cerebrovascular Disorders without CC/MCC
+073 01  M  Cranial and Peripheral Nerve Disorders with MCC
+074 01  M  Cranial and Peripheral Nerve Disorders without MCC
+075 01  M  Viral Meningitis with CC/MCC
+076 01  M  Viral Meningitis without CC/MCC
+077 01  M  Hypertensive Encephalopathy with MCC
+078 01  M  Hypertensive Encephalopathy with CC
+079 01  M  Hypertensive Encephalopathy without CC/MCC
+080 01  M  Nontraumatic Stupor and Coma with MCC
+081 01  M  Nontraumatic Stupor and Coma without MCC
+082 01  M  Traumatic Stupor and Coma >1 Hour with MCC
+083 01  M  Traumatic Stupor and Coma >1 Hour with CC
+084 01  M  Traumatic Stupor and Coma >1 Hour without CC/MCC
+085 01  M  Traumatic Stupor and Coma <1 Hour with MCC
+086 01  M  Traumatic Stupor and Coma <1 Hour with CC
+087 01  M  Traumatic Stupor and Coma <1 Hour without CC/MCC
+088 01  M  Concussion with MCC
+089 01  M  Concussion with CC
+090 01  M  Concussion without CC/MCC
+091 01  M  Other Disorders of Nervous System with MCC
+092 01  M  Other Disorders of Nervous System with CC
+093 01  M  Other Disorders of Nervous System without CC/MCC
+094 01  M  Bacterial and Tuberculous Infections of Nervous System with MCC
+095 01  M  Bacterial and Tuberculous Infections of Nervous System with CC
+096 01  M  Bacterial and Tuberculous Infections of Nervous System without CC/MCC
+097 01  M  Non-Bacterial Infection of Nervous System Except Viral Meningitis with MCC
+098 01  M  Non-Bacterial Infection of Nervous System Except Viral Meningitis with CC
+099 01  M  Non-Bacterial Infection of Nervous System Except Viral Meningitis without CC/MCC
+100 01  M  Seizures with MCC
+101 01  M  Seizures without MCC
+102 01  M  Headaches with MCC
+103 01  M  Headaches without MCC
+113 02  P  Orbital Procedures with CC/MCC
+114 02  P  Orbital Procedures without CC/MCC
+115 02  P  Extraocular Procedures Except Orbit
+116 02  P  Intraocular Procedures with CC/MCC
+117 02  P  Intraocular Procedures without CC/MCC
+121 02  M  Acute Major Eye Infections with CC/MCC
+122 02  M  Acute Major Eye Infections without CC/MCC
+123 02  M  Neurological Eye Disorders
+124 02  M  Other Disorders of the Eye with MCC or Thrombolytic Agent
+125 02  M  Other Disorders of the Eye without MCC
+135 03  P  Sinus and Mastoid Procedures with CC/MCC
+136 03  P  Sinus and Mastoid Procedures without CC/MCC
+137 03  P  Mouth Procedures with CC/MCC
+138 03  P  Mouth Procedures without CC/MCC
+139 03  P  Salivary Gland Procedures
+140 03  P  Major Head and Neck Procedures with MCC
+141 03  P  Major Head and Neck Procedures with CC
+142 03  P  Major Head and Neck Procedures without CC/MCC
+143 03  P  Other Ear, Nose, Mouth and Throat O.R. Procedures with MCC
+144 03  P  Other Ear, Nose, Mouth and Throat O.R. Procedures with CC
+145 03  P  Other Ear, Nose, Mouth and Throat O.R. Procedures without CC/MCC
+146 03  M  Ear, Nose, Mouth and Throat Malignancy with MCC
+147 03  M  Ear, Nose, Mouth and Throat Malignancy with CC
+148 03  M  Ear, Nose, Mouth and Throat Malignancy without CC/MCC
+149 03  M  Dysequilibrium
+150 03  M  Epistaxis with MCC
+151 03  M  Epistaxis without MCC
+152 03  M  Otitis Media and URI with MCC
+153 03  M  Otitis Media and URI without MCC
+154 03  M  Other Ear, Nose, Mouth and Throat Diagnoses with MCC
+155 03  M  Other Ear, Nose, Mouth and Throat Diagnoses with CC
+156 03  M  Other Ear, Nose, Mouth and Throat Diagnoses without CC/MCC
+157 03  M  Dental and Oral Diseases with MCC
+158 03  M  Dental and Oral Diseases with CC
+159 03  M  Dental and Oral Diseases without CC/MCC
+163 04  P  Major Chest Procedures with MCC
+164 04  P  Major Chest Procedures with CC
+165 04  P  Major Chest Procedures without CC/MCC
+166 04  P  Other Respiratory System O.R. Procedures with MCC
+167 04  P  Other Respiratory System O.R. Procedures with CC
+168 04  P  Other Respiratory System O.R. Procedures without CC/MCC
+173 04  P  Ultrasound Accelerated and Other Thrombolysis with Principal Diagnosis Pulmonary Embolism
+175 04  M  Pulmonary Embolism with MCC or Acute Cor Pulmonale
+176 04  M  Pulmonary Embolism without MCC
+177 04  M  Respiratory Infections and Inflammations with MCC
+178 04  M  Respiratory Infections and Inflammations with CC
+179 04  M  Respiratory Infections and Inflammations without CC/MCC
+180 04  M  Respiratory Neoplasms with MCC
+181 04  M  Respiratory Neoplasms with CC
+182 04  M  Respiratory Neoplasms without CC/MCC
+183 04  M  Major Chest Trauma with MCC
+184 04  M  Major Chest Trauma with CC
+185 04  M  Major Chest Trauma without CC/MCC
+186 04  M  Pleural Effusion with MCC
+187 04  M  Pleural Effusion with CC
+188 04  M  Pleural Effusion without CC/MCC
+189 04  M  Pulmonary Edema and Respiratory Failure
+190 04  M  Chronic Obstructive Pulmonary Disease with MCC
+191 04  M  Chronic Obstructive Pulmonary Disease with CC
+192 04  M  Chronic Obstructive Pulmonary Disease without CC/MCC
+193 04  M  Simple Pneumonia and Pleurisy with MCC
+194 04  M  Simple Pneumonia and Pleurisy with CC
+195 04  M  Simple Pneumonia and Pleurisy without CC/MCC
+196 04  M  Interstitial Lung Disease with MCC
+197 04  M  Interstitial Lung Disease with CC
+198 04  M  Interstitial Lung Disease without CC/MCC
+199 04  M  Pneumothorax with MCC
+200 04  M  Pneumothorax with CC
+201 04  M  Pneumothorax without CC/MCC
+202 04  M  Bronchitis and Asthma with CC/MCC
+203 04  M  Bronchitis and Asthma without CC/MCC
+204 04  M  Respiratory Signs and Symptoms
+205 04  M  Other Respiratory System Diagnoses with MCC
+206 04  M  Other Respiratory System Diagnoses without MCC
+207 04  M  Respiratory System Diagnosis with Ventilator Support >96 Hours
+208 04  M  Respiratory System Diagnosis with Ventilator Support <=96 Hours
+212 05  P  Concomitant Aortic and Mitral Valve Procedures
+215 05  P  Other Heart Assist System Implant
+216 05  P  Cardiac Valve and Other Major Cardiothoracic Procedures with Cardiac Catheterization with MCC
+217 05  P  Cardiac Valve and Other Major Cardiothoracic Procedures with Cardiac Catheterization with CC
+218 05  P  Cardiac Valve and Other Major Cardiothoracic Procedures with Cardiac Catheterization without CC/MCC
+219 05  P  Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with MCC
+220 05  P  Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization with CC
+221 05  P  Cardiac Valve and Other Major Cardiothoracic Procedures without Cardiac Catheterization without CC/MCC
+228 05  P  Other Cardiothoracic Procedures with MCC
+229 05  P  Other Cardiothoracic Procedures without MCC
+231 05  P  Coronary Bypass with PTCA with MCC
+232 05  P  Coronary Bypass with PTCA without MCC
+233 05  P  Coronary Bypass with Cardiac Catheterization or Open Ablation with MCC
+234 05  P  Coronary Bypass with Cardiac Catheterization or Open Ablation without MCC
+235 05  P  Coronary Bypass without Cardiac Catheterization with MCC
+236 05  P  Coronary Bypass without Cardiac Catheterization without MCC
+239 05  P  Amputation for Circulatory System Disorders Except Upper Limb and Toe with MCC
+240 05  P  Amputation for Circulatory System Disorders Except Upper Limb and Toe with CC
+241 05  P  Amputation for Circulatory System Disorders Except Upper Limb and Toe without CC/MCC
+242 05  P  Permanent Cardiac Pacemaker Implant with MCC
+243 05  P  Permanent Cardiac Pacemaker Implant with CC
+244 05  P  Permanent Cardiac Pacemaker Implant without CC/MCC
+245 05  P  AICD Generator Procedures
+250 05  P  Percutaneous Cardiovascular Procedures without Intraluminal Device with MCC
+251 05  P  Percutaneous Cardiovascular Procedures without Intraluminal Device without MCC
+252 05  P  Other Vascular Procedures with MCC
+253 05  P  Other Vascular Procedures with CC
+254 05  P  Other Vascular Procedures without CC/MCC
+255 05  P  Upper Limb and Toe Amputation for Circulatory System Disorders with MCC
+256 05  P  Upper Limb and Toe Amputation for Circulatory System Disorders with CC
+257 05  P  Upper Limb and Toe Amputation for Circulatory System Disorders without CC/MCC
+258 05  P  Cardiac Pacemaker Device Replacement with MCC
+259 05  P  Cardiac Pacemaker Device Replacement without MCC
+260 05  P  Cardiac Pacemaker Revision Except Device Replacement with MCC
+261 05  P  Cardiac Pacemaker Revision Except Device Replacement with CC
+262 05  P  Cardiac Pacemaker Revision Except Device Replacement without CC/MCC
+263 05  P  Vein Ligation and Stripping
+264 05  P  Other Circulatory System O.R. Procedures
+265 05  P  AICD Lead Procedures
+266 05  P  Endovascular Cardiac Valve Replacement and Supplement Procedures with MCC
+267 05  P  Endovascular Cardiac Valve Replacement and Supplement Procedures without MCC
+268 05  P  Aortic and Heart Assist Procedures Except Pulsation Balloon with MCC
+269 05  P  Aortic and Heart Assist Procedures Except Pulsation Balloon without MCC
+270 05  P  Other Major Cardiovascular Procedures with MCC
+271 05  P  Other Major Cardiovascular Procedures with CC
+272 05  P  Other Major Cardiovascular Procedures without CC/MCC
+273 05  P  Percutaneous and Other Intracardiac Procedures with MCC
+274 05  P  Percutaneous and Other Intracardiac Procedures without MCC
+275 05  P  Cardiac Defibrillator Implant with Cardiac Catheterization and MCC
+276 05  P  Cardiac Defibrillator Implant with MCC or Carotid Sinus Neurostimulator
+277 05  P  Cardiac Defibrillator Implant without MCC
+278 05  P  Ultrasound Accelerated and Other Thrombolysis of Peripheral Vascular Structures with MCC
+279 05  P  Ultrasound Accelerated and Other Thrombolysis of Peripheral Vascular Structures without MCC
+280 05  M  Acute Myocardial Infarction, Discharged Alive with MCC
+281 05  M  Acute Myocardial Infarction, Discharged Alive with CC
+282 05  M  Acute Myocardial Infarction, Discharged Alive without CC/MCC
+283 05  M  Acute Myocardial Infarction, Expired with MCC
+284 05  M  Acute Myocardial Infarction, Expired with CC
+285 05  M  Acute Myocardial Infarction, Expired without CC/MCC
+286 05  M  Circulatory Disorders Except AMI, with Cardiac Catheterization with MCC
+287 05  M  Circulatory Disorders Except AMI, with Cardiac Catheterization without MCC
+288 05  M  Acute and Subacute Endocarditis with MCC
+289 05  M  Acute and Subacute Endocarditis with CC
+290 05  M  Acute and Subacute Endocarditis without CC/MCC
+291 05  M  Heart Failure and Shock with MCC
+292 05  M  Heart Failure and Shock with CC
+293 05  M  Heart Failure and Shock without CC/MCC
+294 05  M  Deep Vein Thrombophlebitis with CC/MCC
+295 05  M  Deep Vein Thrombophlebitis without CC/MCC
+296 05  M  Cardiac Arrest, Unexplained with MCC
+297 05  M  Cardiac Arrest, Unexplained with CC
+298 05  M  Cardiac Arrest, Unexplained without CC/MCC
+299 05  M  Peripheral Vascular Disorders with MCC
+300 05  M  Peripheral Vascular Disorders with CC
+301 05  M  Peripheral Vascular Disorders without CC/MCC
+302 05  M  Atherosclerosis with MCC
+303 05  M  Atherosclerosis without MCC
+304 05  M  Hypertension with MCC
+305 05  M  Hypertension without MCC
+306 05  M  Cardiac Congenital and Valvular Disorders with MCC
+307 05  M  Cardiac Congenital and Valvular Disorders without MCC
+308 05  M  Cardiac Arrhythmia and Conduction Disorders with MCC
+309 05  M  Cardiac Arrhythmia and Conduction Disorders with CC
+310 05  M  Cardiac Arrhythmia and Conduction Disorders without CC/MCC
+311 05  M  Angina Pectoris
+312 05  M  Syncope and Collapse
+313 05  M  Chest Pain
+314 05  M  Other Circulatory System Diagnoses with MCC
+315 05  M  Other Circulatory System Diagnoses with CC
+316 05  M  Other Circulatory System Diagnoses without CC/MCC
+317 05  P  Concomitant Left Atrial Appendage Closure and Cardiac Ablation
+319 05  P  Other Endovascular Cardiac Valve Procedures with MCC
+320 05  P  Other Endovascular Cardiac Valve Procedures without MCC
+321 05  P  Percutaneous Cardiovascular Procedures with Intraluminal Device with MCC or 4+ Arteries/Intraluminal Devices
+322 05  P  Percutaneous Cardiovascular Procedures with Intraluminal Device without MCC
+323 05  P  Coronary Intravascular Lithotripsy with Intraluminal Device with MCC
+324 05  P  Coronary Intravascular Lithotripsy with Intraluminal Device without MCC
+325 05  P  Coronary Intravascular Lithotripsy without Intraluminal Device
+326 06  P  Stomach, Esophageal and Duodenal Procedures with MCC
+327 06  P  Stomach, Esophageal and Duodenal Procedures with CC
+328 06  P  Stomach, Esophageal and Duodenal Procedures without CC/MCC
+329 06  P  Major Small and Large Bowel Procedures with MCC
+330 06  P  Major Small and Large Bowel Procedures with CC
+331 06  P  Major Small and Large Bowel Procedures without CC/MCC
+332 06  P  Rectal Resection with MCC
+333 06  P  Rectal Resection with CC
+334 06  P  Rectal Resection without CC/MCC
+335 06  P  Peritoneal Adhesiolysis with MCC
+336 06  P  Peritoneal Adhesiolysis with CC
+337 06  P  Peritoneal Adhesiolysis without CC/MCC
+344 06  P  Minor Small and Large Bowel Procedures with MCC
+345 06  P  Minor Small and Large Bowel Procedures with CC
+346 06  P  Minor Small and Large Bowel Procedures without CC/MCC
+347 06  P  Anal and Stomal Procedures with MCC
+348 06  P  Anal and Stomal Procedures with CC
+349 06  P  Anal and Stomal Procedures without CC/MCC
+350 06  P  Inguinal and Femoral Hernia Procedures with MCC
+351 06  P  Inguinal and Femoral Hernia Procedures with CC
+352 06  P  Inguinal and Femoral Hernia Procedures without CC/MCC
+353 06  P  Hernia Procedures Except Inguinal and Femoral with MCC
+354 06  P  Hernia Procedures Except Inguinal and Femoral with CC
+355 06  P  Hernia Procedures Except Inguinal and Femoral without CC/MCC
+356 06  P  Other Digestive System O.R. Procedures with MCC
+357 06  P  Other Digestive System O.R. Procedures with CC
+358 06  P  Other Digestive System O.R. Procedures without CC/MCC
+368 06  M  Major Esophageal Disorders with MCC
+369 06  M  Major Esophageal Disorders with CC
+370 06  M  Major Esophageal Disorders without CC/MCC
+371 06  M  Major Gastrointestinal Disorders and Peritoneal Infections with MCC
+372 06  M  Major Gastrointestinal Disorders and Peritoneal Infections with CC
+373 06  M  Major Gastrointestinal Disorders and Peritoneal Infections without CC/MCC
+374 06  M  Digestive Malignancy with MCC
+375 06  M  Digestive Malignancy with CC
+376 06  M  Digestive Malignancy without CC/MCC
+377 06  M  Gastrointestinal Hemorrhage with MCC
+378 06  M  Gastrointestinal Hemorrhage with CC
+379 06  M  Gastrointestinal Hemorrhage without CC/MCC
+380 06  M  Complicated Peptic Ulcer with MCC
+381 06  M  Complicated Peptic Ulcer with CC
+382 06  M  Complicated Peptic Ulcer without CC/MCC
+383 06  M  Uncomplicated Peptic Ulcer with MCC
+384 06  M  Uncomplicated Peptic Ulcer without MCC
+385 06  M  Inflammatory Bowel Disease with MCC
+386 06  M  Inflammatory Bowel Disease with CC
+387 06  M  Inflammatory Bowel Disease without CC/MCC
+388 06  M  Gastrointestinal Obstruction with MCC
+389 06  M  Gastrointestinal Obstruction with CC
+390 06  M  Gastrointestinal Obstruction without CC/MCC
+391 06  M  Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders with MCC
+392 06  M  Esophagitis, Gastroenteritis and Miscellaneous Digestive Disorders without MCC
+393 06  M  Other Digestive System Diagnoses with MCC
+394 06  M  Other Digestive System Diagnoses with CC
+395 06  M  Other Digestive System Diagnoses without CC/MCC
+397 06  P  Appendix Procedures with MCC
+398 06  P  Appendix Procedures with CC
+399 06  P  Appendix Procedures without CC/MCC
+402 08  P  Single Level Combined Anterior and Posterior Spinal Fusion Except Cervical
+405 07  P  Pancreas, Liver and Shunt Procedures with MCC
+406 07  P  Pancreas, Liver and Shunt Procedures with CC
+407 07  P  Pancreas, Liver and Shunt Procedures without CC/MCC
+408 07  P  Biliary Tract Procedures Except Only Cholecystectomy with or without C.D.E. with MCC
+409 07  P  Biliary Tract Procedures Except Only Cholecystectomy with or without C.D.E. with CC
+410 07  P  Biliary Tract Procedures Except Only Cholecystectomy with or without C.D.E. without CC/MCC
+411 07  P  Cholecystectomy with C.D.E. with MCC
+412 07  P  Cholecystectomy with C.D.E. with CC
+413 07  P  Cholecystectomy with C.D.E. without CC/MCC
+414 07  P  Cholecystectomy Except By Laparoscope without C.D.E. with MCC
+415 07  P  Cholecystectomy Except By Laparoscope without C.D.E. with CC
+416 07  P  Cholecystectomy Except By Laparoscope without C.D.E. without CC/MCC
+417 07  P  Laparoscopic Cholecystectomy without C.D.E. with MCC
+418 07  P  Laparoscopic Cholecystectomy without C.D.E. with CC
+419 07  P  Laparoscopic Cholecystectomy without C.D.E. without CC/MCC
+420 07  P  Hepatobiliary Diagnostic Procedures with MCC
+421 07  P  Hepatobiliary Diagnostic Procedures with CC
+422 07  P  Hepatobiliary Diagnostic Procedures without CC/MCC
+423 07  P  Other Hepatobiliary or Pancreas O.R. Procedures with MCC
+424 07  P  Other Hepatobiliary or Pancreas O.R. Procedures with CC
+425 07  P  Other Hepatobiliary or Pancreas O.R. Procedures without CC/MCC
+426 08  P  Multiple Level Combined Anterior and Posterior Spinal Fusion Except Cervical with MCC or Custom-Made Anatomically Designed Interbody Fusion Device
+427 08  P  Multiple Level Combined Anterior and Posterior Spinal Fusion Except Cervical with CC
+428 08  P  Multiple Level Combined Anterior and Posterior Spinal Fusion Except Cervical without CC/MCC
+429 08  P  Combined Anterior and Posterior Cervical Spinal Fusion with MCC
+430 08  P  Combined Anterior and Posterior Cervical Spinal Fusion without MCC
+432 07  M  Cirrhosis and Alcoholic Hepatitis with MCC
+433 07  M  Cirrhosis and Alcoholic Hepatitis with CC
+434 07  M  Cirrhosis and Alcoholic Hepatitis without CC/MCC
+435 07  M  Malignancy of Hepatobiliary System or Pancreas with MCC
+436 07  M  Malignancy of Hepatobiliary System or Pancreas with CC
+437 07  M  Malignancy of Hepatobiliary System or Pancreas without CC/MCC
+438 07  M  Disorders of Pancreas Except Malignancy with MCC
+439 07  M  Disorders of Pancreas Except Malignancy with CC
+440 07  M  Disorders of Pancreas Except Malignancy without CC/MCC
+441 07  M  Disorders of Liver Except Malignancy, Cirrhosis or Alcoholic Hepatitis with MCC
+442 07  M  Disorders of Liver Except Malignancy, Cirrhosis or Alcoholic Hepatitis with CC
+443 07  M  Disorders of Liver Except Malignancy, Cirrhosis or Alcoholic Hepatitis without CC/MCC
+444 07  M  Disorders of the Biliary Tract with MCC
+445 07  M  Disorders of the Biliary Tract with CC
+446 07  M  Disorders of the Biliary Tract without CC/MCC
+447 08  P  Multiple Level Spinal Fusion Except Cervical with MCC or Custom-Made Anatomically Designed Interbody Fusion Device
+448 08  P  Multiple Level Spinal Fusion Except Cervical without MCC
+450 08  P  Single Level Spinal Fusion Except Cervical with MCC or Custom-Made Anatomically Designed Interbody Fusion Device
+451 08  P  Single Level Spinal Fusion Except Cervical without MCC
+456 08  P  Spinal Fusion Except Cervical with Spinal Curvature, Malignancy, Infection or Extensive Fusions with MCC
+457 08  P  Spinal Fusion Except Cervical with Spinal Curvature, Malignancy, Infection or Extensive Fusions with CC
+458 08  P  Spinal Fusion Except Cervical with Spinal Curvature, Malignancy, Infection or Extensive Fusions without CC/MCC
+461 08  P  Bilateral or Multiple Major Joint Procedures of Lower Extremity with MCC
+462 08  P  Bilateral or Multiple Major Joint Procedures of Lower Extremity without MCC
+463 08  P  Wound Debridement and Skin Graft Except Hand for Musculoskeletal and Connective Tissue Disorders with MCC
+464 08  P  Wound Debridement and Skin Graft Except Hand for Musculoskeletal and Connective Tissue Disorders with CC
+465 08  P  Wound Debridement and Skin Graft Except Hand for Musculoskeletal and Connective Tissue Disorders without CC/MCC
+466 08  P  Revision of Hip or Knee Replacement with MCC
+467 08  P  Revision of Hip or Knee Replacement with CC
+468 08  P  Revision of Hip or Knee Replacement without CC/MCC
+469 08  P  Major Hip and Knee Joint Replacement or Reattachment of Lower Extremity with MCC or Total Ankle Replacement
+470 08  P  Major Hip and Knee Joint Replacement or Reattachment of Lower Extremity without MCC
+471 08  P  Cervical Spinal Fusion with MCC
+472 08  P  Cervical Spinal Fusion with CC
+473 08  P  Cervical Spinal Fusion without CC/MCC
+474 08  P  Amputation for Musculoskeletal System and Connective Tissue Disorders with MCC
+475 08  P  Amputation for Musculoskeletal System and Connective Tissue Disorders with CC
+476 08  P  Amputation for Musculoskeletal System and Connective Tissue Disorders without CC/MCC
+477 08  P  Biopsies of Musculoskeletal System and Connective Tissue with MCC
+478 08  P  Biopsies of Musculoskeletal System and Connective Tissue with CC
+479 08  P  Biopsies of Musculoskeletal System and Connective Tissue without CC/MCC
+480 08  P  Hip and Femur Procedures Except Major Joint with MCC
+481 08  P  Hip and Femur Procedures Except Major Joint with CC
+482 08  P  Hip and Femur Procedures Except Major Joint without CC/MCC
+483 08  P  Major Joint or Limb Reattachment Procedures of Upper Extremities
+485 08  P  Knee Procedures with Principal Diagnosis of Infection with MCC
+486 08  P  Knee Procedures with Principal Diagnosis of Infection with CC
+487 08  P  Knee Procedures with Principal Diagnosis of Infection without CC/MCC
+488 08  P  Knee Procedures without Principal Diagnosis of Infection with CC/MCC
+489 08  P  Knee Procedures without Principal Diagnosis of Infection without CC/MCC
+492 08  P  Lower Extremity and Humerus Procedures Except Hip, Foot and Femur with MCC
+493 08  P  Lower Extremity and Humerus Procedures Except Hip, Foot and Femur with CC
+494 08  P  Lower Extremity and Humerus Procedures Except Hip, Foot and Femur without CC/MCC
+495 08  P  Local Excision and Removal of Internal Fixation Devices Except Hip and Femur with MCC
+496 08  P  Local Excision and Removal of Internal Fixation Devices Except Hip and Femur with CC
+497 08  P  Local Excision and Removal of Internal Fixation Devices Except Hip and Femur without CC/MCC
+498 08  P  Local Excision and Removal of Internal Fixation Devices of Hip and Femur with CC/MCC
+499 08  P  Local Excision and Removal of Internal Fixation Devices of Hip and Femur without CC/MCC
+500 08  P  Soft Tissue Procedures with MCC
+501 08  P  Soft Tissue Procedures with CC
+502 08  P  Soft Tissue Procedures without CC/MCC
+503 08  P  Foot Procedures with MCC
+504 08  P  Foot Procedures with CC
+505 08  P  Foot Procedures without CC/MCC
+506 08  P  Major Thumb or Joint Procedures
+507 08  P  Major Shoulder or Elbow Joint Procedures with CC/MCC
+508 08  P  Major Shoulder or Elbow Joint Procedures without CC/MCC
+509 08  P  Arthroscopy
+510 08  P  Shoulder, Elbow or Forearm Procedures, Except Major Joint Procedures with MCC
+511 08  P  Shoulder, Elbow or Forearm Procedures, Except Major Joint Procedures with CC
+512 08  P  Shoulder, Elbow or Forearm Procedures, Except Major Joint Procedures without CC/MCC
+513 08  P  Hand or Wrist Procedures, Except Major Thumb or Joint Procedures with CC/MCC
+514 08  P  Hand or Wrist Procedures, Except Major Thumb or Joint Procedures without CC/MCC
+515 08  P  Other Musculoskeletal System and Connective Tissue O.R. Procedures with MCC
+516 08  P  Other Musculoskeletal System and Connective Tissue O.R. Procedures with CC
+517 08  P  Other Musculoskeletal System and Connective Tissue O.R. Procedures without CC/MCC
+518 08  P  Back and Neck Procedures Except Spinal Fusion with MCC or Disc Device or Neurostimulator
+519 08  P  Back and Neck Procedures Except Spinal Fusion with CC
+520 08  P  Back and Neck Procedures Except Spinal Fusion without CC/MCC
+521 08  P  Hip Replacement with Principal Diagnosis of Hip Fracture with MCC
+522 08  P  Hip Replacement with Principal Diagnosis of Hip Fracture without MCC
+533 08  M  Fractures of Femur with MCC
+534 08  M  Fractures of Femur without MCC
+535 08  M  Fractures of Hip and Pelvis with MCC
+536 08  M  Fractures of Hip and Pelvis without MCC
+537 08  M  Sprains, Strains, and Dislocations of Hip, Pelvis and Thigh with CC/MCC
+538 08  M  Sprains, Strains, and Dislocations of Hip, Pelvis and Thigh without CC/MCC
+539 08  M  Osteomyelitis with MCC
+540 08  M  Osteomyelitis with CC
+541 08  M  Osteomyelitis without CC/MCC
+542 08  M  Pathological Fractures and Musculoskeletal and Connective Tissue Malignancy with MCC
+543 08  M  Pathological Fractures and Musculoskeletal and Connective Tissue Malignancy with CC
+544 08  M  Pathological Fractures and Musculoskeletal and Connective Tissue Malignancy without CC/MCC
+545 08  M  Connective Tissue Disorders with MCC
+546 08  M  Connective Tissue Disorders with CC
+547 08  M  Connective Tissue Disorders without CC/MCC
+548 08  M  Septic Arthritis with MCC
+549 08  M  Septic Arthritis with CC
+550 08  M  Septic Arthritis without CC/MCC
+551 08  M  Medical Back Problems with MCC
+552 08  M  Medical Back Problems without MCC
+553 08  M  Bone Diseases and Arthropathies with MCC
+554 08  M  Bone Diseases and Arthropathies without MCC
+555 08  M  Signs and Symptoms of Musculoskeletal System and Connective Tissue with MCC
+556 08  M  Signs and Symptoms of Musculoskeletal System and Connective Tissue without MCC
+557 08  M  Tendonitis, Myositis and Bursitis with MCC
+558 08  M  Tendonitis, Myositis and Bursitis without MCC
+559 08  M  Aftercare, Musculoskeletal System and Connective Tissue with MCC
+560 08  M  Aftercare, Musculoskeletal System and Connective Tissue with CC
+561 08  M  Aftercare, Musculoskeletal System and Connective Tissue without CC/MCC
+562 08  M  Fracture, Sprain, Strain and Dislocation Except Femur, Hip, Pelvis and Thigh with MCC
+563 08  M  Fracture, Sprain, Strain and Dislocation Except Femur, Hip, Pelvis and Thigh without MCC
+564 08  M  Other Musculoskeletal System and Connective Tissue Diagnoses with MCC
+565 08  M  Other Musculoskeletal System and Connective Tissue Diagnoses with CC
+566 08  M  Other Musculoskeletal System and Connective Tissue Diagnoses without CC/MCC
+570 09  P  Skin Debridement with MCC
+571 09  P  Skin Debridement with CC
+572 09  P  Skin Debridement without CC/MCC
+573 09  P  Skin Graft for Skin Ulcer or Cellulitis with MCC
+574 09  P  Skin Graft for Skin Ulcer or Cellulitis with CC
+575 09  P  Skin Graft for Skin Ulcer or Cellulitis without CC/MCC
+576 09  P  Skin Graft Except for Skin Ulcer or Cellulitis with MCC
+577 09  P  Skin Graft Except for Skin Ulcer or Cellulitis with CC
+578 09  P  Skin Graft Except for Skin Ulcer or Cellulitis without CC/MCC
+579 09  P  Other Skin, Subcutaneous Tissue and Breast Procedures with MCC
+580 09  P  Other Skin, Subcutaneous Tissue and Breast Procedures with CC
+581 09  P  Other Skin, Subcutaneous Tissue and Breast Procedures without CC/MCC
+582 09  P  Mastectomy for Malignancy with CC/MCC
+583 09  P  Mastectomy for Malignancy without CC/MCC
+584 09  P  Breast Biopsy, Local Excision and Other Breast Procedures with CC/MCC
+585 09  P  Breast Biopsy, Local Excision and Other Breast Procedures without CC/MCC
+592 09  M  Skin Ulcers with MCC
+593 09  M  Skin Ulcers with CC
+594 09  M  Skin Ulcers without CC/MCC
+595 09  M  Major Skin Disorders with MCC
+596 09  M  Major Skin Disorders without MCC
+597 09  M  Malignant Breast Disorders with MCC
+598 09  M  Malignant Breast Disorders with CC
+599 09  M  Malignant Breast Disorders without CC/MCC
+600 09  M  Non-Malignant Breast Disorders with CC/MCC
+601 09  M  Non-Malignant Breast Disorders without CC/MCC
+602 09  M  Cellulitis with MCC
+603 09  M  Cellulitis without MCC
+604 09  M  Trauma to the Skin, Subcutaneous Tissue and Breast with MCC
+605 09  M  Trauma to the Skin, Subcutaneous Tissue and Breast without MCC
+606 09  M  Minor Skin Disorders with MCC
+607 09  M  Minor Skin Disorders without MCC
+614 10  P  Adrenal and Pituitary Procedures with CC/MCC
+615 10  P  Adrenal and Pituitary Procedures without CC/MCC
+616 10  P  Amputation of Lower Limb for Endocrine, Nutritional and Metabolic Disorders with MCC
+617 10  P  Amputation of Lower Limb for Endocrine, Nutritional and Metabolic Disorders with CC
+618 10  P  Amputation of Lower Limb for Endocrine, Nutritional and Metabolic Disorders without CC/MCC
+619 10  P  O.R. Procedures for Obesity with MCC
+620 10  P  O.R. Procedures for Obesity with CC
+621 10  P  O.R. Procedures for Obesity without CC/MCC
+622 10  P  Skin Grafts and Wound Debridement for Endocrine, Nutritional and Metabolic Disorders with MCC
+623 10  P  Skin Grafts and Wound Debridement for Endocrine, Nutritional and Metabolic Disorders with CC
+624 10  P  Skin Grafts and Wound Debridement for Endocrine, Nutritional and Metabolic Disorders without CC/MCC
+625 10  P  Thyroid, Parathyroid and Thyroglossal Procedures with MCC
+626 10  P  Thyroid, Parathyroid and Thyroglossal Procedures with CC
+627 10  P  Thyroid, Parathyroid and Thyroglossal Procedures without CC/MCC
+628 10  P  Other Endocrine, Nutritional and Metabolic O.R. Procedures with MCC
+629 10  P  Other Endocrine, Nutritional and Metabolic O.R. Procedures with CC
+630 10  P  Other Endocrine, Nutritional and Metabolic O.R. Procedures without CC/MCC
+637 10  M  Diabetes with MCC
+638 10  M  Diabetes with CC
+639 10  M  Diabetes without CC/MCC
+640 10  M  Miscellaneous Disorders of Nutrition, Metabolism, Fluids and Electrolytes with MCC
+641 10  M  Miscellaneous Disorders of Nutrition, Metabolism, Fluids and Electrolytes without MCC
+642 10  M  Inborn and Other Disorders of Metabolism
+643 10  M  Endocrine Disorders with MCC
+644 10  M  Endocrine Disorders with CC
+645 10  M  Endocrine Disorders without CC/MCC
+650 11  P  Kidney Transplant with Hemodialysis with MCC
+651 11  P  Kidney Transplant with Hemodialysis without MCC
+652 11  P  Kidney Transplant
+653 11  P  Major Bladder Procedures with MCC
+654 11  P  Major Bladder Procedures with CC
+655 11  P  Major Bladder Procedures without CC/MCC
+656 11  P  Kidney and Ureter Procedures for Neoplasm with MCC
+657 11  P  Kidney and Ureter Procedures for Neoplasm with CC
+658 11  P  Kidney and Ureter Procedures for Neoplasm without CC/MCC
+659 11  P  Kidney and Ureter Procedures for Non-Neoplasm with MCC
+660 11  P  Kidney and Ureter Procedures for Non-Neoplasm with CC
+661 11  P  Kidney and Ureter Procedures for Non-Neoplasm without CC/MCC
+662 11  P  Minor Bladder Procedures with MCC
+663 11  P  Minor Bladder Procedures with CC
+664 11  P  Minor Bladder Procedures without CC/MCC
+665 11  P  Prostatectomy with MCC
+666 11  P  Prostatectomy with CC
+667 11  P  Prostatectomy without CC/MCC
+668 11  P  Transurethral Procedures with MCC
+669 11  P  Transurethral Procedures with CC
+670 11  P  Transurethral Procedures without CC/MCC
+671 11  P  Urethral Procedures with CC/MCC
+672 11  P  Urethral Procedures without CC/MCC
+673 11  P  Other Kidney and Urinary Tract Procedures with MCC
+674 11  P  Other Kidney and Urinary Tract Procedures with CC
+675 11  P  Other Kidney and Urinary Tract Procedures without CC/MCC
+682 11  M  Renal Failure with MCC
+683 11  M  Renal Failure with CC
+684 11  M  Renal Failure without CC/MCC
+686 11  M  Kidney and Urinary Tract Neoplasms with MCC
+687 11  M  Kidney and Urinary Tract Neoplasms with CC
+688 11  M  Kidney and Urinary Tract Neoplasms without CC/MCC
+689 11  M  Kidney and Urinary Tract Infections with MCC
+690 11  M  Kidney and Urinary Tract Infections without MCC
+693 11  M  Urinary Stones with MCC
+694 11  M  Urinary Stones without MCC
+695 11  M  Kidney and Urinary Tract Signs and Symptoms with MCC
+696 11  M  Kidney and Urinary Tract Signs and Symptoms without MCC
+697 11  M  Urethral Stricture
+698 11  M  Other Kidney and Urinary Tract Diagnoses with MCC
+699 11  M  Other Kidney and Urinary Tract Diagnoses with CC
+700 11  M  Other Kidney and Urinary Tract Diagnoses without CC/MCC
+707 12  P  Major Male Pelvic Procedures with CC/MCC
+708 12  P  Major Male Pelvic Procedures without CC/MCC
+709 12  P  Penis Procedures with CC/MCC
+710 12  P  Penis Procedures without CC/MCC
+711 12  P  Testes Procedures with CC/MCC
+712 12  P  Testes Procedures without CC/MCC
+713 12  P  Transurethral Prostatectomy with CC/MCC
+714 12  P  Transurethral Prostatectomy without CC/MCC
+715 12  P  Other Male Reproductive System O.R. Procedures for Malignancy with CC/MCC
+716 12  P  Other Male Reproductive System O.R. Procedures for Malignancy without CC/MCC
+717 12  P  Other Male Reproductive System O.R. Procedures Except Malignancy with CC/MCC
+718 12  P  Other Male Reproductive System O.R. Procedures Except Malignancy without CC/MCC
+722 12  M  Malignancy, Male Reproductive System with MCC
+723 12  M  Malignancy, Male Reproductive System with CC
+724 12  M  Malignancy, Male Reproductive System without CC/MCC
+725 12  M  Benign Prostatic Hypertrophy with MCC
+726 12  M  Benign Prostatic Hypertrophy without MCC
+727 12  M  Inflammation of the Male Reproductive System with MCC
+728 12  M  Inflammation of the Male Reproductive System without MCC
+729 12  M  Other Male Reproductive System Diagnoses with CC/MCC
+730 12  M  Other Male Reproductive System Diagnoses without CC/MCC
+734 13  P  Pelvic Evisceration, Radical Hysterectomy and Radical Vulvectomy with CC/MCC
+735 13  P  Pelvic Evisceration, Radical Hysterectomy and Radical Vulvectomy without CC/MCC
+736 13  P  Uterine and Adnexa Procedures for Ovarian or Adnexal Malignancy with MCC
+737 13  P  Uterine and Adnexa Procedures for Ovarian or Adnexal Malignancy with CC
+738 13  P  Uterine and Adnexa Procedures for Ovarian or Adnexal Malignancy without CC/MCC
+739 13  P  Uterine and Adnexa Procedures for Non-Ovarian and Non-Adnexal Malignancy with MCC
+740 13  P  Uterine and Adnexa Procedures for Non-Ovarian and Non-Adnexal Malignancy with CC
+741 13  P  Uterine and Adnexa Procedures for Non-Ovarian and Non-Adnexal Malignancy without CC/MCC
+742 13  P  Uterine and Adnexa Procedures for Non-Malignancy with CC/MCC
+743 13  P  Uterine and Adnexa Procedures for Non-Malignancy without CC/MCC
+744 13  P  D&C, Conization, Laparoscopy and Tubal Interruption with CC/MCC
+745 13  P  D&C, Conization, Laparoscopy and Tubal Interruption without CC/MCC
+746 13  P  Vagina, Cervix and Vulva Procedures with CC/MCC
+747 13  P  Vagina, Cervix and Vulva Procedures without CC/MCC
+748 13  P  Female Reproductive System Reconstructive Procedures
+749 13  P  Other Female Reproductive System O.R. Procedures with CC/MCC
+750 13  P  Other Female Reproductive System O.R. Procedures without CC/MCC
+754 13  M  Malignancy, Female Reproductive System with MCC
+755 13  M  Malignancy, Female Reproductive System with CC
+756 13  M  Malignancy, Female Reproductive System without CC/MCC
+757 13  M  Infections, Female Reproductive System with MCC
+758 13  M  Infections, Female Reproductive System with CC
+759 13  M  Infections, Female Reproductive System without CC/MCC
+760 13  M  Menstrual and Other Female Reproductive System Disorders with CC/MCC
+761 13  M  Menstrual and Other Female Reproductive System Disorders without CC/MCC
+768 14  P  Vaginal Delivery with O.R. Procedures Except Sterilization and/or D&C
+769 14  P  Postpartum and Post Abortion Diagnoses with O.R. Procedures
+770 14  P  Abortion with D&C, Aspiration Curettage or Hysterotomy
+776 14  M  Postpartum and Post Abortion Diagnoses without O.R. Procedures
+779 14  M  Abortion without D&C
+783 14  P  Cesarean Section with Sterilization with MCC
+784 14  P  Cesarean Section with Sterilization with CC
+785 14  P  Cesarean Section with Sterilization without CC/MCC
+786 14  P  Cesarean Section without Sterilization with MCC
+787 14  P  Cesarean Section without Sterilization with CC
+788 14  P  Cesarean Section without Sterilization without CC/MCC
+789 15  M  Neonates, Died or Transferred to Another Acute Care Facility
+790 15  M  Extreme Immaturity or Respiratory Distress Syndrome, Neonate
+791 15  M  Prematurity with Major Problems
+792 15  M  Prematurity without Major Problems
+793 15  M  Full Term Neonate with Major Problems
+794 15  M  Neonate with Other Significant Problems
+795 15  M  Normal Newborn
+796 14  P  Vaginal Delivery with Sterilization and/or D&C with MCC
+797 14  P  Vaginal Delivery with Sterilization and/or D&C with CC
+798 14  P  Vaginal Delivery with Sterilization and/or D&C without CC/MCC
+799 16  P  Splenic Procedures with MCC
+800 16  P  Splenic Procedures with CC
+801 16  P  Splenic Procedures without CC/MCC
+802 16  P  Other O.R. Procedures of the Blood and Blood Forming Organs with MCC
+803 16  P  Other O.R. Procedures of the Blood and Blood Forming Organs with CC
+804 16  P  Other O.R. Procedures of the Blood and Blood Forming Organs without CC/MCC
+805 14  M  Vaginal Delivery without Sterilization or D&C with MCC
+806 14  M  Vaginal Delivery without Sterilization or D&C with CC
+807 14  M  Vaginal Delivery without Sterilization or D&C without CC/MCC
+808 16  M  Major Hematological and Immunological Diagnoses Except Sickle Cell Crisis and Coagulation Disorders with MCC
+809 16  M  Major Hematological and Immunological Diagnoses Except Sickle Cell Crisis and Coagulation Disorders with CC
+810 16  M  Major Hematological and Immunological Diagnoses Except Sickle Cell Crisis and Coagulation Disorders without CC/MCC
+811 16  M  Red Blood Cell Disorders with MCC
+812 16  M  Red Blood Cell Disorders without MCC
+813 16  M  Coagulation Disorders
+814 16  M  Reticuloendothelial and Immunity Disorders with MCC
+815 16  M  Reticuloendothelial and Immunity Disorders with CC
+816 16  M  Reticuloendothelial and Immunity Disorders without CC/MCC
+817 14  P  Other Antepartum Diagnoses with O.R. Procedures with MCC
+818 14  P  Other Antepartum Diagnoses with O.R. Procedures with CC
+819 14  P  Other Antepartum Diagnoses with O.R. Procedures without CC/MCC
+820 17  P  Lymphoma and Leukemia with Major O.R. Procedures with MCC
+821 17  P  Lymphoma and Leukemia with Major O.R. Procedures with CC
+822 17  P  Lymphoma and Leukemia with Major O.R. Procedures without CC/MCC
+823 17  P  Lymphoma and Non-Acute Leukemia with Other Procedures with MCC
+824 17  P  Lymphoma and Non-Acute Leukemia with Other Procedures with CC
+825 17  P  Lymphoma and Non-Acute Leukemia with Other Procedures without CC/MCC
+826 17  P  Myeloproliferative Disorders or Poorly Differentiated Neoplasms with Major O.R. Procedures with MCC
+827 17  P  Myeloproliferative Disorders or Poorly Differentiated Neoplasms with Major O.R. Procedures with CC
+828 17  P  Myeloproliferative Disorders or Poorly Differentiated Neoplasms with Major O.R. Procedures without CC/MCC
+829 17  P  Myeloproliferative Disorders or Poorly Differentiated Neoplasms with Other Procedures with CC/MCC
+830 17  P  Myeloproliferative Disorders or Poorly Differentiated Neoplasms with Other Procedures without CC/MCC
+831 14  M  Other Antepartum Diagnoses without O.R. Procedures with MCC
+832 14  M  Other Antepartum Diagnoses without O.R. Procedures with CC
+833 14  M  Other Antepartum Diagnoses without O.R. Procedures without CC/MCC
+834 17  M  Acute Leukemia with MCC
+835 17  M  Acute Leukemia with CC
+836 17  M  Acute Leukemia without CC/MCC
+837 17  M  Chemotherapy with Acute Leukemia as Secondary Diagnosis or with High Dose Chemotherapy Agent with MCC
+838 17  M  Chemotherapy with Acute Leukemia as Secondary Diagnosis with CC or High Dose Chemotherapy Agent
+839 17  M  Chemotherapy with Acute Leukemia as Secondary Diagnosis without CC/MCC
+840 17  M  Lymphoma and Non-Acute Leukemia with MCC
+841 17  M  Lymphoma and Non-Acute Leukemia with CC
+842 17  M  Lymphoma and Non-Acute Leukemia without CC/MCC
+843 17  M  Other Myeloproliferative Disorders or Poorly Differentiated Neoplastic Diagnoses with MCC
+844 17  M  Other Myeloproliferative Disorders or Poorly Differentiated Neoplastic Diagnoses with CC
+845 17  M  Other Myeloproliferative Disorders or Poorly Differentiated Neoplastic Diagnoses without CC/MCC
+846 17  M  Chemotherapy without Acute Leukemia as Secondary Diagnosis with MCC
+847 17  M  Chemotherapy without Acute Leukemia as Secondary Diagnosis with CC
+848 17  M  Chemotherapy without Acute Leukemia as Secondary Diagnosis without CC/MCC
+849 17  M  Radiotherapy
+850 17  P  Acute Leukemia with Other Procedures
+853 18  P  Infectious and Parasitic Diseases with O.R. Procedures with MCC
+854 18  P  Infectious and Parasitic Diseases with O.R. Procedures with CC
+855 18  P  Infectious and Parasitic Diseases with O.R. Procedures without CC/MCC
+856 18  P  Postoperative or Post-Traumatic Infections with O.R. Procedures with MCC
+857 18  P  Postoperative or Post-Traumatic Infections with O.R. Procedures with CC
+858 18  P  Postoperative or Post-Traumatic Infections with O.R. Procedures without CC/MCC
+862 18  M  Postoperative and Post-Traumatic Infections with MCC
+863 18  M  Postoperative and Post-Traumatic Infections without MCC
+864 18  M  Fever and Inflammatory Conditions
+865 18  M  Viral Illness with MCC
+866 18  M  Viral Illness without MCC
+867 18  M  Other Infectious and Parasitic Diseases Diagnoses with MCC
+868 18  M  Other Infectious and Parasitic Diseases Diagnoses with CC
+869 18  M  Other Infectious and Parasitic Diseases Diagnoses without CC/MCC
+870 18  M  Septicemia or Severe Sepsis with MV >96 Hours
+871 18  M  Septicemia or Severe Sepsis without MV >96 Hours with MCC
+872 18  M  Septicemia or Severe Sepsis without MV >96 Hours without MCC
+876 19  P  O.R. Procedures with Principal Diagnosis of Mental Illness
+880 19  M  Acute Adjustment Reaction and Psychosocial Dysfunction
+881 19  M  Depressive Neuroses
+882 19  M  Neuroses Except Depressive
+883 19  M  Disorders of Personality and Impulse Control
+884 19  M  Organic Disturbances and Intellectual Disability
+885 19  M  Psychoses
+886 19  M  Behavioral and Developmental Disorders
+887 19  M  Other Mental Disorder Diagnoses
+894 20  M  Alcohol, Drug Abuse or Dependence, Left AMA
+895 20  M  Alcohol, Drug Abuse or Dependence with Rehabilitation Therapy
+896 20  M  Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy with MCC
+897 20  M  Alcohol, Drug Abuse or Dependence without Rehabilitation Therapy without MCC
+901 21  P  Wound Debridements for Injuries with MCC
+902 21  P  Wound Debridements for Injuries with CC
+903 21  P  Wound Debridements for Injuries without CC/MCC
+904 21  P  Skin Grafts for Injuries with CC/MCC
+905 21  P  Skin Grafts for Injuries without CC/MCC
+906 21  P  Hand Procedures for Injuries
+907 21  P  Other O.R. Procedures for Injuries with MCC
+908 21  P  Other O.R. Procedures for Injuries with CC
+909 21  P  Other O.R. Procedures for Injuries without CC/MCC
+913 21  M  Traumatic Injury with MCC
+914 21  M  Traumatic Injury without MCC
+915 21  M  Allergic Reactions with MCC
+916 21  M  Allergic Reactions without MCC
+917 21  M  Poisoning and Toxic Effects of Drugs with MCC
+918 21  M  Poisoning and Toxic Effects of Drugs without MCC
+919 21  M  Complications of Treatment with MCC
+920 21  M  Complications of Treatment with CC
+921 21  M  Complications of Treatment without CC/MCC
+922 21  M  Other Injury, Poisoning and Toxic Effect Diagnoses with MCC
+923 21  M  Other Injury, Poisoning and Toxic Effect Diagnoses without MCC
+927 22  P  Extensive Burns or Full Thickness Burns with MV >96 Hours with Skin Graft
+928 22  P  Full Thickness Burn with Skin Graft or Inhalation Injury with CC/MCC
+929 22  P  Full Thickness Burn with Skin Graft or Inhalation Injury without CC/MCC
+933 22  M  Extensive Burns or Full Thickness Burns with MV >96 Hours without Skin Graft
+934 22  M  Full Thickness Burn without Skin Graft or Inhalation Injury
+935 22  M  Non-Extensive Burns
+939 23  P  O.R. Procedures with Diagnoses of Other Contact with Health Services with MCC
+940 23  P  O.R. Procedures with Diagnoses of Other Contact with Health Services with CC
+941 23  P  O.R. Procedures with Diagnoses of Other Contact with Health Services without CC/MCC
+945 23  M  Rehabilitation with CC/MCC
+946 23  M  Rehabilitation without CC/MCC
+947 23  M  Signs and Symptoms with MCC
+948 23  M  Signs and Symptoms without MCC
+949 23  M  Aftercare with CC/MCC
+950 23  M  Aftercare without CC/MCC
+951 23  M  Other Factors Influencing Health Status
+955 24  P  Craniotomy for Multiple Significant Trauma
+956 24  P  Limb Reattachment, Hip and Femur Procedures for Multiple Significant Trauma
+957 24  P  Other O.R. Procedures for Multiple Significant Trauma with MCC
+958 24  P  Other O.R. Procedures for Multiple Significant Trauma with CC
+959 24  P  Other O.R. Procedures for Multiple Significant Trauma without CC/MCC
+963 24  M  Other Multiple Significant Trauma with MCC
+964 24  M  Other Multiple Significant Trauma with CC
+965 24  M  Other Multiple Significant Trauma without CC/MCC
+969 25  P  HIV with Extensive O.R. Procedures with MCC
+970 25  P  HIV with Extensive O.R. Procedures without MCC
+974 25  M  HIV with Major Related Condition with MCC
+975 25  M  HIV with Major Related Condition with CC
+976 25  M  HIV with Major Related Condition without CC/MCC
+977 25  M  HIV with or without Other Related Condition
+981     P  Extensive O.R. Procedures Unrelated to Principal Diagnosis with MCC
+982     P  Extensive O.R. Procedures Unrelated to Principal Diagnosis with CC
+983     P  Extensive O.R. Procedures Unrelated to Principal Diagnosis without CC/MCC
+987     P  Non-Extensive O.R. Procedures Unrelated to Principal Diagnosis with MCC
+988     P  Non-Extensive O.R. Procedures Unrelated to Principal Diagnosis with CC
+989     P  Non-Extensive O.R. Procedures Unrelated to Principal Diagnosis without CC/MCC
+998        Principal Diagnosis Invalid as Discharge Diagnosis
+999        Ungroupable

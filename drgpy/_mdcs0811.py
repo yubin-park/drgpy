@@ -1,9 +1,53 @@
 
-def mdc08(x):
+def mdc08(x, version=40):
 
     y = []
     if x["_MDC08"] == 0:
         return y
+
+    if version >= 42:
+        single_anterior = x["402|SINGLE LEVEL ANTERIOR SPINAL FUSION ORPCS"]
+        single_posterior = x["402|SINGLE LEVEL POSTERIOR SPINAL FUSION ORPCS"]
+        if single_anterior == 1 and single_posterior == 1:
+            y.append("402")
+
+        multiple_anterior = x["426&427&428|MULTIPLE LEVEL ANTERIOR SPINAL FUSION ORPCS"]
+        multiple_posterior = x["426&427&428|MULTIPLE LEVEL POSTERIOR SPINAL FUSION ORPCS"]
+        single_anterior = x["426&427&428|SINGLE LEVEL ANTERIOR SPINAL FUSION ORPCS"]
+        single_posterior = x["426&427&428|SINGLE LEVEL POSTERIOR SPINAL FUSION ORPCS"]
+        custom_device = (
+            x["426&427&428|MULTIPLE LEVEL CUSTOM-MADE ANATOMICALLY DESIGNED INTERBODY FUSION DEVICE (CMADIFD) ORPCS"] +
+            x["426&427&428|SINGLE LEVEL CUSTOM-MADE ANATOMICALLY DESIGNED INTERBODY FUSION DEVICE (CMADIFD) ORPCS"]
+        )
+        combined = (
+            (multiple_anterior + single_anterior) > 0 and
+            (multiple_posterior + single_posterior) > 0 and
+            (multiple_anterior + multiple_posterior > 0 or
+             single_anterior + single_posterior > 2)
+        )
+        if combined:
+            if x["_MCC"] > 0 or custom_device > 0:
+                y.append("426")
+            elif x["_CC"] > 0:
+                y.append("427")
+            else:
+                y.append("428")
+
+        if (x["429&430|ANTERIOR CERVICAL SPINAL FUSION ORPCS"] *
+                x["429&430|POSTERIOR CERVICAL SPINAL FUSION ORPCS"] > 0):
+            y.append("429" if x["_MCC"] > 0 else "430")
+
+        multiple_fusion = (x["447&448|MULTIPLE LEVEL ANTERIOR SPINAL FUSION ORPCS"] +
+                           x["447&448|MULTIPLE LEVEL POSTERIOR SPINAL FUSION ORPCS"])
+        multiple_fusion += int(x["447&448|SINGLE LEVEL ANTERIOR SPINAL FUSION ORPCS"] >= 2)
+        multiple_fusion += int(x["447&448|SINGLE LEVEL POSTERIOR SPINAL FUSION ORPCS"] >= 2)
+        multiple_custom = x["447&448|MULTIPLE LEVEL CUSTOM-MADE ANATOMICALLY DESIGNED INTERBODY FUSION DEVICE (CMADIFD) ORPCS"]
+        if multiple_fusion > 0:
+            y.append("447" if x["_MCC"] > 0 or multiple_custom > 0 else "448")
+
+        if x["450&451|SINGLE LEVEL FUSION ORPCS"] > 0:
+            single_custom = x["450&451|SINGLE LEVEL CUSTOM-MADE ANATOMICALLY DESIGNED INTERBODY FUSION DEVICE (CMADIFD)"]
+            y.append("450" if x["_MCC"] > 0 or single_custom > 0 else "451")
     
     if (x["453&454&455|ANTERIOR SPINAL FUSION ORPCS"] > 0 and 
         x["453&454&455|POSTERIOR SPINAL FUSION ORPCS"] > 0):
@@ -25,8 +69,9 @@ def mdc08(x):
     sb1 = "456&457&458|EXTENSIVE FUSION PART B1"
     sb2 = "456&457&458|EXTENSIVE FUSION PART B2"
 
-    if ((((x[s1] > 0) and (x[s2] + x[s3]) > 0)) or 
-        (x[s4] > 0) or 
+    extensive_fusion = x[s4] > (1 if version >= 42 else 0)
+    if ((((x[s1] > 0) and (x[s2] + x[s3]) > 0)) or
+        extensive_fusion or
         (x[sa1] * x[sa2] > 0) or 
         (x[sb1] * x[sb2] > 0)):
         if x["_MCC"] > 0:
@@ -622,7 +667,4 @@ def mdc11(x):
             y.append("700")
 
     return y
-
-
-
 
