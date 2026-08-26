@@ -4,6 +4,11 @@
 
 The default version is MS-DRG v43.1, effective April 1, 2026. Bundled versions range from v36 through v43.1.
 
+Published distributions contain deterministic compressed runtime snapshots for
+each supported version. The original CMS text files remain in the Git repository
+for auditing, regeneration, and parser validation, but are not included in wheels
+or source distributions.
+
 ## Installing
 
 Installing from the source:
@@ -39,13 +44,26 @@ $ python -m build
 $ python -m twine check dist/*
 ```
 
-### Real-World Validation
+Regenerate runtime snapshots after updating the CMS source files:
 
-Real inpatient claim data may be used to discover mismatches, but raw claim
-rows, identifiers, service dates, and complete claim fingerprints should not be
-committed to this repository. Convert each confirmed mismatch into the smallest
-synthetic diagnosis/procedure combination that reproduces the relevant CMS rule,
-then add that minimized case to the version tests.
+```bash
+$ python -m tools.build_runtime_data
+```
+
+Generated snapshots must be committed together with their corresponding raw-data
+or parser changes. Tests verify that regeneration is deterministic and that the
+snapshots exactly represent the checked-in CMS text files.
+
+See [Architecture](docs/architecture.md) for diagrams of the CMS-data build
+pipeline, runtime feature extraction, MDC evaluation, grouping precedence, and
+test organization.
+
+### Validation Samples
+
+Validation uses minimized synthetic and real-world-class samples that isolate
+specific CMS rule behavior. Fixtures should contain only the inputs required to
+reproduce the expected grouping and should not include identifying or
+operational metadata.
 
 Cases requiring unavailable inputs such as age or birth weight should be tracked
 separately rather than treated as grouper mismatches. A successful claim sample
@@ -55,7 +73,8 @@ with the official CMS grouper.
 ## File Structure
 
 - `drgpy/`: The package source code is located here.
-  - `data/`: The raw data files downloaded from [the CMS website](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html).
+  - `data/`: Raw CMS files retained in Git but excluded from distributions.
+  - `runtime_data/`: Generated compressed maps included in distributions.
   - `msdrg.py`: The main file for the MS-DRG logic.
   - `_mdcsrdr.py`: A script that reads/parses `mdcs_xx_xx.txt` data files.
   - `_appndxrdr.py`: A script that reads/parses `appendix_xx.txt` data files.
@@ -64,6 +83,8 @@ with the official CMS grouper.
   - `_mdcs1221.py`: logics for MDC12 - MDC21
   - `_mdcs2225.py`: logics for MDC22 - MDC25
 - `tests/`: test scripts to check the validity of the outputs.
+- `docs/architecture.md`: conceptual and implementation architecture guide.
+- `tools/build_runtime_data.py`: deterministic runtime-snapshot generator.
 - `LICENSE.txt`: Apache 2.0.
 - `README.md`: This README file.
 - `pyproject.toml`: package metadata, build configuration, and development dependency groups.
@@ -161,7 +182,7 @@ secondary diagnoses do not affect grouping.
 `drgpy` currently supports sex, alive-at-discharge status, patient discharge
 status, and POA indicators. Sex-sensitive MDCs require the correct `gender`
 value. The historical default is `"F"`, so callers should always pass `"M"` or
-`"F"` explicitly when grouping real claims.
+`"F"` explicitly when grouping production records.
 
 ```python
 engine.get_drg(["N400"], [], gender="M")

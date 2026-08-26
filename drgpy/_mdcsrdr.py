@@ -10,6 +10,16 @@ pr_pttrn = "[A-HJ-NP-Z0-9]{7}"
 _code_line_re = re.compile(
     r"(?:[A-HJ-NP-Z0-9]{7}|[A-Z][0-9][0-9AB][0-9A-TV-Z]{0,4})\*?\s"
 )
+_mdc24_site_headings = {
+    "SIGNIFICANT HEAD TRAUMA": "HEAD",
+    "SIGNIFICANT CHEST TRAUMA": "CHEST",
+    "SIGNIFICANT ABDOMINAL TRAUMA": "ABDOMEN",
+    "SIGNIFICANT TRAUMA OF KIDNEY": "KIDNEY",
+    "SIGNIFICANT TRAUMA OF URINARY SYSTEM": "URINARY",
+    "SIGNIFICANT TRAUMA OF PELVIS OR SPINE": "PELVIS_SPINE",
+    "SIGNIFICANT TRAUMA OF THE UPPER LIMB": "UPPER_LIMB",
+    "SIGNIFICANT TRAUMA OF THE LOWER LIMB": "LOWER_LIMB",
+}
 
 def shorten(x):
     x = " ".join(x.upper().split())
@@ -61,12 +71,21 @@ def is_A(line, cursor):
 def parse_A(line, cursor, dxmap, cache):
     mdc_lst = re.findall(r"MDC\s(\d{2})\s", line)
     dx_lst = re.findall(r"\s{2}" + dx_pttrn + r"\s+", line)
+    stripped = line.strip().upper()
 
     if len(mdc_lst) > 0:
         cache["A"] = "_MDC" + mdc_lst[0] 
+        cache["A24"] = "PDX" if mdc_lst[0] == "24" else None
+    elif cache["A"] == "_MDC24" and stripped in _mdc24_site_headings:
+        cache["A24"] = _mdc24_site_headings[stripped]
     elif len(dx_lst) > 0:
         dx = dx_lst[0].strip()
-        dxmap[dx].append(cache["A"])
+        if cache["A"] != "_MDC24":
+            dxmap[dx].append(cache["A"])
+        elif cache["A24"] == "PDX":
+            dxmap[dx].append("_MDC24_PDX")
+        elif cache["A24"] is not None:
+            dxmap[dx].append(f"_TRAUMA24_SITE_{cache['A24']}")
 
 def is_B(line, cursor):
     return ((cursor in {"A", "B", "D", "E"} and (line[:2] == "+-" )) or 
@@ -160,6 +179,7 @@ def read(fn, dxmap, prmap):
     _cursor = "F"
     cursor = "F"
     cache = {"A": "", 
+            "A24": None,
             "C": "", 
             "D": "",
             "E": [],

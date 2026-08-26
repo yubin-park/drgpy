@@ -1,14 +1,12 @@
 
-import drgpy._mdcsrdr as mdcsrdr
-import drgpy._appndxrdr as appndxrdr
 import drgpy._mdcs0007 as mdcs0007
 import drgpy._mdcs0811 as mdcs0811
 import drgpy._mdcs1221 as mdcs1221
 import drgpy._mdcs2225 as mdcs2225
-from collections import defaultdict
 from collections import Counter
 import re
 
+from drgpy._runtime_data import load_runtime_data
 from drgpy._versions import get_version
 
 class DRGEngine:
@@ -16,38 +14,18 @@ class DRGEngine:
     def __init__(self, version=None):
         version_info = get_version(version)
         version = version_info.name
-        dxmap = defaultdict(list)
-        prmap = defaultdict(list)
-        dxmap, prmap = mdcsrdr.read(
-                f"data/{version}/mdcs_00_07.txt", dxmap, prmap)
-        dxmap, prmap = mdcsrdr.read(
-                f"data/{version}/mdcs_08_11.txt", dxmap, prmap)
-        dxmap, prmap = mdcsrdr.read(
-                f"data/{version}/mdcs_12_21.txt", dxmap, prmap)
-        dxmap, prmap = mdcsrdr.read(
-                f"data/{version}/mdcs_22_25.txt", dxmap, prmap)
-        self.dxmap = dxmap
-        self.prmap = prmap
+        runtime_data = load_runtime_data(version)
+        self.dxmap = runtime_data.dxmap
+        self.prmap = runtime_data.prmap
         self.version = version
         self.version_info = version_info
-
-        self.drgmap = appndxrdr.read_a(
-            f"data/{version}/appendix_A.txt")
-        
-        appendix_c = appndxrdr.read_c(f"data/{version}/appendix_C.txt")
-        self.ccmap = appendix_c.ccmap
-        self.exmap = appendix_c.exmap
-        self.drg_exclusions = appendix_c.drg_exclusions
-
-        orpcsmap = appndxrdr.read_e(
-            f"data/{version}/appendix_D_E.txt")
-        self.orpcsmap = orpcsmap
-        self.surgical_rank = appndxrdr.read_d(
-            f"data/{version}/appendix_D_E.txt")
-
-        neoormap = appndxrdr.read_f(
-            f"data/{version}/{version_info.appendix_f_filename}")
-        self.neoormap = neoormap
+        self.drgmap = runtime_data.drgmap
+        self.ccmap = runtime_data.ccmap
+        self.exmap = runtime_data.exmap
+        self.drg_exclusions = runtime_data.drg_exclusions
+        self.orpcsmap = runtime_data.orpcsmap
+        self.surgical_rank = runtime_data.surgical_rank
+        self.neoormap = runtime_data.neoormap
 
     def get_features(
             self,
@@ -91,9 +69,22 @@ class DRGEngine:
                 pdx = pdx[:-1] # generalize; maybe too specific
                 dx_lst[0] = pdx
 
+            mdc24_principal = False
+            mdc24_sites_by_diagnosis = []
             for j, dx in enumerate(dx_lst):
                 is_pdx = j==0
-                for x_i in self.dxmap[dx]:
+                labels = self.dxmap[dx]
+                if is_pdx and "_MDC24_PDX" in labels:
+                    mdc24_principal = True
+                mdc24_sites = {
+                    label.removeprefix("_TRAUMA24_SITE_")
+                    for label in labels
+                    if label.startswith("_TRAUMA24_SITE_")
+                }
+                if mdc24_sites:
+                    mdc24_sites_by_diagnosis.append(mdc24_sites)
+
+                for x_i in labels:
                     if is_pdx:
                         x.append(x_i)
                     elif "PDX OR SDX" in x_i:
@@ -114,6 +105,14 @@ class DRGEngine:
                     if not any((excluded_by_pdx, excluded_by_drg,
                                 excluded_by_alive, excluded_by_hac)):
                         x.append("_" + cc_info["level"])
+
+            mdc24_sites = set().union(*mdc24_sites_by_diagnosis)
+            if (
+                mdc24_principal
+                and len(mdc24_sites_by_diagnosis) >= 2
+                and len(mdc24_sites) >= 2
+            ):
+                x.append("_MDC24")
 
             # NOTE: special cases to handle EXCEPT conditions
             if "_MDC18" in x and "853&854&855|PDX FROM MDC 18 EXCEPT" not in x:
@@ -171,63 +170,93 @@ class DRGEngine:
         return Counter(x)
 
     def _evaluate(self, x):
-        y = []
-
-        y += mdcs0007.mdc00(x)
+        pre_mdc_results = mdcs0007.mdc00(x)
         major_version = self.version_info.major
-        y += mdcs0007.mdc01(x, major_version)
-        y += mdcs0007.mdc02(x)
-        y += mdcs0007.mdc03(x)
-        y += mdcs0007.mdc04(x, major_version)
-        y += mdcs0007.mdc05(x, major_version)
-        y += mdcs0007.mdc06(x, major_version)
-        y += mdcs0007.mdc07(x)
-        y += mdcs0811.mdc08(x, major_version)
-        y += mdcs0811.mdc09(x)
-        y += mdcs0811.mdc10(x)
-        y += mdcs0811.mdc11(x)
-        y += mdcs1221.mdc12(x)
-        y += mdcs1221.mdc13(x)
-        y += mdcs1221.mdc14(x, major_version)
-        y += mdcs1221.mdc15(x)
-        y += mdcs1221.mdc16(x)
-        y += mdcs1221.mdc17(x, major_version)
-        y += mdcs1221.mdc18(x)
-        y += mdcs1221.mdc19(x)
-        y += mdcs1221.mdc20(x)
-        y += mdcs1221.mdc21(x)
-        y += mdcs2225.mdc22(x)
-        y += mdcs2225.mdc23(x)
-        y += mdcs2225.mdc24(x)
-        y += mdcs2225.mdc25(x)
+        mdc_results = []
+        mdc_results += mdcs0007.mdc01(x, major_version)
+        mdc_results += mdcs0007.mdc02(x)
+        mdc_results += mdcs0007.mdc03(x)
+        mdc_results += mdcs0007.mdc04(x, major_version)
+        mdc_results += mdcs0007.mdc05(x, major_version)
+        mdc_results += mdcs0007.mdc06(x, major_version)
+        mdc_results += mdcs0007.mdc07(x)
+        mdc_results += mdcs0811.mdc08(x, major_version)
+        mdc_results += mdcs0811.mdc09(x)
+        mdc_results += mdcs0811.mdc10(x)
+        mdc_results += mdcs0811.mdc11(x)
+        mdc_results += mdcs1221.mdc12(x)
+        mdc_results += mdcs1221.mdc13(x)
+        mdc_results += mdcs1221.mdc14(x, major_version)
+        mdc_results += mdcs1221.mdc15(x)
+        mdc_results += mdcs1221.mdc16(x)
+        mdc_results += mdcs1221.mdc17(x, major_version)
+        mdc_results += mdcs1221.mdc18(x)
+        mdc_results += mdcs1221.mdc19(x)
+        mdc_results += mdcs1221.mdc20(x)
+        mdc_results += mdcs1221.mdc21(x)
+        mdc_results += mdcs2225.mdc22(x)
+        mdc_results += mdcs2225.mdc23(x)
+        mdc_results += mdcs2225.mdc25(x)
 
-        # NOTE: Appendix F - No PDX mapped
-        if len(y) == 0:
+        mdc24_results = mdcs2225.mdc24(x)
+        if pre_mdc_results:
+            priority_results = pre_mdc_results
+            remaining_results = mdc24_results + mdc_results
+        elif mdc24_results:
+            priority_results = mdc24_results
+            remaining_results = mdc_results
+        else:
+            priority_results = mdc_results
+            remaining_results = []
+
+        has_related_surgical_result = any(
+            self.drgmap.get(drg, {}).get("is_surgical", False)
+            for drg in priority_results
+        )
+        excluded_delivery_orpcs = 0
+        if x["_MDC14"] > 0:
+            excluded_delivery_orpcs = x["768|WITH ANY ORPCS EXCEPT"]
+        has_appendix_f_orpcs = (
+            x["_ORPCS_UNIQUE"] > excluded_delivery_orpcs
+        )
+        if (
+            not pre_mdc_results
+            and not has_related_surgical_result
+            and has_appendix_f_orpcs
+        ):
             if x["_ORPCS_EXTENSIVE"] > 0:
                 if x["_MCC"] > 0:
-                    y.append("981")
+                    priority_results.insert(0, "981")
                 elif x["_CC"] > 0:
-                    y.append("982")
+                    priority_results.insert(0, "982")
                 else:
-                    y.append("983")
+                    priority_results.insert(0, "983")
             elif x["_ORPCS_NON_EXTENSIVE"] > 0:
                 if x["_MCC"] > 0:
-                    y.append("987")
+                    priority_results.insert(0, "987")
                 elif x["_CC"] > 0:
-                    y.append("988")
+                    priority_results.insert(0, "988")
                 else:
-                    y.append("989")
- 
-        unique_results = list(dict.fromkeys(y))
-        indexed_results = list(enumerate(unique_results))
-        indexed_results.sort(
-            key=lambda item: (
-                0 if item[1] in self.surgical_rank else 1,
-                self.surgical_rank.get(item[1], item[0]),
-                item[0],
+                    priority_results.insert(0, "989")
+
+        def sort_results(results):
+            unique_results = list(dict.fromkeys(results))
+            indexed_results = list(enumerate(unique_results))
+            indexed_results.sort(
+                key=lambda item: (
+                    0 if self.drgmap.get(item[1], {}).get("is_surgical") else 1,
+                    self.surgical_rank.get(
+                        item[1],
+                        self.surgical_rank.get(item[1].lstrip("0"), item[0]),
+                    ),
+                    item[0],
+                )
             )
-        )
-        return [drg for _, drg in indexed_results]
+            return [drg for _, drg in indexed_results]
+
+        ordered_results = sort_results(priority_results)
+        ordered_results += sort_results(remaining_results)
+        return list(dict.fromkeys(ordered_results))
 
     def get_drg_all(
             self,

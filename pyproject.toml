@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "drgpy"
-version = "0.1.1"
+version = "0.2.1"
 description = "Assign diagnosis and procedure codes to Medicare Severity Diagnosis Related Groups (MS-DRGs)."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -26,6 +26,7 @@ dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/yubin-park/drgpy"
+Documentation = "https://github.com/yubin-park/drgpy/blob/master/docs/architecture.md"
 Issues = "https://github.com/yubin-park/drgpy/issues"
 Repository = "https://github.com/yubin-park/drgpy.git"
 
@@ -42,10 +43,11 @@ include-package-data = false
 
 [tool.setuptools.packages.find]
 include = ["drgpy*"]
+exclude = ["drgpy.data*"]
 namespaces = false
 
 [tool.setuptools.package-data]
-drgpy = ["data/v*/*.txt"]
+"drgpy.runtime_data" = ["*.json.xz"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
