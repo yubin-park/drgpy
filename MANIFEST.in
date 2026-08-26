@@ -1,4 +1,4 @@
-recursive-include drgpy/data/v* *.txt
-prune drgpy/data/diffs
-exclude drgpy/data/pbl-049_hcpcs-drg_defman.txt
+recursive-include drgpy/runtime_data *.json.xz
+include docs/architecture.md
+prune drgpy/data
 global-exclude .DS_Store *.py[cod]

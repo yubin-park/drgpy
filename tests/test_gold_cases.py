@@ -9,7 +9,7 @@ class TestGoldCases(unittest.TestCase):
     def setUpClass(cls):
         cls.engine = DRGEngine("v43.1")
 
-    def test_minimized_claim_derived_cases(self):
+    def test_minimized_validation_samples(self):
         cases = [
             ("ventilation", ["J95821"], ["5A1935Z"], "208"),
             ("intestinal_obstruction", ["K562", "K460"], ["0DTH0ZZ"], "330"),
@@ -40,7 +40,233 @@ class TestGoldCases(unittest.TestCase):
                     expected,
                 )
 
-    def test_additional_claim_derived_severity_families(self):
+    def test_additional_minimized_samples(self):
+        cases = [
+            ("knee_replacement_variant", ["M1711"], ["0SRC0JA"], "470"),
+            ("copd_respiratory_failure", ["J441", "J9621"], [], "190"),
+            ("intestinal_obstruction_medical", ["K56609"], [], "390"),
+            ("subdural_hemorrhage", ["S06360A", "N186"], [], "085"),
+            ("device_complication_sepsis", ["T8571XA", "A419"], [], "919"),
+            (
+                "lumbar_fusion",
+                ["M4316"],
+                ["0SG00AJ", "0SG0071"],
+                "402",
+            ),
+            ("tibia_fracture_cc", ["S82141A", "D62"], ["0QSG34Z"], "493"),
+            ("colectomy", ["Z433", "K567"], ["0DBM4ZZ"], "330"),
+            ("carotid_stent", ["I6521"], ["037K3DZ"], "036"),
+            ("atrial_fibrillation", ["I4820"], [], "310"),
+            ("pulmonary_embolism", ["I2699"], [], "176"),
+            ("craniotomy_tumor", ["C713"], ["00B70ZZ"], "027"),
+            ("cervical_fusion", ["S12500A"], ["0RG10A0"], "473"),
+            (
+                "cholecystectomy_pancreatitis",
+                ["K8510", "K8010"],
+                ["0FT44ZZ"],
+                "418",
+            ),
+            ("spinal_fusion", ["M4802"], ["0RG20K0"], "473"),
+            ("hip_replacement_variant", ["M1612"], ["0SRB0JA"], "470"),
+            ("femur_fracture", ["S72002A"], ["0QS704Z"], "482"),
+            ("pericarditis", ["I3139"], [], "316"),
+            ("aki_encephalopathy", ["N179", "G9341"], [], "682"),
+            (
+                "sepsis_urinary_procedure",
+                ["A4159", "N136"],
+                ["0T778DZ"],
+                "854",
+            ),
+            ("transcatheter_valve", ["I080"], ["02RF38Z"], "267"),
+            ("ureteral_obstruction", ["N130"], ["0T768DZ"], "661"),
+            (
+                "pacemaker",
+                ["I495", "I452"],
+                ["0JH606Z", "02H63JZ"],
+                "243",
+            ),
+        ]
+        for name, diagnoses, procedures, expected in cases:
+            with self.subTest(name=name, expected=expected):
+                self.assertEqual(
+                    self.engine.get_drg(diagnoses, procedures),
+                    expected,
+                )
+
+    def test_additional_rule_samples(self):
+        cases = [
+            ("diverticulitis", ["K5732"], [], "392"),
+            ("cellulitis", ["L03115"], [], "603"),
+            ("psychosis", ["F209"], [], "885"),
+            ("hip_device_dislocation", ["T84020A"], [], "561"),
+            ("femur_aftercare", ["S72041D", "A6920"], [], "560"),
+            (
+                "diaphragmatic_hernia_repair",
+                ["K449"],
+                ["0BUT4JZ"],
+                "328",
+            ),
+            (
+                "hip_fracture_replacement",
+                ["S72011A"],
+                ["0SRR0J9"],
+                "522",
+            ),
+            ("pulmonary_embolism_mcc", ["I2699", "J9601"], [], "175"),
+            (
+                "intestinal_adhesiolysis",
+                ["K5650", "K5090"],
+                ["0DN84ZZ"],
+                "336",
+            ),
+            ("myeloproliferative_disorder", ["D735", "K766"], [], "815"),
+            ("intestinal_obstruction_medical", ["K567"], [], "390"),
+            (
+                "hip_fracture_replacement_variant",
+                ["S72001A"],
+                ["0SRR0J9"],
+                "522",
+            ),
+            ("hip_contusion", ["S7001XA"], [], "605"),
+            (
+                "bladder_cancer_procedure",
+                ["C679", "N131"],
+                ["0TBB8ZZ"],
+                "669",
+            ),
+            (
+                "intestinal_obstruction_laparoscopy",
+                ["K56609"],
+                ["0WJG4ZZ"],
+                "358",
+            ),
+            (
+                "intestinal_obstruction_open_adhesiolysis",
+                ["K56699"],
+                ["0DN80ZZ"],
+                "337",
+            ),
+            ("angina", ["I200"], [], "311"),
+            (
+                "intestinal_ischemia_resection",
+                ["K551", "N390"],
+                ["0DTF4ZZ"],
+                "330",
+            ),
+            ("dementia", ["F0390"], [], "884"),
+        ]
+        for name, diagnoses, procedures, expected in cases:
+            with self.subTest(name=name, expected=expected):
+                self.assertEqual(
+                    self.engine.get_drg(diagnoses, procedures),
+                    expected,
+                )
+
+    def test_additional_high_risk_samples(self):
+        cases = [
+            (
+                "neurostimulator_mcc",
+                ["G20B2", "E43"],
+                ["00H03MZ", "0JH60BZ"],
+                "023",
+            ),
+            ("stroke_thrombectomy", ["I63412"], ["03CG3ZZ"], "024"),
+            ("craniotomy_mcc", ["C7931", "G935"], ["00B70ZX"], "025"),
+            (
+                "aneurysm_craniotomy_cc",
+                ["I671", "Z6842"],
+                ["03VG3HZ"],
+                "026",
+            ),
+            ("neurostimulator_no_cc", ["G250"], ["00H03MZ"], "027"),
+            (
+                "spinal_procedure_cc",
+                ["T85113A", "G9600"],
+                ["00HU0MZ"],
+                "029",
+            ),
+            (
+                "cabg_cath_mcc",
+                ["I214", "R570"],
+                ["02100Z9", "4A023N7"],
+                "233",
+            ),
+            (
+                "cabg_cath_no_mcc",
+                ["I25110"],
+                ["02100Z9", "4A023N7"],
+                "234",
+            ),
+            (
+                "cabg_no_cath_mcc",
+                ["I25118", "J951"],
+                ["02100Z9"],
+                "235",
+            ),
+            ("cabg_no_cath", ["I214"], ["02100Z9"], "236"),
+        ]
+        for name, diagnoses, procedures, expected in cases:
+            with self.subTest(name=name, expected=expected):
+                self.assertEqual(
+                    self.engine.get_drg(diagnoses, procedures),
+                    expected,
+                )
+
+    def test_multiple_significant_trauma_precedence_samples(self):
+        cases = [
+            (
+                ["S42491B", "D62", "S32591A"],
+                ["0PSF04Z"],
+                ["Y", "N", "Y"],
+                "M",
+                "01",
+                "958",
+            ),
+            (
+                ["S272XXA", "J9601", "S72032A"],
+                [],
+                ["Y", "Y", "Y"],
+                "M",
+                "51",
+                "963",
+            ),
+            (
+                ["S066XAA", "N179", "S32592A"],
+                [],
+                ["Y", "Y", "Y"],
+                "M",
+                "62",
+                "964",
+            ),
+        ]
+        for diagnoses, procedures, poa, gender, status, expected in cases:
+            with self.subTest(expected=expected):
+                self.assertEqual(
+                    self.engine.get_drg(
+                        diagnoses,
+                        procedures,
+                        gender=gender,
+                        poa=poa,
+                        discharge_status=status,
+                    ),
+                    expected,
+                )
+
+    def test_unrelated_operating_room_precedence_samples(self):
+        cases = [
+            (["K8020", "M8008XA"], ["0QU03JZ"], "982"),
+            (["R569", "I420"], ["5A02216"], "982"),
+            (["E871"], ["0SRC0J9"], "983"),
+            (["R222"], ["0KBJ3ZX"], "983"),
+        ]
+        for diagnoses, procedures, expected in cases:
+            with self.subTest(expected=expected):
+                self.assertEqual(
+                    self.engine.get_drg(diagnoses, procedures),
+                    expected,
+                )
+
+    def test_additional_severity_family_samples(self):
         cases = [
             (["C3411", "A021"], ["0BTC4ZZ"], "163"),
             (["C3411", "D62"], ["0BTC4ZZ"], "164"),
@@ -73,7 +299,7 @@ class TestGoldCases(unittest.TestCase):
                     expected,
                 )
 
-    def test_claim_derived_severity_families(self):
+    def test_severity_family_samples(self):
         cases = [
             (["I871", "A021"], ["06JY0ZZ"], "252"),
             (["I871", "D62"], ["06JY0ZZ"], "253"),

@@ -743,25 +743,46 @@ def mdc05(x, version):
             y.append("229")
 
     # 231 - 236
-    s1 = "231&232&233&234&235&236|CORONARY BYPASS ORPCS"
-    s2 = "231&232&233&234&235&236|PTCA ORPCS"
-    s3 = "216&217&218&219&220&221|CARDIAC CATHETERIZATION NON-ORPCS"
-    if x[s1] > 0:
-        if x[s2] > 0:
-            if x["_MCC"] > 0:
-                y.append("231")
+    if version >= 43:
+        bypass_with_ptca = (
+            x["231&232|CORONARY BYPASS ORPCS"]
+            * x["231&232|PTCA ORPCS"]
+        )
+        bypass_with_cath_or_ablation = (
+            x["233&234|CORONARY BYPASS ORPCS"]
+            * (
+                x["233&234|CARDIAC CATHETERIZATION NON-ORPCS"]
+                + x["233&234|ABLATION ORPCS"]
+                + x["233&234|NON-ORPCS"]
+            )
+        )
+        bypass_without_cath = x["235&236|CORONARY BYPASS ORPCS"]
+        if bypass_with_ptca > 0:
+            y.append("231" if x["_MCC"] > 0 else "232")
+        elif bypass_with_cath_or_ablation > 0:
+            y.append("233" if x["_MCC"] > 0 else "234")
+        elif bypass_without_cath > 0:
+            y.append("235" if x["_MCC"] > 0 else "236")
+    else:
+        s1 = "231&232&233&234&235&236|CORONARY BYPASS ORPCS"
+        s2 = "231&232&233&234&235&236|PTCA ORPCS"
+        s3 = "216&217&218&219&220&221|CARDIAC CATHETERIZATION NON-ORPCS"
+        if x[s1] > 0:
+            if x[s2] > 0:
+                if x["_MCC"] > 0:
+                    y.append("231")
+                else:
+                    y.append("232")
+            elif x[s3] > 0:
+                if x["_MCC"] > 0:
+                    y.append("233")
+                else:
+                    y.append("234")
             else:
-                y.append("232")
-        elif x[s3] > 0:
-            if x["_MCC"] > 0:
-                y.append("233")
-            else:
-                y.append("234")
-        else:
-            if x["_MCC"] > 0:
-                y.append("235")
-            else:
-                y.append("236")
+                if x["_MCC"] > 0:
+                    y.append("235")
+                else:
+                    y.append("236")
 
     # 268 - 269
     if x["268&269|ORPCS"] > 0:

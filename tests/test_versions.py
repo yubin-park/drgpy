@@ -63,6 +63,30 @@ class TestModernVersions(unittest.TestCase):
         for diagnoses, procedures, expected in cases:
             self.assertEqual(self.v43_1.get_drg(diagnoses, procedures), expected)
 
+    def test_v43_coronary_bypass_split_rules(self):
+        cases = [
+            (["02100Z9", "027034Z"], "232"),
+            (["02100Z9", "4A023N7"], "234"),
+            (["02100Z9", "06BQ4ZZ"], "236"),
+        ]
+        for procedures, expected in cases:
+            with self.subTest(expected=expected):
+                self.assertEqual(
+                    self.v43_1.get_drg(["I25119"], procedures),
+                    expected,
+                )
+
+    def test_v43_multiple_trauma_requires_distinct_body_sites(self):
+        procedures = ["0RG20A0", "0RB30ZZ"]
+        self.assertEqual(
+            self.v43_1.get_drg(["S14126A", "S12501A"], procedures),
+            "030",
+        )
+        self.assertEqual(
+            self.v43_1.get_drg(["S062X0A", "S7400XA"], procedures),
+            "959",
+        )
+
     def test_v43_appendix_c_and_hac(self):
         self.assertEqual(len(self.v43_1.ccmap), 18391)
         self.assertEqual(len(self.v43_1.exmap), 1994)

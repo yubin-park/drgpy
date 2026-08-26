@@ -52,7 +52,7 @@ class TestSimulation(unittest.TestCase):
                 ["I871", "D62", "A021"],
                 ["06JY0ZZ"],
             ),
-            ["252", "811", "854"],
+            ["252", "854", "981"],
         )
         self.assertEqual(
             self.engine.get_possible_drgs([], ["02HA0RS"]),
